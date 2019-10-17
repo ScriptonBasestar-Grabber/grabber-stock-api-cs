@@ -1,0 +1,15 @@
+﻿<UserControl x:Name="LoginControl1" x:Class="GrabberManager.LoginControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GrabberManager"
+             mc:Ignorable="d" Width="140" Height="130">
+    <Grid>
+        <TextBox Name="TxtUserName" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TxtUserPass" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" Text="UserPass" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TxtCertPass" HorizontalAlignment="Left" Height="23" Margin="10,66,0,0" TextWrapping="Wrap" Text="CertPass" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+
+    </Grid>
+</UserControl>
