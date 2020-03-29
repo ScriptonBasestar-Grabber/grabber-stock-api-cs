@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GrabberManager.Properties {
+namespace XingBot.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -23,21 +23,15 @@ namespace GrabberManager.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\eBEST\\xingAPI")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string root_path {
             get {
                 return ((string)(this["root_path"]));
             }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\tmp")]
-        public string data_path {
-            get {
-                return ((string)(this["data_path"]));
+            set {
+                this["root_path"] = value;
             }
         }
     }
