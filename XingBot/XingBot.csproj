@@ -41,7 +41,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Mapping\MappingFieldModel.cs" />
+    <Compile Include="Mapping\MappingRowModel.cs" />
+    <Compile Include="Mapping\RealMap.cs" />
+    <Compile Include="QueryEvents_t9907.cs" />
+    <Compile Include="QueryEvents_t9942.cs" />
+    <Compile Include="QueryEvents_t8424.cs" />
+    <Compile Include="QueryEvents_t8435.cs" />
+    <Compile Include="QueryEvents_t8433.cs" />
+    <Compile Include="QueryEvents_t8432.cs" />
+    <Compile Include="QueryEvents_t8425.cs" />
+    <Compile Include="RealEvents_FC0.cs" />
+    <Compile Include="RealEvents_FH0.cs" />
+    <Compile Include="res\FC0.cs" />
+    <Compile Include="res\FH0.cs" />
+    <Compile Include="res\t1981.cs" />
+    <Compile Include="res\t8424.cs" />
+    <Compile Include="res\t8425.cs" />
+    <Compile Include="res\t8431.cs" />
+    <Compile Include="res\t8435.cs" />
+    <Compile Include="res\t8433.cs" />
+    <Compile Include="res\t8432.cs" />
+    <Compile Include="res\t8436.cs" />
+    <Compile Include="res\t9907.cs" />
+    <Compile Include="res\t9942.cs" />
+    <Compile Include="SessionEvents.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -54,6 +78,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="QueryEvents_t8436.cs" />
     <Compile Include="QueryEvents_t1981.cs" />
     <Compile Include="RealEvents.cs" />
     <Compile Include="QueryEvents.cs" />
@@ -61,7 +86,6 @@
     <Compile Include="res\BMT.cs" />
     <Compile Include="res\BM_.cs" />
     <Compile Include="res\C01.cs" />
-    <Compile Include="res\t9945.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="XA_DATASETLib">

@@ -6,45 +6,47 @@ using System.Threading.Tasks;
 
 namespace XingBot
 {
-    class Constants
+    public class Constants
     {
         public static readonly string[] QueryInitialCodes =
         {
+            "t8436", //주식 마스터
+            "t8425", //주식 테마
+            "t8432", //파생 지수선물
+            "t8433", //파생 지수옵션
+            "t8435", //파생 마스터
+            "t8424", //업종
+            "t1981", //Elw 기초자산
+            "t9942", //Elw 마스터
+            "t9907", //Elw 만기월
         };
 
         public static readonly string[] QueryEventNames =
         {
-            "CACBQ21900",
-             "CCEAQ50600", "CCEAT00100", "CCEAT00200", "CCEAT00300", "CCEBQ10500",
-            "CEXAQ21100", "CEXAQ21200", "CEXAQ31100", "CEXAQ31200",
-            "CEXAT11100", "CEXAT11200", "CEXAT11300", "CFOAQ00600", "CFOAQ10100", "CFOAQ50400",
-            "CFOAT00100", "CFOAT00200", "CFOAT00300", "CFOBQ10500", "CFOBQ10800", "CFOEQ11100",
-            "CFOEQ82600", "CFOEQ82700", "CFOFQ02400", "CSPAQ02200", "CSPAQ02300", "CSPAQ03700",
+            "CACBQ21900", //개별계좌정보 조회
+            "CFOAQ50400", //선물옵션 계좌잔고 및 평가현황2
+            
+            "CFOEQ82700", //선물옵션 주야간 통합 손익 조회
+            "CSPAQ02200", //현물계좌예수금 주문가능금액 총평가조회
+            "CSPAQ02300", //BEP단가조회
+            "CSPAQ03700", //현물계좌주문체결내역조회
+            // "O01",
+            "o3117", //해외선물차트용NTick(o3117)-API용
 
-
-            "FOCCQ33700",
-
-            "JX0",
-            "MMDAQ91200", "O01", "o3117",
-
-            "t0431",
-            "t0434", "t0441",
-            "t1833", "t2101", "t2105",
-            "t2106", "t2201", "t2203", "t2209", "t2210", "t2301", "t2405", "t2421",
-            "t2541", "t2545", "t2801", "t2802", "t2804", "t2805", "t2813", "t2814",
-            "t2816", "t2830", "t2831", "t2832", "t2833", "t2835", "t8401",
-            "t8402", "t8403", "t8404", "t8405", "t8406", "t8407", "t8408", "t8409",
-             "t8414", "t8415", "t8416",  "t8426", "t8427", "t8429",
-            "t8432", "t8433", "t8434", "t9943",
-            "t9944", "TH_", "TS_",
+            "t0431", //선물/옵션잔고평가(주문팝업)(t0431)
+           
+            "t1833", //종목검색(씽API용)(t1833)
+            "TH_", //OTCBB호가잔량(TH)
+            "TS_", //OTCBB체결(TS)
         };
 
         public static readonly string[] QueryEventStockNames =
         {
-            "CDPCQ04700",
-            "ChartExcel", "ChartIndex",
-            "CLNAQ00100",
-            "CSPAQ00600",
+            "CDPCQ04700", //계좌 거래내역
+            "ChartExcel", //챠트엑셀데이터조회
+            "ChartIndex", //챠트지표데이터조회
+            "CLNAQ00100", //예탁담보융자가능종목현황조회
+            "CSPAQ00600", //계좌별신용한도조회
             "CSPAQ12200", "CSPAQ12300", "CSPAQ13700",
             "CSPAQ22200", //???
             "CSPAT00600", "CSPAT00700", "CSPAT00800",
@@ -65,11 +67,11 @@ namespace XingBot
             "t1866", //??
             "t1901", "t1902", "t1903",
             "t1904", "t1906", "t1921", "t1926", "t1927", "t1941",
-            "t4201",
+            "t4201", "t8407",
             "t8411", "t8412", "t8413",
-            "t8425",  "t8430", 
+            "t8425",  "t8430",
             "t8436", //??
-                "t9945",
+            "t9945",
         };
 
         public static readonly string[] QueryEventDerivativesNames =
@@ -77,8 +79,26 @@ namespace XingBot
             "CCEAQ01100",
             "CCEAQ06000",
             "CCEAQ10100",
-
-
+            "CCEAQ50600", "CCEAT00100", "CCEAT00200", "CCEAT00300", "CCEBQ10500",
+            "CEXAQ21100", "CEXAQ21200", "CEXAQ31100", "CEXAQ31200",
+            "CEXAQ44200",//??
+            "CEXAT11100", "CEXAT11200", "CEXAT11300", "CFOAQ00600", "CFOAQ10100",
+            "CFOAT00100", "CFOAT00200", "CFOAT00300", "CFOBQ10500", "CFOBQ10800", "CFOEQ11100",
+            "CFOEQ82600",
+            "CFOFQ02400",
+            "FOCCQ33700",
+            "MMDAQ91200",
+            "t0434", "t0441",
+            "t2101", "t2105",
+            "t2106", "t2201", "t2203", "t2209", "t2210", "t2301", "t2405", "t2421",
+            "t2541", "t2545", "t2801", "t2802", "t2804", "t2805", "t2813", "t2814",
+            "t2816", "t2830", "t2831", "t2832", "t2833", "t2835", "t8401",
+            "t8402", "t8403", "t8404", "t8405", "t8406",
+            "t8408", "t8409",
+            "t8414", "t8415", "t8416",  "t8426", "t8427", "t8429",
+            "t8432", "t8433", "t8434",
+            "t8435",//??
+            "t9943", "t9944",
         };
 
         public static readonly string[] QueryEventInfoNames =
@@ -114,7 +134,7 @@ namespace XingBot
         public static readonly string[] RealEventDerivativesNames =
         {
             "C01", "CD0", "CM0", "CM1", "CM2", "EC0", "EH0", "EU0", "EU1", "EU2", "FC0", "FD0", "FH0", "FX0", "H01",
-            "JC0", "JD0", "JH0", "NC0", "NH0", "OC0", "OD0", "OH0", "OMG", "OX0", "YC3", "YFC", "YJC",
+            "JC0", "JD0", "JH0", "JX0", "NC0", "NH0", "OC0", "OD0", "OH0", "OMG", "OX0", "YC3", "YFC", "YJC",
             "YOC",
         };
 

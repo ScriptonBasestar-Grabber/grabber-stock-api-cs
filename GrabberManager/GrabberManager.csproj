@@ -107,5 +107,11 @@
   <ItemGroup>
     <Folder Include="util\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XingBot\XingBot.csproj">
+      <Project>{9287d59b-36fd-439d-b094-5eccba69c99f}</Project>
+      <Name>XingBot</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
