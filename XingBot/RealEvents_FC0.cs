@@ -13,7 +13,7 @@ namespace XingBot
         public void InBlock_FC0(string futcode)
         {
             string szTrCode = "FC0";
-            _RealDict[szTrCode].SetFieldData(szTrCode + "InBlock", "futcode", futcode);
+            _RealDict[szTrCode].SetFieldData("InBlock", "futcode", futcode);
         }
 
         private void OutBlock_FC0(string szTrCode)

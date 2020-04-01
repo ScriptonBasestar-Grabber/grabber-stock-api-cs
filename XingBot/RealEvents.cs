@@ -21,11 +21,12 @@ namespace XingBot
             foreach (var code in codes)
             {
                 // dwCookie = 0;
-                _RealDict[code] = new XAReal
+                var realDict = new Dictionary<string, IXAReal>();
+                realDict[code] = new XAReal
                 {
                     ResFileName = Properties.Settings.Default.root_path + @"\res\" + code + ".res"
                 };
-                icpc = (IConnectionPointContainer)_RealDict[code];
+                icpc = (IConnectionPointContainer)realDict[code];
                 icpc.FindConnectionPoint(ref IID_RealEvents, out icp);
                 icp.Advise(this, out dwCookie);
             }
@@ -36,9 +37,9 @@ namespace XingBot
         // Real
         void _IXARealEvents.ReceiveRealData(string szTrCode)
         {
+            OutBlock_FC0(szTrCode);
             if (szTrCode == "FC0")
             {
-                OutBlock_FC0(szTrCode);
             }
             else if (szTrCode == "FH0")
             {

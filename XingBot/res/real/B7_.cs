@@ -1,5 +1,6 @@
 ﻿namespace XingBot.res
 {
+    // 코스닥LP호가 ( ATTR, KEY=6, GROUP=1 )
     struct _B7__InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
