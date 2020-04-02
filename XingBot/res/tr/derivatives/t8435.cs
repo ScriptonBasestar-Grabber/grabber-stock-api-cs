@@ -25,3 +25,4 @@ namespace XingBot.res.tr.derivatives
         public float recprice; // [float ,  6.2] 기준가                          StartPos 70, Length 6
     }
 }
+
