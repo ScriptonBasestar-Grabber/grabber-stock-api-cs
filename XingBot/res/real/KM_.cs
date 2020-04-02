@@ -52,6 +52,7 @@
         public long wval; // [long  ,    8] 전체위탁순매수 금액             StartPos 315, Length 8
         public long djvalue; // [long  ,    8] 전체매도자기체결금액            StartPos 324, Length 8
         public long sjvalue; // [long  ,    8] 전체매수자기체결금액            StartPos 333, Length 8
+
         public long jval; // [long  ,    8] 전체자기순매수 금액             StartPos 342, Length 8
         public float k50jisu; // [float ,  6.2] KOSDAQ50 지수                   StartPos 351, Length 6
         public string k50sign; // [string,    1] KOSDAQ50 전일대비구분           StartPos 358, Length 1
@@ -89,6 +90,7 @@
         public long p_cvalcha; // [long  ,    8] 차익순매수 금액직전대비         StartPos 597, Length 8
         public long p_bdvalcha; // [long  ,    8] 비차익매도체결금액직전대비      StartPos 606, Length 8
         public long p_bsvalcha; // [long  ,    8] 비차익매수체결금액직전대비      StartPos 615, Length 8
+        public long p_bvalcha; // [long  ,    8] 비차익매수체결금액직전대비      StartPos 615, Length 8
         public long p_tdvalcha; // [long  ,    8] 전체매도체결금액직전대비        StartPos 633, Length 8
         public long p_tsvalcha; // [long  ,    8] 전체매수체결금액직전대비        StartPos 642, Length 8
         public long p_tvalcha; // [long  ,    8] 전체순매수 금액직전대비         StartPos 651, Length 8

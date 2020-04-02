@@ -57,7 +57,7 @@
         public long ordqty; // [long  ,   16] 주문수량                        StartPos 346, Length 16
         public long ordprice; // [long  ,   13] 주문가격                        StartPos 362, Length 13
         public string hogagb; // [string,    1] 주문조건                        StartPos 375, Length 1
-        public public string etfhogagb; // [string,    2] 호가유형코드                    StartPos 376, Length 2
+        public string etfhogagb; // [string,    2] 호가유형코드                    StartPos 376, Length 2
         public long pgmtype; // [long  ,    2] 프로그램호가구분                StartPos 378, Length 2
         public long gmhogagb; // [long  ,    1] 공매도호가구분                  StartPos 380, Length 1
         public long gmhogayn; // [long  ,    1] 공매도가능여부                  StartPos 381, Length 1
