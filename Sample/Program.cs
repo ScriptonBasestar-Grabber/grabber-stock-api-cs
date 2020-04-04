@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XingBot.res
+namespace Sample
 {
-    class HeaderReader
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }

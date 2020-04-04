@@ -18,6 +18,6 @@
         public long high; // [long  ,    8] 고가                            StartPos 50, Length 8
         public string lowtime; // [string,    6] 저가시간                        StartPos 59, Length 6
         public long low; // [long  ,    8] 저가                            StartPos 66, Length 8
-        public long shcode; // [long,    6] 단축코드                        StartPos 75, Length 6
+        public string shcode; // [long,    6] 단축코드                        StartPos 75, Length 6
     }
 }
