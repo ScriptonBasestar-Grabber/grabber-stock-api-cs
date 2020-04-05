@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 종목별 신용/대주 현황 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1926InBlock
+    internal struct _t1926InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
     }
 
-    struct _t1926OutBlock
+    internal struct _t1926OutBlock
     {
         public long ynvolume; // [long  ,    8] 융자신규수량                    StartPos 0, Length 8
         public long ysvolume; // [long  ,    8] 융자상환수량                    StartPos 9, Length 8

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물/옵션 미결제약정 추이 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t2421InBlock
+    internal struct _t2421InBlock
     {
         public string focode; // [string,    8] 종목코드                        StartPos 0, Length 8
         public string bdgubun; // [string,    1] 분일구분                        StartPos 9, Length 1
@@ -16,7 +10,7 @@ namespace XingBot.res.tr.derivatives
         public string cnt; // [string,    4] 조회건수                        StartPos 17, Length 4
     }
 
-    struct _t2421OutBlock
+    internal struct _t2421OutBlock
     {
         public float price; // [float ,  6.2] 현재가                          StartPos 0, Length 6
         public string sign; // [string,    1] 전일대비구분                    StartPos 7, Length 1
@@ -27,7 +21,7 @@ namespace XingBot.res.tr.derivatives
         public long openyak; // [long  ,    8] 미결제수량                      StartPos 48, Length 8
     }
 
-    struct _t2421OutBlock1
+    internal struct _t2421OutBlock1
     {
         public string dt; // [string,   14] 일자시간                        StartPos 0, Length 14
         public float open; // [float ,  6.2] 시가                            StartPos 15, Length 6

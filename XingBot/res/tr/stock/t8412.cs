@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
-    class t8412
+    internal class t8412
     {
     }
 }

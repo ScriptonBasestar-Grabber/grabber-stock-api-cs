@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 테마종목별 시세조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1537InBlock
+    internal struct _t1537InBlock
     {
         public string tmcode; // [string,    4] 테마코드                        StartPos 0, Length 4
     }
 
-    struct _t1537OutBlock
+    internal struct _t1537OutBlock
     {
         public long upcnt; // [long  ,    4] 상승종목수                      StartPos 0, Length 4
         public long tmcnt; // [long  ,    4] 테마종목수                      StartPos 5, Length 4
@@ -20,7 +14,7 @@ namespace XingBot.res.tr
         public string tmname; // [string,   36] 테마명                          StartPos 15, Length 36
     }
 
-    struct _t1537OutBlock1
+    internal struct _t1537OutBlock1
     {
         public string hname; // [string,   20] 종목명                          StartPos 0, Length 20
         public long price; // [long  ,    8] 현재가                          StartPos 21, Length 8

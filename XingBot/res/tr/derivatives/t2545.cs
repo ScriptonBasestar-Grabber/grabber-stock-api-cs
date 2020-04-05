@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 상품선물투자자매매동향(챠트용) ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t2545InBlock
+    internal struct _t2545InBlock
     {
         public string eitem; // [string,    2] 상품ID                          StartPos 0, Length 2
         public string sgubun; // [string,    1] 시장구분                        StartPos 3, Length 1
@@ -17,7 +11,7 @@ namespace XingBot.res.tr.derivatives
         public string bgubun; // [string,    1] 전일분                          StartPos 16, Length 1
     }
 
-    struct _t2545OutBlock
+    internal struct _t2545OutBlock
     {
         public string eitem; // [string,    2] 상품ID                          StartPos 0, Length 2
         public string sgubun; // [string,    1] 시장구분                        StartPos 3, Length 1
@@ -37,7 +31,7 @@ namespace XingBot.res.tr.derivatives
         public string jisunm; // [string,   20] 기준지수명                      StartPos 74, Length 20
     }
 
-    struct _t2545OutBlock1
+    internal struct _t2545OutBlock1
     {
         public string date; // [string,    8] 일자                            StartPos 0, Length 8
         public string time; // [string,    6] 시간                            StartPos 9, Length 6

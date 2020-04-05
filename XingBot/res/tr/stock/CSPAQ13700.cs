@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 현물계좌 주문체결내역 조회(API) ( SERVICE=CSPAQ13700,HEADTYPE=B,CREATOR=이상은,CREDATE=2015/04/13 08:39:53 )
-    struct _CSPAQ13700InBlock1
+    internal struct _CSPAQ13700InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -22,7 +16,7 @@ namespace XingBot.res.tr
         public string OrdPtnCode; // [OrdPtnCode,    2] 주문유형코드                    StartPos 68, Length 2
     }
 
-    struct _CSPAQ13700OutBlock1
+    internal struct _CSPAQ13700OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -37,7 +31,7 @@ namespace XingBot.res.tr
         public string OrdPtnCode; // [OrdPtnCode,    2] 주문유형코드                    StartPos 68, Length 2
     }
 
-    struct _CSPAQ13700OutBlock2
+    internal struct _CSPAQ13700OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long SellExecAmt; // [SellExecAmt  ,   16] 매도체결금액                    StartPos 5, Length 16
@@ -48,7 +42,7 @@ namespace XingBot.res.tr
         public long BuyOrdQty; // [BuyOrdQty  ,   16] 매수주문수량                    StartPos 85, Length 16
     }
 
-    struct _CSPAQ13700OutBlock3
+    internal struct _CSPAQ13700OutBlock3
     {
         public string OrdDt; // [OrdDt,    8] 주문일                          StartPos 0, Length 8
         public string MgmtBrnNo; // [MgmtBrnNo,    3] 관리지점번호                    StartPos 8, Length 3

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 계좌별신용한도조회 ( SERVICE=CSPAQ00600,HEADTYPE=B,CREATOR=송우석,CREDATE=2018/09/17 15:17:35 )
-    struct _CSPAQ00600InBlock1
+    internal struct _CSPAQ00600InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -18,7 +12,7 @@ namespace XingBot.res.tr
         public string CommdaCode; // [CommdaCode,    2] 통신매체코드                    StartPos 60, Length 2
     }
 
-    struct _CSPAQ00600OutBlock1
+    internal struct _CSPAQ00600OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -29,7 +23,7 @@ namespace XingBot.res.tr
         public string CommdaCode; // [CommdaCode,    2] 통신매체코드                    StartPos 60, Length 2
     }
 
-    struct _CSPAQ00600OutBlock2
+    internal struct _CSPAQ00600OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm; // [AcntNm,   40] 계좌명                          StartPos 5, Length 40

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 주식차트(종합) ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t4201InBlock
+    internal struct _t4201InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
         public string gubun; // [string,    1] 주기구분(0:틱1:분2:일3:주4:월)  StartPos 7, Length 1
@@ -21,7 +15,7 @@ namespace XingBot.res.tr
         public string cts_daygb; // [string,    1] 연속당일구분(0:연속전체1:연속당 StartPos 59, Length 1
     }
 
-    struct _t4201OutBlock
+    internal struct _t4201OutBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
         public long jisiga; // [long  ,    8] 전일시가                        StartPos 7, Length 8
@@ -40,7 +34,7 @@ namespace XingBot.res.tr
         public string cts_daygb; // [string,    1] 연속당일구분                    StartPos 130, Length 1
     }
 
-    struct _t4201OutBlock1
+    internal struct _t4201OutBlock1
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public string time; // [string,   10] 시간                            StartPos 9, Length 10

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 현물 취소주문 ( SERVICE=CSPAT00800,ENCRYPT,SIGNATURE,HEADTYPE=B,CREATOR=김기종,CREDATE=2011/12/07 09:23:48 )
-    struct _CSPAT00800InBlock1
+    internal struct _CSPAT00800InBlock1
     {
         public long OrgOrdNo; // [OrgOrdNo  ,   10] 원주문번호                      StartPos 0, Length 10
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 10, Length 20
@@ -16,7 +10,7 @@ namespace XingBot.res.tr
         public long OrdQty; // [OrdQty  ,   16] 주문수량                        StartPos 50, Length 16
     }
 
-    struct _CSPAT00800OutBlock1
+    internal struct _CSPAT00800OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrgOrdNo; // [OrgOrdNo  ,   10] 원주문번호                      StartPos 5, Length 10
@@ -34,7 +28,7 @@ namespace XingBot.res.tr
         public long ItemNo; // [ItemNo  ,   10] 아이템번호                      StartPos 139, Length 10
     }
 
-    struct _CSPAT00800OutBlock2
+    internal struct _CSPAT00800OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrdNo; // [OrdNo  ,   10] 주문번호                        StartPos 5, Length 10

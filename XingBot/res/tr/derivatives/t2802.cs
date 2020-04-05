@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // CME 호가조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t2802InBlock
+    internal struct _t2802InBlock
     {
         public string shcode; // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    struct _t2802OutBlock
+    internal struct _t2802OutBlock
     {
         public string hname; // [string,   20] 종목명                          StartPos 0, Length 20
         public float price; // [float ,  6.2] 현재가                          StartPos 21, Length 6

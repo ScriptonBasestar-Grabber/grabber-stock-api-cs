@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물옵션 옵션매도시 주문증거금조회 ( SERVICE=CFOBQ10800,HEADTYPE=B,CREATOR=원종혁,CREDATE=2019/08/01 10:51:29 )
-    struct _CFOBQ10800InBlock1
+    internal struct _CFOBQ10800InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string PrdgrpClssCode; // [PrdgrpClssCode,    2] 상품군코드                      StartPos 5, Length 2
@@ -16,7 +10,7 @@ namespace XingBot.res.tr.derivatives
         public string FstmmTpCode; // [FstmmTpCode,    1] 최근월물구분                    StartPos 14, Length 1
     }
 
-    struct _CFOBQ10800OutBlock1
+    internal struct _CFOBQ10800OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string PrdgrpClssCode; // [PrdgrpClssCode,    2] 상품군코드                      StartPos 5, Length 2
@@ -25,7 +19,7 @@ namespace XingBot.res.tr.derivatives
         public string FstmmTpCode; // [FstmmTpCode,    1] 최근월물구분                    StartPos 14, Length 1
     }
 
-    struct _CFOBQ10800OutBlock2
+    internal struct _CFOBQ10800OutBlock2
     {
         public double ElwXrcPrc; // [ElwXrcPrc, 13.2] 행사가                          StartPos 0, Length 13
         public string FnoIsuNo; // [FnoIsuNo,   12] 선물옵션종목번호                StartPos 13, Length 12

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.elw
+﻿namespace XingBot.res
 {
     // ELW 등락율 상위 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1960InBlock
+    internal struct _t1960InBlock
     {
         public string gubun; // [string,    1] 상승하락(0:상승1:하락)          StartPos 0, Length 1
         public string ggubun; // [string,    2] 권리유형구분(00:EX01:콜02:풋'': StartPos 2, Length 2
@@ -22,12 +16,12 @@ namespace XingBot.res.tr.elw
         public long idx; // [long  ,    4] IDX                             StartPos 83, Length 4
     }
 
-    struct _t1960OutBlock
+    internal struct _t1960OutBlock
     {
         public long idx; // [long  ,    4] IDX                             StartPos 0, Length 4
     }
 
-    struct _t1960OutBlock1
+    internal struct _t1960OutBlock1
     {
         public string hname; // [string,   40] 한글명                          StartPos 0, Length 40
         public long price; // [long  ,    8] 현재가                          StartPos 41, Length 8

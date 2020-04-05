@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 신호조회 ( BLOCK,HEADTYPE=A )
-    struct _t1809InBlock
+    internal struct _t1809InBlock
     {
         public string gubun; // [gubun,    1] 신호구분                        StartPos 0, Length 1
         public string jmGb; // [jmGb,    1] 종목구분                        StartPos 1, Length 1
@@ -15,12 +9,12 @@ namespace XingBot.res.tr
         public string cts; // [cts,   30] NEXTKEY                         StartPos 8, Length 30
     }
 
-    struct _t1809OutBlock
+    internal struct _t1809OutBlock
     {
         public string cts; // [cts,   30] NEXTKEY                         StartPos 0, Length 30
     }
 
-    struct _t1809OutBlock1
+    internal struct _t1809OutBlock1
     {
         public string date; // [date,    8] 일자                            StartPos 0, Length 8
         public string time; // [time,    6] 시간                            StartPos 8, Length 6

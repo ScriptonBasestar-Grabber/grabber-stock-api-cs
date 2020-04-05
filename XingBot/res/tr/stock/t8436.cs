@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res
+﻿namespace XingBot.res
 {
     // 주식종목조회 API용 ( BLOCK,HEADTYPE=A )
-    struct _t8436InBlock
+    internal struct _t8436InBlock
     {
         public string gubun; // [string,    1] 구분(0:전체1:코스피2:코스닥)    StartPos 0, Length 1
     }
 
-    struct _t8436OutBlock
+    internal struct _t8436OutBlock
     {
         public string hname; // [string,   20] 종목명                          StartPos 0, Length 20
         public string shcode; // [string,    6] 단축코드                        StartPos 20, Length 6

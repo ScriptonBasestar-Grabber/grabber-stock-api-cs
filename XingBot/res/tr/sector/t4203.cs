@@ -1,28 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.category
+﻿namespace XingBot.res
 {
-    // 업종챠트(N분) ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t8418InBlock
+    // 업종차트(종합) ( ATTR,BLOCK,HEADTYPE=A )
+    internal struct _t4203InBlock
     {
         public string shcode; // [string,    3] 단축코드                        StartPos 0, Length 3
-        public long ncnt; // [long  ,    4] 단위(n분)                       StartPos 4, Length 4
-        public long qrycnt; // [long  ,    4] 요청건수(최대-압축:2000비압축:5 StartPos 9, Length 4
-        public string nday; // [string,    1] 조회영업일수(0:미사용1>=사용)   StartPos 14, Length 1
-        public string sdate; // [string,    8] 시작일자                        StartPos 16, Length 8
-        public string stime; // [string,    6] 시작시간(현재미사용)            StartPos 25, Length 6
-        public string edate; // [string,    8] 종료일자                        StartPos 32, Length 8
-        public string etime; // [string,    6] 종료시간(현재미사용)            StartPos 41, Length 6
-        public string cts_date; // [string,    8] 연속일자                        StartPos 48, Length 8
-        public string cts_time; // [string,   10] 연속시간                        StartPos 57, Length 10
-        public string comp_yn; // [string,    1] 압축여부(Y:압축N:비압축)        StartPos 68, Length 1
+        public string gubun; // [string,    1] 주기구분(0:틱1:분2:일3:주4:월)  StartPos 4, Length 1
+        public long ncnt; // [long  ,    4] 틱개수                          StartPos 6, Length 4
+        public long qrycnt; // [long  ,    4] 건수                            StartPos 11, Length 4
+        public string tdgb; // [string,    1] 당일구분(0:전체1:당일만)        StartPos 16, Length 1
+        public string sdate; // [string,    8] 시작일자                        StartPos 18, Length 8
+        public string edate; // [string,    8] 종료일자                        StartPos 27, Length 8
+        public string cts_date; // [string,    8] 연속일자                        StartPos 36, Length 8
+        public string cts_time; // [string,   10] 연속시간                        StartPos 45, Length 10
+        public string cts_daygb; // [string,    1] 연속당일구분(0:연속전체1:연속당 StartPos 56, Length 1
     }
 
-    struct _t8418OutBlock
+    internal struct _t4203OutBlock
     {
         public string shcode; // [string,    3] 단축코드                        StartPos 0, Length 3
         public float jisiga; // [float ,  7.2] 전일시가                        StartPos 4, Length 7
@@ -37,13 +30,10 @@ namespace XingBot.res.tr.category
         public long disvalue; // [long  ,   12] 당일거래대금                    StartPos 81, Length 12
         public string cts_date; // [string,    8] 연속일자                        StartPos 94, Length 8
         public string cts_time; // [string,   10] 연속시간                        StartPos 103, Length 10
-        public string s_time; // [string,    6] 업종시작시간(HHMMSS)            StartPos 114, Length 6
-        public string e_time; // [string,    6] 업종종료시간(HHMMSS)            StartPos 121, Length 6
-        public string dshmin; // [string,    2] 동시호가처리시간(MM:분)         StartPos 128, Length 2
-        public long rec_count; // [long  ,    7] 레코드카운트                    StartPos 131, Length 7
+        public string cts_daygb; // [string,    1] 연속당일구분                    StartPos 114, Length 1
     }
 
-    struct _t8418OutBlock1
+    internal struct _t4203OutBlock1
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public string time; // [string,    6] 시간                            StartPos 9, Length 6

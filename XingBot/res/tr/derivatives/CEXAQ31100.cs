@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 야간장잔고 및 평가현황 조회 ( SERVICE=CEXAQ31100,HEADTYPE=B,CREATOR=이시종,CREDATE=2012/12/22 14:39:24 )
-    struct _CEXAQ31100InBlock1
+    internal struct _CEXAQ31100InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -17,7 +11,7 @@ namespace XingBot.res.tr.derivatives
         public string FutsPrcEvalTp; // [FutsPrcEvalTp,    1] 선물가격평가구분                StartPos 46, Length 1
     }
 
-    struct _CEXAQ31100OutBlock1
+    internal struct _CEXAQ31100OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -27,7 +21,7 @@ namespace XingBot.res.tr.derivatives
         public string FutsPrcEvalTp; // [FutsPrcEvalTp,    1] 선물가격평가구분                StartPos 46, Length 1
     }
 
-    struct _CEXAQ31100OutBlock2
+    internal struct _CEXAQ31100OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -38,7 +32,7 @@ namespace XingBot.res.tr.derivatives
         public long TotPnlAmt; // [TotPnlAmt  ,   16] 총손익금액                      StartPos 113, Length 16
     }
 
-    struct _CEXAQ31100OutBlock3
+    internal struct _CEXAQ31100OutBlock3
     {
         public string FnoIsuNo; // [FnoIsuNo,   12] 선물옵션종목번호                StartPos 0, Length 12
         public string IsuNm; // [IsuNm,   40] 종목명                          StartPos 12, Length 40

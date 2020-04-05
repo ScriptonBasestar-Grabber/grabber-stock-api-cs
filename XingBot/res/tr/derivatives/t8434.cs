@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물옵션멀티현재가 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t8434InBlock
+    internal struct _t8434InBlock
     {
         public long qrycnt; // [long  ,    3] 건수                            StartPos 0, Length 3
         public string focode; // [string,  400] 단축코드                        StartPos 4, Length 400
     }
 
-    struct _t8434OutBlock1
+    internal struct _t8434OutBlock1
     {
         public string hname; // [string,   20] 한글명                          StartPos 0, Length 20
         public float price; // [float ,  6.2] 현재가                          StartPos 21, Length 6

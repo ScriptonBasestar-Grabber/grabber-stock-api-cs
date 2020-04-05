@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.elw
+﻿namespace XingBot.res
 {
     // ELW 종목비교 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1958InBlock
+    internal struct _t1958InBlock
     {
         public string shcode1; // [string,    6] 종목코드1                       StartPos 0, Length 6
         public string shcode2; // [string,    6] 종목코드2                       StartPos 7, Length 6
     }
 
-    struct _t1958OutBlock
+    internal struct _t1958OutBlock
     {
         public string hname; // [string,   40] 종목명                          StartPos 0, Length 40
         public string item1; // [string,   12] 기초자산                        StartPos 41, Length 12
@@ -39,7 +33,7 @@ namespace XingBot.res.tr.elw
         public float diff; // [float ,  6.2] 등락율                          StartPos 235, Length 6
     }
 
-    struct _t1958OutBlock1
+    internal struct _t1958OutBlock1
     {
         public string hname; // [string,   40] 종목명                          StartPos 0, Length 40
         public string item1; // [string,   12] 기초자산                        StartPos 41, Length 12
@@ -65,7 +59,7 @@ namespace XingBot.res.tr.elw
         public float diff; // [float ,  6.2] 등락율                          StartPos 235, Length 6
     }
 
-    struct _t1958OutBlock2
+    internal struct _t1958OutBlock2
     {
         public string hnamecmp; // [string,    6] 종목명비교                      StartPos 0, Length 6
         public string item1cmp; // [string,    6] 기초자산비교                    StartPos 7, Length 6

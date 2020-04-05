@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 주식멀티현재가조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t8407InBlock
+    internal struct _t8407InBlock
     {
         public long nrec; // [long  ,    3] 건수                            StartPos 0, Length 3
         public string shcode; // [string,  300] 종목코드                        StartPos 4, Length 300
     }
 
-    struct _t8407OutBlock1
+    internal struct _t8407OutBlock1
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string hname; // [string,   40] 종목명                          StartPos 7, Length 40

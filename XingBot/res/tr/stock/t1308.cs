@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 주식 시간대별 체결조회 차트 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1308InBlock
+    internal struct _t1308InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
         public string starttime; // [string,    4] 시작시간                        StartPos 7, Length 4
@@ -15,7 +9,7 @@ namespace XingBot.res.tr
         public string bun_term; // [string,    2] 분간격                          StartPos 17, Length 2
     }
 
-    struct _t1308OutBlock1
+    internal struct _t1308OutBlock1
     {
         public string chetime; // [string,    8] 시간                            StartPos 0, Length 8
         public long price; // [long  ,    8] 현재가                          StartPos 9, Length 8

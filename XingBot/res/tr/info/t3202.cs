@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.info
+﻿namespace XingBot.res
 {
     // 종목별 증시일정 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t3202InBlock
+    internal struct _t3202InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string date; // [string,    8] 조회일자                        StartPos 7, Length 8
     }
 
-    struct _t3202OutBlock
+    internal struct _t3202OutBlock
     {
         public string recdt; // [string,    8] 기준일                          StartPos 0, Length 8
         public string tableid; // [string,    6] 테이블아이디                    StartPos 9, Length 6

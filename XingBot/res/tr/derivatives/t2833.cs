@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 기간별 추이 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t2833InBlock
+    internal struct _t2833InBlock
     {
         public string shcode; // [string,    8] 단축코드                        StartPos 0, Length 8
         public string futcheck; // [string,    1] 선물최근월물                    StartPos 9, Length 1
@@ -17,7 +11,7 @@ namespace XingBot.res.tr.derivatives
         public string cnt; // [string,    3] 조회요청건수                    StartPos 38, Length 3
     }
 
-    struct _t2833OutBlock
+    internal struct _t2833OutBlock
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public string cts_code; // [string,    8] CTS종목코드                     StartPos 9, Length 8
@@ -25,7 +19,7 @@ namespace XingBot.res.tr.derivatives
         public string nowfutyn; // [string,    1] 최근월선물여부                  StartPos 27, Length 1
     }
 
-    struct _t2833OutBlock1
+    internal struct _t2833OutBlock1
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public float open; // [float ,  6.2] 시가                            StartPos 9, Length 6

@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.elw
+﻿namespace XingBot.res
 {
     // ELW 기초자산 동일종목 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1974InBlock
+    internal struct _t1974InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
     }
 
-    struct _t1974OutBlock
+    internal struct _t1974OutBlock
     {
         public long cnt; // [long  ,    4] 종목갯수                        StartPos 0, Length 4
 
-        struct _t1974OutBlock1
+        private struct _t1974OutBlock1
         {
             public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
             public string hname; // [string,   40] 종목명                          StartPos 7, Length 40
@@ -29,7 +23,7 @@ namespace XingBot.res.tr.elw
         }
     }
 
-    struct _t1974OutBlock1
+    internal struct _t1974OutBlock1
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string hname; // [string,   40] 종목명                          StartPos 7, Length 40

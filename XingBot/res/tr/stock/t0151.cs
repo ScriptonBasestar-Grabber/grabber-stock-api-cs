@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 주식당일매매일지/수수료(전일) ( TUXCODE=T0151, HEADTYPE=C )
-    struct _t0151InBlock
+    internal struct _t0151InBlock
     {
         public string date; // [date,    8] 일자                            StartPos 0, Length 8
         public string accno; // [accno,   11] 계좌번호                        StartPos 8, Length 11
@@ -17,7 +11,7 @@ namespace XingBot.res.tr
         public string cts_middiv; // [cts_middiv,    2] CTS_매체                        StartPos 41, Length 2
     }
 
-    struct _t0151OutBlock
+    internal struct _t0151OutBlock
     {
         public long mdqty; // [mdqty  ,    9] 매도수량                        StartPos 0, Length 9
         public long mdamt; // [mdamt  ,   18] 매도약정금액                    StartPos 9, Length 18
@@ -44,7 +38,7 @@ namespace XingBot.res.tr
         public string cts_middiv; // [cts_middiv,    2] CTS_매체                        StartPos 337, Length 2
     }
 
-    struct _t0151OutBlock1
+    internal struct _t0151OutBlock1
     {
         public string medosu; // [medosu,   10] 매매구분                        StartPos 0, Length 10
         public string expcode; // [expcode,   12] 종목번호                        StartPos 10, Length 12

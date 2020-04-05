@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 기간별투자자매매추이(챠트) ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1665InBlock
+    internal struct _t1665InBlock
     {
         public string market; // [string,    1] 시장구분(1:kospi2:kp2003:kosdaq StartPos 0, Length 1
         public string upcode; // [string,    3] 업종코드                        StartPos 2, Length 3
@@ -17,13 +11,13 @@ namespace XingBot.res.tr
         public string to_date; // [string,    8] 종료날짜                        StartPos 19, Length 8
     }
 
-    struct _t1665OutBlock
+    internal struct _t1665OutBlock
     {
         public string mcode; // [string,    8] 시장코드                        StartPos 0, Length 8
         public string mname; // [string,   20] 시장명                          StartPos 9, Length 20
     }
 
-    struct _t1665OutBlock1
+    internal struct _t1665OutBlock1
     {
         public string date; // [string,    8] 일자                            StartPos 0, Length 8
         public long sv_08; // [long  ,   12] 개인수량                        StartPos 9, Length 12

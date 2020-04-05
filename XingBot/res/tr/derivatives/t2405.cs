@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물/옵션 호가잔량 비율 차트 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t2405InBlock
+    internal struct _t2405InBlock
     {
         public string focode; // [string,    8] 단축코드                        StartPos 0, Length 8
         public string bgubun; // [string,    1] 분구분                          StartPos 9, Length 1
@@ -18,7 +12,7 @@ namespace XingBot.res.tr.derivatives
         public string cts_time; // [string,    6] 시간CTS                         StartPos 25, Length 6
     }
 
-    struct _t2405OutBlock
+    internal struct _t2405OutBlock
     {
         public double mdvolume; // [double,   12] 매도체결수량                    StartPos 0, Length 12
         public long mdchecnt; // [long  ,    8] 매도체결건수                    StartPos 13, Length 8
@@ -27,7 +21,7 @@ namespace XingBot.res.tr.derivatives
         public string cts_time; // [string,    6] 시간CTS                         StartPos 44, Length 6
     }
 
-    struct _t2405OutBlock1
+    internal struct _t2405OutBlock1
     {
         public string time; // [string,    6] 시간                            StartPos 0, Length 6
         public float price; // [float ,  6.2] 현재가                          StartPos 7, Length 6

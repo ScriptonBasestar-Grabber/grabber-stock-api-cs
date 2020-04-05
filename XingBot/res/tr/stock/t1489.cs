@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 예상체결량상위조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1489InBlock
+    internal struct _t1489InBlock
     {
         public string gubun; // [string,    1] 거래소구분                      StartPos 0, Length 1
         public string jgubun; // [string,    1] 장구분                          StartPos 2, Length 1
@@ -18,12 +12,12 @@ namespace XingBot.res.tr
         public long yevolume; // [long  ,   12] 예상체결량                      StartPos 40, Length 12
     }
 
-    struct _t1489OutBlock
+    internal struct _t1489OutBlock
     {
         public long idx; // [long  ,    4] IDX                             StartPos 0, Length 4
     }
 
-    struct _t1489OutBlock1
+    internal struct _t1489OutBlock1
     {
         public string hname; // [string,   20] 한글명                          StartPos 0, Length 20
         public long price; // [long  ,    8] 현재가                          StartPos 21, Length 8

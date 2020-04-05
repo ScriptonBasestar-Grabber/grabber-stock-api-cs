@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물옵션 CME 주문체결내역 조회 ( SERVICE=CCEAQ06000,HEADTYPE=B,CREATOR=김효종,CREDATE=2012/04/17 17:48:18 )
-    struct _CCEAQ06000InBlock1
+    internal struct _CCEAQ06000InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string ChoicInptTpCode; // [ChoicInptTpCode,    1] 선택입력구분                    StartPos 5, Length 1
@@ -24,7 +18,7 @@ namespace XingBot.res.tr.derivatives
         public string StnlnSeqTp; // [StnlnSeqTp,    1] 정렬순서구분                    StartPos 77, Length 1
     }
 
-    struct _CCEAQ06000OutBlock1
+    internal struct _CCEAQ06000OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string ChoicInptTpCode; // [ChoicInptTpCode,    1] 선택입력구분                    StartPos 5, Length 1
@@ -41,7 +35,7 @@ namespace XingBot.res.tr.derivatives
         public string StnlnSeqTp; // [StnlnSeqTp,    1] 정렬순서구분                    StartPos 77, Length 1
     }
 
-    struct _CCEAQ06000OutBlock2
+    internal struct _CCEAQ06000OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm; // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -49,7 +43,7 @@ namespace XingBot.res.tr.derivatives
         public long FutsExecQty; // [FutsExecQty  ,   16] 선물체결수량                    StartPos 61, Length 16
     }
 
-    struct _CCEAQ06000OutBlock3
+    internal struct _CCEAQ06000OutBlock3
     {
         public string AcntNo1; // [AcntNo1,   20] 계좌번호1                       StartPos 0, Length 20
         public string OrdDt; // [OrdDt,    8] 주문일                          StartPos 20, Length 8

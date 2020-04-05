@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // CME야간선물 시간대별투자자매매추이 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t2813InBlock
+    internal struct _t2813InBlock
     {
         public string gubun1; // [string,    1] 수량구분                        StartPos 0, Length 1
         public string gubun2; // [string,    1] 전일분구분                      StartPos 2, Length 1
@@ -17,7 +11,7 @@ namespace XingBot.res.tr.derivatives
         public string gubun3; // [string,    1] 직전대비구분(C:직전대비)        StartPos 23, Length 1
     }
 
-    struct _t2813OutBlock
+    internal struct _t2813OutBlock
     {
         public string cts_time; // [string,    8] CTSTIME                         StartPos 0, Length 8
         public string tjjcode_08; // [string,    4] 개인투자자코드                  StartPos 9, Length 4
@@ -82,7 +76,7 @@ namespace XingBot.res.tr.derivatives
         public long svolume_00; // [long  ,   12] 사모펀드순매수                  StartPos 680, Length 12
     }
 
-    struct _t2813OutBlock1
+    internal struct _t2813OutBlock1
     {
         public string time; // [string,    8] 시간                            StartPos 0, Length 8
         public long sv_08; // [long  ,   12] 개인순매수                      StartPos 9, Length 12

@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // ETFLP호가 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1906InBlock
+    internal struct _t1906InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    struct _t1906OutBlock
+    internal struct _t1906OutBlock
     {
         public string hname; // [string,   20] 한글명                          StartPos 0, Length 20
         public long price; // [long  ,    8] 현재가                          StartPos 21, Length 8

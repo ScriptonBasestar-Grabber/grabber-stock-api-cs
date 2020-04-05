@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 주문가능 수량/금액 조회 ( SERVICE=CEXAQ21200,HEADTYPE=B,CREATOR=이시종,CREDATE=2012/07/06 14:21:09 )
-    struct _CEXAQ21200InBlock1
+    internal struct _CEXAQ21200InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -21,7 +15,7 @@ namespace XingBot.res.tr.derivatives
         public string ErxPrcCndiTpCode; // [ErxPrcCndiTpCode,    1] 유렉스가격조건구분코드          StartPos 95, Length 1
     }
 
-    struct _CEXAQ21200OutBlock1
+    internal struct _CEXAQ21200OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -35,7 +29,7 @@ namespace XingBot.res.tr.derivatives
         public string ErxPrcCndiTpCode; // [ErxPrcCndiTpCode,    1] 유렉스가격조건구분코드          StartPos 95, Length 1
     }
 
-    struct _CEXAQ21200OutBlock2
+    internal struct _CEXAQ21200OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm; // [AcntNm,   40] 계좌명                          StartPos 5, Length 40

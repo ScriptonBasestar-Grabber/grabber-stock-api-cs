@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 주식 잔고2 ( ATTR,TUXCODE=T0424,HEADTYPE=D )
-    struct _t0424InBlock
+    internal struct _t0424InBlock
     {
         public string accno; // [string,   11] 계좌번호                        StartPos 0, Length 11
         public string passwd; // [string,    8] 비밀번호                        StartPos 12, Length 8
@@ -18,7 +12,7 @@ namespace XingBot.res.tr
         public string cts_expcode; // [string,   22] CTS_종목번호                    StartPos 29, Length 22
     }
 
-    struct _t0424OutBlock
+    internal struct _t0424OutBlock
     {
         public long sunamt; // [long  ,   18] 추정순자산                      StartPos 0, Length 18
         public long dtsunik; // [long  ,   18] 실현손익                        StartPos 19, Length 18
@@ -29,7 +23,7 @@ namespace XingBot.res.tr
         public long tdtsunik; // [long  ,   18] 평가손익                        StartPos 118, Length 18
     }
 
-    struct _t0424OutBlock1
+    internal struct _t0424OutBlock1
     {
         public string expcode; // [string,   12] 종목번호                        StartPos 0, Length 12
         public string jangb; // [string,   10] 잔고구분                        StartPos 13, Length 10

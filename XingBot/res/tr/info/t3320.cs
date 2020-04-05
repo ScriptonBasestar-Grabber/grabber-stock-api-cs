@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.info
+﻿namespace XingBot.res
 {
     // FNG_요약 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t3320InBlock
+    internal struct _t3320InBlock
     {
         public string gicode; // [string,    7] 종목코드                        StartPos 0, Length 7
     }
 
-    struct _t3320OutBlock
+    internal struct _t3320OutBlock
     {
         public string upgubunnm; // [string,   20] 업종구분명                      StartPos 0, Length 20
         public string sijangcd; // [string,    1] 시장구분                        StartPos 21, Length 1
@@ -37,7 +31,7 @@ namespace XingBot.res.tr.info
         public long jnilclose; // [long  ,    8] 전일종가                        StartPos 480, Length 8
     }
 
-    struct _t3320OutBlock1
+    internal struct _t3320OutBlock1
     {
         public string gicode; // [string,    7] 기업코드                        StartPos 0, Length 7
         public string gsym; // [string,    6] 결산년월                        StartPos 8, Length 6

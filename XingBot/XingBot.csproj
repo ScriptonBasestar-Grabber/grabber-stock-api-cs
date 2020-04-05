@@ -85,6 +85,7 @@
     <Compile Include="real\etc\RealEvents_NWS.cs" />
     <Compile Include="real\etc\RealEvents_JIF.cs" />
     <Compile Include="real\info\RealEvents_MK2.cs" />
+    <Compile Include="real\RealEventsData.cs" />
     <Compile Include="real\stock\RealEvents_YS3.cs" />
     <Compile Include="real\stock\RealEvents_YK3.cs" />
     <Compile Include="real\stock\RealEvents_YJ_.cs" />
@@ -106,7 +107,8 @@
     <Compile Include="real\stock\RealEvents_OK_.cs" />
     <Compile Include="QueryEvents_t9907.cs" />
     <Compile Include="QueryEvents_t9942.cs" />
-    <Compile Include="QueryEvents_t8424.cs" />
+    <Compile Include="tr\sector\QueryEvents_t8419.cs" />
+    <Compile Include="tr\sector\QueryEvents_t8424.cs" />
     <Compile Include="QueryEvents_t8435.cs" />
     <Compile Include="QueryEvents_t8433.cs" />
     <Compile Include="QueryEvents_t8432.cs" />
@@ -202,11 +204,11 @@
     <Compile Include="res\real\DVI.cs" />
     <Compile Include="res\real\FC0.cs" />
     <Compile Include="res\real\FH0.cs" />
-    <Compile Include="res\tr\category\t4203.cs" />
-    <Compile Include="res\tr\category\t8417.cs" />
-    <Compile Include="res\tr\category\t8418.cs" />
-    <Compile Include="res\tr\category\t8419.cs" />
-    <Compile Include="res\tr\category\t8424.cs" />
+    <Compile Include="res\tr\sector\t4203.cs" />
+    <Compile Include="res\tr\sector\t8417.cs" />
+    <Compile Include="res\tr\sector\t8418.cs" />
+    <Compile Include="res\tr\sector\t8419.cs" />
+    <Compile Include="res\tr\sector\t8424.cs" />
     <Compile Include="res\tr\derivatives\CCEAQ01100.cs" />
     <Compile Include="res\tr\derivatives\CCEAQ06000.cs" />
     <Compile Include="res\tr\derivatives\CCEAQ10100.cs" />
@@ -297,7 +299,7 @@
     <Compile Include="res\tr\elw\t1973.cs" />
     <Compile Include="res\tr\elw\t1974.cs" />
     <Compile Include="res\tr\etc\t0167.cs" />
-    <Compile Include="res\tr\category\t1514.cs" />
+    <Compile Include="res\tr\sector\t1514.cs" />
     <Compile Include="res\tr\info\t3102.cs" />
     <Compile Include="res\tr\info\t3202.cs" />
     <Compile Include="res\tr\info\t3320.cs" />
@@ -398,7 +400,6 @@
     <Compile Include="res\tr\stock\t8411.cs" />
     <Compile Include="res\tr\stock\t8412.cs" />
     <Compile Include="res\tr\stock\t8413.cs" />
-    <Compile Include="res\tr\stock\t8424.cs" />
     <Compile Include="res\tr\stock\t8425.cs" />
     <Compile Include="res\tr\stock\t8430.cs" />
     <Compile Include="res\tr\elw\t8431.cs" />
@@ -425,11 +426,12 @@
     <Compile Include="QueryEvents_t8436.cs" />
     <Compile Include="QueryEvents_t1981.cs" />
     <Compile Include="real\RealEvents.cs" />
-    <Compile Include="QueryEvents.cs" />
+    <Compile Include="tr\QueryEvents.cs" />
     <Compile Include="res\real\B7_.cs" />
     <Compile Include="res\real\BMT.cs" />
     <Compile Include="res\real\BM_.cs" />
     <Compile Include="res\real\C01.cs" />
+    <Compile Include="tr\QueryEventsData.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="XA_DATASETLib">
@@ -468,7 +470,13 @@
     <None Include="res\real.yaml" />
     <None Include="res\tr.yaml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="tr\derivatives\" />
+    <Folder Include="tr\elw\" />
+    <Folder Include="tr\etc\" />
+    <Folder Include="tr\info\" />
+    <Folder Include="tr\stock\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

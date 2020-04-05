@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 외인기관별종목별동항 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1717InBlock
+    internal struct _t1717InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string gubun; // [string,    1] 구분(0:일간순매수1:기간누적순매 StartPos 7, Length 1
@@ -15,7 +9,7 @@ namespace XingBot.res.tr
         public string todt; // [string,    8] 종료일자                        StartPos 18, Length 8
     }
 
-    struct _t1717OutBlock
+    internal struct _t1717OutBlock
     {
         public string date; // [string,    8] 일자                            StartPos 0, Length 8
         public long close; // [long  ,    8] 종가                            StartPos 9, Length 8

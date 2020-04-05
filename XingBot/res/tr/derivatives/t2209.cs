@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물/옵션 틱분별 체결조회 차트 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t2209InBlock
+    internal struct _t2209InBlock
     {
         public string focode; // [string,    8] 단축코드                        StartPos 0, Length 8
         public string cgubun; // [string,    1] 챠트구분                        StartPos 9, Length 1
@@ -15,7 +9,7 @@ namespace XingBot.res.tr.derivatives
         public string cnt; // [string,    3] 조회건수                        StartPos 15, Length 3
     }
 
-    struct _t2209OutBlock1
+    internal struct _t2209OutBlock1
     {
         public string chetime; // [string,   10] 시간                            StartPos 0, Length 10
         public float price; // [float ,  6.2] 현재가                          StartPos 11, Length 6

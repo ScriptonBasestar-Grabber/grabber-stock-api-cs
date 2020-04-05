@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물옵션 일별 계좌손익내역 ( SERVICE=CFOEQ82600,HEADTYPE=B,CREATOR=황규석,CREDATE=2013/01/06 17:48:51 ) 
-    struct _CFOEQ82600InBlock1
+    internal struct _CFOEQ82600InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -19,7 +13,7 @@ namespace XingBot.res.tr.derivatives
         public string FnoBalEvalTpCode; // [FnoBalEvalTpCode,    1] 선물옵션잔고평가구분코드        StartPos 51, Length 1
     }
 
-    struct _CFOEQ82600OutBlock1
+    internal struct _CFOEQ82600OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -31,7 +25,7 @@ namespace XingBot.res.tr.derivatives
         public string FnoBalEvalTpCode; // [FnoBalEvalTpCode,    1] 선물옵션잔고평가구분코드        StartPos 51, Length 1
     }
 
-    struct _CFOEQ82600OutBlock2
+    internal struct _CFOEQ82600OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long FutsAdjstDfamt; // [FutsAdjstDfamt  ,   16] 선물정산차금                    StartPos 5, Length 16
@@ -43,7 +37,7 @@ namespace XingBot.res.tr.derivatives
         public string AcntNm; // [AcntNm,   40] 계좌명                          StartPos 101, Length 40
     }
 
-    struct _CFOEQ82600OutBlock3
+    internal struct _CFOEQ82600OutBlock3
     {
         public string QryDt; // [QryDt,    8] 조회일                          StartPos 0, Length 8
         public long DpstgTotamt; // [DpstgTotamt  ,   16] 예탁총액                        StartPos 8, Length 16

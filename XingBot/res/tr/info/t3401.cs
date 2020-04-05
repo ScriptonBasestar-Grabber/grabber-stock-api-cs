@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.info
+﻿namespace XingBot.res
 {
     // 투자의견 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t3401InBlock
+    internal struct _t3401InBlock
     {
         public string shcode; // [string,    9] 종목코드                        StartPos 0, Length 9
         public string gubun1; // [string,    1] 구분                            StartPos 10, Length 1
@@ -15,7 +9,7 @@ namespace XingBot.res.tr.info
         public string cts_date; // [string,    8] IDXDATE                         StartPos 16, Length 8
     }
 
-    struct _t3401OutBlock
+    internal struct _t3401OutBlock
     {
         public string cts_date; // [string,    8] IDXDATE                         StartPos 0, Length 8
         public long price; // [long  ,    8] 현재가                          StartPos 9, Length 8
@@ -26,7 +20,7 @@ namespace XingBot.res.tr.info
         public long value; // [long  ,   12] 거래대금                        StartPos 49, Length 12
     }
 
-    struct _t3401OutBlock1
+    internal struct _t3401OutBlock1
     {
         public string shcode; // [string,    9] 종목코드                        StartPos 0, Length 9
         public string tradno; // [string,    3] 회원사코드                      StartPos 10, Length 3

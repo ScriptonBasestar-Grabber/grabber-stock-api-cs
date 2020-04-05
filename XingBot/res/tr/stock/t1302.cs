@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 주식 분별 주가 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1302InBlock
+    internal struct _t1302InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
         public string gubun; // [string,    1] 작업구분                        StartPos 7, Length 1
@@ -15,12 +9,12 @@ namespace XingBot.res.tr
         public string cnt; // [string,    3] 건수                            StartPos 16, Length 3
     }
 
-    struct _t1302OutBlock
+    internal struct _t1302OutBlock
     {
         public string cts_time; // [string,    6] 시간CTS                         StartPos 0, Length 6
     }
 
-    struct _t1302OutBlock1
+    internal struct _t1302OutBlock1
     {
         public string chetime; // [string,    6] 시간                            StartPos 0, Length 6
         public long close; // [long  ,    8] 종가                            StartPos 7, Length 8

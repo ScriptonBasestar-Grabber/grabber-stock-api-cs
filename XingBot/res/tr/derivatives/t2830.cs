@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 시세 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t2830InBlock
+    internal struct _t2830InBlock
     {
         public string focode; // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    struct _t2830OutBlock
+    internal struct _t2830OutBlock
     {
         public string hname; // [string,   20] 한글명                          StartPos 0, Length 20
         public float price; // [float ,  6.2] 현재가                          StartPos 21, Length 6

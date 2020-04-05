@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 시간대별 예상체결가 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1486InBlock
+    internal struct _t1486InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
         public string cts_time; // [string,   10] 시간CTS                         StartPos 7, Length 10
         public string cnt; // [string,    4] 조회건수                        StartPos 18, Length 4
     }
 
-    struct _t1486OutBlock
+    internal struct _t1486OutBlock
     {
         public string cts_time; // [string,   10] 시간CTS                         StartPos 0, Length 10
     }
 
-    struct _t1486OutBlock1
+    internal struct _t1486OutBlock1
     {
         public string chetime; // [string,    8] 시간                            StartPos 0, Length 8
         public long price; // [long  ,    8] 예상체결가                      StartPos 9, Length 8

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 상/하한가 직전 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1427InBlock
+    internal struct _t1427InBlock
     {
         public string qrygb; // [string,    1] 조회구분                        StartPos 0, Length 1
         public string gubun; // [string,    1] 구분                            StartPos 2, Length 1
@@ -21,13 +15,13 @@ namespace XingBot.res.tr
         public string jshex; // [string,    1] 전일상하한제외                  StartPos 59, Length 1
     }
 
-    struct _t1427OutBlock
+    internal struct _t1427OutBlock
     {
         public long cnt; // [long  ,    4] CNT                             StartPos 0, Length 4
         public long idx; // [long  ,    4] IDX                             StartPos 5, Length 4
     }
 
-    struct _t1427OutBlock1
+    internal struct _t1427OutBlock1
     {
         public string hname; // [string,   20] 한글명                          StartPos 0, Length 20
         public long price; // [long  ,    8] 현재가                          StartPos 21, Length 8

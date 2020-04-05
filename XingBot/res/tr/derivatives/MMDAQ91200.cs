@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 파생상품증거금율조회 ( SERVICE=MMDAQ91200,HEADTYPE=B,CREATOR=임정선,CREDATE=2014/09/03 15:16:28 )
-    struct _MMDAQ91200InBlock1
+    internal struct _MMDAQ91200InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string IsuLgclssCode; // [IsuLgclssCode,    2] 종목대분류코드                  StartPos 5, Length 2
         public string IsuMdclssCode; // [IsuMdclssCode,    2] 종목중분류코드                  StartPos 7, Length 2
     }
 
-    struct _MMDAQ91200OutBlock1
+    internal struct _MMDAQ91200OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string IsuLgclssCode; // [IsuLgclssCode,    2] 종목대분류코드                  StartPos 5, Length 2
         public string IsuMdclssCode; // [IsuMdclssCode,    2] 종목중분류코드                  StartPos 7, Length 2
     }
 
-    struct _MMDAQ91200OutBlock2
+    internal struct _MMDAQ91200OutBlock2
     {
         public string IsuSmclssCode; // [IsuSmclssCode,    3] 종목소분류코드                  StartPos 0, Length 3
         public string IsuMdclssCode; // [IsuMdclssCode,    2] 종목중분류코드                  StartPos 3, Length 2

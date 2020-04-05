@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res
+﻿namespace XingBot.res
 {
     // 기초자산리스트 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1981InBlock
+    internal struct _t1981InBlock
     {
         public string mkt_gb; // [string,    1] 시장구분(0:전체1:코스피2:코스닥 StartPos 0, Length 1
     }
 
-    struct _t1981OutBlock1
+    internal struct _t1981OutBlock1
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
         public string expcode; // [string,   12] 표준코드                        StartPos 7, Length 12

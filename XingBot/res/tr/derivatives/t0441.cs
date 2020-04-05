@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물/옵션 잔고평가(이동평균) ( ATTR,TUXCODE=T0441,HEADTYPE=D )
-    struct _t0441InBlock
+    internal struct _t0441InBlock
     {
         public string accno; // [string,   11] 계좌번호                        StartPos 0, Length 11
         public string passwd; // [string,    8] 비밀번호                        StartPos 12, Length 8
@@ -15,7 +9,7 @@ namespace XingBot.res.tr.derivatives
         public string cts_medocd; // [string,    1] CTS_매매구분                    StartPos 30, Length 1
     }
 
-    struct _t0441OutBlock
+    internal struct _t0441OutBlock
     {
         public long tdtsunik; // [long  ,   18] 매매손익합계                    StartPos 0, Length 18
         public string cts_expcode; // [string,    8] CTS_종목번호                    StartPos 19, Length 8
@@ -24,7 +18,7 @@ namespace XingBot.res.tr.derivatives
         public long tsunik; // [long  ,   18] 평가손익                        StartPos 49, Length 18
     }
 
-    struct _t0441OutBlock1
+    internal struct _t0441OutBlock1
     {
         public string expcode; // [string,    8] 종목번호                        StartPos 0, Length 8
         public string medosu; // [string,    4] 구분                            StartPos 9, Length 4

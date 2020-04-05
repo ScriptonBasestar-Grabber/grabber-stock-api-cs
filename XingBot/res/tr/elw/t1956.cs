@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.elw
+﻿namespace XingBot.res
 {
     // ELW 현재가(확정지급액) 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1956InBlock
+    internal struct _t1956InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    struct _t1956OutBlock
+    internal struct _t1956OutBlock
     {
         public string hname; // [string,   40] 한글명                          StartPos 0, Length 40
         public string chetime; // [string,   10] 체결시간                        StartPos 41, Length 10
@@ -97,7 +91,7 @@ namespace XingBot.res.tr.elw
         public float givemoney; // [float ,  8.3] 확정지급액                      StartPos 914, Length 8
     }
 
-    struct _t1956OutBlock1
+    internal struct _t1956OutBlock1
     {
         public string bskcode; // [string,    6] 기초자산코드                    StartPos 0, Length 6
         public long bskbno; // [long  ,    3] 기초자산비율                    StartPos 7, Length 3

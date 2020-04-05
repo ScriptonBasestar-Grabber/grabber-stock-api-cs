@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 옵션 전광판 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t2301InBlock
+    internal struct _t2301InBlock
     {
         public string yyyymm; // [string,    6] 월물                            StartPos 0, Length 6
         public string gubun; // [string,    1] 미니구분(M:미니G:정규)          StartPos 7, Length 1
     }
 
-    struct _t2301OutBlock
+    internal struct _t2301OutBlock
     {
         public long histimpv; // [long  ,    4] 역사적변동성                    StartPos 0, Length 4
         public long jandatecnt; // [long  ,    4] 옵션잔존일                      StartPos 5, Length 4
@@ -27,7 +21,7 @@ namespace XingBot.res.tr.derivatives
         public string gmshcode; // [string,    8] 근월물선물코드                  StartPos 60, Length 8
     }
 
-    struct _t2301OutBlock1
+    internal struct _t2301OutBlock1
     {
         public float actprice; // [float ,  6.2] 행사가                          StartPos 0, Length 6
         public string optcode; // [string,    8] 콜옵션코드                      StartPos 7, Length 8
@@ -63,7 +57,7 @@ namespace XingBot.res.tr.derivatives
         public float value; // [float ,   12] 거래대금                        StartPos 257, Length 12
     }
 
-    struct _t2301OutBlock2
+    internal struct _t2301OutBlock2
     {
         public float actprice; // [float ,  6.2] 행사가                          StartPos 0, Length 6
         public string optcode; // [string,    8] 풋옵션코드                      StartPos 7, Length 8

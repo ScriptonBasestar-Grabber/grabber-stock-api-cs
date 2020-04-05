@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 현물계좌예수금 주문가능금액 총평가2 ( SERVICE=CSPAQ22200,HEADTYPE=B,CREATOR=송우석,CREDATE=2020/02/25 08:21:10 )
-    struct _CSPAQ22200InBlock1
+    internal struct _CSPAQ22200InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string MgmtBrnNo; // [MgmtBrnNo,    3] 관리지점번호                    StartPos 5, Length 3
@@ -16,7 +10,7 @@ namespace XingBot.res.tr
         public string BalCreTp; // [BalCreTp,    1] 잔고생성구분                    StartPos 36, Length 1
     }
 
-    struct _CSPAQ22200OutBlock1
+    internal struct _CSPAQ22200OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string MgmtBrnNo; // [MgmtBrnNo,    3] 관리지점번호                    StartPos 5, Length 3
@@ -25,7 +19,7 @@ namespace XingBot.res.tr
         public string BalCreTp; // [BalCreTp,    1] 잔고생성구분                    StartPos 36, Length 1
     }
 
-    struct _CSPAQ22200OutBlock2
+    internal struct _CSPAQ22200OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string BrnNm; // [BrnNm,   40] 지점명                          StartPos 5, Length 40

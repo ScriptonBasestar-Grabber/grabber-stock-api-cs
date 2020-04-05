@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 기간별 주가 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1305InBlock
+    internal struct _t1305InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
         public long dwmcode; // [long  ,    1] 일주월구분                      StartPos 7, Length 1
@@ -16,14 +10,14 @@ namespace XingBot.res.tr
         public long cnt; // [long  ,    4] 건수                            StartPos 23, Length 4
     }
 
-    struct _t1305OutBlock
+    internal struct _t1305OutBlock
     {
         public long cnt; // [long  ,    4] CNT                             StartPos 0, Length 4
         public string date; // [string,    8] 날짜                            StartPos 5, Length 8
         public long idx; // [long  ,    4] IDX                             StartPos 14, Length 4
     }
 
-    struct _t1305OutBlock1
+    internal struct _t1305OutBlock1
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public long open; // [long  ,    8] 시가                            StartPos 9, Length 8

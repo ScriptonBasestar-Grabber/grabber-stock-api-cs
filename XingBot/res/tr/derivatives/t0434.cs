@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물/옵션 체결/미체결 ( TUXCODE=T0434,HEADTYPE=D )
-    struct _t0434InBlock
+    internal struct _t0434InBlock
     {
         public string accno; // [accno,   11] 계좌번호                        StartPos 0, Length 11
         public string passwd; // [passwd,    8] 비밀번호                        StartPos 11, Length 8
@@ -17,12 +11,12 @@ namespace XingBot.res.tr.derivatives
         public string cts_ordno; // [cts_ordno,    7] CTS_주문번호                    StartPos 29, Length 7
     }
 
-    struct _t0434OutBlock
+    internal struct _t0434OutBlock
     {
         public string cts_ordno; // [cts_ordno,    7] CTS_주문번호                    StartPos 0, Length 7
     }
 
-    struct _t0434OutBlock1
+    internal struct _t0434OutBlock1
     {
         public long ordno; // [ordno  ,    7] 주문번호                        StartPos 0, Length 7
         public long orgordno; // [orgordno  ,    7] 원주문번호                      StartPos 7, Length 7

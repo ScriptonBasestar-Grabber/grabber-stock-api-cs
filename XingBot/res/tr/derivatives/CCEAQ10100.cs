@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물옵션 CME 주문가능 수량/금액 조회 ( SERVICE=CCEAQ10100,HEADTYPE=B,CREATOR=김효종,CREDATE=2012/04/17 13:38:18 )
-    struct _CCEAQ10100InBlock1
+    internal struct _CCEAQ10100InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -21,7 +15,7 @@ namespace XingBot.res.tr.derivatives
         public string FnoOrdprcPtnCode; // [FnoOrdprcPtnCode,    2] 선물옵션호가유형코드            StartPos 95, Length 2
     }
 
-    struct _CCEAQ10100OutBlock1
+    internal struct _CCEAQ10100OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -35,7 +29,7 @@ namespace XingBot.res.tr.derivatives
         public string FnoOrdprcPtnCode; // [FnoOrdprcPtnCode,    2] 선물옵션호가유형코드            StartPos 95, Length 2
     }
 
-    struct _CCEAQ10100OutBlock2
+    internal struct _CCEAQ10100OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm; // [AcntNm,   40] 계좌명                          StartPos 5, Length 40

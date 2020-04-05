@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 주식 체결/미체결 ( ATTR,TUXCODE=T0425,HEADTYPE=D )
-    struct _t0425InBlock
+    internal struct _t0425InBlock
     {
         public string accno; // [string,   11] 계좌번호                        StartPos 0, Length 11
         public string passwd; // [string,    8] 비밀번호                        StartPos 12, Length 8
@@ -18,7 +12,7 @@ namespace XingBot.res.tr
         public string cts_ordno; // [string,   10] 주문번호                        StartPos 40, Length 10
     }
 
-    struct _t0425OutBlock
+    internal struct _t0425OutBlock
     {
         public long tqty; // [long  ,   18] 총주문수량                      StartPos 0, Length 18
         public long tcheqty; // [long  ,   18] 총체결수량                      StartPos 19, Length 18
@@ -31,7 +25,7 @@ namespace XingBot.res.tr
         public string cts_ordno; // [string,   10] 주문번호                        StartPos 152, Length 10
     }
 
-    struct _t0425OutBlock1
+    internal struct _t0425OutBlock1
     {
         public long ordno; // [long  ,   10] 주문번호                        StartPos 0, Length 10
         public string expcode; // [string,   12] 종목번호                        StartPos 11, Length 12

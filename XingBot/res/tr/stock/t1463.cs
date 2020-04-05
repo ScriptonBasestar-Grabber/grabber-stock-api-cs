@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 거래대금상위 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1463InBlock
+    internal struct _t1463InBlock
     {
         public string gubun; // [string,    1] 구분                            StartPos 0, Length 1
         public string jnilgubun; // [string,    1] 전일구분                        StartPos 2, Length 1
@@ -19,12 +13,12 @@ namespace XingBot.res.tr
         public long jc_num2; // [long  ,   12] 대상제외2                       StartPos 53, Length 12
     }
 
-    struct _t1463OutBlock
+    internal struct _t1463OutBlock
     {
         public long idx; // [long  ,    4] IDX                             StartPos 0, Length 4
     }
 
-    struct _t1463OutBlock1
+    internal struct _t1463OutBlock1
     {
         public string hname; // [string,   20] 한글명                          StartPos 0, Length 20
         public long price; // [long  ,    8] 현재가                          StartPos 21, Length 8

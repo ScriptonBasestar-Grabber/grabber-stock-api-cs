@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 주식당일전일분틱조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1310InBlock
+    internal struct _t1310InBlock
     {
         public string daygb; // [string,    1] 당일전일구분                    StartPos 0, Length 1
         public string timegb; // [string,    1] 분틱구분                        StartPos 2, Length 1
@@ -16,12 +10,12 @@ namespace XingBot.res.tr
         public string cts_time; // [string,   10] 시간CTS                         StartPos 16, Length 10
     }
 
-    struct _t1310OutBlock
+    internal struct _t1310OutBlock
     {
         public string cts_time; // [string,   10] 시간CTS                         StartPos 0, Length 10
     }
 
-    struct _t1310OutBlock1
+    internal struct _t1310OutBlock1
     {
         public string chetime; // [string,   10] 시간                            StartPos 0, Length 10
         public long price; // [long  ,    8] 현재가                          StartPos 11, Length 8

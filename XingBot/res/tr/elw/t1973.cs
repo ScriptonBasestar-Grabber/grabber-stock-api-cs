@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.elw
+﻿namespace XingBot.res
 {
     // ELW 시간대별 예상체결 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1973InBlock
+    internal struct _t1973InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
         public string cts_time; // [string,    8] 시간CTS                         StartPos 7, Length 8
     }
 
-    struct _t1973OutBlock
+    internal struct _t1973OutBlock
     {
         public string cts_time; // [string,    8] 시간CTS                         StartPos 0, Length 8
     }
 
-    struct _t1973OutBlock1
+    internal struct _t1973OutBlock1
     {
         public string chetime; // [string,    8] 시간                            StartPos 0, Length 8
         public long yeprice; // [long  ,    8] 예상체결가격                    StartPos 9, Length 8

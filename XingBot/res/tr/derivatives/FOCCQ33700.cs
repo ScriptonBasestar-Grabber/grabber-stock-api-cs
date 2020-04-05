@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물옵션 기간별 계좌 수익률 현황 ( SERVICE=FOCCQ33700,HEADTYPE=B,CREATOR=이석희,CREDATE=2013/01/08 10:45:28 )
-    struct _FOCCQ33700InBlock1
+    internal struct _FOCCQ33700InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -20,7 +14,7 @@ namespace XingBot.res.tr.derivatives
         public string PnlCalcTpCode; // [PnlCalcTpCode,    1] 손익산출구분코드                StartPos 52, Length 1
     }
 
-    struct _FOCCQ33700OutBlock1
+    internal struct _FOCCQ33700OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -33,7 +27,7 @@ namespace XingBot.res.tr.derivatives
         public string PnlCalcTpCode; // [PnlCalcTpCode,    1] 손익산출구분코드                StartPos 52, Length 1
     }
 
-    struct _FOCCQ33700OutBlock2
+    internal struct _FOCCQ33700OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm; // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -48,7 +42,7 @@ namespace XingBot.res.tr.derivatives
         public double ErnRat; // [ErnRat, 12.6] 수익률                          StartPos 173, Length 12
     }
 
-    struct _FOCCQ33700OutBlock3
+    internal struct _FOCCQ33700OutBlock3
     {
         public string TrdDt; // [TrdDt,    8] 거래일                          StartPos 0, Length 8
         public long FdDpsastAmt; // [FdDpsastAmt  ,   16] 기초예탁자산금액                StartPos 8, Length 16

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.elw
+﻿namespace XingBot.res
 {
     // ELW 전광판 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1964InBlock
+    internal struct _t1964InBlock
     {
         public string item; // [string,   12] 기초자산코드                    StartPos 0, Length 12
         public string issuercd; // [string,   12] 발행사                          StartPos 13, Length 12
@@ -22,7 +16,7 @@ namespace XingBot.res.tr.elw
         public string volume; // [string,   12] 거래량                          StartPos 57, Length 12
     }
 
-    struct _t1964OutBlock1
+    internal struct _t1964OutBlock1
     {
         public string shcode; // [string,    6] ELW코드                         StartPos 0, Length 6
         public string hname; // [string,   40] 종목명                          StartPos 7, Length 40

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.category
+﻿namespace XingBot.res
 {
     // 업종챠트(일주월) ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t8419InBlock
+    internal struct _t8419InBlock
     {
         public string shcode; // [string,    3] 단축코드                        StartPos 0, Length 3
         public string gubun; // [string,    1] 주기구분(2:일3:주4:월)          StartPos 4, Length 1
@@ -18,7 +12,7 @@ namespace XingBot.res.tr.category
         public string comp_yn; // [string,    1] 압축여부(Y:압축N:비압축)        StartPos 38, Length 1
     }
 
-    struct _t8419OutBlock
+    internal struct _t8419OutBlock
     {
         public string shcode; // [string,    3] 단축코드                        StartPos 0, Length 3
         public float jisiga; // [float ,  7.2] 전일시가                        StartPos 4, Length 7
@@ -38,7 +32,7 @@ namespace XingBot.res.tr.category
         public long rec_count; // [long  ,    7] 레코드카운트                    StartPos 120, Length 7
     }
 
-    struct _t8419OutBlock1
+    internal struct _t8419OutBlock1
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public float open; // [float ,  7.2] 시가                            StartPos 9, Length 7

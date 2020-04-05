@@ -2,9 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GrabberManager.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="root_path" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\eBEST\xingAPI</Value>
-    </Setting>
     <Setting Name="data_path" Type="System.String" Scope="Application">
       <Value Profile="(Default)">D:\tmp</Value>
     </Setting>

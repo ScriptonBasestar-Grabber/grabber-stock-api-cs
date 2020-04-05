@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 종목별프로그램매매동향 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1636InBlock
+    internal struct _t1636InBlock
     {
         public string gubun; // [string,    1] 구분                            StartPos 0, Length 1
         public string gubun1; // [string,    1] 금액수량구분                    StartPos 2, Length 1
@@ -16,12 +10,12 @@ namespace XingBot.res.tr
         public long cts_idx; // [long  ,    4] IDXCTS                          StartPos 13, Length 4
     }
 
-    struct _t1636OutBlock
+    internal struct _t1636OutBlock
     {
         public long cts_idx; // [long  ,    4] IDXCTS                          StartPos 0, Length 4
     }
 
-    struct _t1636OutBlock1
+    internal struct _t1636OutBlock1
     {
         public long rank; // [long  ,    8] 순위                            StartPos 0, Length 8
         public string hname; // [string,   20] 종목명                          StartPos 9, Length 20

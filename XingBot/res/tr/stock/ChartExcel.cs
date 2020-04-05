@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 챠트엑셀데이터조회 ( HEADTYPE=B )
-    struct _ChartExcelInBlock
+    internal struct _ChartExcelInBlock
     {
         public long indexid; // [indexid  ,   10] 지표ID                          StartPos 0, Length 10
         public string indexname; // [indexname,   40] 지표명                          StartPos 10, Length 40
@@ -21,14 +15,14 @@ namespace XingBot.res.tr
         public string IsReal; // [IsReal,    1] 실시간 데이터수신 자동등록 여부 StartPos 358, Length 1
     }
 
-    struct _ChartExcelOutBlock
+    internal struct _ChartExcelOutBlock
     {
         public long indexid; // [indexid  ,   10] 지표ID                          StartPos 0, Length 10
         public long rec_cnt; // [rec_cnt  ,    5] 레코드갯수                      StartPos 10, Length 5
         public long validdata_cnt; // [validdata_cnt  ,    2] 유효 데이터 컬럼 갯수           StartPos 15, Length 2
     }
 
-    struct _ChartExcelOutBlock1
+    internal struct _ChartExcelOutBlock1
     {
         public string date; // [date,    8] 일자                            StartPos 0, Length 8
         public string time; // [time,    6] 시간                            StartPos 8, Length 6

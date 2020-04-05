@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 현물계좌 잔고내역 조회(API) ( SERVICE=CSPAQ12300,HEADTYPE=B,CREATOR=이상은,CREDATE=2015/04/13 08:43:20 )
-    struct _CSPAQ12300InBlock1
+    internal struct _CSPAQ12300InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -18,7 +12,7 @@ namespace XingBot.res.tr
         public string UprcTpCode; // [UprcTpCode,    1] 단가구분                        StartPos 36, Length 1
     }
 
-    struct _CSPAQ12300OutBlock1
+    internal struct _CSPAQ12300OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -29,7 +23,7 @@ namespace XingBot.res.tr
         public string UprcTpCode; // [UprcTpCode,    1] 단가구분                        StartPos 36, Length 1
     }
 
-    struct _CSPAQ12300OutBlock2
+    internal struct _CSPAQ12300OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string BrnNm; // [BrnNm,   40] 지점명                          StartPos 5, Length 40
@@ -111,7 +105,7 @@ namespace XingBot.res.tr
         public long LoanAmt; // [LoanAmt  ,   16] 대출금액                        StartPos 1125, Length 16
     }
 
-    struct _CSPAQ12300OutBlock3
+    internal struct _CSPAQ12300OutBlock3
     {
         public string IsuNo; // [IsuNo,   12] 종목번호                        StartPos 0, Length 12
         public string IsuNm; // [IsuNm,   40] 종목명                          StartPos 12, Length 40

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 체결강도추이 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1475InBlock
+    internal struct _t1475InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string vptype; // [string,    1] 상승하락                        StartPos 7, Length 1
@@ -18,14 +12,14 @@ namespace XingBot.res.tr
         public string gubun; // [string,    1] 조회구분                        StartPos 34, Length 1
     }
 
-    struct _t1475OutBlock
+    internal struct _t1475OutBlock
     {
         public long date; // [long  ,    8] 기준일자                        StartPos 0, Length 8
         public long time; // [long  ,    6] 기준시간                        StartPos 9, Length 6
         public long rankcnt; // [long  ,    3] 랭크카운터                      StartPos 16, Length 3
     }
 
-    struct _t1475OutBlock1
+    internal struct _t1475OutBlock1
     {
         public string datetime; // [string,   10] 일자                            StartPos 0, Length 10
         public long price; // [long  ,    8] 현재가                          StartPos 11, Length 8

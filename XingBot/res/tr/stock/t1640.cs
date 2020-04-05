@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 프로그램 매매종합 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1640InBlock
+    internal struct _t1640InBlock
     {
         public string gubun; // [string,    2] 구분                            StartPos 0, Length 2
     }
 
-    struct _t1640OutBlock
+    internal struct _t1640OutBlock
     {
         public long offervolume; // [long  ,    8] 매도수량                        StartPos 0, Length 8
         public long bidvolume; // [long  ,    8] 매수수량                        StartPos 9, Length 8

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.elw
+﻿namespace XingBot.res
 {
     // ELW 지표검색 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1955InBlock
+    internal struct _t1955InBlock
     {
         public string chkitem; // [string,    1] 기초자산chk구분                 StartPos 0, Length 1
         public string cbitem; // [string,   12] 기초자산코드                    StartPos 2, Length 12
@@ -63,12 +57,12 @@ namespace XingBot.res.tr.elw
         public string cbkoba; // [string,    1] 조기종료(0:전체1:조기종료만2:조 StartPos 292, Length 1
     }
 
-    struct _t1955OutBlock
+    internal struct _t1955OutBlock
     {
         public long cnt; // [long  ,    4] 종목갯수                        StartPos 0, Length 4
     }
 
-    struct _t1955OutBlock1
+    internal struct _t1955OutBlock1
     {
         public string hname; // [string,   40] 종목명                          StartPos 0, Length 40
         public string shcode; // [string,    6] 종목코드                        StartPos 41, Length 6

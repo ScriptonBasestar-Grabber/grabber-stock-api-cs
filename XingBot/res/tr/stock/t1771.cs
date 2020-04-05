@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 종목별회원사추이 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1771InBlock
+    internal struct _t1771InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string tradno; // [string,    3] 거래원코드                      StartPos 7, Length 3
@@ -18,12 +12,12 @@ namespace XingBot.res.tr
         public string cnt; // [string,    3] 요청건수                        StartPos 36, Length 3
     }
 
-    struct _t1771OutBlock
+    internal struct _t1771OutBlock
     {
         public long cts_idx; // [long  ,    4] CTSIDX                          StartPos 0, Length 4
     }
 
-    struct _t1771OutBlock2
+    internal struct _t1771OutBlock2
     {
         public string traddate; // [string,    8] 날짜                            StartPos 0, Length 8
         public string tradtime; // [string,    8] 시간                            StartPos 9, Length 8

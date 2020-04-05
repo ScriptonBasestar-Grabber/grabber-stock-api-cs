@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 관리/불성실/투자유의조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1404InBlock
+    internal struct _t1404InBlock
     {
         public string gubun; // [string,    1] 구분                            StartPos 0, Length 1
         public string jongchk; // [string,    1] 종목체크                        StartPos 2, Length 1
         public string cts_shcode; // [string,    6] 종목코드_CTS                    StartPos 4, Length 6
     }
 
-    struct _t1404OutBlock
+    internal struct _t1404OutBlock
     {
         public string cts_shcode; // [string,    6] 종목코드_CTS                    StartPos 0, Length 6
     }
 
-    struct _t1404OutBlock1
+    internal struct _t1404OutBlock1
     {
         public string hname; // [string,   20] 한글명                          StartPos 0, Length 20
         public long price; // [long  ,    8] 현재가                          StartPos 21, Length 8

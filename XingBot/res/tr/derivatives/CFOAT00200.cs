@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물옵션 정정주문 ( SERVICE=CFOAT00200,ENCRYPT,SIGNATURE,HEADTYPE=B,CREATOR=이인희,CREDATE=2012/03/12 13:31:21 )
-    struct _CFOAT00200InBlock1
+    internal struct _CFOAT00200InBlock1
     {
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 0, Length 20
         public string Pwd; // [Pwd,    8] 비밀번호                        StartPos 20, Length 8
@@ -18,7 +12,7 @@ namespace XingBot.res.tr.derivatives
         public long MdfyQty; // [MdfyQty  ,   16] 정정수량                        StartPos 67, Length 16
     }
 
-    struct _CFOAT00200OutBlock1
+    internal struct _CFOAT00200OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string OrdMktCode; // [OrdMktCode,    2] 주문시장코드                    StartPos 5, Length 2
@@ -44,7 +38,7 @@ namespace XingBot.res.tr.derivatives
         public long FundOrdNo; // [FundOrdNo  ,   10] 펀드주문번호                    StartPos 204, Length 10
     }
 
-    struct _CFOAT00200OutBlock2
+    internal struct _CFOAT00200OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrdNo; // [OrdNo  ,   10] 주문번호                        StartPos 5, Length 10

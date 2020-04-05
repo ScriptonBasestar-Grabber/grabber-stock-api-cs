@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물옵션 CME 정상주문 ( SERVICE=CCEAT00100,HEADTYPE=B,CREATOR=이호섭,CREDATE=2012/04/10 10:02:33 )
-    struct _CCEAT00100InBlock1
+    internal struct _CCEAT00100InBlock1
     {
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 0, Length 20
         public string Pwd; // [Pwd,    8] 비밀번호                        StartPos 20, Length 8
@@ -18,7 +12,7 @@ namespace XingBot.res.tr.derivatives
         public long OrdQty; // [OrdQty  ,   16] 주문수량                        StartPos 58, Length 16
     }
 
-    struct _CCEAT00100OutBlock1
+    internal struct _CCEAT00100OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string OrdMktCode; // [OrdMktCode,    2] 주문시장코드                    StartPos 5, Length 2
@@ -45,7 +39,7 @@ namespace XingBot.res.tr.derivatives
         public long FundOrdNo; // [FundOrdNo  ,   10] 펀드주문번호                    StartPos 205, Length 10
     }
 
-    struct _CCEAT00100OutBlock2
+    internal struct _CCEAT00100OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrdNo; // [OrdNo  ,   10] 주문번호                        StartPos 5, Length 10

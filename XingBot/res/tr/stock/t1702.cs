@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 외인/기관 종목별동향 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1702InBlock
+    internal struct _t1702InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string todt; // [string,    8] 종료일자                        StartPos 7, Length 8
@@ -18,13 +12,13 @@ namespace XingBot.res.tr
         public long cts_idx; // [long  ,    4] CTSIDX                          StartPos 31, Length 4
     }
 
-    struct _t1702OutBlock
+    internal struct _t1702OutBlock
     {
         public long cts_idx; // [long  ,    4] CTSIDX                          StartPos 0, Length 4
         public string cts_date; // [string,    8] CTSDATE                         StartPos 5, Length 8
     }
 
-    struct _t1702OutBlock1
+    internal struct _t1702OutBlock1
     {
         public string date; // [string,    8] 일자                            StartPos 0, Length 8
         public long close; // [long  ,    8] 종가                            StartPos 9, Length 8

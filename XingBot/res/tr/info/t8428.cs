@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.info
+﻿namespace XingBot.res
 {
     // 증시주변자금추이 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t8428InBlock
+    internal struct _t8428InBlock
     {
         public string fdate; // [string,    8] from일자                        StartPos 0, Length 8
         public string tdate; // [string,    8] to일자                          StartPos 9, Length 8
@@ -17,13 +11,13 @@ namespace XingBot.res.tr.info
         public string cnt; // [string,    3] 조회건수                        StartPos 33, Length 3
     }
 
-    struct _t8428OutBlock
+    internal struct _t8428OutBlock
     {
         public string date; // [string,    8] 날짜CTS                         StartPos 0, Length 8
         public long idx; // [long  ,    4] IDX                             StartPos 9, Length 4
     }
 
-    struct _t8428OutBlock1
+    internal struct _t8428OutBlock1
     {
         public string date; // [string,    8] 일자                            StartPos 0, Length 8
         public float jisu; // [float ,  7.2] 지수                            StartPos 9, Length 7

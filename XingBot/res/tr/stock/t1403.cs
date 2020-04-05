@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 신규상장종목조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1403InBlock
+    internal struct _t1403InBlock
     {
         public string gubun; // [string,    1] 구분                            StartPos 0, Length 1
         public string styymm; // [string,    6] 시작상장월                      StartPos 2, Length 6
@@ -15,12 +9,12 @@ namespace XingBot.res.tr
         public long idx; // [long  ,    4] IDX                             StartPos 16, Length 4
     }
 
-    struct _t1403OutBlock
+    internal struct _t1403OutBlock
     {
         public long idx; // [long  ,    4] IDX                             StartPos 0, Length 4
     }
 
-    struct _t1403OutBlock1
+    internal struct _t1403OutBlock1
     {
         public string hname; // [string,   20] 한글명                          StartPos 0, Length 20
         public long price; // [long  ,    8] 현재가                          StartPos 21, Length 8

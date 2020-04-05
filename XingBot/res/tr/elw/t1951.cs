@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.elw
+﻿namespace XingBot.res
 {
     // ELW 시간대별 체결조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1951InBlock
+    internal struct _t1951InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
         public long cvolume; // [long  ,   12] 특이거래량                      StartPos 7, Length 12
@@ -16,12 +10,12 @@ namespace XingBot.res.tr.elw
         public string cts_time; // [string,    8] 시간CTS                         StartPos 30, Length 8
     }
 
-    struct _t1951OutBlock
+    internal struct _t1951OutBlock
     {
         public string cts_time; // [string,    8] 시간CTS                         StartPos 0, Length 8
     }
 
-    struct _t1951OutBlock1
+    internal struct _t1951OutBlock1
     {
         public string chetime; // [string,    8] 시간                            StartPos 0, Length 8
         public long price; // [long  ,    8] 현재가                          StartPos 9, Length 8

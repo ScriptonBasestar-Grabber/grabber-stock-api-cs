@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 기간별 프로그램 매매추이 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1633InBlock
+    internal struct _t1633InBlock
     {
         public string gubun; // [string,    1] 시장구분                        StartPos 0, Length 1
         public string gubun1; // [string,    1] 금액수량구분                    StartPos 2, Length 1
@@ -19,13 +13,13 @@ namespace XingBot.res.tr
         public string date; // [string,    8] 날짜                            StartPos 28, Length 8
     }
 
-    struct _t1633OutBlock
+    internal struct _t1633OutBlock
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public long idx; // [long  ,    4] IDX                             StartPos 9, Length 4
     }
 
-    struct _t1633OutBlock1
+    internal struct _t1633OutBlock1
     {
         public string date; // [string,    8] 일자                            StartPos 0, Length 8
         public float jisu; // [float ,  6.2] KP200                           StartPos 9, Length 6

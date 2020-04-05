@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 업종현재가 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1511InBlock
+    internal struct _t1511InBlock
     {
         public string upcode; // [string,    3] 업종코드                        StartPos 0, Length 3
     }
 
-    struct _t1511OutBlock
+    internal struct _t1511OutBlock
     {
         public string gubun; // [string,    1] 업종구분                        StartPos 0, Length 1
         public string hname; // [string,   20] 업종명                          StartPos 2, Length 20

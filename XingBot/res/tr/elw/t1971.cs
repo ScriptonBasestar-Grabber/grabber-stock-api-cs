@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.elw
+﻿namespace XingBot.res
 {
     // ELW 현재가 호가조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1971InBlock
+    internal struct _t1971InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    struct _t1971OutBlock
+    internal struct _t1971OutBlock
     {
         public string hname; // [string,   40] 한글명                          StartPos 0, Length 40
         public long price; // [long  ,    8] 현재가                          StartPos 41, Length 8

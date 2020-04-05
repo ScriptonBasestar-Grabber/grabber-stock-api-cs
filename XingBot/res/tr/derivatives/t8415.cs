@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물/옵션챠트(N분) ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t8415InBlock
+    internal struct _t8415InBlock
     {
         public string shcode; // [string,    8] 단축코드                        StartPos 0, Length 8
         public long ncnt; // [long  ,    4] 단위(n분)                       StartPos 9, Length 4
@@ -22,7 +16,7 @@ namespace XingBot.res.tr.derivatives
         public string comp_yn; // [string,    1] 압축여부(Y:압축N:비압축)        StartPos 73, Length 1
     }
 
-    struct _t8415OutBlock
+    internal struct _t8415OutBlock
     {
         public string shcode; // [string,    8] 단축코드                        StartPos 0, Length 8
         public float jisiga; // [float ,  6.2] 전일시가                        StartPos 9, Length 6
@@ -44,7 +38,7 @@ namespace XingBot.res.tr.derivatives
         public long rec_count; // [long  ,    7] 레코드카운트                    StartPos 129, Length 7
     }
 
-    struct _t8415OutBlock1
+    internal struct _t8415OutBlock1
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public string time; // [string,   10] 시간                            StartPos 9, Length 10

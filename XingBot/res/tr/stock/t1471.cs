@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 시간대별호가잔량추이 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1471InBlock
+    internal struct _t1471InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string gubun; // [string,    2] 분구분                          StartPos 7, Length 2
@@ -15,7 +9,7 @@ namespace XingBot.res.tr
         public string cnt; // [string,    3] 자료개수                        StartPos 17, Length 3
     }
 
-    struct _t1471OutBlock
+    internal struct _t1471OutBlock
     {
         public string time; // [string,    6] 시간CTS                         StartPos 0, Length 6
         public long price; // [long  ,    8] 현재가                          StartPos 7, Length 8
@@ -25,7 +19,7 @@ namespace XingBot.res.tr
         public long volume; // [long  ,   12] 누적거래량                      StartPos 34, Length 12
     }
 
-    struct _t1471OutBlock1
+    internal struct _t1471OutBlock1
     {
         public string time; // [string,    6] 체결시간                        StartPos 0, Length 6
         public long preoffercha1; // [long  ,   12] 메도증감                        StartPos 7, Length 12

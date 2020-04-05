@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 투자자 매매종합(차트) ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1664InBlock
+    internal struct _t1664InBlock
     {
         public string mgubun; // [string,    1] 시장구분                        StartPos 0, Length 1
         public string vagubun; // [string,    1] 금액수량구분                    StartPos 2, Length 1
@@ -15,7 +9,7 @@ namespace XingBot.res.tr
         public string cnt; // [string,    3] 조회건수                        StartPos 6, Length 3
     }
 
-    struct _t1664OutBlock1
+    internal struct _t1664OutBlock1
     {
         public string dt; // [string,    8] 일자시간                        StartPos 0, Length 8
         public double tjj01; // [double,   12] 증권순매수                      StartPos 9, Length 12

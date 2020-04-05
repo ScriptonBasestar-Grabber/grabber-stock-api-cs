@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 시가총액상위 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1444InBlock
+    internal struct _t1444InBlock
     {
         public string upcode; // [string,    3] 업종코드                        StartPos 0, Length 3
         public long idx; // [long  ,    4] IDX                             StartPos 4, Length 4
     }
 
-    struct _t1444OutBlock
+    internal struct _t1444OutBlock
     {
         public long idx; // [long  ,    4] IDX                             StartPos 0, Length 4
     }
 
-    struct _t1444OutBlock1
+    internal struct _t1444OutBlock1
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string hname; // [string,   20] 종목명                          StartPos 7, Length 20

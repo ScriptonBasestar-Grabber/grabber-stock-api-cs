@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물옵션 과거데이터시간대별조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t8427InBlock
+    internal struct _t8427InBlock
     {
         public string fo_gbn; // [string,    1] 선물옵션구분                    StartPos 0, Length 1
         public string yyyy; // [string,    4] 조회년도                        StartPos 2, Length 4
@@ -21,14 +15,14 @@ namespace XingBot.res.tr.derivatives
         public string time; // [string,    6] 시간                            StartPos 42, Length 6
     }
 
-    struct _t8427OutBlock
+    internal struct _t8427OutBlock
     {
         public string focode; // [string,    8] 선물옵션코드                    StartPos 0, Length 8
         public string date; // [string,    8] 날짜                            StartPos 9, Length 8
         public string time; // [string,    6] 시간                            StartPos 18, Length 6
     }
 
-    struct _t8427OutBlock1
+    internal struct _t8427OutBlock1
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public string time; // [string,    6] 시간                            StartPos 9, Length 6

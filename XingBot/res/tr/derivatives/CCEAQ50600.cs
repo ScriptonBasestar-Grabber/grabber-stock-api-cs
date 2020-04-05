@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물옵션 CME 계좌잔고 및 평가현황 ( SERVICE=CCEAQ50600,HEADTYPE=B,CREATOR=김승환,CREDATE=2012/05/01 12:18:45 )
-    struct _CCEAQ50600InBlock1
+    internal struct _CCEAQ50600InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -16,7 +10,7 @@ namespace XingBot.res.tr.derivatives
         public string FutsPrcEvalTp; // [FutsPrcEvalTp,    1] 선물가격평가구분                StartPos 34, Length 1
     }
 
-    struct _CCEAQ50600OutBlock1
+    internal struct _CCEAQ50600OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -25,7 +19,7 @@ namespace XingBot.res.tr.derivatives
         public string FutsPrcEvalTp; // [FutsPrcEvalTp,    1] 선물가격평가구분                StartPos 34, Length 1
     }
 
-    struct _CCEAQ50600OutBlock2
+    internal struct _CCEAQ50600OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -55,7 +49,7 @@ namespace XingBot.res.tr.derivatives
         public long MnyoutAmt; // [MnyoutAmt  ,   16] 출금금액                        StartPos 412, Length 16
     }
 
-    struct _CCEAQ50600OutBlock3
+    internal struct _CCEAQ50600OutBlock3
     {
         public string FnoIsuNo; // [FnoIsuNo,   12] 선물옵션종목번호                StartPos 0, Length 12
         public string IsuNm; // [IsuNm,   40] 종목명                          StartPos 12, Length 40

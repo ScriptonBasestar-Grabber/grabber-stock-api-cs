@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.elw
+﻿namespace XingBot.res
 {
     // ELW 현재가(거래원) 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1972InBlock
+    internal struct _t1972InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    struct _t1972OutBlock
+    internal struct _t1972OutBlock
     {
         public string hname; // [string,   40] 한글명                          StartPos 0, Length 40
         public string expcode; // [string,   12] 표준코드                        StartPos 41, Length 12

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
 // 선물/옵션 시간대별 체결조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t2201InBlock
+    internal struct _t2201InBlock
     {
         public string focode; // [string,    8] 단축코드                        StartPos 0, Length 8
         public long cvolume; // [long  ,   12] 특이거래량                      StartPos 9, Length 12
@@ -16,12 +10,12 @@ namespace XingBot.res.tr.derivatives
         public string cts_time; // [string,   10] 시간CTS                         StartPos 32, Length 10
     }
 
-    struct _t2201OutBlock
+    internal struct _t2201OutBlock
     {
         public string cts_time; // [string,   10] 시간CTS                         StartPos 0, Length 10
     }
 
-    struct _t2201OutBlock1
+    internal struct _t2201OutBlock1
     {
         public string chetime; // [string,   10] 시간                            StartPos 0, Length 10
         public float price; // [float ,  6.2] 현재가                          StartPos 11, Length 6

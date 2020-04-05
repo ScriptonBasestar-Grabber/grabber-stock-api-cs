@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.info
+﻿namespace XingBot.res
 {
     // 해외실시간지수 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t3518InBlock
+    internal struct _t3518InBlock
     {
         public string kind; // [string,    1] 종목종류                        StartPos 0, Length 1
         public string symbol; // [string,   16] SYMBOL                          StartPos 2, Length 16
@@ -18,13 +12,13 @@ namespace XingBot.res.tr.info
         public string cts_time; // [string,    6] CTS_TIME                        StartPos 39, Length 6
     }
 
-    struct _t3518OutBlock
+    internal struct _t3518OutBlock
     {
         public string cts_date; // [string,    8] CTS_DATE                        StartPos 0, Length 8
         public string cts_time; // [string,    6] CTS_TIME                        StartPos 9, Length 6
     }
 
-    struct _t3518OutBlock1
+    internal struct _t3518OutBlock1
     {
         public string date; // [string,    8] 일자                            StartPos 0, Length 8
         public string time; // [string,    8] 시간                            StartPos 9, Length 8

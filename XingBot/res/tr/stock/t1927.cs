@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 공매도일별추이 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1927InBlock
+    internal struct _t1927InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string date; // [string,    8] 일자                            StartPos 7, Length 8
@@ -15,12 +9,12 @@ namespace XingBot.res.tr
         public string edate; // [string,    8] 종료일자                        StartPos 25, Length 8
     }
 
-    struct _t1927OutBlock
+    internal struct _t1927OutBlock
     {
         public string date; // [string,    8] 일자CTS                         StartPos 0, Length 8
     }
 
-    struct _t1927OutBlock1
+    internal struct _t1927OutBlock1
     {
         public string date; // [string,    8] 일자                            StartPos 0, Length 8
         public long price; // [long  ,    8] 현재가                          StartPos 9, Length 8

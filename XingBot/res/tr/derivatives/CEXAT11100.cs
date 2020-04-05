@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 정상주문 ( SERVICE=CEXAT11100,HEADTYPE=B,CREATOR=이시종,CREDATE=2012/06/27 20:48:05 )
-    struct _CEXAT11100InBlock1
+    internal struct _CEXAT11100InBlock1
     {
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 0, Length 20
         public string Pwd; // [Pwd,    8] 비밀번호                        StartPos 20, Length 8
@@ -18,7 +12,7 @@ namespace XingBot.res.tr.derivatives
         public long OrdQty; // [OrdQty  ,   16] 주문수량                        StartPos 57, Length 16
     }
 
-    struct _CEXAT11100OutBlock1
+    internal struct _CEXAT11100OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -32,7 +26,7 @@ namespace XingBot.res.tr.derivatives
         public string CommdaCode; // [CommdaCode,    2] 통신매체코드                    StartPos 103, Length 2
     }
 
-    struct _CEXAT11100OutBlock2
+    internal struct _CEXAT11100OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrdNo; // [OrdNo  ,   10] 주문번호                        StartPos 5, Length 10

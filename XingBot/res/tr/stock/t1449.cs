@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 가격대별 매매비중 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1449InBlock
+    internal struct _t1449InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
         public string dategb; // [string,    1] 일자구분                        StartPos 7, Length 1
     }
 
-    struct _t1449OutBlock
+    internal struct _t1449OutBlock
     {
         public long price; // [long  ,    8] 현재가                          StartPos 0, Length 8
         public string sign; // [string,    1] 전일대비구분                    StartPos 9, Length 1
@@ -24,7 +18,7 @@ namespace XingBot.res.tr
         public long mdvolume; // [long  ,   12] 매도체결량                      StartPos 53, Length 12
     }
 
-    struct _t1449OutBlock1
+    internal struct _t1449OutBlock1
     {
         public long price; // [long  ,    8] 체결가                          StartPos 0, Length 8
         public string sign; // [string,    1] 전일대비구분                    StartPos 9, Length 1

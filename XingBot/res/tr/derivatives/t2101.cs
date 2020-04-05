@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 선물/옵션 현재가(시세) 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t2101InBlock
+    internal struct _t2101InBlock
     {
         public string focode; // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    struct _t2101OutBlock
+    internal struct _t2101OutBlock
     {
         public string hname; // [string,   20] 한글명                          StartPos 0, Length 20
         public float price; // [float ,  6.2] 현재가                          StartPos 21, Length 6

@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 종목별잔량/사전공시 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1638InBlock
+    internal struct _t1638InBlock
     {
         public string gubun1; // [string,    1] 구분                            StartPos 0, Length 1
         public string shcode; // [string,    6] 종목코드                        StartPos 2, Length 6
         public string gubun2; // [string,    1] 정렬                            StartPos 9, Length 1
     }
 
-    struct _t1638OutBlock
+    internal struct _t1638OutBlock
     {
         public long rank; // [long  ,    4] 순위                            StartPos 0, Length 4
         public string hname; // [string,   20] 한글명                          StartPos 5, Length 20

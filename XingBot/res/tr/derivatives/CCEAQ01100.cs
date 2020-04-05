@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr_derivatives
+﻿namespace XingBot.res.tr_derivatives
 {
     // 선물옵션 CME 매매거래현황 조회 ( SERVICE=CCEAQ01100,HEADTYPE=B,CREATOR=원종혁,CREDATE=2019/04/03 16:08:04 )
-    struct _CCEAQ01100InBlock1
+    internal struct _CCEAQ01100InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -17,7 +11,7 @@ namespace XingBot.res.tr_derivatives
         public string StnlnSeqTp; // [StnlnSeqTp,    1] 정렬순서구분                    StartPos 49, Length 1
     }
 
-    struct _CCEAQ01100OutBlock2
+    internal struct _CCEAQ01100OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm; // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -26,7 +20,7 @@ namespace XingBot.res.tr_derivatives
         public long CmsnAmtSumAmt; // [CmsnAmtSumAmt  ,   16] 수수료합계금액                  StartPos 77, Length 16
     }
 
-    struct _CCEAQ01100OutBlock3
+    internal struct _CCEAQ01100OutBlock3
     {
         public string BnsDt; // [BnsDt,    8] 매매일                          StartPos 0, Length 8
         public long OrdNo; // [OrdNo  ,   10] 주문번호                        StartPos 8, Length 10

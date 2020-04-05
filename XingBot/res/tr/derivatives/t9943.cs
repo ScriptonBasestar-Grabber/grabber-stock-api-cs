@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 지수선물마스터조회 API용 ( BLOCK,HEADTYPE=A )
     // t8432
-    struct _t9943InBlock
+    internal struct _t9943InBlock
     {
         public string gubun; // [string,    1] 구분                            StartPos 0, Length 1
     }
 
-    struct _t9943OutBlock
+    internal struct _t9943OutBlock
     {
         public string hname; // [string,   20] 종목명                          StartPos 0, Length 20
         public string shcode; // [string,    8] 단축코드                        StartPos 20, Length 8

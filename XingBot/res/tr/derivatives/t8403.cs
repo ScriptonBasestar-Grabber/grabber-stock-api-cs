@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // 주식선물 호가조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t8403InBlock
+    internal struct _t8403InBlock
     {
         public string shcode; // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    struct _t8403OutBlock
+    internal struct _t8403OutBlock
     {
         public string hname; // [string,   20] 종목명                          StartPos 0, Length 20
         public long price; // [long  ,    8] 현재가                          StartPos 21, Length 8

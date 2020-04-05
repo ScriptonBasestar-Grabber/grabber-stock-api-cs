@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res
+﻿namespace XingBot.res
 {
     // 지수선물마스터조회API용(t8432) ( block,headtype=A )
-    struct _t8432InBlock
+    internal struct _t8432InBlock
     {
         public string dummy; // [string,    1] Dummy                           StartPos 0, Length 1
     }
 
-    struct _t8432OutBlock
+    internal struct _t8432OutBlock
     {
         public string hname; // [string,   20] 종목명                          StartPos 0, Length 20
         public string shcode; // [string,    8] 단축코드                        StartPos 20, Length 8

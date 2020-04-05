@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.category
+﻿namespace XingBot.res
 {
     // 업종차트(틱/n틱) ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t8417InBlock
+    internal struct _t8417InBlock
     {
         public string shcode; // [string,    3] 단축코드                        StartPos 0, Length 3
         public long ncnt; // [long  ,    4] 단위(n틱)                       StartPos 4, Length 4
@@ -22,7 +16,7 @@ namespace XingBot.res.tr.category
         public string comp_yn; // [string,    1] 압축여부(Y:압축N:비압축)        StartPos 68, Length 1
     }
 
-    struct _t8417OutBlock
+    internal struct _t8417OutBlock
     {
         public string shcode; // [string,    3] 단축코드                        StartPos 0, Length 3
         public float jisiga; // [float ,  7.2] 전일시가                        StartPos 4, Length 7
@@ -42,7 +36,7 @@ namespace XingBot.res.tr.category
         public long rec_count; // [long  ,    7] 레코드카운트                    StartPos 118, Length 7
     }
 
-    struct _t8417OutBlock1
+    internal struct _t8417OutBlock1
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public string time; // [string,    6] 시간                            StartPos 9, Length 6

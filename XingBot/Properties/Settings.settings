@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="root_path" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\eBEST\xingAPI</Value>
     </Setting>
   </Settings>
 </SettingsFile>

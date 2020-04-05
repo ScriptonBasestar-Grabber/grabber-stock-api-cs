@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 예탁담보융자가능종목현황조회 ( SERVICE=CLNAQ00100,HEADTYPE=B,CREATOR=이성호,CREDATE=2012/01/10 15:45:49 )
-    struct _CLNAQ00100InBlock1
+    internal struct _CLNAQ00100InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string QryTp; // [QryTp,    1] 조회구분                        StartPos 5, Length 1
@@ -17,7 +11,7 @@ namespace XingBot.res.tr
         public string LoanTp; // [LoanTp,    1] 대출구분                        StartPos 21, Length 1
     }
 
-    struct _CLNAQ00100OutBlock1
+    internal struct _CLNAQ00100OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string QryTp; // [QryTp,    1] 조회구분                        StartPos 5, Length 1
@@ -27,7 +21,7 @@ namespace XingBot.res.tr
         public string LoanTp; // [LoanTp,    1] 대출구분                        StartPos 21, Length 1
     }
 
-    struct _CLNAQ00100OutBlock2
+    internal struct _CLNAQ00100OutBlock2
     {
         public string IsuNo; // [IsuNo,   12] 종목번호                        StartPos 0, Length 12
         public string IsuNm; // [IsuNm,   40] 종목명                          StartPos 12, Length 40
@@ -52,7 +46,7 @@ namespace XingBot.res.tr
         public double Rat02; // [Rat02, 19.8] 비율값                          StartPos 439, Length 19
     }
 
-    struct _CLNAQ00100OutBlock3
+    internal struct _CLNAQ00100OutBlock3
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long LrgMnyoutSumAmt; // [LrgMnyoutSumAmt  ,   16] 대출금합계금액                  StartPos 5, Length 16

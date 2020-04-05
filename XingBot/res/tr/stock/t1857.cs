@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // e종목검색(API용) ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1857InBlock
+    internal struct _t1857InBlock
     {
         public string sRealFlag; // [string,    1] 실시간구분(0:조회 1:실시간)     StartPos 0, Length 1
         public string sSearchFlag; // [string,    1] 종목검색구분(F:파일 S:서버)     StartPos 2, Length 1
         public string query_index; // [string,  256] 종목검색입력값                  StartPos 4, Length 256
     }
 
-    struct _t1857OutBlock
+    internal struct _t1857OutBlock
     {
         public long result_count; // [long  ,    5] 검색종목수                      StartPos 0, Length 5
         public string result_time; // [string,    6] 포착시간                        StartPos 6, Length 6
         public string AlertNum; // [string,   11] 실시간키                        StartPos 13, Length 11
     }
 
-    struct _t1857OutBlock1
+    internal struct _t1857OutBlock1
     {
         public string shcode; // [string,    7] 종목코드                        StartPos 0, Length 7
         public string hname; // [string,   40] 종목명                          StartPos 8, Length 40

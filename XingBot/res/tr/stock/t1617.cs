@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 투자자매매종합2 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1617InBlock
+    internal struct _t1617InBlock
     {
         public string gubun1; // [string,    1] 시장구분(1:코스피2:코스닥3:선물 StartPos 0, Length 1
         public string gubun2; // [string,    1] 수량금액구분(1:수량2:금액)      StartPos 2, Length 1
@@ -16,7 +10,7 @@ namespace XingBot.res.tr
         public string cts_time; // [string,    8] CTSTIME(연속키값-시간)          StartPos 15, Length 8
     }
 
-    struct _t1617OutBlock
+    internal struct _t1617OutBlock
     {
         public string cts_date; // [string,    8] CTSDATE                         StartPos 0, Length 8
         public string cts_time; // [string,    8] CTSTIME                         StartPos 9, Length 8
@@ -34,7 +28,7 @@ namespace XingBot.res.tr
         public long sv_01; // [long  ,   12] 증권순매수                      StartPos 161, Length 12
     }
 
-    struct _t1617OutBlock1
+    internal struct _t1617OutBlock1
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public string time; // [string,    8] 시간                            StartPos 9, Length 8

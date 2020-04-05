@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.derivatives
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 주문체결내역 조회 ( SERVICE=CEXAQ21100,HEADTYPE=B,CREATOR=이시종,CREDATE=2012/07/02 21:01:29 )
-    struct _CEXAQ21100InBlock1
+    internal struct _CEXAQ21100InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string ChoicInptTpCode; // [ChoicInptTpCode,    1] 선택입력구분                    StartPos 5, Length 1
@@ -17,7 +11,7 @@ namespace XingBot.res.tr.derivatives
         public string StnlnSeqTp; // [StnlnSeqTp,    1] 정렬순서구분                    StartPos 35, Length 1
     }
 
-    struct _CEXAQ21100OutBlock1
+    internal struct _CEXAQ21100OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string ChoicInptTpCode; // [ChoicInptTpCode,    1] 선택입력구분                    StartPos 5, Length 1
@@ -27,7 +21,7 @@ namespace XingBot.res.tr.derivatives
         public string StnlnSeqTp; // [StnlnSeqTp,    1] 정렬순서구분                    StartPos 35, Length 1
     }
 
-    struct _CEXAQ21100OutBlock2
+    internal struct _CEXAQ21100OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm; // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -35,7 +29,7 @@ namespace XingBot.res.tr.derivatives
         public long ExecQty; // [ExecQty  ,   16] 체결수량                        StartPos 61, Length 16
     }
 
-    struct _CEXAQ21100OutBlock3
+    internal struct _CEXAQ21100OutBlock3
     {
         public string AcntNo1; // [AcntNo1,   20] 계좌번호1                       StartPos 0, Length 20
         public string OrdDt; // [OrdDt,    8] 주문일                          StartPos 20, Length 8

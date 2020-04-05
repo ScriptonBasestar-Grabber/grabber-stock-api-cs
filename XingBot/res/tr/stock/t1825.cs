@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr
+﻿namespace XingBot.res.tr
 {
     // 종목Q클릭검색 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1825InBlock
+    internal struct _t1825InBlock
     {
         public string search_cd; // [string,    4] 검색코드                        StartPos 0, Length 4
         public string gubun; // [string,    1] 구분(0:전체1:코스피2:코스닥)    StartPos 5, Length 1
     }
 
-    struct _t1825OutBlock
+    internal struct _t1825OutBlock
     {
         public long JongCnt; // [long  ,    4] 검색종목수                      StartPos 0, Length 4
     }
 
-    struct _t1825OutBlock1
+    internal struct _t1825OutBlock1
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string hname; // [string,   20] 종목명                          StartPos 7, Length 20

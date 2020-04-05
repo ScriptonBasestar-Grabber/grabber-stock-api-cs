@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res
+﻿namespace XingBot.res
 {
     // ELW종목조회 ( BLOCK,HEADTYPE=A )
-    struct _t8431InBlock
+    internal struct _t8431InBlock
     {
         public string dummy; // [string,    1] Dummy                           StartPos 0, Length 1
     }
 
-    struct _t8431OutBlock
+    internal struct _t8431OutBlock
     {
         public string hname; // [string,   40] 종목명                          StartPos 0, Length 40
         public string shcode; // [string,    6] 단축코드                        StartPos 40, Length 6

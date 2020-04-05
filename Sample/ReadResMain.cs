@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -87,9 +88,69 @@ END_FUNCTION_MAP
 
 ";
 
+        static Result read(string resfile)
+        {
+            int euckrCodepage = 51949;
+            System.Text.Encoding utf8 = System.Text.Encoding.UTF8;
+            System.Text.Encoding euckr = System.Text.Encoding.GetEncoding(euckrCodepage);
+
+            string blockName;
+            Result result = new Result();
+            var lines = File.ReadAllLines(resfile, euckr);
+
+            for (var i = 0; i < lines.Length; i++)
+            {
+                if (lines[i].TrimStart().StartsWith(".Feed"))
+                {
+                    Console.WriteLine("Feed before " + lines[i]);
+                    var spline = Regex.Split(lines[i].Trim(), "[,\\s\t]+");
+                    result.Name = spline[2];
+                    result.Desc = spline[1];
+                    Console.WriteLine("feed after " + spline[2] + " " + spline[1]);
+                }
+                else if (lines[i].TrimStart().StartsWith("InBlock") || lines[i].TrimStart().StartsWith("OutBlock"))
+                {
+                    var spline = Regex.Split(lines[i].Trim(), "[,\\s\t]+");
+                    Block block = new Block { Name = spline[0], Desc = spline[1] };
+                    i++;
+                    if (lines[i].TrimStart().StartsWith("begin"))
+                    {
+                        i++;
+                        for (int j = i; j < lines.Length; j++)
+                        {
+                            if (lines[j].TrimStart().StartsWith("end"))
+                            {
+                                break;
+                            }
+                            var spline1 = Regex.Split(lines[i].Trim(), "[,\\s\t]+");
+                            block.rows.Add(new Row { Name = spline1[1], Desc = spline1[0], Length = spline1[4], DataType = spline1[3] });
+                        }
+                        Console.WriteLine(block.Name);
+                        result.Blocks.Add(block.Name, block);
+                    }
+                    else
+                    {
+                    }
+                }
+                else
+                {
+                }
+            }
+
+            return result;
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("============================Start================================");
-            
+            var result1 = read(@"C:\eBEST\xingAPI\Res\B7_.res");
+            Console.WriteLine("result1========================");
+            Console.WriteLine(result1.Name);
+            Console.WriteLine(string.Join(",", result1.Blocks));
+            Console.WriteLine(string.Join(",", result1.Blocks["InBlock"].rows));
+            // var result2 = read(@"C:\eBEST\xingAPI\Res\B7_.res");
+            // var result3 = read(@"C:\eBEST\xingAPI\Res\B7_.res");
+            // Console.WriteLine(result);
+        }
     }
 }

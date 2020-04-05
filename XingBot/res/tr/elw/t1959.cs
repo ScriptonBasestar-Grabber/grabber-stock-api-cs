@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XingBot.res.tr.elw
+﻿namespace XingBot.res
 {
     // LP 대상종목정보 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    struct _t1959InBlock
+    internal struct _t1959InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
     }
 
-    struct _t1959OutBlock1
+    internal struct _t1959OutBlock1
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string hname; // [string,   40] 종목명                          StartPos 7, Length 40
