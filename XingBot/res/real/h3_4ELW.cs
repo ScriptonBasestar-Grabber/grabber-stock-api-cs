@@ -1,12 +1,12 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // ELW호가잔량 ( ATTR, KEY=6, GROUP=1 )
-    struct _h3_4ELW_InBlock
+    public struct _h3_4ELW_InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    struct _h3_4ELW_OutBlock
+    public struct _h3_4ELW_OutBlock
     {
         public string hotime; // [string,    6] 호가시간                        StartPos 0, Length 6
         public long offerho1; // [long  ,    7] 매도호가1                       StartPos 7, Length 7
@@ -72,7 +72,7 @@
         public long totofferrem; // [long  ,    9] 총매도호가잔량                  StartPos 567, Length 9
         public long totbidrem; // [long  ,    9] 총매수호가잔량                  StartPos 577, Length 9
         public string donsigubun; // [string,    1] 동시호가구분                    StartPos 587, Length 1
-        public float spread; // [float ,  6.2] 스프레드                        StartPos 589, Length 6
+        public decimal spread; // [float ,  6.2] 스프레드                        StartPos 589, Length 6
         public string shcode; // [string,    6] 단축코드                        StartPos 596, Length 6
     }
 }

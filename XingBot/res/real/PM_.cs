@@ -1,12 +1,12 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // KOSPI프로그램매매전체집계 ( ATTR, KEY=1, GROUP=1 )
-    struct _PM__InBlock
+    public struct _PM__InBlock
     {
         public string gubun; // [string,    1] 구분값                          StartPos 0, Length 1
     }
 
-    struct _PM__OutBlock
+    public struct _PM__OutBlock
     {
         public string time; // [string,    6] 수신시간                        StartPos 0, Length 6
         public long cdhrem; // [long  ,    6] 차익매도호가 잔량               StartPos 7, Length 6
@@ -53,10 +53,10 @@
         public long djvalue; // [long  ,    8] 전체매도자기체결금액            StartPos 324, Length 8
         public long sjvalue; // [long  ,    8] 전체매수자기체결금액            StartPos 333, Length 8
         public long jval; // [long  ,    8] 전체자기순매수 금액             StartPos 342, Length 8
-        public float k200jisu; // [float ,  6.2] KOSPI200 지수                   StartPos 351, Length 6
+        public decimal k200jisu; // [float ,  6.2] KOSPI200 지수                   StartPos 351, Length 6
         public string k200sign; // [string,    1] KOSPI200 전일대비구분           StartPos 358, Length 1
-        public float change; // [float ,  6.2] KOSPI200 전일대비               StartPos 360, Length 6
-        public float k200basis; // [float ,  4.2] KOSPI200 베이시스               StartPos 367, Length 4
+        public decimal change; // [float ,  6.2] KOSPI200 전일대비               StartPos 360, Length 6
+        public decimal k200basis; // [float ,  4.2] KOSPI200 베이시스               StartPos 367, Length 4
         public long cdvolume; // [long  ,    6] 차익매도체결수량합계            StartPos 372, Length 6
         public long csvolume; // [long  ,    6] 차익매수체결수량합계            StartPos 379, Length 6
         public long cvol; // [long  ,    6] 차익순매수 수량합계             StartPos 386, Length 6

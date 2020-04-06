@@ -1,7 +1,7 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 선물옵션가정산예탁금상세 ( SERVICE=CFOEQ11100,HEADTYPE=B,CREATOR=김정현,CREDATE=2012/03/16 14:04:41 )
-    internal struct _CFOEQ11100InBlock1
+    public struct _CFOEQ11100InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -9,7 +9,7 @@
         public string BnsDt; // [BnsDt,    8] 매매일                          StartPos 33, Length 8
     }
 
-    internal struct _CFOEQ11100OutBlock1
+    public struct _CFOEQ11100OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -17,7 +17,7 @@
         public string BnsDt; // [BnsDt,    8] 매매일                          StartPos 33, Length 8
     }
 
-    internal struct _CFOEQ11100OutBlock2
+    public struct _CFOEQ11100OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm; // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -68,8 +68,8 @@
             DpsamtUtlfeeGivPrergAmt; // [DpsamtUtlfeeGivPrergAmt  ,   16] 예탁금이용료지급예정금액        StartPos 637, Length 16
 
         public long TaxAmt; // [TaxAmt  ,   16] 세금                            StartPos 653, Length 16
-        public double CsgnMgnrat; // [CsgnMgnrat,  7.2] 위탁증거금 비율                 StartPos 669, Length 7
-        public double CsgnMnyMgnrat; // [CsgnMnyMgnrat,  7.2] 위탁증거금현금비율              StartPos 676, Length 7
+        public decimal CsgnMgnrat; // [CsgnMgnrat,  7.2] 위탁증거금 비율                 StartPos 669, Length 7
+        public decimal CsgnMnyMgnrat; // [CsgnMnyMgnrat,  7.2] 위탁증거금현금비율              StartPos 676, Length 7
         public long DpstgTotamtLackAmt; // [DpstgTotamtLackAmt  ,   16] 예탁총액부족금액(위탁증거금기준 StartPos 683, Length 16
         public long DpstgMnyLackAmt; // [DpstgMnyLackAmt  ,   16] 예탁현금부족금액(위탁증거금기준 StartPos 699, Length 16
         public long RealInAmt; // [RealInAmt  ,   16] 실입금액                        StartPos 715, Length 16

@@ -4,26 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XA_DATASETLib;
-using XingBot.res;
+using XingBot.real.res;
 
-namespace XingBot
+namespace XingBot.real
 {
-    public partial class RealEvents : _IXARealEvents
+    public partial class RealCtrl : _IXARealEvents
     {
         public void InBlock_CD0(string futcode)
         {
             string szTrCode = "CD0";
-            _RealDict[szTrCode].SetFieldData("InBlock", "futcode", futcode);
+            _realDict[szTrCode].SetFieldData("InBlock", "futcode", futcode);
         }
 
         private void OutBlock_CD0(string szTrCode)
         {
             _CD0_OutBlock outData;
-            outData.gubun = _RealDict[szTrCode].GetFieldData("OutBlock", "gubun");
-            outData.dy_gubun = _RealDict[szTrCode].GetFieldData("OutBlock", "dy_gubun");
-            outData.dy_uplmtprice = float.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "dy_uplmtprice"));
-            outData.dy_dnlmtprice = float.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "dy_dnlmtprice"));
-            outData.futcode = _RealDict[szTrCode].GetFieldData("OutBlock", "futcode");
+            outData.gubun = _realDict[szTrCode].GetFieldData("OutBlock", "gubun");
+            outData.dy_gubun = _realDict[szTrCode].GetFieldData("OutBlock", "dy_gubun");
+            outData.dy_uplmtprice = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "dy_uplmtprice"));
+            outData.dy_dnlmtprice = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "dy_dnlmtprice"));
+            outData.futcode = _realDict[szTrCode].GetFieldData("OutBlock", "futcode");
         }
     }
 }

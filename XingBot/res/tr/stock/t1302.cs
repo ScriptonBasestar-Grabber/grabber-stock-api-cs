@@ -1,7 +1,7 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 주식 분별 주가 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t1302InBlock
+    public struct _t1302InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
         public string gubun; // [string,    1] 작업구분                        StartPos 7, Length 1
@@ -9,19 +9,19 @@
         public string cnt; // [string,    3] 건수                            StartPos 16, Length 3
     }
 
-    internal struct _t1302OutBlock
+    public struct _t1302OutBlock
     {
         public string cts_time; // [string,    6] 시간CTS                         StartPos 0, Length 6
     }
 
-    internal struct _t1302OutBlock1
+    public struct _t1302OutBlock1
     {
         public string chetime; // [string,    6] 시간                            StartPos 0, Length 6
         public long close; // [long  ,    8] 종가                            StartPos 7, Length 8
         public string sign; // [string,    1] 전일대비구분                    StartPos 16, Length 1
         public long change; // [long  ,    8] 전일대비                        StartPos 18, Length 8
-        public float diff; // [float ,  6.2] 등락율                          StartPos 27, Length 6
-        public float chdegree; // [float ,  8.2] 체결강도                        StartPos 34, Length 8
+        public decimal diff; // [float ,  6.2] 등락율                          StartPos 27, Length 6
+        public decimal chdegree; // [float ,  8.2] 체결강도                        StartPos 34, Length 8
         public long mdvolume; // [long  ,   12] 매도체결수량                    StartPos 43, Length 12
         public long msvolume; // [long  ,   12] 매수체결수량                    StartPos 56, Length 12
         public long revolume; // [long  ,   12] 순매수체결량                    StartPos 69, Length 12

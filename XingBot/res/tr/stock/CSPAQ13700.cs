@@ -1,7 +1,7 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 현물계좌 주문체결내역 조회(API) ( SERVICE=CSPAQ13700,HEADTYPE=B,CREATOR=이상은,CREDATE=2015/04/13 08:39:53 )
-    internal struct _CSPAQ13700InBlock1
+    public struct _CSPAQ13700InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -16,7 +16,7 @@
         public string OrdPtnCode; // [OrdPtnCode,    2] 주문유형코드                    StartPos 68, Length 2
     }
 
-    internal struct _CSPAQ13700OutBlock1
+    public struct _CSPAQ13700OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -31,7 +31,7 @@
         public string OrdPtnCode; // [OrdPtnCode,    2] 주문유형코드                    StartPos 68, Length 2
     }
 
-    internal struct _CSPAQ13700OutBlock2
+    public struct _CSPAQ13700OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long SellExecAmt; // [SellExecAmt  ,   16] 매도체결금액                    StartPos 5, Length 16
@@ -42,7 +42,7 @@
         public long BuyOrdQty; // [BuyOrdQty  ,   16] 매수주문수량                    StartPos 85, Length 16
     }
 
-    internal struct _CSPAQ13700OutBlock3
+    public struct _CSPAQ13700OutBlock3
     {
         public string OrdDt; // [OrdDt,    8] 주문일                          StartPos 0, Length 8
         public string MgmtBrnNo; // [MgmtBrnNo,    3] 관리지점번호                    StartPos 8, Length 3
@@ -62,9 +62,9 @@
         public long MrcQty; // [MrcQty  ,   16] 정정취소수량                    StartPos 208, Length 16
         public long MrcAbleQty; // [MrcAbleQty  ,   16] 정정취소가능수량                StartPos 224, Length 16
         public long OrdQty; // [OrdQty  ,   16] 주문수량                        StartPos 240, Length 16
-        public double OrdPrc; // [OrdPrc, 15.2] 주문가격                        StartPos 256, Length 15
+        public decimal OrdPrc; // [OrdPrc, 15.2] 주문가격                        StartPos 256, Length 15
         public long ExecQty; // [ExecQty  ,   16] 체결수량                        StartPos 271, Length 16
-        public double ExecPrc; // [ExecPrc, 15.2] 체결가                          StartPos 287, Length 15
+        public decimal ExecPrc; // [ExecPrc, 15.2] 체결가                          StartPos 287, Length 15
         public string ExecTrxTime; // [ExecTrxTime,    9] 체결처리시각                    StartPos 302, Length 9
         public string LastExecTime; // [LastExecTime,    9] 최종체결시각                    StartPos 311, Length 9
         public string OrdprcPtnCode; // [OrdprcPtnCode,    2] 호가유형코드                    StartPos 320, Length 2

@@ -1,7 +1,7 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 주식 잔고2 ( ATTR,TUXCODE=T0424,HEADTYPE=D )
-    internal struct _t0424InBlock
+    public struct _t0424InBlock
     {
         public string accno; // [string,   11] 계좌번호                        StartPos 0, Length 11
         public string passwd; // [string,    8] 비밀번호                        StartPos 12, Length 8
@@ -12,7 +12,7 @@
         public string cts_expcode; // [string,   22] CTS_종목번호                    StartPos 29, Length 22
     }
 
-    internal struct _t0424OutBlock
+    public struct _t0424OutBlock
     {
         public long sunamt; // [long  ,   18] 추정순자산                      StartPos 0, Length 18
         public long dtsunik; // [long  ,   18] 실현손익                        StartPos 19, Length 18
@@ -23,7 +23,7 @@
         public long tdtsunik; // [long  ,   18] 평가손익                        StartPos 118, Length 18
     }
 
-    internal struct _t0424OutBlock1
+    public struct _t0424OutBlock1
     {
         public string expcode; // [string,   12] 종목번호                        StartPos 0, Length 12
         public string jangb; // [string,   10] 잔고구분                        StartPos 13, Length 10
@@ -46,11 +46,11 @@
         public string hname; // [string,   20] 종목명                          StartPos 300, Length 20
         public string marketgb; // [string,    1] 시장구분                        StartPos 321, Length 1
         public string jonggb; // [string,    1] 종목구분                        StartPos 323, Length 1
-        public float janrt; // [float , 10.2] 보유비중                        StartPos 325, Length 10
+        public decimal janrt; // [float , 10.2] 보유비중                        StartPos 325, Length 10
         public long price; // [long  ,    8] 현재가                          StartPos 336, Length 8
         public long appamt; // [long  ,   18] 평가금액                        StartPos 345, Length 18
         public long dtsunik; // [long  ,   18] 평가손익                        StartPos 364, Length 18
-        public float sunikrt; // [float , 10.2] 수익율                          StartPos 383, Length 10
+        public decimal sunikrt; // [float , 10.2] 수익율                          StartPos 383, Length 10
         public long fee; // [long  ,   10] 수수료                          StartPos 394, Length 10
         public long tax; // [long  ,   10] 제세금                          StartPos 405, Length 10
         public long sininter; // [long  ,   10] 신용이자                        StartPos 416, Length 10

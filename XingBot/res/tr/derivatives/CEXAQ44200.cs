@@ -1,7 +1,7 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // EUREX 야간옵션 기간주문체결조회 ( SERVICE=CEXAQ44200,HEADTYPE=B,CREATOR=,CREDATE=2012/11/08 17:10:28 )
-    internal struct _CEXAQ44200InBlock1
+    public struct _CEXAQ44200InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string ChoicInptTpCode; // [ChoicInptTpCode,    1] 선택입력구분                    StartPos 5, Length 1
@@ -15,7 +15,7 @@
         public string StnlnSeqTp; // [StnlnSeqTp,    1] 정렬순서구분                    StartPos 63, Length 1
     }
 
-    internal struct _CEXAQ44200OutBlock1
+    public struct _CEXAQ44200OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string ChoicInptTpCode; // [ChoicInptTpCode,    1] 선택입력구분                    StartPos 5, Length 1
@@ -29,16 +29,16 @@
         public string StnlnSeqTp; // [StnlnSeqTp,    1] 정렬순서구분                    StartPos 63, Length 1
     }
 
-    internal struct _CEXAQ44200OutBlock2
+    public struct _CEXAQ44200OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrdQty; // [OrdQty  ,   16] 주문수량                        StartPos 5, Length 16
         public long ExecQty; // [ExecQty  ,   16] 체결수량                        StartPos 21, Length 16
         public long UnercQty; // [UnercQty  ,   16] 미체결수량                      StartPos 37, Length 16
-        public double ExecPrc; // [ExecPrc, 15.2] 체결가                          StartPos 53, Length 15
+        public decimal ExecPrc; // [ExecPrc, 15.2] 체결가                          StartPos 53, Length 15
     }
 
-    internal struct _CEXAQ44200OutBlock3
+    public struct _CEXAQ44200OutBlock3
     {
         public string AcntNo1; // [AcntNo1,   20] 계좌번호1                       StartPos 0, Length 20
         public string AcntNm; // [AcntNm,   40] 계좌명                          StartPos 20, Length 40
@@ -54,12 +54,12 @@
         public string MrcTpNm; // [MrcTpNm,   10] 정정취소구분명                  StartPos 161, Length 10
         public string ErxPrcCndiTpCode; // [ErxPrcCndiTpCode,    1] 유렉스가격조건구분코드          StartPos 171, Length 1
         public string CodeNm; // [CodeNm,   40] 코드명                          StartPos 172, Length 40
-        public double OrdPrc; // [OrdPrc, 13.2] 주문가                          StartPos 212, Length 13
+        public decimal OrdPrc; // [OrdPrc, 13.2] 주문가                          StartPos 212, Length 13
         public long OrdQty; // [OrdQty  ,   16] 주문수량                        StartPos 225, Length 16
         public string FnoRjtRsnCode; // [FnoRjtRsnCode,    3] 선물옵션거부사유코드            StartPos 241, Length 3
         public string OrdTpNm; // [OrdTpNm,   10] 주문구분명                      StartPos 244, Length 10
         public string ExecTpNm; // [ExecTpNm,   10] 체결구분명                      StartPos 254, Length 10
-        public double ExecPrc; // [ExecPrc, 13.2] 체결가                          StartPos 264, Length 13
+        public decimal ExecPrc; // [ExecPrc, 13.2] 체결가                          StartPos 264, Length 13
         public long ExecQty; // [ExecQty  ,   16] 체결수량                        StartPos 277, Length 16
         public string ExecTime; // [ExecTime,    9] 체결시각                        StartPos 293, Length 9
         public long ExecNo; // [ExecNo  ,   10] 체결번호                        StartPos 302, Length 10

@@ -1,7 +1,7 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // EUREX 야간옵션 예탁금/통합잔고 조회 ( SERVICE=CEXAQ31200,HEADTYPE=B,CREATOR=이유리,CREDATE=2014/12/08 10:30:17 )
-    internal struct _CEXAQ31200InBlock1
+    public struct _CEXAQ31200InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -10,7 +10,7 @@
         public string FutsPrcEvalTp; // [FutsPrcEvalTp,    1] 선물가격평가구분                StartPos 34, Length 1
     }
 
-    internal struct _CEXAQ31200OutBlock1
+    public struct _CEXAQ31200OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -19,7 +19,7 @@
         public string FutsPrcEvalTp; // [FutsPrcEvalTp,    1] 선물가격평가구분                StartPos 34, Length 1
     }
 
-    internal struct _CEXAQ31200OutBlock2
+    public struct _CEXAQ31200OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -50,18 +50,18 @@
         public long FutsCmsnAmt; // [FutsCmsnAmt  ,   16] 선물수수료금액                  StartPos 428, Length 16
     }
 
-    internal struct _CEXAQ31200OutBlock3
+    public struct _CEXAQ31200OutBlock3
     {
         public string FnoIsuNo; // [FnoIsuNo,   12] 선물옵션종목번호                StartPos 0, Length 12
         public string IsuNm; // [IsuNm,   40] 종목명                          StartPos 12, Length 40
         public string BnsTpCode; // [BnsTpCode,    1] 매매구분                        StartPos 52, Length 1
         public string BnsTpNm; // [BnsTpNm,   10] 매매구분                        StartPos 53, Length 10
         public long UnsttQty; // [UnsttQty  ,   16] 미결제수량                      StartPos 63, Length 16
-        public double FnoAvrPrc; // [FnoAvrPrc, 19.8] 평균가                          StartPos 79, Length 19
-        public double NowPrc; // [NowPrc, 13.2] 현재가                          StartPos 98, Length 13
-        public double CmpPrc; // [CmpPrc, 13.2] 대비가                          StartPos 111, Length 13
+        public decimal FnoAvrPrc; // [FnoAvrPrc, 19.8] 평균가                          StartPos 79, Length 19
+        public decimal NowPrc; // [NowPrc, 13.2] 현재가                          StartPos 98, Length 13
+        public decimal CmpPrc; // [CmpPrc, 13.2] 대비가                          StartPos 111, Length 13
         public long EvalPnl; // [EvalPnl  ,   16] 평가손익                        StartPos 124, Length 16
-        public double PnlRat; // [PnlRat, 12.6] 손익률                          StartPos 140, Length 12
+        public decimal PnlRat; // [PnlRat, 12.6] 손익률                          StartPos 140, Length 12
         public long EvalAmt; // [EvalAmt  ,   16] 평가금액                        StartPos 152, Length 16
         public long LqdtAbleQty; // [LqdtAbleQty  ,   16] 청산가능수량                    StartPos 168, Length 16
     }

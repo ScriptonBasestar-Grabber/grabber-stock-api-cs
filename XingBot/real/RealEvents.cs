@@ -1,60 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.ComTypes;
 using XA_DATASETLib;
+using XingBot.real.Properties;
+using XingBot.real.res;
 
-namespace XingBot
+namespace XingBot.real
 {
-    public partial class RealEvents : _IXARealEvents
+    public delegate void InBlockReal(IXAReal query);
+    public class RealEvents
     {
-        private Dictionary<string, IXAReal> _RealDict = new Dictionary<string, IXAReal>();
-
-        public RealEvents(string[] codes)
+        private readonly IXAReal _ixa;
+        private readonly ResModel _resModel;
+        public RealEvents(string szTrCode, IXAReal query, Action<IXAReal> action)
         {
-            int dwCookie = 0;
-            IConnectionPoint icp;
-            IConnectionPointContainer icpc;
-            Guid IID_RealEvents = typeof(_IXARealEvents).GUID;
-
-            foreach (var code in codes)
-            {
-                // dwCookie = 0;
-                var realDict = new Dictionary<string, IXAReal>();
-                realDict[code] = new XAReal
-                {
-                    ResFileName = Properties.Settings.Default.root_path + @"\res\" + code + ".res"
-                };
-                icpc = (IConnectionPointContainer)realDict[code];
-                icpc.FindConnectionPoint(ref IID_RealEvents, out icp);
-                icp.Advise(this, out dwCookie);
-            }
-
-            Console.WriteLine("RealEvents 생성자완료");
+            this._ixa = query;
+            _resModel = ReadResFile.Read(Path.Combine(Settings.Default.root_path, szTrCode));
+            action(query);
         }
 
-        // Real
-        void _IXARealEvents.ReceiveRealData(string szTrCode)
+        private void OutBlock(string szTrCode)
         {
-            OutBlock_FC0(szTrCode);
-            if (szTrCode == "FC0")
+            foreach(Row row in _resModel.Blocks["OutBlock"].Rows)
             {
+                //TODO stream out
+                _ixa.GetFieldData("OutBlock", row.Name);
             }
-            else if (szTrCode == "FH0")
-            {
-            }
-            else if (szTrCode == "OC0")
-            {
-            }
-            else if (szTrCode == "OH0")
-            {
-            }
-        }
-
-        void _IXARealEvents.RecieveLinkData(string szLinkName, string szData, string szFiller)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

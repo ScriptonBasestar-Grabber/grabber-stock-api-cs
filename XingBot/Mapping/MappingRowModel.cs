@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace XingBot.Mapping
+namespace XingBot.real.Mapping
 {
     class MappingRowModel
     {

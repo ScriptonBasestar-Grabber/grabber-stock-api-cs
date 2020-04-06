@@ -1,13 +1,13 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 현물 정상주문 ( SERVICE=CSPAT00600,ENCRYPT,SIGNATURE,HEADTYPE=B,CREATOR=김기종,CREDATE=2011/12/07 09:23:39 )
-    internal struct _CSPAT00600InBlock1
+    public struct _CSPAT00600InBlock1
     {
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 0, Length 20
         public string InptPwd; // [InptPwd,    8] 입력비밀번호                    StartPos 20, Length 8
         public string IsuNo; // [IsuNo,   12] 종목번호                        StartPos 28, Length 12
         public long OrdQty; // [OrdQty  ,   16] 주문수량                        StartPos 40, Length 16
-        public double OrdPrc; // [OrdPrc, 13.2] 주문가                          StartPos 56, Length 13
+        public decimal OrdPrc; // [OrdPrc, 13.2] 주문가                          StartPos 56, Length 13
         public string BnsTpCode; // [BnsTpCode,    1] 매매구분                        StartPos 69, Length 1
         public string OrdprcPtnCode; // [OrdprcPtnCode,    2] 호가유형코드                    StartPos 70, Length 2
         public string MgntrnCode; // [MgntrnCode,    3] 신용거래코드                    StartPos 72, Length 3
@@ -15,14 +15,14 @@
         public string OrdCndiTpCode; // [OrdCndiTpCode,    1] 주문조건구분                    StartPos 83, Length 1
     }
 
-    internal struct _CSPAT00600OutBlock1
+    public struct _CSPAT00600OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
         public string InptPwd; // [InptPwd,    8] 입력비밀번호                    StartPos 25, Length 8
         public string IsuNo; // [IsuNo,   12] 종목번호                        StartPos 33, Length 12
         public long OrdQty; // [OrdQty  ,   16] 주문수량                        StartPos 45, Length 16
-        public double OrdPrc; // [OrdPrc, 13.2] 주문가                          StartPos 61, Length 13
+        public decimal OrdPrc; // [OrdPrc, 13.2] 주문가                          StartPos 61, Length 13
         public string BnsTpCode; // [BnsTpCode,    1] 매매구분                        StartPos 74, Length 1
         public string OrdprcPtnCode; // [OrdprcPtnCode,    2] 호가유형코드                    StartPos 75, Length 2
         public string PrgmOrdprcPtnCode; // [PrgmOrdprcPtnCode,    2] 프로그램호가유형코드            StartPos 77, Length 2
@@ -45,7 +45,7 @@
         public string CvrgTpCode; // [CvrgTpCode,    1] 반대매매구분                    StartPos 187, Length 1
     }
 
-    internal struct _CSPAT00600OutBlock2
+    public struct _CSPAT00600OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrdNo; // [OrdNo  ,   10] 주문번호                        StartPos 5, Length 10

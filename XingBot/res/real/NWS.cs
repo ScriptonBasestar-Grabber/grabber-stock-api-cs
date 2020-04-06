@@ -1,12 +1,12 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 실시간 뉴스 제목 패킷 ( KEY=6, GROUP=1 )
-    struct _NWS_InBlock
+    public struct _NWS_InBlock
     {
         public string nwcode; // [nwcode,    6] 뉴스코드                        StartPos 0, Length 6
     }
 
-    struct _NWS_OutBlock
+    public struct _NWS_OutBlock
     {
         public string date; // [date,    8] 날짜                            StartPos 0, Length 8
         public string time; // [time,    6] 시간                            StartPos 8, Length 6

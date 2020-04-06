@@ -13,7 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GrabberManager.model;
-using XingBot;
+using XingBot.real;
+using XingBot.real.tr;
 
 namespace GrabberManager
 {
@@ -41,9 +42,9 @@ namespace GrabberManager
             // (this.Parent).Children.Clear();
             if (_company == "xing")
             {
-                XingBot.SessionEvents session = new SessionEvents();
+                XingBot.real.SessionEvents session = new SessionEvents();
                 session.Login(TxtUserName.Text, TxtUserPass.Text, TxtCertPass.Text);
-                QueryCtrl queryEvents = new QueryCtrl(XingBot.Constants.QueryInitialCodes);
+                QueryCtrl queryEvents = new QueryCtrl(XingBot.real.Constants.QueryInitialCodes);
                 queryEvents.InBlock_t8436();
                 queryEvents.InBlock_t8425();
             } else if (_company == "cybos")

@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XingBot.res
+namespace XingBot.real.res
 {
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     // 시간외단일가VI발동해제 ( ATTR, KEY=6, GROUP=1 )
-    struct _DVI_InBlock
+    public struct _DVI_InBlock
     {
         public string shcode; // [string,    6] 단축코드(KEY)                   StartPos 0, Length 6
     }
 
-    struct _DVI_OutBlock
+    public struct _DVI_OutBlock
     {
         public string vi_gubun; // [string,    1] 구분(0:해제 1:정적발동 2:동적발 StartPos 0, Length 1
         public long svi_recprice; // [long  ,    8] 정적VI발동기준가격              StartPos 2, Length 8

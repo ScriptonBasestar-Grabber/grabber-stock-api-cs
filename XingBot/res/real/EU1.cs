@@ -1,11 +1,11 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // EUX체결 ( KEY=8, GROUP=1 )
-    struct _EU1_InBlock
+    public struct _EU1_InBlock
     {
     }
 
-    struct _EU1_OutBlock
+    public struct _EU1_OutBlock
     {
         public long lineseq; // [lineseq  ,   10] 라인일련번호                    StartPos 0, Length 10
         public string accno; // [accno,   11] 계좌번호                        StartPos 10, Length 11
@@ -67,12 +67,12 @@
         public long ordqty; // [ordqty  ,   16] 주문수량                        StartPos 408, Length 16
         public string hogatype; // [hogatype,    2] 호가유형코드                    StartPos 424, Length 2
         public string mmgb; // [mmgb,    2] 거래유형코드                    StartPos 426, Length 2
-        public double ordprc; // [ordprc, 13.2] 주문가격                        StartPos 428, Length 13
+        public decimal ordprc; // [ordprc, 13.2] 주문가격                        StartPos 428, Length 13
         public long unercqty; // [unercqty  ,   16] 미체결수량                      StartPos 441, Length 16
         public string commdacode; // [commdacode,    2] 통신매체                        StartPos 457, Length 2
         public string peeamtcode; // [peeamtcode,    2] 수수료합산코드                  StartPos 459, Length 2
         public string mgempno; // [mgempno,    9] 관리사원                        StartPos 461, Length 9
-        public double fnotrdunitamt; // [fnotrdunitamt, 19.8] 선물옵션거래단위금액            StartPos 470, Length 19
+        public decimal fnotrdunitamt; // [fnotrdunitamt, 19.8] 선물옵션거래단위금액            StartPos 470, Length 19
         public string trxtime; // [trxtime,    9] 처리시각                        StartPos 489, Length 9
         public string strtgcode; // [strtgcode,    6] 전략코드                        StartPos 498, Length 6
         public string grpId; // [grpId,   20] 그룹Id                          StartPos 504, Length 20
@@ -89,7 +89,7 @@
         public long orgordmrcqty; // [orgordmrcqty  ,   16] 원주문정정취소수량              StartPos 638, Length 16
         public string ctrcttime; // [ctrcttime,    8] 약정시각(체결시각)              StartPos 654, Length 8
         public string ctrctno; // [ctrctno,   10] 약정번호                        StartPos 662, Length 10
-        public double execprc; // [execprc, 13.2] 체결가격                        StartPos 672, Length 13
+        public decimal execprc; // [execprc, 13.2] 체결가격                        StartPos 672, Length 13
         public long execqty; // [execqty  ,   16] 체결수량                        StartPos 685, Length 16
         public long newqty; // [newqty  ,   16] 신규체결수량                    StartPos 701, Length 16
         public long qdtqty; // [qdtqty  ,   16] 청산체결수량                    StartPos 717, Length 16
@@ -100,13 +100,13 @@
         public long bnsplamt; // [bnsplamt  ,   16] 매매손익금액                    StartPos 782, Length 16
         public string fnoIsuno1; // [fnoIsuno1,    8] 선물옵션종목번호1               StartPos 798, Length 8
         public string bnstp1; // [bnstp1,    1] 매매구분1                       StartPos 806, Length 1
-        public double execprc1; // [execprc1, 13.2] 체결가1                         StartPos 807, Length 13
+        public decimal execprc1; // [execprc1, 13.2] 체결가1                         StartPos 807, Length 13
         public long newqty1; // [newqty1  ,   16] 신규체결수량1                   StartPos 820, Length 16
         public long qdtqty1; // [qdtqty1  ,   16] 청산체결수량1                   StartPos 836, Length 16
         public long allexecamt1; // [allexecamt1  ,   16] 전체체결금액1                   StartPos 852, Length 16
         public string fnoIsuno2; // [fnoIsuno2,    8] 선물옵션종목번호2               StartPos 868, Length 8
         public string bnstp2; // [bnstp2,    1] 매매구분2                       StartPos 876, Length 1
-        public double execprc2; // [execprc2, 13.2] 체결가2                         StartPos 877, Length 13
+        public decimal execprc2; // [execprc2, 13.2] 체결가2                         StartPos 877, Length 13
         public long newqty2; // [newqty2  ,   16] 신규체결수량2                   StartPos 890, Length 16
         public long lqdtqty2; // [lqdtqty2  ,   16] 청산체결수량2                   StartPos 906, Length 16
         public long allexecamt2; // [allexecamt2  ,   16] 전체체결금액2                   StartPos 922, Length 16
@@ -120,11 +120,11 @@
         public string bnstp_1; // [bnstp_1,    1] 잔고 매매구분1                  StartPos 1042, Length 1
         public long unsttqty_1; // [unsttqty_1  ,   16] 미결제수량1                     StartPos 1043, Length 16
         public long lqdtableqty_1; // [lqdtableqty_1  ,   16] 주문가능수량1                   StartPos 1059, Length 16
-        public double avrprc_1; // [avrprc_1, 13.2] 평균가1                         StartPos 1075, Length 13
+        public decimal avrprc_1; // [avrprc_1, 13.2] 평균가1                         StartPos 1075, Length 13
         public string fnoIsuno_2; // [fnoIsuno_2,    8] 잔고 종목번호2                  StartPos 1088, Length 8
         public string bnstp_2; // [bnstp_2,    1] 잔고 매매구분2                  StartPos 1096, Length 1
         public long unsttqty_2; // [unsttqty_2  ,   16] 미결제수량2                     StartPos 1097, Length 16
         public long lqdtableqty_2; // [lqdtableqty_2  ,   16] 주문가능수량2                   StartPos 1113, Length 16
-        public double avrprc_2; // [avrprc_2, 13.2] 평균가2                         StartPos 1129, Length 13
+        public decimal avrprc_2; // [avrprc_2, 13.2] 평균가2                         StartPos 1129, Length 13
     }
 }

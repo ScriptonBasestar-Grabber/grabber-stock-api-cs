@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XA_DATASETLib;
-using XingBot.res;
+using XingBot.real.res;
 
-namespace XingBot
+namespace XingBot.real
 {
-    public partial class RealEvents : _IXARealEvents
+    public partial class RealCtrl : _IXARealEvents
     {
         public void InBlock_SC3(string shcode)
         {
             string szTrCode = "SC3";
-            _RealDict[szTrCode].SetFieldData("InBlock", "shcode", shcode);
+            _realDict[szTrCode].SetFieldData("InBlock", "shcode", shcode);
             //TODO ...
         }
 

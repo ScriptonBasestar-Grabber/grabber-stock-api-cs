@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XingBot.Mapping
+namespace XingBot.real.Mapping
 {
     class MappingFieldModel
     {

@@ -1,7 +1,7 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 외인/기관 종목별동향 ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t1702InBlock
+    public struct _t1702InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string todt; // [string,    8] 종료일자                        StartPos 7, Length 8
@@ -12,19 +12,19 @@
         public long cts_idx; // [long  ,    4] CTSIDX                          StartPos 31, Length 4
     }
 
-    internal struct _t1702OutBlock
+    public struct _t1702OutBlock
     {
         public long cts_idx; // [long  ,    4] CTSIDX                          StartPos 0, Length 4
         public string cts_date; // [string,    8] CTSDATE                         StartPos 5, Length 8
     }
 
-    internal struct _t1702OutBlock1
+    public struct _t1702OutBlock1
     {
         public string date; // [string,    8] 일자                            StartPos 0, Length 8
         public long close; // [long  ,    8] 종가                            StartPos 9, Length 8
         public string sign; // [string,    1] 전일대비구분                    StartPos 18, Length 1
         public long change; // [long  ,    8] 전일대비                        StartPos 20, Length 8
-        public float diff; // [float ,  6.2] 등락율                          StartPos 29, Length 6
+        public decimal diff; // [float ,  6.2] 등락율                          StartPos 29, Length 6
         public long volume; // [long  ,   12] 누적거래량                      StartPos 36, Length 12
         public long amt0000; // [long  ,   12] 사모펀드                        StartPos 49, Length 12
         public long amt0001; // [long  ,   12] 증권                            StartPos 62, Length 12

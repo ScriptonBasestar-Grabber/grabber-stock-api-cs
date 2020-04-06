@@ -1,21 +1,21 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 상/하한가진입 ( ATTR, KEY=1, GROUP=1 )
-    struct _SHI_InBlock
+    public struct _SHI_InBlock
     {
         public string updnlmtgubun; // [string,    1] 상/하한구분                     StartPos 0, Length 1
     }
 
-    struct _SHI_OutBlock
+    public struct _SHI_OutBlock
     {
         public string sijanggubun; // [string,    1] 거래소/코스닥구분               StartPos 0, Length 1
         public string hname; // [string,   20] 종목명                          StartPos 2, Length 20
         public long price; // [long  ,    8] 현재가                          StartPos 23, Length 8
         public string sign; // [string,    1] 전일대비구분                    StartPos 32, Length 1
         public long change; // [long  ,    8] 전일대비                        StartPos 34, Length 8
-        public float drate; // [float ,  6.2] 등락율                          StartPos 43, Length 6
+        public decimal drate; // [float ,  6.2] 등락율                          StartPos 43, Length 6
         public long volume; // [long  ,   12] 누적거래량                      StartPos 50, Length 12
-        public float volincrate; // [float , 12.2] 거래증가율                      StartPos 63, Length 12
+        public decimal volincrate; // [float , 12.2] 거래증가율                      StartPos 63, Length 12
         public long totofferrem; // [long  ,   12] 매도호가총수량                  StartPos 76, Length 12
         public long totbidrem; // [long  ,   12] 매수호가총수량                  StartPos 89, Length 12
         public string updnlmtstime; // [string,    6] 상한가/하한가최종진입시간       StartPos 102, Length 6

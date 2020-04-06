@@ -1,19 +1,19 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 주식 현재가 호가 조회 ( ATTR,BLOCK,HEADTYPE=A )
 
-    internal struct _t1101InBlock
+    public struct _t1101InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    internal struct _t1101OutBlock
+    public struct _t1101OutBlock
     {
         public string hname; // [string,   20] 한글명                          StartPos 0, Length 20
         public long price; // [long  ,    8] 현재가                          StartPos 21, Length 8
         public string sign; // [string,    1] 전일대비구분                    StartPos 30, Length 1
         public long change; // [long  ,    8] 전일대비                        StartPos 32, Length 8
-        public float diff; // [float ,  6.2] 등락율                          StartPos 41, Length 6
+        public decimal diff; // [float ,  6.2] 등락율                          StartPos 41, Length 6
         public long volume; // [long  ,   12] 누적거래량                      StartPos 48, Length 12
         public long jnilclose; // [long  ,    8] 전일종가                        StartPos 61, Length 8
         public long offerho1; // [long  ,    8] 매도호가1                       StartPos 70, Length 8
@@ -85,7 +85,7 @@
         public long yevolume; // [long  ,   12] 예상체결수량                    StartPos 840, Length 12
         public string yesign; // [string,    1] 예상체결전일구분                StartPos 853, Length 1
         public long yechange; // [long  ,    8] 예상체결전일대비                StartPos 855, Length 8
-        public float yediff; // [float ,  6.2] 예상체결등락율                  StartPos 864, Length 6
+        public decimal yediff; // [float ,  6.2] 예상체결등락율                  StartPos 864, Length 6
         public long tmoffer; // [long  ,   12] 시간외매도잔량                  StartPos 871, Length 12
         public long tmbid; // [long  ,   12] 시간외매수잔량                  StartPos 884, Length 12
         public string ho_status; // [string,    1] 동시구분                        StartPos 897, Length 1

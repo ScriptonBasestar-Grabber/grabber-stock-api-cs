@@ -4,184 +4,184 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XA_DATASETLib;
-using XingBot.res;
+using XingBot.real.res;
 
-namespace XingBot
+namespace XingBot.real
 {
-    public partial class RealEvents : _IXARealEvents
+    public partial class RealCtrl : _IXARealEvents
     {
         public void InBlock_KM_(string gubun)
         {
             string szTrCode = "KM_";
-            _RealDict[szTrCode].SetFieldData("InBlock", "gubun", gubun);
+            _realDict[szTrCode].SetFieldData("InBlock", "gubun", gubun);
         }
 
         private void OutBlock_KM_(string szTrCode)
         {
             _KM__OutBlock outData;
-            outData.time = _RealDict[szTrCode].GetFieldData("OutBlock", "time");
-            outData.cdhrem = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cdhrem"));
-            outData.cshrem = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cshrem"));
-            outData.bdhrem = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bdhrem"));
-            outData.bshrem = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bshrem"));
-            outData.cdhvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cdhvolume"));
-            outData.cshvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cshvolume"));
-            outData.bdhvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bdhvolume"));
-            outData.bshvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bshvolume"));
-            outData.cdwvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cdwvolume"));
+            outData.time = _realDict[szTrCode].GetFieldData("OutBlock", "time");
+            outData.cdhrem = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cdhrem"));
+            outData.cshrem = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cshrem"));
+            outData.bdhrem = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bdhrem"));
+            outData.bshrem = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bshrem"));
+            outData.cdhvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cdhvolume"));
+            outData.cshvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cshvolume"));
+            outData.bdhvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bdhvolume"));
+            outData.bshvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bshvolume"));
+            outData.cdwvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cdwvolume"));
 
-            outData.cdjvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cdjvolume"));
+            outData.cdjvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cdjvolume"));
 
-            outData.cswvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cswvolume"));
+            outData.cswvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cswvolume"));
 
-            outData.csjvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "csjvolume"));
+            outData.csjvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "csjvolume"));
 
-            outData.cwvol = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cwvol"));
+            outData.cwvol = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cwvol"));
 
-            outData.cjvol = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cjvol"));
+            outData.cjvol = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cjvol"));
 
-            outData.bdwvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bdwvolume"));
+            outData.bdwvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bdwvolume"));
 
-            outData.bdjvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bdjvolume"));
+            outData.bdjvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bdjvolume"));
 
-            outData.bswvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bswvolume"));
+            outData.bswvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bswvolume"));
 
-            outData.bsjvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bsjvolume"));
+            outData.bsjvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bsjvolume"));
 
-            outData.bwvol = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bwvol"));
+            outData.bwvol = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bwvol"));
 
-            outData.bjvol = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bjvol"));
+            outData.bjvol = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bjvol"));
 
-            outData.dwvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "dwvolume"));
+            outData.dwvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "dwvolume"));
 
-            outData.swvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "swvolume"));
+            outData.swvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "swvolume"));
 
-            outData.wvol = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "wvol"));
+            outData.wvol = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "wvol"));
 
-            outData.djvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "djvolume"));
+            outData.djvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "djvolume"));
 
-            outData.sjvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "sjvolume"));
+            outData.sjvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "sjvolume"));
 
-            outData.jvol = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "jvol"));
+            outData.jvol = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jvol"));
 
-            outData.cdwvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cdwvalue"));
+            outData.cdwvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cdwvalue"));
 
-            outData.cdjvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cdjvalue"));
+            outData.cdjvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cdjvalue"));
 
 
-            outData.cswvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cswvalue"));
+            outData.cswvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cswvalue"));
 
-            outData.csjvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "csjvalue"));
+            outData.csjvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "csjvalue"));
 
-            outData.cwval = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cwval"));
+            outData.cwval = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cwval"));
 
-            outData.cjval = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cjval"));
+            outData.cjval = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cjval"));
 
-            outData.bdwvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bdwvalue"));
+            outData.bdwvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bdwvalue"));
 
-            outData.bdjvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bdjvalue"));
+            outData.bdjvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bdjvalue"));
 
-            outData.bswvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bswvalue"));
+            outData.bswvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bswvalue"));
 
-            outData.bsjvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bsjvalue"));
+            outData.bsjvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bsjvalue"));
 
-            outData.bwval = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bwval"));
+            outData.bwval = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bwval"));
 
-            outData.bjval = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bjval"));
+            outData.bjval = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bjval"));
 
-            outData.dwvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "dwvalue"));
+            outData.dwvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "dwvalue"));
 
-            outData.swvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "swvalue"));
+            outData.swvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "swvalue"));
 
-            outData.wval = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "wval"));
+            outData.wval = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "wval"));
 
-            outData.djvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "djvalue"));
+            outData.djvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "djvalue"));
 
-            outData.sjvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "sjvalue"));
+            outData.sjvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "sjvalue"));
 
 
-            outData.jval = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "jval"));
+            outData.jval = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jval"));
 
-            outData.k50jisu = float.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "k50jisu"));
+            outData.k50jisu = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "k50jisu"));
 
-            outData.k50sign = _RealDict[szTrCode].GetFieldData("OutBlock", "k50sign");
-            outData.change = float.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "change"));
+            outData.k50sign = _realDict[szTrCode].GetFieldData("OutBlock", "k50sign");
+            outData.change = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
 
-            outData.k50basis = float.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "k50basis"));
+            outData.k50basis = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "k50basis"));
 
-            outData.cdvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cdvolume"));
+            outData.cdvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cdvolume"));
 
-            outData.csvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "csvolume"));
+            outData.csvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "csvolume"));
 
-            outData.cvol = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cvol"));
+            outData.cvol = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cvol"));
 
-            outData.bdvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bdvolume"));
+            outData.bdvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bdvolume"));
 
-            outData.bsvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bsvolume"));
+            outData.bsvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bsvolume"));
 
-            outData.bvol = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bvol"));
+            outData.bvol = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bvol"));
 
-            outData.tdvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "tdvolume"));
+            outData.tdvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "tdvolume"));
 
-            outData.tsvolume = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "tsvolume"));
+            outData.tsvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "tsvolume"));
 
-            outData.tvol = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "tvol"));
+            outData.tvol = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "tvol"));
 
-            outData.cdvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cdvalue"));
+            outData.cdvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cdvalue"));
 
-            outData.csvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "csvalue"));
+            outData.csvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "csvalue"));
 
-            outData.cval = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "cval"));
+            outData.cval = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cval"));
 
-            outData.bdvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bdvalue"));
+            outData.bdvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bdvalue"));
 
-            outData.bsvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bsvalue"));
+            outData.bsvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bsvalue"));
 
-            outData.bval = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "bval"));
+            outData.bval = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bval"));
 
-            outData.tdvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "tdvalue"));
+            outData.tdvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "tdvalue"));
 
-            outData.tsvalue = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "tsvalue"));
+            outData.tsvalue = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "tsvalue"));
 
-            outData.tval = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "tval"));
+            outData.tval = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "tval"));
 
-            outData.p_cdvolcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_cdvolcha"));
+            outData.p_cdvolcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_cdvolcha"));
 
-            outData.p_csvolcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_csvolcha"));
+            outData.p_csvolcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_csvolcha"));
 
-            outData.p_cvolcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_cvolcha"));
+            outData.p_cvolcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_cvolcha"));
 
-            outData.p_bdvolcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_bdvolcha"));
+            outData.p_bdvolcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_bdvolcha"));
 
-            outData.p_bsvolcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_bsvolcha"));
+            outData.p_bsvolcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_bsvolcha"));
 
-            outData.p_bvolcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_bvolcha"));
+            outData.p_bvolcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_bvolcha"));
 
-            outData.p_tdvolcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_tdvolcha"));
+            outData.p_tdvolcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_tdvolcha"));
 
-            outData.p_tsvolcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_tsvolcha"));
+            outData.p_tsvolcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_tsvolcha"));
 
-            outData.p_tvolcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_tvolcha"));
+            outData.p_tvolcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_tvolcha"));
 
-            outData.p_cdvalcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_cdvalcha"));
+            outData.p_cdvalcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_cdvalcha"));
 
-            outData.p_csvalcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_csvalcha"));
+            outData.p_csvalcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_csvalcha"));
 
-            outData.p_cvalcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_cvalcha"));
+            outData.p_cvalcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_cvalcha"));
 
-            outData.p_bdvalcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_bdvalcha"));
+            outData.p_bdvalcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_bdvalcha"));
 
-            outData.p_bsvalcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_bsvalcha"));
+            outData.p_bsvalcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_bsvalcha"));
 
-            outData.p_bvalcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_bvalcha"));
+            outData.p_bvalcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_bvalcha"));
 
-            outData.p_tdvalcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_tdvalcha"));
+            outData.p_tdvalcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_tdvalcha"));
 
-            outData.p_tsvalcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_tsvalcha"));
+            outData.p_tsvalcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_tsvalcha"));
 
-            outData.p_tvalcha = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "p_tvalcha"));
+            outData.p_tvalcha = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "p_tvalcha"));
 
-            outData.gubun = _RealDict[szTrCode].GetFieldData("OutBlock", "gubun");
+            outData.gubun = _realDict[szTrCode].GetFieldData("OutBlock", "gubun");
         }
     }
 }

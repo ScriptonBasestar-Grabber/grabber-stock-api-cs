@@ -1,12 +1,12 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 주식선물가격제한폭확대 ( ATTR, KEY=8, GROUP=1 )
-    struct _JX0_InBlock
+    public struct _JX0_InBlock
     {
         public string futcode; // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    struct _JX0_OutBlock
+    public struct _JX0_OutBlock
     {
         public string upstep; // [string,    2] 적용 상한단계                   StartPos 0, Length 2
         public string dnstep; // [string,    2] 적용 하한단계                   StartPos 3, Length 2

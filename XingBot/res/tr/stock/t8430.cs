@@ -1,13 +1,13 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 주식종목조회 ( BLOCK,HEADTYPE=A )
     // t8436 사용
-    internal struct _t8430InBlock
+    public struct _t8430InBlock
     {
         public string gubun; // [gubun,    1] 구분(0:전체1:코스피2:코스닥)    StartPos 0, Length 1
     }
 
-    internal struct _t8430OutBlock
+    public struct _t8430OutBlock
     {
         public string hname; // [hname,   20] 종목명                          StartPos 0, Length 20
         public string shcode; // [shcode,    6] 단축코드                        StartPos 20, Length 6

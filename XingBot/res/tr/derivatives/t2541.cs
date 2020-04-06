@@ -1,7 +1,7 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 상품선물투자자매매동향(실시간) ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t2541InBlock
+    public struct _t2541InBlock
     {
         public string eitem; // [string,    2] 상품ID                          StartPos 0, Length 2
         public string market; // [string,    1] 시장구분                        StartPos 3, Length 1
@@ -13,7 +13,7 @@
         public string cnt; // [string,    4] 조회건수                        StartPos 27, Length 4
     }
 
-    internal struct _t2541OutBlock
+    public struct _t2541OutBlock
     {
         public string eitem; // [string,    2] 상품ID                          StartPos 0, Length 2
         public string sgubun; // [string,    1] 시장구분                        StartPos 3, Length 1
@@ -80,7 +80,7 @@
         public long svolume_00; // [long  ,   12] 사모펀드순매수                  StartPos 685, Length 12
     }
 
-    internal struct _t2541OutBlock1
+    public struct _t2541OutBlock1
     {
         public string time; // [string,    8] 시간                            StartPos 0, Length 8
         public long sv_08; // [long  ,   12] 개인순매수                      StartPos 9, Length 12

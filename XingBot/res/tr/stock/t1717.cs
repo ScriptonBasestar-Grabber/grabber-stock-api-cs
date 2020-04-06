@@ -1,7 +1,7 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 외인기관별종목별동항 ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t1717InBlock
+    public struct _t1717InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string gubun; // [string,    1] 구분(0:일간순매수1:기간누적순매 StartPos 7, Length 1
@@ -9,13 +9,13 @@
         public string todt; // [string,    8] 종료일자                        StartPos 18, Length 8
     }
 
-    internal struct _t1717OutBlock
+    public struct _t1717OutBlock
     {
         public string date; // [string,    8] 일자                            StartPos 0, Length 8
         public long close; // [long  ,    8] 종가                            StartPos 9, Length 8
         public string sign; // [string,    1] 전일대비구분                    StartPos 18, Length 1
         public long change; // [long  ,    8] 전일대비                        StartPos 20, Length 8
-        public float diff; // [float ,  6.2] 등락율                          StartPos 29, Length 6
+        public decimal diff; // [float ,  6.2] 등락율                          StartPos 29, Length 6
         public long volume; // [long  ,   12] 누적거래량                      StartPos 36, Length 12
         public long tjj0000_vol; // [long  ,   12] 사모펀드(순매수량)              StartPos 49, Length 12
         public long tjj0001_vol; // [long  ,   12] 증권(순매수량)                  StartPos 62, Length 12

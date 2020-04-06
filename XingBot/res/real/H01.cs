@@ -1,11 +1,11 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 선물주문정정취소 ( KEY=8, GROUP=1 )
-    struct _H01_InBlock
+    public struct _H01_InBlock
     {
     }
 
-    struct _H01_OutBlock
+    public struct _H01_OutBlock
     {
         public long lineseq; // [lineseq  ,   10] 라인일련번호                    StartPos 0, Length 10
         public string accno; // [accno,   11] 계좌번호                        StartPos 10, Length 11
@@ -23,7 +23,7 @@
         public string mocagb; // [mocagb,    1] 정정취소구분                    StartPos 98, Length 1
         public string accno1; // [accno1,   12] 계좌번호1                       StartPos 99, Length 12
         public long qty2; // [qty2  ,   10] 호가수량                        StartPos 111, Length 10
-        public float price; // [price , 11.2] 호가가격                        StartPos 121, Length 11
+        public decimal price; // [price , 11.2] 호가가격                        StartPos 121, Length 11
         public string ordgb; // [ordgb,    1] 주문유형                        StartPos 132, Length 1
         public string hogagb; // [hogagb,    1] 호가구분                        StartPos 133, Length 1
         public string sihogagb; // [sihogagb,   11] 시장조성호가구분                StartPos 134, Length 11

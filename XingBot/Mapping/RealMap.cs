@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XingBot.Mapping
+namespace XingBot.real.Mapping
 {
     //TODO 이거못씀. 설정값 가져오는 방식으로 변경
     class RealMap

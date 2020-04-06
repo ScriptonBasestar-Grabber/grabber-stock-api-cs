@@ -1,12 +1,12 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 업종별 투자자별 매매현황(BM) ( attr,block )
-    struct _BM__InBlock
+    public struct _BM__InBlock
     {
         public string upcode; // [string,    3] 업종코드                       StartPos 0, Length 3
     }
 
-    struct _BM__OutBlock
+    public struct _BM__OutBlock
     {
         public string tjjcode; // [string,    4] 투자자코드                     StartPos 0, Length 4
         public string tjjtime; // [string,    8] 수신시간                       StartPos 5, Length 8

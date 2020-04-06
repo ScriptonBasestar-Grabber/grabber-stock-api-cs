@@ -1,7 +1,7 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 현물계좌 잔고내역 조회(API) ( SERVICE=CSPAQ12300,HEADTYPE=B,CREATOR=이상은,CREDATE=2015/04/13 08:43:20 )
-    internal struct _CSPAQ12300InBlock1
+    public struct _CSPAQ12300InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -12,7 +12,7 @@
         public string UprcTpCode; // [UprcTpCode,    1] 단가구분                        StartPos 36, Length 1
     }
 
-    internal struct _CSPAQ12300OutBlock1
+    public struct _CSPAQ12300OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -23,7 +23,7 @@
         public string UprcTpCode; // [UprcTpCode,    1] 단가구분                        StartPos 36, Length 1
     }
 
-    internal struct _CSPAQ12300OutBlock2
+    public struct _CSPAQ12300OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string BrnNm; // [BrnNm,   40] 지점명                          StartPos 5, Length 40
@@ -40,7 +40,7 @@
         public long BalEvalAmt; // [BalEvalAmt  ,   16] 잔고평가금액                    StartPos 181, Length 16
         public long PchsAmt; // [PchsAmt  ,   16] 매입금액                        StartPos 197, Length 16
         public long RcvblAmt; // [RcvblAmt  ,   16] 미수금액                        StartPos 213, Length 16
-        public double PnlRat; // [PnlRat, 18.6] 손익율                          StartPos 229, Length 18
+        public decimal PnlRat; // [PnlRat, 18.6] 손익율                          StartPos 229, Length 18
         public long InvstOrgAmt; // [InvstOrgAmt  ,   20] 투자원금                        StartPos 247, Length 20
         public long InvstPlAmt; // [InvstPlAmt  ,   16] 투자손익금액                    StartPos 267, Length 16
         public long CrdtPldgOrdAmt; // [CrdtPldgOrdAmt  ,   16] 신용담보주문금액                StartPos 283, Length 16
@@ -105,7 +105,7 @@
         public long LoanAmt; // [LoanAmt  ,   16] 대출금액                        StartPos 1125, Length 16
     }
 
-    internal struct _CSPAQ12300OutBlock3
+    public struct _CSPAQ12300OutBlock3
     {
         public string IsuNo; // [IsuNo,   12] 종목번호                        StartPos 0, Length 12
         public string IsuNm; // [IsuNm,   40] 종목명                          StartPos 12, Length 40
@@ -115,19 +115,19 @@
         public long BnsBaseBalQty; // [BnsBaseBalQty  ,   16] 매매기준잔고수량                StartPos 110, Length 16
         public long CrdayBuyExecQty; // [CrdayBuyExecQty  ,   16] 금일매수체결수량                StartPos 126, Length 16
         public long CrdaySellExecQty; // [CrdaySellExecQty  ,   16] 금일매도체결수량                StartPos 142, Length 16
-        public double SellPrc; // [SellPrc, 21.4] 매도가                          StartPos 158, Length 21
-        public double BuyPrc; // [BuyPrc, 21.4] 매수가                          StartPos 179, Length 21
+        public decimal SellPrc; // [SellPrc, 21.4] 매도가                          StartPos 158, Length 21
+        public decimal BuyPrc; // [BuyPrc, 21.4] 매수가                          StartPos 179, Length 21
         public long SellPnlAmt; // [SellPnlAmt  ,   16] 매도손익금액                    StartPos 200, Length 16
-        public double PnlRat; // [PnlRat, 18.6] 손익율                          StartPos 216, Length 18
-        public double NowPrc; // [NowPrc, 15.2] 현재가                          StartPos 234, Length 15
+        public decimal PnlRat; // [PnlRat, 18.6] 손익율                          StartPos 216, Length 18
+        public decimal NowPrc; // [NowPrc, 15.2] 현재가                          StartPos 234, Length 15
         public long CrdtAmt; // [CrdtAmt  ,   16] 신용금액                        StartPos 249, Length 16
         public string DueDt; // [DueDt,    8] 만기일                          StartPos 265, Length 8
-        public double PrdaySellExecPrc; // [PrdaySellExecPrc, 13.2] 전일매도체결가                  StartPos 273, Length 13
+        public decimal PrdaySellExecPrc; // [PrdaySellExecPrc, 13.2] 전일매도체결가                  StartPos 273, Length 13
         public long PrdaySellQty; // [PrdaySellQty  ,   16] 전일매도수량                    StartPos 286, Length 16
-        public double PrdayBuyExecPrc; // [PrdayBuyExecPrc, 13.2] 전일매수체결가                  StartPos 302, Length 13
+        public decimal PrdayBuyExecPrc; // [PrdayBuyExecPrc, 13.2] 전일매수체결가                  StartPos 302, Length 13
         public long PrdayBuyQty; // [PrdayBuyQty  ,   16] 전일매수수량                    StartPos 315, Length 16
         public string LoanDt; // [LoanDt,    8] 대출일                          StartPos 331, Length 8
-        public double AvrUprc; // [AvrUprc, 13.2] 평균단가                        StartPos 339, Length 13
+        public decimal AvrUprc; // [AvrUprc, 13.2] 평균단가                        StartPos 339, Length 13
         public long SellAbleQty; // [SellAbleQty  ,   16] 매도가능수량                    StartPos 352, Length 16
         public long SellOrdQty; // [SellOrdQty  ,   16] 매도주문수량                    StartPos 368, Length 16
         public long CrdayBuyExecAmt; // [CrdayBuyExecAmt  ,   16] 금일매수체결금액                StartPos 384, Length 16
@@ -144,7 +144,7 @@
         public long BuyUnsttQty; // [BuyUnsttQty  ,   16] 매수미결제수량                  StartPos 560, Length 16
         public long UnsttQty; // [UnsttQty  ,   16] 미결제수량                      StartPos 576, Length 16
         public long UnercQty; // [UnercQty  ,   16] 미체결수량                      StartPos 592, Length 16
-        public double PrdayCprc; // [PrdayCprc, 15.2] 전일종가                        StartPos 608, Length 15
+        public decimal PrdayCprc; // [PrdayCprc, 15.2] 전일종가                        StartPos 608, Length 15
         public long PchsAmt; // [PchsAmt  ,   16] 매입금액                        StartPos 623, Length 16
         public string RegMktCode; // [RegMktCode,    2] 등록시장코드                    StartPos 639, Length 2
         public string LoanDtlClssCode; // [LoanDtlClssCode,    2] 대출상세분류코드                StartPos 641, Length 2

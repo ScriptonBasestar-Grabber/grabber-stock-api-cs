@@ -1,20 +1,20 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 주식선물 호가조회 ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t8403InBlock
+    public struct _t8403InBlock
     {
         public string shcode; // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    internal struct _t8403OutBlock
+    public struct _t8403OutBlock
     {
         public string hname; // [string,   20] 종목명                          StartPos 0, Length 20
         public long price; // [long  ,    8] 현재가                          StartPos 21, Length 8
         public string sign; // [string,    1] 전일대비구분                    StartPos 30, Length 1
         public long change; // [long  ,    8] 전일대비                        StartPos 32, Length 8
-        public float diff; // [float ,  6.2] 등락율                          StartPos 41, Length 6
+        public decimal diff; // [float ,  6.2] 등락율                          StartPos 41, Length 6
         public long volume; // [long  ,   12] 거래량                          StartPos 48, Length 12
-        public float stimeqrt; // [float ,  6.2] 거래량전일동시간비율            StartPos 61, Length 6
+        public decimal stimeqrt; // [float ,  6.2] 거래량전일동시간비율            StartPos 61, Length 6
         public long jnilclose; // [long  ,    8] 전일종가                        StartPos 68, Length 8
         public long offerho1; // [long  ,    8] 매도호가1                       StartPos 77, Length 8
         public long bidho1; // [long  ,    8] 매수호가1                       StartPos 86, Length 8

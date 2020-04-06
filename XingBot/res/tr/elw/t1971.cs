@@ -1,19 +1,19 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // ELW 현재가 호가조회 ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t1971InBlock
+    public struct _t1971InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    internal struct _t1971OutBlock
+    public struct _t1971OutBlock
     {
         public string hname; // [string,   40] 한글명                          StartPos 0, Length 40
         public long price; // [long  ,    8] 현재가                          StartPos 41, Length 8
         public string sign; // [string,    1] 전일대비구분                    StartPos 50, Length 1
         public long change; // [long  ,    8] 전일대비                        StartPos 52, Length 8
-        public float diff; // [float ,  6.2] 등락율                          StartPos 61, Length 6
-        public float volume; // [float ,   12] 누적거래량                      StartPos 68, Length 12
+        public decimal diff; // [float ,  6.2] 등락율                          StartPos 61, Length 6
+        public decimal volume; // [float ,   12] 누적거래량                      StartPos 68, Length 12
         public long jnilclose; // [long  ,    8] 전일종가                        StartPos 81, Length 8
         public long offerho1; // [long  ,    8] 매도호가1                       StartPos 90, Length 8
         public long bidho1; // [long  ,    8] 매수호가1                       StartPos 99, Length 8
@@ -101,10 +101,10 @@
         public long prebidcha; // [long  ,   12] 직전매수대비수량합              StartPos 1089, Length 12
         public string hotime; // [string,    8] 수신시간                        StartPos 1102, Length 8
         public long yeprice; // [long  ,    8] 예상체결가격                    StartPos 1111, Length 8
-        public float yevolume; // [float ,   12] 예상체결수량                    StartPos 1120, Length 12
+        public decimal yevolume; // [float ,   12] 예상체결수량                    StartPos 1120, Length 12
         public string yesign; // [string,    1] 예상체결전일구분                StartPos 1133, Length 1
         public long yechange; // [long  ,    8] 예상체결전일대비                StartPos 1135, Length 8
-        public float yediff; // [float ,  6.2] 예상체결등락율                  StartPos 1144, Length 6
+        public decimal yediff; // [float ,  6.2] 예상체결등락율                  StartPos 1144, Length 6
         public long tmoffer; // [long  ,   12] 시간외매도잔량                  StartPos 1151, Length 12
         public long tmbid; // [long  ,   12] 시간외매수잔량                  StartPos 1164, Length 12
         public string ho_status; // [string,    1] 동시구분                        StartPos 1177, Length 1
@@ -112,8 +112,8 @@
         public long high; // [long  ,    8] 고가                            StartPos 1188, Length 8
         public long low; // [long  ,    8] 저가                            StartPos 1197, Length 8
         public string invidx; // [string,    1] ELW권리형태(1:표준2:디지털3:조?StartPos 1206, Length 1
-        public float koba_stdprc; // [float , 12.2] KO베리어                        StartPos 1208, Length 12
-        public float koba_acc_rt; // [float , 12.2] KO접근도                        StartPos 1221, Length 12
+        public decimal koba_stdprc; // [float , 12.2] KO베리어                        StartPos 1208, Length 12
+        public decimal koba_acc_rt; // [float , 12.2] KO접근도                        StartPos 1221, Length 12
         public string koba_yn; // [string,    1] KO발생여부(Y/N)                 StartPos 1234, Length 1
     }
 }

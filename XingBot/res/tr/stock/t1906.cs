@@ -1,18 +1,18 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // ETFLP호가 ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t1906InBlock
+    public struct _t1906InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    internal struct _t1906OutBlock
+    public struct _t1906OutBlock
     {
         public string hname; // [string,   20] 한글명                          StartPos 0, Length 20
         public long price; // [long  ,    8] 현재가                          StartPos 21, Length 8
         public string sign; // [string,    1] 전일대비구분                    StartPos 30, Length 1
         public long change; // [long  ,    8] 전일대비                        StartPos 32, Length 8
-        public float diff; // [float ,  6.2] 등락율                          StartPos 41, Length 6
+        public decimal diff; // [float ,  6.2] 등락율                          StartPos 41, Length 6
         public long volume; // [long  ,   12] 누적거래량                      StartPos 48, Length 12
         public long lp_offerrem1; // [long  ,   12] LP매도호가수량1                 StartPos 61, Length 12
         public long lp_bidrem1; // [long  ,   12] LP매수호가수량1                 StartPos 74, Length 12
@@ -104,7 +104,7 @@
         public long yevolume; // [long  ,   12] 예상체결수량                    StartPos 1100, Length 12
         public string yesign; // [string,    1] 예상체결전일구분                StartPos 1113, Length 1
         public long yechange; // [long  ,    8] 예상체결전일대비                StartPos 1115, Length 8
-        public float yediff; // [float ,  6.2] 예상체결등락율                  StartPos 1124, Length 6
+        public decimal yediff; // [float ,  6.2] 예상체결등락율                  StartPos 1124, Length 6
         public long tmoffer; // [long  ,   12] 시간외매도잔량                  StartPos 1131, Length 12
         public long tmbid; // [long  ,   12] 시간외매수잔량                  StartPos 1144, Length 12
         public string ho_status; // [string,    1] 동시구분                        StartPos 1157, Length 1

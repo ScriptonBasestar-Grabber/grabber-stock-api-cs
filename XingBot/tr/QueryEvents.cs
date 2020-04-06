@@ -1,96 +1,55 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
+using System.IO;
 using System.Runtime.InteropServices.ComTypes;
 using XA_DATASETLib;
+using XingBot.real.Properties;
+using XingBot.real.res;
+using XingBot.tr;
 
-namespace XingBot
+namespace XingBot.tr
 {
-    public partial class QueryCtrl : _IXAQueryEvents
-    {
-        private Dictionary<string, IXAQuery> _QueryDict = new Dictionary<string, IXAQuery>();
 
-        public QueryCtrl(string[] codes)
+    public class QueryEvents
+    {
+        private readonly IXAQuery _ixa;
+        private readonly ResModel _resModel;
+        private readonly string _szTrCode;
+
+        public QueryEvents(string szTrCode)
         {
+            this._szTrCode = szTrCode;
+
             int dwCookie = 0;
             IConnectionPoint icp;
             IConnectionPointContainer icpc;
-            Guid IID_QueryEvents = typeof(_IXAQueryEvents).GUID;
+            Guid iidQueryEvents = typeof(_IXAQueryEvents).GUID;
 
-            foreach (var code in codes)
+            this._ixa = new XAQuery
             {
-                // dwCookie = 0;
-                _QueryDict[code] = new XAQuery
-                {
-                    ResFileName = Properties.Settings.Default.root_path + @"\res\" + code + ".res"
-                };
-                icpc = (IConnectionPointContainer) _QueryDict[code];
-                icpc.FindConnectionPoint(ref IID_QueryEvents, out icp);
-                icp.Advise(this, out dwCookie);
-            }
+                ResFileName = Settings.Default.root_path + @"\res\" + szTrCode + ".res"
+            };
+            icpc = (IConnectionPointContainer) _ixa;
+            icpc.FindConnectionPoint(ref iidQueryEvents, out icp);
+            icp.Advise(this, out dwCookie);
 
-            Console.WriteLine("QueryCtrl 생성자완료");
+            _resModel = ReadResFile.Read(Path.Combine(Settings.Default.root_path, szTrCode));
         }
 
-        // Query
-        void _IXAQueryEvents.ReceiveData(string szTrCode)
+        public void InBlock(InBlockQuery action)
         {
-            Console.WriteLine("_IXAQueryEvents.ReceiveData " + szTrCode);
-            if (szTrCode == "t8436")
-            {
-                OutBlock_t8436(szTrCode);
-            }
-            else if (szTrCode == "t8425")
-            {
-                OutBlock_t8425(szTrCode);
-            }
-            else if (szTrCode == "t8432")
-            {
-                OutBlock_t8432(szTrCode);
-            }
-            else if (szTrCode == "t8433")
-            {
-                OutBlock_t8433(szTrCode);
-            }
-            else if (szTrCode == "t8435")
-            {
-                OutBlock_t8435(szTrCode);
-            }
-            else if (szTrCode == "t8424")
-            {
-                OutBlock_t8424(szTrCode);
-            }
-            else if (szTrCode == "t1981")
-            {
-                OutBlock_t1981(szTrCode);
-            }
-            else if (szTrCode == "t9942")
-            {
-                OutBlock_t9942(szTrCode);
-            }
-            else if (szTrCode == "t9907")
-            {
-                OutBlock_t9907(szTrCode);
-            }
+            action(_szTrCode, _resModel.Blocks["InBlock"], _ixa);
         }
 
-        void _IXAQueryEvents.ReceiveMessage(bool bIsSystemError, string nMessageCode, string szMessage)
+        public void OutBlock(string szTrCode, OutBlockQuery action, InBlockQuery inAction)
         {
-            Console.WriteLine("_IXAQueryEvents.ReceiveMessage ");
-            // ptForm.lblMessage.Text = nMessageCode;
-            Console.WriteLine(nMessageCode + "  " + szMessage);
+            for (var i = 0; i < _ixa.GetBlockCount(szTrCode + "OutBlock"); i++)
+            {
+                action(szTrCode, _resModel.Blocks["OutBlock"], _ixa);
+            }
+            // InBlock1();
+            inAction(_szTrCode, _resModel.Blocks["InBlock"], _ixa);
         }
 
-        void _IXAQueryEvents.ReceiveChartRealData(string szTrCode)
-        {
-            Console.WriteLine("_IXAQueryEvents.ReceiveChartRealData " + szTrCode);
-            var result = _QueryDict[szTrCode].GetFieldChartRealData(szTrCode + "OutBlock", "shcode");
-            Console.WriteLine(result);
-        }
-
-        void _IXAQueryEvents.ReceiveSearchRealData(string szTrCode)
-        {
-            Console.WriteLine("_IXAQueryEvents.ReceiveSearchRealData " + szTrCode);
-        }
+        // public abstract void InBlock1();
     }
 }

@@ -1,12 +1,12 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // ELW마스터조회 API용 ( BLOCK,HEADTYPE=A )
-    internal struct _t9942InBlock
+    public struct _t9942InBlock
     {
         public string dummy; // [string,    1] Dummy                           StartPos 0, Length 1
     }
 
-    internal struct _t9942OutBlock
+    public struct _t9942OutBlock
     {
         public string hname; // [string,   40] 종목명                          StartPos 0, Length 40
         public string shcode; // [string,    6] 단축코드                        StartPos 40, Length 6

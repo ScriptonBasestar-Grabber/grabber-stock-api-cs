@@ -1,7 +1,7 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 주식선물 기간별주가 ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t8405InBlock
+    public struct _t8405InBlock
     {
         public string shcode; // [string,    8] 단축코드                        StartPos 0, Length 8
         public string futcheck; // [string,    1] 선물최근월물                    StartPos 9, Length 1
@@ -11,7 +11,7 @@
         public string cnt; // [string,    3] 조회요청건수                    StartPos 38, Length 3
     }
 
-    internal struct _t8405OutBlock
+    public struct _t8405OutBlock
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public string cts_code; // [string,    8] CTS종목코드                     StartPos 9, Length 8
@@ -19,7 +19,7 @@
         public string nowfutyn; // [string,    1] 최근월선물여부                  StartPos 27, Length 1
     }
 
-    internal struct _t8405OutBlock1
+    public struct _t8405OutBlock1
     {
         public string date; // [string,    8] 날짜                            StartPos 0, Length 8
         public long open; // [long  ,    8] 시가                            StartPos 9, Length 8
@@ -28,11 +28,11 @@
         public long close; // [long  ,    8] 종가                            StartPos 36, Length 8
         public string sign; // [string,    1] 전일대비구분                    StartPos 45, Length 1
         public long change; // [long  ,    8] 전일대비                        StartPos 47, Length 8
-        public float diff; // [float ,  6.2] 등락율                          StartPos 56, Length 6
+        public decimal diff; // [float ,  6.2] 등락율                          StartPos 56, Length 6
         public long volume; // [long  ,   12] 거래량                          StartPos 63, Length 12
-        public float diff_vol; // [float , 10.2] 거래증가율                      StartPos 76, Length 10
+        public decimal diff_vol; // [float , 10.2] 거래증가율                      StartPos 76, Length 10
         public long openyak; // [long  ,    8] 미결수량                        StartPos 87, Length 8
         public long openyakupdn; // [long  ,    8] 미결증감                        StartPos 96, Length 8
-        public float value; // [float ,   12] 거래대금                        StartPos 105, Length 12
+        public decimal value; // [float ,   12] 거래대금                        StartPos 105, Length 12
     }
 }

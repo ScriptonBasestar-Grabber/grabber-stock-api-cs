@@ -1,7 +1,7 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 현물계좌 예수금/주문가능금액/총평가 조회(API) ( SERVICE=CSPAQ12200,HEADTYPE=B,CREATOR=이상은,CREDATE=2015/04/13 08:41:27 )
-    internal struct _CSPAQ12200InBlock1
+    public struct _CSPAQ12200InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string MgmtBrnNo; // [MgmtBrnNo,    3] 관리지점번호                    StartPos 5, Length 3
@@ -10,7 +10,7 @@
         public string BalCreTp; // [BalCreTp,    1] 잔고생성구분                    StartPos 36, Length 1
     }
 
-    internal struct _CSPAQ12200OutBlock1
+    public struct _CSPAQ12200OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string MgmtBrnNo; // [MgmtBrnNo,    3] 관리지점번호                    StartPos 5, Length 3
@@ -19,7 +19,7 @@
         public string BalCreTp; // [BalCreTp,    1] 잔고생성구분                    StartPos 36, Length 1
     }
 
-    internal struct _CSPAQ12200OutBlock2
+    public struct _CSPAQ12200OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string BrnNm; // [BrnNm,   40] 지점명                          StartPos 5, Length 40
@@ -31,7 +31,7 @@
         public long BalEvalAmt; // [BalEvalAmt  ,   16] 잔고평가금액                    StartPos 149, Length 16
         public long RcvblAmt; // [RcvblAmt  ,   16] 미수금액                        StartPos 165, Length 16
         public long DpsastTotamt; // [DpsastTotamt  ,   16] 예탁자산총액                    StartPos 181, Length 16
-        public double PnlRat; // [PnlRat, 18.6] 손익율                          StartPos 197, Length 18
+        public decimal PnlRat; // [PnlRat, 18.6] 손익율                          StartPos 197, Length 18
         public long InvstOrgAmt; // [InvstOrgAmt  ,   20] 투자원금                        StartPos 215, Length 20
         public long InvstPlAmt; // [InvstPlAmt  ,   16] 투자손익금액                    StartPos 235, Length 16
         public long CrdtPldgOrdAmt; // [CrdtPldgOrdAmt  ,   16] 신용담보주문금액                StartPos 251, Length 16
@@ -66,7 +66,7 @@
         public long DpspdgLoanAmt; // [DpspdgLoanAmt  ,   16] 예탁담보대출금액                StartPos 587, Length 16
         public long Imreq; // [Imreq  ,   16] 신용설정보증금                  StartPos 603, Length 16
         public long MloanAmt; // [MloanAmt  ,   16] 융자금액                        StartPos 619, Length 16
-        public double ChgAfPldgRat; // [ChgAfPldgRat,  9.3] 변경후담보비율                  StartPos 635, Length 9
+        public decimal ChgAfPldgRat; // [ChgAfPldgRat,  9.3] 변경후담보비율                  StartPos 635, Length 9
         public long OrgPldgAmt; // [OrgPldgAmt  ,   16] 원담보금액                      StartPos 644, Length 16
         public long SubPldgAmt; // [SubPldgAmt  ,   16] 부담보금액                      StartPos 660, Length 16
         public long RqrdPldgAmt; // [RqrdPldgAmt  ,   16] 소요담보금액                    StartPos 676, Length 16

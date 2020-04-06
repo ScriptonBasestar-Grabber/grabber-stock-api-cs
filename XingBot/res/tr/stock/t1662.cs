@@ -1,20 +1,20 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 시간대별 프로그램 매매추이(차트) ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t1662InBlock
+    public struct _t1662InBlock
     {
         public string gubun; // [string,    1] 구분                            StartPos 0, Length 1
         public string gubun1; // [string,    1] 금액수량구분                    StartPos 2, Length 1
         public string gubun3; // [string,    1] 전일구분                        StartPos 4, Length 1
     }
 
-    internal struct _t1662OutBlock
+    public struct _t1662OutBlock
     {
         public string time; // [string,    6] 시간                            StartPos 0, Length 6
-        public float k200jisu; // [float ,  6.2] KP200                           StartPos 7, Length 6
+        public decimal k200jisu; // [float ,  6.2] KP200                           StartPos 7, Length 6
         public string sign; // [string,    1] 대비구분                        StartPos 14, Length 1
-        public float change; // [float ,  6.2] 대비                            StartPos 16, Length 6
-        public float k200basis; // [float ,  6.2] BASIS                           StartPos 23, Length 6
+        public decimal change; // [float ,  6.2] 대비                            StartPos 16, Length 6
+        public decimal k200basis; // [float ,  6.2] BASIS                           StartPos 23, Length 6
         public long tot3; // [long  ,   12] 전체순매수                      StartPos 30, Length 12
         public long tot1; // [long  ,   12] 전체매수                        StartPos 43, Length 12
         public long tot2; // [long  ,   12] 전체매도                        StartPos 56, Length 12

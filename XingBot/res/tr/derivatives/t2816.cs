@@ -1,12 +1,12 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // CME야간선물투자자별종합 ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t2816InBlock
+    public struct _t2816InBlock
     {
         public string dummy; // [string,    1] Dummy                           StartPos 0, Length 1
     }
 
-    internal struct _t2816OutBlock1
+    public struct _t2816OutBlock1
     {
         public string tjjcode_08; // [string,    4] 개인투자자코드                  StartPos 0, Length 4
         public long ms_08; // [long  ,   12] 개인매수                        StartPos 5, Length 12
@@ -70,7 +70,7 @@
         public long svolume_00; // [long  ,   12] 사모펀드순매수                  StartPos 671, Length 12
     }
 
-    internal struct _t2816OutBlock2
+    public struct _t2816OutBlock2
     {
         public string tjjcode_08; // [string,    4] 개인투자자코드                  StartPos 0, Length 4
         public long ms_08; // [long  ,   12] 개인매수                        StartPos 5, Length 12

@@ -1,12 +1,12 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // ELW종목조회 ( BLOCK,HEADTYPE=A )
-    internal struct _t8431InBlock
+    public struct _t8431InBlock
     {
         public string dummy; // [string,    1] Dummy                           StartPos 0, Length 1
     }
 
-    internal struct _t8431OutBlock
+    public struct _t8431OutBlock
     {
         public string hname; // [string,   40] 종목명                          StartPos 0, Length 40
         public string shcode; // [string,    6] 단축코드                        StartPos 40, Length 6

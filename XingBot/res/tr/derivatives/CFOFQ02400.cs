@@ -1,7 +1,7 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 선물옵션 계좌 미결제 약정현황(평균가) ( SERVICE=CFOFQ02400,HEADTYPE=B,CREATOR=김정현,CREDATE=2012/03/16 14:07:10 )
-    internal struct _CFOFQ02400InBlock1
+    public struct _CFOFQ02400InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -10,7 +10,7 @@
         public string BuyDt; // [BuyDt,    8] 매수일자                        StartPos 35, Length 8
     }
 
-    internal struct _CFOFQ02400OutBlock1
+    public struct _CFOFQ02400OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -19,7 +19,7 @@
         public string BuyDt; // [BuyDt,    8] 매수일자                        StartPos 35, Length 8
     }
 
-    internal struct _CFOFQ02400OutBlock2
+    public struct _CFOFQ02400OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm; // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -43,7 +43,7 @@
         public long AllPnlSum; // [AllPnlSum  ,   16] 전체손익합계                    StartPos 317, Length 16
     }
 
-    internal struct _CFOFQ02400OutBlock3
+    public struct _CFOFQ02400OutBlock3
     {
         public string FnoClssCode; // [FnoClssCode,    1] 선물옵션품목구분                StartPos 0, Length 1
         public long FutsSellQty; // [FutsSellQty  ,   16] 선물매도수량                    StartPos 1, Length 16
@@ -60,19 +60,19 @@
         public long PutBuyPnl; // [PutBuyPnl  ,   16] 풋매수손익                      StartPos 177, Length 16
     }
 
-    internal struct _CFOFQ02400OutBlock4
+    public struct _CFOFQ02400OutBlock4
     {
         public string IsuNo; // [IsuNo,   12] 종목번호                        StartPos 0, Length 12
         public string IsuNm; // [IsuNm,   40] 종목명                          StartPos 12, Length 40
         public string BnsTpCode; // [BnsTpCode,    1] 매매구분                        StartPos 52, Length 1
         public string BnsTpNm; // [BnsTpNm,   10] 매매구분                        StartPos 53, Length 10
         public long BalQty; // [BalQty  ,   16] 잔고수량                        StartPos 63, Length 16
-        public double FnoAvrPrc; // [FnoAvrPrc, 19.8] 평균가                          StartPos 79, Length 19
+        public decimal FnoAvrPrc; // [FnoAvrPrc, 19.8] 평균가                          StartPos 79, Length 19
         public long BgnAmt; // [BgnAmt  ,   16] 당초금액                        StartPos 98, Length 16
         public long ThdayLqdtQty; // [ThdayLqdtQty  ,   16] 당일청산수량                    StartPos 114, Length 16
-        public double Curprc; // [Curprc, 13.2] 현재가                          StartPos 130, Length 13
+        public decimal Curprc; // [Curprc, 13.2] 현재가                          StartPos 130, Length 13
         public long EvalAmt; // [EvalAmt  ,   16] 평가금액                        StartPos 143, Length 16
         public long EvalPnlAmt; // [EvalPnlAmt  ,   16] 평가손익금액                    StartPos 159, Length 16
-        public double EvalErnrat; // [EvalErnrat, 12.6] 평가수익률                      StartPos 175, Length 12
+        public decimal EvalErnrat; // [EvalErnrat, 12.6] 평가수익률                      StartPos 175, Length 12
     }
 }

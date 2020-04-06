@@ -1,7 +1,7 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 선물옵션 계좌주문체결내역 조회 ( ENCRYPT,SERVICE=CFOAQ00600,HEADTYPE=B,CREATOR=정명기,CREDATE=2012/03/12 16:35:20 )
-    internal struct _CFOAQ00600InBlock1
+    public struct _CFOAQ00600InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -15,7 +15,7 @@
         public string CommdaCode; // [CommdaCode,    2] 통신매체코드                    StartPos 55, Length 2
     }
 
-    internal struct _CFOAQ00600OutBlock1
+    public struct _CFOAQ00600OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -29,7 +29,7 @@
         public string CommdaCode; // [CommdaCode,    2] 통신매체코드                    StartPos 55, Length 2
     }
 
-    internal struct _CFOAQ00600OutBlock2
+    public struct _CFOAQ00600OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm; // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -39,7 +39,7 @@
         public long OptExecQty; // [OptExecQty  ,   16] 옵션체결수량                    StartPos 93, Length 16
     }
 
-    internal struct _CFOAQ00600OutBlock3
+    public struct _CFOAQ00600OutBlock3
     {
         public string OrdDt; // [OrdDt,    8] 주문일                          StartPos 0, Length 8
         public long OrdNo; // [OrdNo  ,   10] 주문번호                        StartPos 8, Length 10
@@ -51,11 +51,11 @@
         public string MrcTpNm; // [MrcTpNm,   10] 정정취소구분명                  StartPos 99, Length 10
         public string FnoOrdprcPtnCode; // [FnoOrdprcPtnCode,    2] 선물옵션호가유형코드            StartPos 109, Length 2
         public string FnoOrdprcPtnNm; // [FnoOrdprcPtnNm,   40] 선물옵션호가유형명              StartPos 111, Length 40
-        public double OrdPrc; // [OrdPrc, 13.2] 주문가                          StartPos 151, Length 13
+        public decimal OrdPrc; // [OrdPrc, 13.2] 주문가                          StartPos 151, Length 13
         public long OrdQty; // [OrdQty  ,   16] 주문수량                        StartPos 164, Length 16
         public string OrdTpNm; // [OrdTpNm,   10] 주문구분명                      StartPos 180, Length 10
         public string ExecTpNm; // [ExecTpNm,   10] 체결구분명                      StartPos 190, Length 10
-        public double ExecPrc; // [ExecPrc, 13.2] 체결가                          StartPos 200, Length 13
+        public decimal ExecPrc; // [ExecPrc, 13.2] 체결가                          StartPos 200, Length 13
         public long ExecQty; // [ExecQty  ,   16] 체결수량                        StartPos 213, Length 16
         public string CtrctTime; // [CtrctTime,    9] 약정시각                        StartPos 229, Length 9
         public long CtrctNo; // [CtrctNo  ,   10] 약정번호                        StartPos 238, Length 10

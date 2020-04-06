@@ -1,7 +1,7 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 현물계좌예수금 주문가능금액 총평가2 ( SERVICE=CSPAQ22200,HEADTYPE=B,CREATOR=송우석,CREDATE=2020/02/25 08:21:10 )
-    internal struct _CSPAQ22200InBlock1
+    public struct _CSPAQ22200InBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string MgmtBrnNo; // [MgmtBrnNo,    3] 관리지점번호                    StartPos 5, Length 3
@@ -10,7 +10,7 @@
         public string BalCreTp; // [BalCreTp,    1] 잔고생성구분                    StartPos 36, Length 1
     }
 
-    internal struct _CSPAQ22200OutBlock1
+    public struct _CSPAQ22200OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string MgmtBrnNo; // [MgmtBrnNo,    3] 관리지점번호                    StartPos 5, Length 3
@@ -19,7 +19,7 @@
         public string BalCreTp; // [BalCreTp,    1] 잔고생성구분                    StartPos 36, Length 1
     }
 
-    internal struct _CSPAQ22200OutBlock2
+    public struct _CSPAQ22200OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string BrnNm; // [BrnNm,   40] 지점명                          StartPos 5, Length 40
@@ -46,7 +46,7 @@
         public long D1ovdRepayRqrdAmt; // [D1ovdRepayRqrdAmt  ,   16] D1연체변제소요금액              StartPos 341, Length 16
         public long D2ovdRepayRqrdAmt; // [D2ovdRepayRqrdAmt  ,   16] D2연체변제소요금액              StartPos 357, Length 16
         public long MloanAmt; // [MloanAmt  ,   16] 융자금액                        StartPos 373, Length 16
-        public double ChgAfPldgRat; // [ChgAfPldgRat,  9.3] 변경후담보비율                  StartPos 389, Length 9
+        public decimal ChgAfPldgRat; // [ChgAfPldgRat,  9.3] 변경후담보비율                  StartPos 389, Length 9
         public long RqrdPldgAmt; // [RqrdPldgAmt  ,   16] 소요담보금액                    StartPos 398, Length 16
         public long PdlckAmt; // [PdlckAmt  ,   16] 담보부족금액                    StartPos 414, Length 16
         public long OrgPldgSumAmt; // [OrgPldgSumAmt  ,   16] 원담보합계금액                  StartPos 430, Length 16

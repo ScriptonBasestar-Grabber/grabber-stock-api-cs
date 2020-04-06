@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace XingBot.Properties {
+namespace XingBot.real.Properties {
     using System;
     
     

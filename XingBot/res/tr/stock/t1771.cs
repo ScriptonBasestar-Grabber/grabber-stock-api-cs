@@ -1,7 +1,7 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 종목별회원사추이 ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t1771InBlock
+    public struct _t1771InBlock
     {
         public string shcode; // [string,    6] 종목코드                        StartPos 0, Length 6
         public string tradno; // [string,    3] 거래원코드                      StartPos 7, Length 3
@@ -12,19 +12,19 @@
         public string cnt; // [string,    3] 요청건수                        StartPos 36, Length 3
     }
 
-    internal struct _t1771OutBlock
+    public struct _t1771OutBlock
     {
         public long cts_idx; // [long  ,    4] CTSIDX                          StartPos 0, Length 4
     }
 
-    internal struct _t1771OutBlock2
+    public struct _t1771OutBlock2
     {
         public string traddate; // [string,    8] 날짜                            StartPos 0, Length 8
         public string tradtime; // [string,    8] 시간                            StartPos 9, Length 8
         public long price; // [long  ,    8] 현재가                          StartPos 18, Length 8
         public string sign; // [string,    1] 대비구분                        StartPos 27, Length 1
         public long change; // [long  ,    8] 대비                            StartPos 29, Length 8
-        public float diff; // [float ,  6.2] 등락율                          StartPos 38, Length 6
+        public decimal diff; // [float ,  6.2] 등락율                          StartPos 38, Length 6
         public long volume; // [long  ,   12] 거래량                          StartPos 45, Length 12
         public long tradmdcha; // [long  ,   12] 매도                            StartPos 58, Length 12
         public long tradmscha; // [long  ,   12] 매수                            StartPos 71, Length 12

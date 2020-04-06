@@ -1,12 +1,12 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // KOSPI호가잔량 ( ATTR, KEY=6, GROUP=1 )
-    struct _H1__InBlock
+    public struct _H1__InBlock
     {
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    struct _H1__OutBlock
+    public struct _H1__OutBlock
     {
         public string hotime; // [string,    6] 호가시간                        StartPos 0, Length 6
         public long offerho1; // [long  ,    7] 매도호가1                       StartPos 7, Length 7

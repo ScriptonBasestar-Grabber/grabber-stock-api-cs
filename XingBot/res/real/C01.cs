@@ -1,11 +1,11 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 선물주문체결 ( block )
-    public struct _C01_InBlock
+    public    public struct _C01_InBlock
     {
     }
 
-    struct _C01_OutBlock
+    public struct _C01_OutBlock
     {
         public long lineseq; // [long  ,   10] 라인일련번호                    StartPos 0, Length 10
         public string accno; // [string,   11] 계좌번호                        StartPos 10, Length 11
@@ -20,13 +20,13 @@
         public string orgordno; // [string,   10] 원주문번호                      StartPos 75, Length 10
         public string expcode; // [string,   12] 종목코드                        StartPos 85, Length 12
         public string yakseq; // [string,   11] 약정번호                        StartPos 97, Length 11
-        public float cheprice; // [float , 11.2] 체결가격                        StartPos 108, Length 11
+        public decimal cheprice; // [float , 11.2] 체결가격                        StartPos 108, Length 11
         public long chevol; // [long  ,   10] 체결수량                        StartPos 119, Length 10
         public string sessionid; // [string,    2] 세션ID                          StartPos 129, Length 2
         public string chedate; // [string,    8] 체결일자                        StartPos 131, Length 8
         public string chetime; // [string,    9] 체결시각                        StartPos 139, Length 9
-        public float spdprc1; // [float , 11.2] 최근월체결가격                  StartPos 148, Length 11
-        public float spdprc2; // [float , 11.2] 차근월체결가격                  StartPos 159, Length 11
+        public decimal spdprc1; // [float , 11.2] 최근월체결가격                  StartPos 148, Length 11
+        public decimal spdprc2; // [float , 11.2] 차근월체결가격                  StartPos 159, Length 11
         public string dosugb; // [string,    1] 매도수구분                      StartPos 170, Length 1
         public string accno1; // [string,   12] 계좌번호1                       StartPos 171, Length 12
         public string sihogagb; // [string,   11] 시장조성호가구분                StartPos 183, Length 11

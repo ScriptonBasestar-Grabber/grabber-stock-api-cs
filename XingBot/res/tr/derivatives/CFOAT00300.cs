@@ -1,7 +1,7 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // 선물옵션 취소주문 ( SERVICE=CFOAT00300,ENCRYPT,SIGNATURE,HEADTYPE=B,CREATOR=이인희,CREDATE=2011/12/19 17:39:04 )
-    internal struct _CFOAT00300InBlock1
+    public struct _CFOAT00300InBlock1
     {
         public string AcntNo; // [AcntNo,   20] 계좌번호                        StartPos 0, Length 20
         public string Pwd; // [Pwd,    8] 비밀번호                        StartPos 20, Length 8
@@ -10,7 +10,7 @@
         public long CancQty; // [CancQty  ,   16] 취소수량                        StartPos 50, Length 16
     }
 
-    internal struct _CFOAT00300OutBlock1
+    public struct _CFOAT00300OutBlock1
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string OrdMktCode; // [OrdMktCode,    2] 주문시장코드                    StartPos 5, Length 2
@@ -34,7 +34,7 @@
         public long FundOrdNo; // [FundOrdNo  ,   10] 펀드주문번호                    StartPos 187, Length 10
     }
 
-    internal struct _CFOAT00300OutBlock2
+    public struct _CFOAT00300OutBlock2
     {
         public long RecCnt; // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrdNo; // [OrdNo  ,   10] 주문번호                        StartPos 5, Length 10

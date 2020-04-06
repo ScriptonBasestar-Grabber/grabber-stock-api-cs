@@ -1,12 +1,12 @@
-﻿namespace XingBot.res
+﻿namespace XingBot.real.res
 {
     // FNG_요약 ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t3320InBlock
+    public struct _t3320InBlock
     {
         public string gicode; // [string,    7] 종목코드                        StartPos 0, Length 7
     }
 
-    internal struct _t3320OutBlock
+    public struct _t3320OutBlock
     {
         public string upgubunnm; // [string,   20] 업종구분명                      StartPos 0, Length 20
         public string sijangcd; // [string,    1] 시장구분                        StartPos 21, Length 1
@@ -21,36 +21,36 @@
         public long gstock; // [long  ,   12] 주식수                          StartPos 285, Length 12
         public string homeurl; // [string,   50] Homepage                        StartPos 298, Length 50
         public string grdnm; // [string,   30] 그룹명                          StartPos 349, Length 30
-        public float foreignratio; // [float ,  6.2] 외국인                          StartPos 380, Length 6
+        public decimal foreignratio; // [float ,  6.2] 외국인                          StartPos 380, Length 6
         public string irtel; // [string,   30] 주담전화                        StartPos 387, Length 30
-        public float capital; // [float ,   12] 자본금                          StartPos 418, Length 12
-        public float sigavalue; // [float ,   12] 시가총액                        StartPos 431, Length 12
-        public float cashsis; // [float ,   12] 배당금                          StartPos 444, Length 12
-        public float cashrate; // [float , 13.2] 배당수익율                      StartPos 457, Length 13
+        public decimal capital; // [float ,   12] 자본금                          StartPos 418, Length 12
+        public decimal sigavalue; // [float ,   12] 시가총액                        StartPos 431, Length 12
+        public decimal cashsis; // [float ,   12] 배당금                          StartPos 444, Length 12
+        public decimal cashrate; // [float , 13.2] 배당수익율                      StartPos 457, Length 13
         public long price; // [long  ,    8] 현재가                          StartPos 471, Length 8
         public long jnilclose; // [long  ,    8] 전일종가                        StartPos 480, Length 8
     }
 
-    internal struct _t3320OutBlock1
+    public struct _t3320OutBlock1
     {
         public string gicode; // [string,    7] 기업코드                        StartPos 0, Length 7
         public string gsym; // [string,    6] 결산년월                        StartPos 8, Length 6
         public string gsgb; // [string,    1] 결산구분                        StartPos 15, Length 1
-        public float per; // [float , 13.2] PER                             StartPos 17, Length 13
-        public float eps; // [float ,   13] EPS                             StartPos 31, Length 13
-        public float pbr; // [float , 13.2] PBR                             StartPos 45, Length 13
-        public float roa; // [float , 13.2] ROA                             StartPos 59, Length 13
-        public float roe; // [float , 13.2] ROE                             StartPos 73, Length 13
-        public float ebitda; // [float , 13.2] EBITDA                          StartPos 87, Length 13
-        public float evebitda; // [float , 13.2] EVEBITDA                        StartPos 101, Length 13
-        public float par; // [float , 13.2] 액면가                          StartPos 115, Length 13
-        public float sps; // [float , 13.2] SPS                             StartPos 129, Length 13
-        public float cps; // [float , 13.2] CPS                             StartPos 143, Length 13
-        public float bps; // [float ,   13] BPS                             StartPos 157, Length 13
-        public float t_per; // [float , 13.2] T.PER                           StartPos 171, Length 13
-        public float t_eps; // [float ,   13] T.EPS                           StartPos 185, Length 13
-        public float peg; // [float , 13.2] PEG                             StartPos 199, Length 13
-        public float t_peg; // [float , 13.2] T.PEG                           StartPos 213, Length 13
+        public decimal per; // [float , 13.2] PER                             StartPos 17, Length 13
+        public decimal eps; // [float ,   13] EPS                             StartPos 31, Length 13
+        public decimal pbr; // [float , 13.2] PBR                             StartPos 45, Length 13
+        public decimal roa; // [float , 13.2] ROA                             StartPos 59, Length 13
+        public decimal roe; // [float , 13.2] ROE                             StartPos 73, Length 13
+        public decimal ebitda; // [float , 13.2] EBITDA                          StartPos 87, Length 13
+        public decimal evebitda; // [float , 13.2] EVEBITDA                        StartPos 101, Length 13
+        public decimal par; // [float , 13.2] 액면가                          StartPos 115, Length 13
+        public decimal sps; // [float , 13.2] SPS                             StartPos 129, Length 13
+        public decimal cps; // [float , 13.2] CPS                             StartPos 143, Length 13
+        public decimal bps; // [float ,   13] BPS                             StartPos 157, Length 13
+        public decimal t_per; // [float , 13.2] T.PER                           StartPos 171, Length 13
+        public decimal t_eps; // [float ,   13] T.EPS                           StartPos 185, Length 13
+        public decimal peg; // [float , 13.2] PEG                             StartPos 199, Length 13
+        public decimal t_peg; // [float , 13.2] T.PEG                           StartPos 213, Length 13
         public string t_gsym; // [string,    6] 최근분기년도                    StartPos 227, Length 6
     }
 }

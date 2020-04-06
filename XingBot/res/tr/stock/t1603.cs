@@ -1,7 +1,7 @@
-﻿namespace XingBot.res.tr
+﻿namespace XingBot.real.res.tr
 {
     // 시간대별 투자자 매매추이 상세 ( ATTR,BLOCK,HEADTYPE=A )
-    internal struct _t1603InBlock
+    public struct _t1603InBlock
     {
         public string market; // [string,    1] 시장구분                        StartPos 0, Length 1
         public string gubun1; // [string,    1] 투자자구분                      StartPos 2, Length 1
@@ -12,13 +12,13 @@
         public string upcode; // [string,    3] 업종코드                        StartPos 24, Length 3
     }
 
-    internal struct _t1603OutBlock
+    public struct _t1603OutBlock
     {
         public long cts_idx; // [long  ,    4] CTSIDX                          StartPos 0, Length 4
         public string cts_time; // [string,    8] CTSTIME                         StartPos 5, Length 8
     }
 
-    internal struct _t1603OutBlock1
+    public struct _t1603OutBlock1
     {
         public string time; // [string,    8] 시간                            StartPos 0, Length 8
         public string tjjcode; // [string,    4] 투자자구분                      StartPos 9, Length 4

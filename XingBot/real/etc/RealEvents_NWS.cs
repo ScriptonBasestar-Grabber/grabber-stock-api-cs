@@ -4,28 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XA_DATASETLib;
-using XingBot.res;
+using XingBot.real.res;
 
-namespace XingBot
+namespace XingBot.real
 {
-    public partial class RealEvents : _IXARealEvents
+    public partial class RealCtrl : _IXARealEvents
     {
         public void InBlock_NWS(string nwcode)
         {
             string szTrCode = "NWS";
-            _RealDict[szTrCode].SetFieldData("InBlock", "nwcode", nwcode);
+            _realDict[szTrCode].SetFieldData("InBlock", "nwcode", nwcode);
         }
 
         private void OutBlock_NWS(string szTrCode)
         {
             _NWS_OutBlock outData;
-            outData.date = _RealDict[szTrCode].GetFieldData("OutBlock", "upstep");
-            outData.time = _RealDict[szTrCode].GetFieldData("OutBlock", "upstep");
-            outData.id = _RealDict[szTrCode].GetFieldData("OutBlock", "upstep");
-            outData.realkey = _RealDict[szTrCode].GetFieldData("OutBlock", "upstep");
-            outData.title = _RealDict[szTrCode].GetFieldData("OutBlock", "upstep");
-            outData.code = _RealDict[szTrCode].GetFieldData("OutBlock", "upstep");
-            outData.bodysize = long.Parse(_RealDict[szTrCode].GetFieldData("OutBlock", "dnlmtprice"));
+            outData.date = _realDict[szTrCode].GetFieldData("OutBlock", "upstep");
+            outData.time = _realDict[szTrCode].GetFieldData("OutBlock", "upstep");
+            outData.id = _realDict[szTrCode].GetFieldData("OutBlock", "upstep");
+            outData.realkey = _realDict[szTrCode].GetFieldData("OutBlock", "upstep");
+            outData.title = _realDict[szTrCode].GetFieldData("OutBlock", "upstep");
+            outData.code = _realDict[szTrCode].GetFieldData("OutBlock", "upstep");
+            outData.bodysize = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "dnlmtprice"));
         }
     }
 }

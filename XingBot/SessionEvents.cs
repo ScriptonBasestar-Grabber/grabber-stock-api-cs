@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using XA_SESSIONLib;
 
-namespace XingBot
+namespace XingBot.real
 {
     public class SessionEvents : _IXASessionEvents
     {
@@ -31,7 +31,7 @@ namespace XingBot
 
         public void Login(string UserName, string UserPass, string CertPass)
         {
-            m_Session.ConnectServer("mis.etrade.co.kr", 20001);
+            m_Session.ConnectServer("api.ebestsec.co.kr", 20001);
             m_Session.Login(UserName, UserPass, CertPass, (int)XA_SESSIONLib.XA_SERVER_TYPE.XA_SIMUL_SERVER, true);
         }
         void _IXASessionEvents.Login(string szCode, string szMsg)
