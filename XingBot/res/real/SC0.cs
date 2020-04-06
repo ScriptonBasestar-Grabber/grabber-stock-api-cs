@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 주식주문접수 ( KEY=8, GROUP=1 )
     public struct _SC0_InBlock

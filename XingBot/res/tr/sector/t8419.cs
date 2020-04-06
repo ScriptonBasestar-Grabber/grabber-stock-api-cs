@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 업종챠트(일주월) ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t8419InBlock

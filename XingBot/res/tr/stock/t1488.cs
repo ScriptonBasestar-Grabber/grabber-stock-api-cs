@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 예상체결가 등락율 상위조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1488InBlock

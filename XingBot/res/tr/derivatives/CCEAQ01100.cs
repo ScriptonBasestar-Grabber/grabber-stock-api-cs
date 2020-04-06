@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr_derivatives
+﻿namespace XingBot.res_derivatives
 {
     // 선물옵션 CME 매매거래현황 조회 ( SERVICE=CCEAQ01100,HEADTYPE=B,CREATOR=원종혁,CREDATE=2019/04/03 16:08:04 )
     public struct _CCEAQ01100InBlock1

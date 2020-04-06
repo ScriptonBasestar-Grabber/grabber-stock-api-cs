@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 현물계좌 주문체결내역 조회(API) ( SERVICE=CSPAQ13700,HEADTYPE=B,CREATOR=이상은,CREDATE=2015/04/13 08:39:53 )
     public struct _CSPAQ13700InBlock1

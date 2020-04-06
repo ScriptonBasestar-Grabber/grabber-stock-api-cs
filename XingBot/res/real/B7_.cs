@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 코스닥LP호가 ( ATTR, KEY=6, GROUP=1 )
     public struct _B7__InBlock

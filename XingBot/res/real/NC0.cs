@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // CME연계KP200지수선물체결 ( ATTR, KEY=8, GROUP=1 )
     public struct _NC0_InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 서버저장조건리스트조회 ( ENCRYPT,BLOCK,HEADTYPE=A )
     public struct _t1866InBlock

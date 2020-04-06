@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 업종별 투자자별 매매현황(BM) ( attr,block )
     public struct _BM__InBlock

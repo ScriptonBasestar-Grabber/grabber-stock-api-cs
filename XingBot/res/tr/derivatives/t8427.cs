@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션 과거데이터시간대별조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t8427InBlock

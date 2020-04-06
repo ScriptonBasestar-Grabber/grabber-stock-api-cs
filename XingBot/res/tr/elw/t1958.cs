@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW 종목비교 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1958InBlock

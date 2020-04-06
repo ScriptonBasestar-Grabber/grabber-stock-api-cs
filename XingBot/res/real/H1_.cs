@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // KOSPI호가잔량 ( ATTR, KEY=6, GROUP=1 )
     public struct _H1__InBlock

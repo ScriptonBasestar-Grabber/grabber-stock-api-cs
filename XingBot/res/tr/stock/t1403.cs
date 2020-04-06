@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 신규상장종목조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1403InBlock

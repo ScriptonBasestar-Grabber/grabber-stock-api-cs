@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식 현재가 시세메모 ( BLOCK,HEADTYPE=A )
     public struct _t1104InBlock

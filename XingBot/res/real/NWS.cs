@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 실시간 뉴스 제목 패킷 ( KEY=6, GROUP=1 )
     public struct _NWS_InBlock

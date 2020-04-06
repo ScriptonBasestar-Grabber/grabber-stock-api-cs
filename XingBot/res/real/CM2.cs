@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // CME확인 ( KEY=8, GROUP=1 )
     public struct _CM2_InBlock

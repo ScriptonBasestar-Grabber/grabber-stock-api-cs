@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 거래대금상위 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1463InBlock

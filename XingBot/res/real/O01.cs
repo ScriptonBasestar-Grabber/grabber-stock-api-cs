@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물접수 ( KEY=8, GROUP=1 )
     public struct _O01_InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션 계좌주문체결내역 조회 ( ENCRYPT,SERVICE=CFOAQ00600,HEADTYPE=B,CREATOR=정명기,CREDATE=2012/03/12 16:35:20 )
     public struct _CFOAQ00600InBlock1

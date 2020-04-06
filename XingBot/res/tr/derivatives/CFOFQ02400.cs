@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션 계좌 미결제 약정현황(평균가) ( SERVICE=CFOFQ02400,HEADTYPE=B,CREATOR=김정현,CREDATE=2012/03/16 14:07:10 )
     public struct _CFOFQ02400InBlock1

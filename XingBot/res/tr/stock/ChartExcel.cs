@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 챠트엑셀데이터조회 ( HEADTYPE=B )
     public struct _ChartExcelInBlock

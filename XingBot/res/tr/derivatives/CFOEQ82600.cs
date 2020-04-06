@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션 일별 계좌손익내역 ( SERVICE=CFOEQ82600,HEADTYPE=B,CREATOR=황규석,CREDATE=2013/01/06 17:48:51 ) 
     public struct _CFOEQ82600InBlock1

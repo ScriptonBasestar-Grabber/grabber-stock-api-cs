@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // KOSPI200옵션실시간상하한가 ( ATTR, KEY=8, GROUP=1 )
     public struct _OD0_InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // KOSDAQ호가잔량 ( ATTR, KEY=6, GROUP=1 )
     public struct _HA__InBlock

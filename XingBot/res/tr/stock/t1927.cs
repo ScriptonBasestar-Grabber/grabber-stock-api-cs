@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 공매도일별추이 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1927InBlock

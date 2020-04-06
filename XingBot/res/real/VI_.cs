@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 주식VI발동해제 ( ATTR, KEY=6, GROUP=1 )
     public struct _VI__InBlock

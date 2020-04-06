@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // e종목검색(API용) ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1857InBlock

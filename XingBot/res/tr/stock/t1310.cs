@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식당일전일분틱조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1310InBlock

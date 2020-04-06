@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 주문가능 수량/금액 조회 ( SERVICE=CEXAQ21200,HEADTYPE=B,CREATOR=이시종,CREDATE=2012/07/06 14:21:09 )
     public struct _CEXAQ21200InBlock1

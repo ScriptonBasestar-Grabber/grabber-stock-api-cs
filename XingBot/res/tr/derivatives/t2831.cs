@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 호가 조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2831InBlock

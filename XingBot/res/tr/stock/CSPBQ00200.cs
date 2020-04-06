@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 현물계좌 증거금률별 주문가능수량 조회 ( SERVICE=CSPBQ00200,HEADTYPE=B,CREATOR=이상은,CREDATE=2011/12/12 09:22:25 )
     public struct _CSPBQ00200InBlock1

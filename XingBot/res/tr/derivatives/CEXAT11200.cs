@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 정정주문 ( SERVICE=CEXAT11200,HEADTYPE=B,CREATOR=이시종,CREDATE=2012/06/27 21:27:10 )
     public struct _CEXAT11200InBlock1

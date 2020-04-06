@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션 옵션매도시 주문증거금조회 ( SERVICE=CFOBQ10800,HEADTYPE=B,CREATOR=원종혁,CREDATE=2019/08/01 10:51:29 )
     public struct _CFOBQ10800InBlock1

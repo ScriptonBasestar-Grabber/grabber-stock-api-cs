@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // KOSPI200옵션민감도 ( ATTR, KEY=8, GROUP=1 )
     public struct _OMG_InBlock

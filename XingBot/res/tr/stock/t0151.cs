@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식당일매매일지/수수료(전일) ( TUXCODE=T0151, HEADTYPE=C )
     public struct _t0151InBlock

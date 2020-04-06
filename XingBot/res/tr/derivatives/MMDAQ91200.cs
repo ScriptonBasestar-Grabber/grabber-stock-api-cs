@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 파생상품증거금율조회 ( SERVICE=MMDAQ91200,HEADTYPE=B,CREATOR=임정선,CREDATE=2014/09/03 15:16:28 )
     public struct _MMDAQ91200InBlock1

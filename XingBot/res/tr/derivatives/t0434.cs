@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물/옵션 체결/미체결 ( TUXCODE=T0434,HEADTYPE=D )
     public struct _t0434InBlock

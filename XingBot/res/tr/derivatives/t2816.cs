@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // CME야간선물투자자별종합 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2816InBlock

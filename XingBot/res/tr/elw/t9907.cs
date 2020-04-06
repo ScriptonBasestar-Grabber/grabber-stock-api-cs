@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 만기월조회 ( BLOCK,HEADTYPE=A )
     public struct _t9907InBlock

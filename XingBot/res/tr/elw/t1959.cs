@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // LP 대상종목정보 조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1959InBlock

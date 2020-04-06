@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 주식선물실시간상하한가 ( ATTR, KEY=8, GROUP=1 )
     public struct _JD0_InBlock

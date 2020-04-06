@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식종목조회 ( BLOCK,HEADTYPE=A )
     // t8436 사용

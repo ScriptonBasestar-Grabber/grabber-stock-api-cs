@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 주식선물가격제한폭확대 ( ATTR, KEY=8, GROUP=1 )
     public struct _JX0_InBlock

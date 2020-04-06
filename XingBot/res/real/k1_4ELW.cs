@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW거래원 ( ATTR, KEY=6, GROUP=1 )
     public struct _k1_4ELW_InBlock

@@ -10,7 +10,7 @@ using CsvHelper;
 using XA_DATASETLib;
 using XingBot.Properties;
 using XingBot.real.Properties;
-using XingBot.real.res;
+using XingBot.res;
 
 namespace XingBot.tr
 {

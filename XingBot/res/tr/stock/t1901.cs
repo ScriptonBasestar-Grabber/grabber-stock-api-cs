@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // ETF 현재가(시세) 조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1901InBlock

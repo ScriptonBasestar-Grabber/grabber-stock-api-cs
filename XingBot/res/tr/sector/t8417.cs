@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 업종차트(틱/n틱) ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t8417InBlock

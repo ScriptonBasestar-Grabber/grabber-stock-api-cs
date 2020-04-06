@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 외인/기관 종목별동향 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1701InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW 지표검색 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1955InBlock

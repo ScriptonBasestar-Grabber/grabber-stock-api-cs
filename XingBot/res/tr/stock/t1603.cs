@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 시간대별 투자자 매매추이 상세 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1603InBlock

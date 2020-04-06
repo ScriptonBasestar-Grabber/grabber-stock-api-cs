@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물/옵션 미결제약정 추이 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2421InBlock

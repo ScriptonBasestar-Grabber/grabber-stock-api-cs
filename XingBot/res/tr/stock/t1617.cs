@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 투자자매매종합2 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1617InBlock

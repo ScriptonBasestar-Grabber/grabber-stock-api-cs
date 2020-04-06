@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 계좌별신용한도조회 ( SERVICE=CSPAQ00600,HEADTYPE=B,CREATOR=송우석,CREDATE=2018/09/17 15:17:35 )
     public struct _CSPAQ00600InBlock1

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // CME야간선물 시간대별투자자매매추이 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2813InBlock

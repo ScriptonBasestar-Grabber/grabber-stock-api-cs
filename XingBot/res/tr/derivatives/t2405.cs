@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물/옵션 호가잔량 비율 차트 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2405InBlock

@@ -7,7 +7,7 @@ using DataLib.util;
 using XA_DATASETLib;
 using XingBot.Properties;
 using XingBot.real.Properties;
-using XingBot.real.res;
+using XingBot.res;
 using XingBot.tr;
 
 namespace XingBot.tr
@@ -34,15 +34,18 @@ namespace XingBot.tr
             icpc = (IConnectionPointContainer) _ixa;
             icpc.FindConnectionPoint(ref iidQueryEvents, out icp);
             icp.Advise(this, out dwCookie);
-
+            //
             // Console.WriteLine(Settings.Default.root_path);
             // Console.WriteLine(Settings.Default.root_path.ToString());
             // Console.WriteLine(Path.Combine(Settings.Default.root_path.ToString(), @"\Res\", szTrCode + ".res"));
             _resModel = ReadResFile.Read(Settings.Default.root_path + @"\Res\" + szTrCode + ".res");
+            Console.WriteLine("===============================");
         }
 
         public void InBlock(InBlockQuery action, StringDict sdict)
         {
+            // _ixa.SetFieldData("t1981InBlock", "mkt_gb", 0, "0");
+            // _ixa.Request(false);
             action(_szTrCode, _ixa, _resModel.Blocks[_szTrCode + "InBlock"], sdict);
         }
 
@@ -93,44 +96,53 @@ namespace XingBot.tr
             using (var writer = new StreamWriter(Settings.Default.data_path + "\\xing\\" + szTrCode + ".csv"))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
-                int cnt;
-                Console.WriteLine("===============1981 receive");
-                cnt = _ixa.GetBlockCount(szTrCode + "OutBlock");
-                for (var i = 0; i < cnt; i++)
-                {
-                    var result = new _t1981OutBlock()
-                    {
-                        ksp_cnt = _ixa.GetFieldData(szTrCode + "OutBlock", "ksp_cnt", i),
-                        ksd_cnt = _ixa.GetFieldData(szTrCode + "OutBlock", "ksd_cnt", i),
-                    };
-                    Console.WriteLine(result.ksp_cnt);
-                    Console.WriteLine(result.ksd_cnt);
-                    Console.WriteLine("f9f9f9f9f9");
-                }
-                
-                csv.WriteHeader<_t1981OutBlock1>();
-                cnt = _ixa.GetBlockCount(szTrCode + "OutBlock1");
-                for (var i = 0; i < cnt; i++)
-                {
-                    Console.WriteLine("라인수:"+i);
-                    var result = new _t1981OutBlock1()
-                    {
-                        shcode = _ixa.GetFieldData(szTrCode + "OutBlock1", "shcode", i),
-                        expcode = _ixa.GetFieldData(szTrCode + "OutBlock1", "expcode", i),
-                        hname = _ixa.GetFieldData(szTrCode + "OutBlock1", "hname", i),
-                        price = _ixa.GetFieldData(szTrCode + "OutBlock1", "price", i),
-                        sign = _ixa.GetFieldData(szTrCode + "OutBlock1", "sign", i),
-                        change = _ixa.GetFieldData(szTrCode + "OutBlock1", "change", i),
-                        rate = decimal.Parse(_ixa.GetFieldData(szTrCode + "OutBlock1", "rate", i)),
-                        volume = _ixa.GetFieldData(szTrCode + "OutBlock1", "volume", i),
-                        value = _ixa.GetFieldData(szTrCode + "OutBlock1", "value", i),
-                        mkt_gb = _ixa.GetFieldData(szTrCode + "OutBlock1", "mkt_gb", i),
-                    };
-                    Console.WriteLine(result.shcode);
-                    csv.WriteRecord<_t1981OutBlock1>(result);
-                    // csv.NextRecord();
-                }
-                // action(szTrCode, _ixa, _resModel.Blocks["OutBlock"], csv);
+                // int cnt;
+                // Console.WriteLine("===============1981 receive");
+                // cnt = _ixa.GetBlockCount(szTrCode + "OutBlock");
+                // for (var i = 0; i < cnt; i++)
+                // {
+                //     var result = new _t1981OutBlock()
+                //     {
+                //         ksp_cnt = _ixa.GetFieldData(szTrCode + "OutBlock", "ksp_cnt", i),
+                //         ksd_cnt = _ixa.GetFieldData(szTrCode + "OutBlock", "ksd_cnt", i),
+                //     };
+                //     Console.WriteLine(result.ksp_cnt);
+                //     Console.WriteLine(result.ksd_cnt);
+                //     Console.WriteLine("f9f9f9f9f9");
+                // }
+                //
+                // csv.WriteHeader<_t1981OutBlock1>();
+                // cnt = _ixa.GetBlockCount(szTrCode + "OutBlock1");
+                // for (var i = 0; i < cnt; i++)
+                // {
+                //     Console.WriteLine("라인수:"+i);
+                //     var result = new _t1981OutBlock1()
+                //     {
+                //         shcode = _ixa.GetFieldData(szTrCode + "OutBlock1", "shcode", i),
+                //         expcode = _ixa.GetFieldData(szTrCode + "OutBlock1", "expcode", i),
+                //         hname = _ixa.GetFieldData(szTrCode + "OutBlock1", "hname", i),
+                //         price = _ixa.GetFieldData(szTrCode + "OutBlock1", "price", i),
+                //         sign = _ixa.GetFieldData(szTrCode + "OutBlock1", "sign", i),
+                //         change = _ixa.GetFieldData(szTrCode + "OutBlock1", "change", i),
+                //         rate = decimal.Parse(_ixa.GetFieldData(szTrCode + "OutBlock1", "rate", i)),
+                //         volume = _ixa.GetFieldData(szTrCode + "OutBlock1", "volume", i),
+                //         value = _ixa.GetFieldData(szTrCode + "OutBlock1", "value", i),
+                //         mkt_gb = _ixa.GetFieldData(szTrCode + "OutBlock1", "mkt_gb", i),
+                //     };
+                //     Console.WriteLine(result.shcode);
+                //     csv.NextRecord();
+                //     csv.WriteRecord<_t1981OutBlock1>(result);
+                // }
+                // Console.WriteLine("1981 before");
+                // Console.WriteLine(_ixa);
+                // Console.WriteLine("111111");
+                // Console.WriteLine(_resModel.Blocks);
+                // Console.WriteLine("222222");
+                // Console.WriteLine(_resModel.Blocks["OutBlock"]);
+                // Console.WriteLine("333333");
+                // Console.WriteLine(csv);
+                // Console.WriteLine("444444");
+                action(szTrCode, _ixa, _resModel.Blocks[szTrCode+"OutBlock"], csv);
                 Console.WriteLine("+80990u09uj080uj9");
             }
         }

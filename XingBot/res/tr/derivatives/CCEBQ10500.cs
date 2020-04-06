@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션 CME 예탁금증거금 조회 ( SERVICE=CCEBQ10500,HEADTYPE=B,CREATOR=김승환,CREDATE=2012/04/16 18:02:19 )
     public struct _CCEBQ10500InBlock1

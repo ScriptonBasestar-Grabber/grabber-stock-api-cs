@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 주식선물 틱분별체결조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t8406InBlock

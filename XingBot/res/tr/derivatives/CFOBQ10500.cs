@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션 계좌예탁금증거금조회 ( ENCRYPT,SERVICE=CFOBQ10500,HEADTYPE=B,CREATOR=정명기,CREDATE=2012/03/12 15:03:11 )
     public struct _CFOBQ10500InBlock1

@@ -6,7 +6,6 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Threading;
 using DataLib.util;
 using XA_DATASETLib;
-using XingBot.real.res;
 using XingBot.tr;
 
 namespace XingBot.tr

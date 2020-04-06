@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 기간주문체결조회 ( SERVICE=CEXAQ44200,HEADTYPE=B,CREATOR=,CREDATE=2012/11/08 17:10:28 )
     public struct _CEXAQ44200InBlock1

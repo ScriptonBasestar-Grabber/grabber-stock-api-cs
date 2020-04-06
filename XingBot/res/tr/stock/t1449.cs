@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 가격대별 매매비중 조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1449InBlock

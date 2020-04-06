@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 뉴ELW투자지표민감도 ( ATTR, KEY=6, GROUP=1 )
     public struct _ESN_InBlock

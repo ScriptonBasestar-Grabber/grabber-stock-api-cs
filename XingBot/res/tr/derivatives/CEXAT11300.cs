@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 취소주문 ( SERVICE=CEXAT11300,HEADTYPE=B,CREATOR=이시종,CREDATE=2012/06/27 21:31:41 )
 

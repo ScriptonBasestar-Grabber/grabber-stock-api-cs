@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 외인기관별종목별동항 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1717InBlock

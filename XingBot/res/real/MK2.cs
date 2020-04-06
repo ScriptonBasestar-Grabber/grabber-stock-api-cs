@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // US지수 ( ATTR, KEY=16, GROUP=1 )
     public struct _MK2_InBlock

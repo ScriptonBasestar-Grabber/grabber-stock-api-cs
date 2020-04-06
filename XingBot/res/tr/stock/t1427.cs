@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 상/하한가 직전 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1427InBlock

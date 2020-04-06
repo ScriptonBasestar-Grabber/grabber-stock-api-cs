@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // FNG_요약 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t3320InBlock

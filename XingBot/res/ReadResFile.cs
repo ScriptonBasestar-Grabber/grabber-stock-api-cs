@@ -5,8 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using XingBot.res;
 
-namespace XingBot.real.res
+namespace XingBot.res
 {
 
     class ReadResFile
@@ -22,15 +23,15 @@ namespace XingBot.real.res
 
             for (var i = 0; i < lines.Length; i++)
             {
-                if (lines[i].TrimStart().StartsWith(".Feed"))
+                if (lines[i].TrimStart().StartsWith(".Feed") || lines[i].TrimStart().StartsWith(".Func"))
                 {
-                    // Console.WriteLine("Feed before " + lines[i]);
+                    Console.WriteLine("Feed before " + lines[i]);
                     var spline = Regex.Split(lines[i].Trim(), "[,\\s\t]+");
                     resModel.Name = spline[2];
                     resModel.Desc = spline[1];
                     // Console.WriteLine("feed after " + spline[2] + " " + spline[1]);
                 }
-                else if (lines[i].TrimStart().StartsWith("InBlock") || lines[i].TrimStart().StartsWith("OutBlock"))
+                else if (lines[i].Contains("InBlock") || lines[i].Contains("OutBlock"))
                 {
                     var spline = Regex.Split(lines[i].Trim(), "[,\\s\t]+");
                     Block block = new Block { Name = spline[0], Desc = spline[1] };

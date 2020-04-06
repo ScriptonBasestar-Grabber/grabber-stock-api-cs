@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW 일별주가 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1954InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 챠트지표데이터조회 ( HEADTYPE=B )
     public struct _ChartIndexInBlock

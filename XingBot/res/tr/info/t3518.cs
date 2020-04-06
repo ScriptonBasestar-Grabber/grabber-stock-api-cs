@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 해외실시간지수 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t3518InBlock

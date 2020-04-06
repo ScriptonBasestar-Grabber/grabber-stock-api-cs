@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 업종별 분별 투자자매매동향 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1621InBlock

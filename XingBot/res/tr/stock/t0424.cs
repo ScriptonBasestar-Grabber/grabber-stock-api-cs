@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식 잔고2 ( ATTR,TUXCODE=T0424,HEADTYPE=D )
     public struct _t0424InBlock

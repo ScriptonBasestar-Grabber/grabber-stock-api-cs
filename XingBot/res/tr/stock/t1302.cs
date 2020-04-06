@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식 분별 주가 조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1302InBlock

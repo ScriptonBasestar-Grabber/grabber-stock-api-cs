@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 섹터별 종목 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1531InBlock

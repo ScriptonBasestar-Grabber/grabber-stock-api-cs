@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 상/하한가이탈 ( ATTR, KEY=1, GROUP=1 )
     public struct _SHO_InBlock

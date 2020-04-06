@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 주식선물 기간별주가 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t8405InBlock

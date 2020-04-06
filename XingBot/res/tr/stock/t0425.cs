@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식 체결/미체결 ( ATTR,TUXCODE=T0425,HEADTYPE=D )
     public struct _t0425InBlock

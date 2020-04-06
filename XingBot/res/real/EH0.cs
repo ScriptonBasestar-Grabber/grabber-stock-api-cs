@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // EUREX연계KP200지수옵션선물호가 ( ATTR, KEY=8, GROUP=1 )
     public struct _EH0_InBlock

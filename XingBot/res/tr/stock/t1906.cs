@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // ETFLP호가 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1906InBlock

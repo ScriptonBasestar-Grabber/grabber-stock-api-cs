@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식 시간대별 체결 조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1301InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // CME야간선물미결제약정추이 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t8409InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물/옵션 현재가 호가조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2105InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 종목별잔량/사전공시 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1638InBlock

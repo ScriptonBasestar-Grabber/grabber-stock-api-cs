@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // CME야간선물틱분별조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t8408InBlock

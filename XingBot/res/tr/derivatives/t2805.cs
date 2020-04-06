@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // CME 기간별주가 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2805InBlock

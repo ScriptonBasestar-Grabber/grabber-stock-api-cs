@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물주문정정취소 ( KEY=8, GROUP=1 )
     public struct _H01_InBlock

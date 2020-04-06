@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 현물계좌예수금 주문가능금액 총평가2 ( SERVICE=CSPAQ22200,HEADTYPE=B,CREATOR=송우석,CREDATE=2020/02/25 08:21:10 )
     public struct _CSPAQ22200InBlock1

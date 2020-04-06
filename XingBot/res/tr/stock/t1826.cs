@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 종목Q클릭검색리스트 ( BLOCK,HEADTYPE=A )
     public struct _t1826InBlock

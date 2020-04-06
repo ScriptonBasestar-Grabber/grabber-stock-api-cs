@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 투자경고/매매정지/정리매매조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1405InBlock

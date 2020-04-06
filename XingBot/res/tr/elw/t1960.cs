@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW 등락율 상위 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1960InBlock

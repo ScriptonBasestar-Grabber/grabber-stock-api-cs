@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션 CME 계좌잔고 및 평가현황 ( SERVICE=CCEAQ50600,HEADTYPE=B,CREATOR=김승환,CREDATE=2012/05/01 12:18:45 )
     public struct _CCEAQ50600InBlock1

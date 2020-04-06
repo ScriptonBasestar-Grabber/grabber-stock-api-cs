@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 예탁금/통합잔고 조회 ( SERVICE=CEXAQ31200,HEADTYPE=B,CREATOR=이유리,CREDATE=2014/12/08 10:30:17 )
     public struct _CEXAQ31200InBlock1

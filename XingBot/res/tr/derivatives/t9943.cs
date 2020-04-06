@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 지수선물마스터조회 API용 ( BLOCK,HEADTYPE=A )
     // t8432

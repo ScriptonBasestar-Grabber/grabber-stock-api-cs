@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물/옵션 현재가 시세메모 ( BLOCK,HEADTYPE=A )
 

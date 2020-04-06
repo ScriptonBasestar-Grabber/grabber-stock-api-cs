@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션 기간별 계좌 수익률 현황 ( SERVICE=FOCCQ33700,HEADTYPE=B,CREATOR=이석희,CREDATE=2013/01/08 10:45:28 )
     public struct _FOCCQ33700InBlock1

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 주식선물 마스터조회 ( BLOCK,HEADTYPE=A )
     public struct _t8401InBlock

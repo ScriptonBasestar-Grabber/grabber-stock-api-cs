@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW예상체결 ( ATTR, KEY=6, GROUP=1 )
     public struct _Ys3_4ELW_InBlock

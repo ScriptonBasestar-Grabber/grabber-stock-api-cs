@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션 CME 정상주문 ( SERVICE=CCEAT00100,HEADTYPE=B,CREATOR=이호섭,CREDATE=2012/04/10 10:02:33 )
     public struct _CCEAT00100InBlock1

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW호가잔량 ( ATTR, KEY=6, GROUP=1 )
     public struct _h3_4ELW_InBlock

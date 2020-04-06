@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 지수옵션마스터조회API용 ( BLOCK,HEADTYPE=A )
     public struct _t8433InBlock

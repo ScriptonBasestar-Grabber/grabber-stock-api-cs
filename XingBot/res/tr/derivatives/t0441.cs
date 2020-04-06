@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물/옵션 잔고평가(이동평균) ( ATTR,TUXCODE=T0441,HEADTYPE=D )
     public struct _t0441InBlock

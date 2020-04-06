@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 시간대별 투자자매매추이(BMT) ( attr,block )
     public struct _BMT_InBlock

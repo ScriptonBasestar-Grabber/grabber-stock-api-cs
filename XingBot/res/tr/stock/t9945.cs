@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식마스터조회 API용 ( BLOCK,HEADTYPE=A )
     // t8436 사용

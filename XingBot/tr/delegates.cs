@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using CsvHelper;
 using DataLib.util;
 using XA_DATASETLib;
-using XingBot.real.res;
+using XingBot.res;
 
 namespace XingBot.tr
 {

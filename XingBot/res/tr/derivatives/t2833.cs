@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 기간별 추이 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2833InBlock

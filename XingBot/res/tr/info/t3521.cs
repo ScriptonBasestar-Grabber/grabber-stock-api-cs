@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 해외지수조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t3521InBlock

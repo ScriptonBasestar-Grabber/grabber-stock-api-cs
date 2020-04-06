@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 업종현재가 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1511InBlock

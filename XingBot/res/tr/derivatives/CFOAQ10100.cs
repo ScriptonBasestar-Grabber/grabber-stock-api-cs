@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션주문가능수량조회 ( SERVICE=CFOAQ10100,HEADTYPE=B,CREATOR=정명기,CREDATE=2011/11/18 15:04:59 )
     public struct _CFOAQ10100InBlock1

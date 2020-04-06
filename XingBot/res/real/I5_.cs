@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 코스피ETF종목실시간NAV ( ATTR, KEY=6, GROUP=1 )
     public struct _I5__InBlock

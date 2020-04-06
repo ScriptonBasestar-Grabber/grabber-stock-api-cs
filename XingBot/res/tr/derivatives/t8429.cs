@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // EUREX야간옵션선물틱분별체결조회챠트 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t8429InBlock

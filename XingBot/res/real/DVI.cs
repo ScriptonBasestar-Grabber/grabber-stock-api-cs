@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XingBot.real.res
+namespace XingBot.res
 {
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     // 시간외단일가VI발동해제 ( ATTR, KEY=6, GROUP=1 )

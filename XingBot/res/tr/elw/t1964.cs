@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW 전광판 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1964InBlock

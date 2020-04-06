@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식차트(종합) ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t4201InBlock

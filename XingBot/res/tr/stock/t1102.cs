@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식 현재가(시세) 조회 ( ATTR,BLOCK,HEADTYPE=A )
 

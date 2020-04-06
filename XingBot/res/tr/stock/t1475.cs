@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 체결강도추이 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1475InBlock

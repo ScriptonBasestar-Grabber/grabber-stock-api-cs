@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 종목별회원사추이 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1771InBlock

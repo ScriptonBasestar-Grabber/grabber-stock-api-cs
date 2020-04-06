@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 업종차트(종합) ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t4203InBlock

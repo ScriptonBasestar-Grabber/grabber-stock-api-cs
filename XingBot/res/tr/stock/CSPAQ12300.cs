@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 현물계좌 잔고내역 조회(API) ( SERVICE=CSPAQ12300,HEADTYPE=B,CREATOR=이상은,CREDATE=2015/04/13 08:43:20 )
     public struct _CSPAQ12300InBlock1

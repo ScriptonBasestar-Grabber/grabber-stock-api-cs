@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // ETF 시간별추이 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1902InBlock

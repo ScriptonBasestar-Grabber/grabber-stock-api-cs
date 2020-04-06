@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // KOSDAQ프로그램매매종목별 ( ATTR, KEY=6, GROUP=1 )
     public struct _KH__InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 신용거래동향 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1921InBlock

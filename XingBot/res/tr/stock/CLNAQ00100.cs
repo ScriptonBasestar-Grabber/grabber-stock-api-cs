@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 예탁담보융자가능종목현황조회 ( SERVICE=CLNAQ00100,HEADTYPE=B,CREATOR=이성호,CREDATE=2012/01/10 15:45:49 )
     public struct _CLNAQ00100InBlock1

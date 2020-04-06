@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 주식종목조회 API용 ( BLOCK,HEADTYPE=A )
     public struct _t8436InBlock

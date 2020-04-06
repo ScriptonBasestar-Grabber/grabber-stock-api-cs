@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션 CME 주문체결내역 조회 ( SERVICE=CCEAQ06000,HEADTYPE=B,CREATOR=김효종,CREDATE=2012/04/17 17:48:18 )
     public struct _CCEAQ06000InBlock1

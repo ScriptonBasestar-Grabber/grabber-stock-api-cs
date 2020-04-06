@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 프로그램 매매종합 조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1640InBlock

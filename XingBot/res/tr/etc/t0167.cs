@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 시간조회 ( BLOCK,HEADTYPE=A )
     public struct _t0167InBlock

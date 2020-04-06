@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // EUREX 야간옵션 시세전광판 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2835InBlock

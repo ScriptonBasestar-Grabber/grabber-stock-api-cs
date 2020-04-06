@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // CME 시간대별 체결조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2804InBlock

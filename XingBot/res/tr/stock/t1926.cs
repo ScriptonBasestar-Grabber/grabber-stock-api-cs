@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 종목별 신용/대주 현황 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1926InBlock

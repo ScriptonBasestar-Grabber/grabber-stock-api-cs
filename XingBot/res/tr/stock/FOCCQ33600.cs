@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식 계좌 기간별 수익률 상세 ( SERVICE=FOCCQ33600,HEADTYPE=B,CREATOR=유종우,CREDATE=2012/03/15 11:06:33 )
     public struct _FOCCQ33600InBlock1

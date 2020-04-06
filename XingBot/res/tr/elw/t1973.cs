@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW 시간대별 예상체결 조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1973InBlock

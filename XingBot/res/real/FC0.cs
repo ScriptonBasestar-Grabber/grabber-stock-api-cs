@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // KOSPI200선물체결 ( ATTR, KEY=8, GROUP=1 )
     public struct _FC0_InBlock

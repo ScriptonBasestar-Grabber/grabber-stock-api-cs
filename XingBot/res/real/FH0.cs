@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XingBot.real.res
+namespace XingBot.res
 {
     // KOSPI200선물호가 ( ATTR, KEY=8, GROUP=1 )
     public struct _FH0_InBlock

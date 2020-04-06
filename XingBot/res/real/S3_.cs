@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // KOSPI체결 ( ATTR, KEY=6, GROUP=1 )
     public struct _S3__InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 재무순위종합 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t3341InBlock

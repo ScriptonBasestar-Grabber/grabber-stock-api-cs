@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 관리/불성실/투자유의조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1404InBlock

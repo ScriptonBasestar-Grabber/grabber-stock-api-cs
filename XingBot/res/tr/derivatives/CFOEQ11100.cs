@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션가정산예탁금상세 ( SERVICE=CFOEQ11100,HEADTYPE=B,CREATOR=김정현,CREDATE=2012/03/16 14:04:41 )
     public struct _CFOEQ11100InBlock1

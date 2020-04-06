@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 투자의견 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t3401InBlock

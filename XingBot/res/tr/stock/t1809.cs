@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 신호조회 ( BLOCK,HEADTYPE=A )
     public struct _t1809InBlock

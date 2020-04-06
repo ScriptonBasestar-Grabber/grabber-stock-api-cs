@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW 거래량 상위 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1961InBlock

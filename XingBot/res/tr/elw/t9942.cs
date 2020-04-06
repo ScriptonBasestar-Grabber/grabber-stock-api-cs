@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW마스터조회 API용 ( BLOCK,HEADTYPE=A )
     public struct _t9942InBlock

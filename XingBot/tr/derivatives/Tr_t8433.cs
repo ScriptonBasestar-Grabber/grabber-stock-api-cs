@@ -5,7 +5,7 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using XA_DATASETLib;
-using XingBot.real.res;
+using XingBot.res;
 
 namespace XingBot.tr
 {

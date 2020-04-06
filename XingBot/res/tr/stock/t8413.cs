@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 주식챠트(틱/n틱) ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t8411InBlock

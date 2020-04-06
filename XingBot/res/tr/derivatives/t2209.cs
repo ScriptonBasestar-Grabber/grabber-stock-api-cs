@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물/옵션 틱분별 체결조회 차트 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2209InBlock

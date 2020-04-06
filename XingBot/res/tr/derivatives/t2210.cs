@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물/옵션 시간대별 체결조회(단일출력용) ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2210InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 뉴스본문 ( BLOCK,HEADTYPE=A )
     public struct _t3102InBlock

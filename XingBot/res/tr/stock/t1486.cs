@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 시간대별 예상체결가 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1486InBlock

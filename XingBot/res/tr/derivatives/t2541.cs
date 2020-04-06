@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 상품선물투자자매매동향(실시간) ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t2541InBlock

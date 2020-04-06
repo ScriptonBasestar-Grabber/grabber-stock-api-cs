@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 종목별대차거래일간추이 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1941InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 장운영정보 ( KEY=1, GROUP=1 )
     public struct _JIF_InBlock

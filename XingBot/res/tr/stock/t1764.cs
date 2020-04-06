@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 회원사리스트 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1764InBlock

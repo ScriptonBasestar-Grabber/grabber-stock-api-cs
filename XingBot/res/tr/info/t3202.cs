@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 종목별 증시일정 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t3202InBlock

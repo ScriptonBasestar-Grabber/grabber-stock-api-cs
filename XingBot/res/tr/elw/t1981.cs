@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 기초자산리스트 조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1981InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 시간대별호가잔량추이 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1471InBlock

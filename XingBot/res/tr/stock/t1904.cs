@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // ETF 구성종목조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1904InBlock

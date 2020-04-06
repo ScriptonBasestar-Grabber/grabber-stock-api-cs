@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 예상지수 ( ATTR, KEY=3, GROUP=1 )
     public struct _YJ__InBlock

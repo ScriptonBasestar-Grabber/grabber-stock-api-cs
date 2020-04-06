@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 기간별 프로그램 매매추이 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1633InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 초저유동성조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1410InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // KOSDAQ우선호가 ( ATTR, KEY=6, GROUP=1 )
     public struct _KS__InBlock

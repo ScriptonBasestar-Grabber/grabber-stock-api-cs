@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // KOSPI기세 ( ATTR, KEY=6, GROUP=1 )
     public struct _S4__InBlock

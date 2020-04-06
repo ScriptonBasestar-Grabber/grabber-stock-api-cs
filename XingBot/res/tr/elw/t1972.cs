@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW 현재가(거래원) 조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1972InBlock

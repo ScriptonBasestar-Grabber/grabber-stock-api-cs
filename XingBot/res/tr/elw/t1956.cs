@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // ELW 현재가(확정지급액) 조회 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1956InBlock

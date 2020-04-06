@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 선물옵션 정정주문 ( SERVICE=CFOAT00200,ENCRYPT,SIGNATURE,HEADTYPE=B,CREATOR=이인희,CREDATE=2012/03/12 13:31:21 )
     public struct _CFOAT00200InBlock1

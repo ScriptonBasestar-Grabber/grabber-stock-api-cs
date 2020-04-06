@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 기간별투자자매매추이(챠트) ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1665InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // EUX접수 ( KEY=8, GROUP=1 )
     public struct _EU0_InBlock

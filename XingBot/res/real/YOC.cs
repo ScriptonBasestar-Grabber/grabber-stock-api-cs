@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // 지수옵션예상체결 ( ATTR, KEY=8, GROUP=1 )
     public struct _YOC_InBlock

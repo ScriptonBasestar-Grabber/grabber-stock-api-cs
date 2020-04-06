@@ -44,6 +44,7 @@ namespace XingBot.real
             Console.WriteLine(szCode);
             Console.WriteLine(szMsg);
             var queryInit = new QueryInit();
+            Console.WriteLine("call query init next line");
         }
 
         void _IXASessionEvents.Logout()

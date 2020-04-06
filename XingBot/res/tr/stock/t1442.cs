@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res.tr
+﻿namespace XingBot.res
 {
     // 신고/신저가 ( ATTR,BLOCK,HEADTYPE=A )
     public struct _t1442InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // KOSDAQ거래원 ( ATTR, KEY=6, GROUP=1 )
     public struct _OK__InBlock

@@ -1,4 +1,4 @@
-﻿namespace XingBot.real.res
+﻿namespace XingBot.res
 {
     // KOSPI프로그램매매전체집계 ( ATTR, KEY=1, GROUP=1 )
     public struct _PM__InBlock
