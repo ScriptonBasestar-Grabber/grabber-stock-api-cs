@@ -5,5 +5,8 @@
     <Setting Name="root_path" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\eBEST\xingAPI</Value>
     </Setting>
+    <Setting Name="data_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\tmp</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

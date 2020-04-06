@@ -102,7 +102,7 @@ namespace XingBot.real
             outData.totbidrem = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "totbidrem"));
 
             outData.donsigubun = _realDict[szTrCode].GetFieldData("OutBlock", "donsigubun");
-            outData.spread = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "spread"));
+            outData.spread = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "spread"));
             outData.shcode = _realDict[szTrCode].GetFieldData("OutBlock", "shcode");
         }
     }

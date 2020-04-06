@@ -25,15 +25,15 @@ namespace XingBot.real
             outData.sign = _realDict[szTrCode].GetFieldData("OutBlock", "sign");
             outData.change = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
 
-            outData.volume = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "volume"));
-            outData.navdiff = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "navdiff"));
-            outData.nav = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "nav"));
-            outData.navchange = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "navchange"));
-            outData.crate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "crate"));
-            outData.grate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "grate"));
-            outData.jisu = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jisu"));
-            outData.jichange = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jichange"));
-            outData.jirate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jirate"));
+            outData.volume = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "volume"));
+            outData.navdiff = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "navdiff"));
+            outData.nav = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "nav"));
+            outData.navchange = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "navchange"));
+            outData.crate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "crate"));
+            outData.grate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "grate"));
+            outData.jisu = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jisu"));
+            outData.jichange = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jichange"));
+            outData.jirate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jirate"));
             outData.shcode = _realDict[szTrCode].GetFieldData("OutBlock", "shcode");
         }
     }

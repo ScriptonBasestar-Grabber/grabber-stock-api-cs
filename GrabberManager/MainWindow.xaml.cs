@@ -31,7 +31,7 @@ namespace GrabberManager
         {
             LoginStack.Children.Clear();
             // TODO set saved value
-            LoginStack.Children.Add(new LoginControl(
+            LoginStack.Children.Add(new LoginControl("xing",
                 new LoginModel("username", "userpass", "certpass")
                 ));
         }
@@ -40,7 +40,7 @@ namespace GrabberManager
         {
             LoginStack.Children.Clear();
             // TODO set saved value
-            LoginStack.Children.Add(new LoginControl(
+            LoginStack.Children.Add(new LoginControl("cybos",
                 new LoginModel("username", "userpass", "certpass")
                 ));
         }

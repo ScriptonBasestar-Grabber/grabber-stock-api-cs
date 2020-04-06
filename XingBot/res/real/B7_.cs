@@ -6,7 +6,7 @@
         public string shcode; // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public    public struct _B7__OutBlock
+    public struct _B7__OutBlock
     {
         public string hotime; // [string,    6] 호가시간                        StartPos 0, Length 6
         public long lp_offerho1; // [long  ,    9] LP매도호가수량1                 StartPos 7, Length 9

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using XA_DATASETLib;
-using XingBot.real.Properties;
+using XingBot.Properties;
 using XingBot.real.res;
 
 namespace XingBot.real

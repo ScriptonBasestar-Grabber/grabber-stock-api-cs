@@ -7,8 +7,8 @@
              mc:Ignorable="d" Width="140" Height="130">
     <Grid>
         <TextBox Name="TxtUserName" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="TxtUserPass" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" Text="UserPass" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="TxtCertPass" HorizontalAlignment="Left" Height="23" Margin="10,66,0,0" TextWrapping="Wrap" Text="CertPass" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Name="TxtUserPass" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" PasswordChar="*" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Name="TxtCertPass" HorizontalAlignment="Left" Height="23" Margin="10,66,0,0" PasswordChar="*" VerticalAlignment="Top" Width="120"/>
         <Button Content="Login" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
 
     </Grid>

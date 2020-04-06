@@ -34,8 +34,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CsvHelper, Version=15.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.15.0.4\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -125,83 +137,82 @@
     <Compile Include="real\stock\RealEvents_YS3.cs" />
     <Compile Include="res\models.cs" />
     <Compile Include="res\ReadResFile.cs" />
-    <Compile Include="res\real\MK2.cs" />
-    <Compile Include="res\real\EU2.cs" />
-    <Compile Include="res\real\EU1.cs" />
-    <Compile Include="res\real\EU0.cs" />
-    <Compile Include="res\real\EH0.cs" />
-    <Compile Include="res\real\EC0.cs" />
-    <Compile Include="res\real\CM2.cs" />
-    <Compile Include="res\real\CM1.cs" />
-    <Compile Include="res\real\CM0.cs" />
+    <Compile Include="res\real\B7_.cs" />
+    <Compile Include="res\real\BMT.cs" />
+    <Compile Include="res\real\BM_.cs" />
+    <Compile Include="res\real\C01.cs" />
     <Compile Include="res\real\CD0.cs" />
-    <Compile Include="res\real\ESN.cs" />
-    <Compile Include="res\real\NWS.cs" />
-    <Compile Include="res\real\JIF.cs" />
-    <Compile Include="res\real\Ys3_4ELW.cs" />
-    <Compile Include="res\real\s4_4ELW.cs" />
-    <Compile Include="res\real\s3_4ELW.cs" />
-    <Compile Include="res\real\s2_4ELW.cs" />
-    <Compile Include="res\real\k1_4ELW.cs" />
-    <Compile Include="res\real\h3_4ELW.cs" />
-    <Compile Include="res\real\h2_4ELW.cs" />
-    <Compile Include="res\real\YOC.cs" />
-    <Compile Include="res\real\YJC.cs" />
-    <Compile Include="res\real\YFC.cs" />
-    <Compile Include="res\real\YC3.cs" />
-    <Compile Include="res\real\OX0.cs" />
-    <Compile Include="res\real\OMG.cs" />
-    <Compile Include="res\real\OH0.cs" />
-    <Compile Include="res\real\OD0.cs" />
-    <Compile Include="res\real\OC0.cs" />
-    <Compile Include="res\real\O01.cs" />
-    <Compile Include="res\real\NH0.cs" />
-    <Compile Include="res\real\NC0.cs" />
-    <Compile Include="res\real\JX0.cs" />
-    <Compile Include="res\real\JH0.cs" />
-    <Compile Include="res\real\JD0.cs" />
-    <Compile Include="res\real\JC0.cs" />
-    <Compile Include="res\real\H01.cs" />
-    <Compile Include="res\real\FX0.cs" />
-    <Compile Include="res\real\FD0.cs" />
-    <Compile Include="res\real\YS3.cs" />
-    <Compile Include="res\real\YK3.cs" />
-    <Compile Include="res\real\YJ_.cs" />
-    <Compile Include="res\real\VI_.cs" />
-    <Compile Include="res\real\SHO.cs" />
-    <Compile Include="res\real\SHI.cs" />
-    <Compile Include="res\real\SHD.cs" />
-    <Compile Include="res\real\SHC.cs" />
-    <Compile Include="res\real\SC4.cs" />
-    <Compile Include="res\real\SC3.cs" />
-    <Compile Include="res\real\SC2.cs" />
-    <Compile Include="res\real\SC1.cs" />
-    <Compile Include="res\real\SC0.cs" />
-    <Compile Include="res\real\S4_.cs" />
-    <Compile Include="res\real\S3_.cs" />
-    <Compile Include="res\real\S2_.cs" />
-    <Compile Include="res\real\PM_.cs" />
-    <Compile Include="res\real\PH_.cs" />
-    <Compile Include="res\real\OK_.cs" />
-    <Compile Include="res\real\KS_.cs" />
-    <Compile Include="res\real\KM_.cs" />
-    <Compile Include="res\real\KH_.cs" />
-    <Compile Include="res\real\K3_.cs" />
-    <Compile Include="res\real\K1_.cs" />
-    <Compile Include="res\real\IJ_.cs" />
-    <Compile Include="res\real\I5_.cs" />
-    <Compile Include="res\real\HB_.cs" />
-    <Compile Include="res\real\HA_.cs" />
-    <Compile Include="res\real\H2_.cs" />
-    <Compile Include="res\real\H1_.cs" />
+    <Compile Include="res\real\CM0.cs" />
+    <Compile Include="res\real\CM1.cs" />
+    <Compile Include="res\real\CM2.cs" />
     <Compile Include="res\real\DVI.cs" />
+    <Compile Include="res\real\EC0.cs" />
+    <Compile Include="res\real\EH0.cs" />
+    <Compile Include="res\real\ESN.cs" />
+    <Compile Include="res\real\EU0.cs" />
+    <Compile Include="res\real\EU1.cs" />
+    <Compile Include="res\real\EU2.cs" />
     <Compile Include="res\real\FC0.cs" />
+    <Compile Include="res\real\FD0.cs" />
     <Compile Include="res\real\FH0.cs" />
-    <Compile Include="res\tr\sector\t4203.cs" />
-    <Compile Include="res\tr\sector\t8417.cs" />
-    <Compile Include="res\tr\sector\t8418.cs" />
-    <Compile Include="res\tr\sector\t8419.cs" />
-    <Compile Include="res\tr\sector\t8424.cs" />
+    <Compile Include="res\real\FX0.cs" />
+    <Compile Include="res\real\H01.cs" />
+    <Compile Include="res\real\H1_.cs" />
+    <Compile Include="res\real\H2_.cs" />
+    <Compile Include="res\real\h2_4ELW.cs" />
+    <Compile Include="res\real\h3_4ELW.cs" />
+    <Compile Include="res\real\HA_.cs" />
+    <Compile Include="res\real\HB_.cs" />
+    <Compile Include="res\real\I5_.cs" />
+    <Compile Include="res\real\IJ_.cs" />
+    <Compile Include="res\real\JC0.cs" />
+    <Compile Include="res\real\JD0.cs" />
+    <Compile Include="res\real\JH0.cs" />
+    <Compile Include="res\real\JIF.cs" />
+    <Compile Include="res\real\JX0.cs" />
+    <Compile Include="res\real\K1_.cs" />
+    <Compile Include="res\real\k1_4ELW.cs" />
+    <Compile Include="res\real\K3_.cs" />
+    <Compile Include="res\real\KH_.cs" />
+    <Compile Include="res\real\KM_.cs" />
+    <Compile Include="res\real\KS_.cs" />
+    <Compile Include="res\real\MK2.cs" />
+    <Compile Include="res\real\NC0.cs" />
+    <Compile Include="res\real\NH0.cs" />
+    <Compile Include="res\real\NWS.cs" />
+    <Compile Include="res\real\O01.cs" />
+    <Compile Include="res\real\OC0.cs" />
+    <Compile Include="res\real\OD0.cs" />
+    <Compile Include="res\real\OH0.cs" />
+    <Compile Include="res\real\OK_.cs" />
+    <Compile Include="res\real\OMG.cs" />
+    <Compile Include="res\real\OX0.cs" />
+    <Compile Include="res\real\PH_.cs" />
+    <Compile Include="res\real\PM_.cs" />
+    <Compile Include="res\real\S2_.cs" />
+    <Compile Include="res\real\s2_4ELW.cs" />
+    <Compile Include="res\real\S3_.cs" />
+    <Compile Include="res\real\s3_4ELW.cs" />
+    <Compile Include="res\real\S4_.cs" />
+    <Compile Include="res\real\s4_4ELW.cs" />
+    <Compile Include="res\real\SC0.cs" />
+    <Compile Include="res\real\SC1.cs" />
+    <Compile Include="res\real\SC2.cs" />
+    <Compile Include="res\real\SC3.cs" />
+    <Compile Include="res\real\SC4.cs" />
+    <Compile Include="res\real\SHC.cs" />
+    <Compile Include="res\real\SHD.cs" />
+    <Compile Include="res\real\SHI.cs" />
+    <Compile Include="res\real\SHO.cs" />
+    <Compile Include="res\real\VI_.cs" />
+    <Compile Include="res\real\YC3.cs" />
+    <Compile Include="res\real\YFC.cs" />
+    <Compile Include="res\real\YJC.cs" />
+    <Compile Include="res\real\YJ_.cs" />
+    <Compile Include="res\real\YK3.cs" />
+    <Compile Include="res\real\YOC.cs" />
+    <Compile Include="res\real\YS3.cs" />
+    <Compile Include="res\real\Ys3_4ELW.cs" />
     <Compile Include="res\tr\derivatives\CCEAQ01100.cs" />
     <Compile Include="res\tr\derivatives\CCEAQ06000.cs" />
     <Compile Include="res\tr\derivatives\CCEAQ10100.cs" />
@@ -276,7 +287,6 @@
     <Compile Include="res\tr\derivatives\t8435.cs" />
     <Compile Include="res\tr\derivatives\t9943.cs" />
     <Compile Include="res\tr\derivatives\t9944.cs" />
-    <Compile Include="res\tr\elw\t1972.cs" />
     <Compile Include="res\tr\elw\t1950.cs" />
     <Compile Include="res\tr\elw\t1951.cs" />
     <Compile Include="res\tr\elw\t1954.cs" />
@@ -289,10 +299,14 @@
     <Compile Include="res\tr\elw\t1964.cs" />
     <Compile Include="res\tr\elw\t1966.cs" />
     <Compile Include="res\tr\elw\t1971.cs" />
+    <Compile Include="res\tr\elw\t1972.cs" />
     <Compile Include="res\tr\elw\t1973.cs" />
     <Compile Include="res\tr\elw\t1974.cs" />
+    <Compile Include="res\tr\elw\t1981.cs" />
+    <Compile Include="res\tr\elw\t8431.cs" />
+    <Compile Include="res\tr\elw\t9907.cs" />
+    <Compile Include="res\tr\elw\t9942.cs" />
     <Compile Include="res\tr\etc\t0167.cs" />
-    <Compile Include="res\tr\sector\t1514.cs" />
     <Compile Include="res\tr\info\t3102.cs" />
     <Compile Include="res\tr\info\t3202.cs" />
     <Compile Include="res\tr\info\t3320.cs" />
@@ -301,6 +315,12 @@
     <Compile Include="res\tr\info\t3518.cs" />
     <Compile Include="res\tr\info\t3521.cs" />
     <Compile Include="res\tr\info\t8428.cs" />
+    <Compile Include="res\tr\sector\t1514.cs" />
+    <Compile Include="res\tr\sector\t4203.cs" />
+    <Compile Include="res\tr\sector\t8417.cs" />
+    <Compile Include="res\tr\sector\t8418.cs" />
+    <Compile Include="res\tr\sector\t8419.cs" />
+    <Compile Include="res\tr\sector\t8424.cs" />
     <Compile Include="res\tr\stock\CAPAT00800.cs" />
     <Compile Include="res\tr\stock\ChartExcel.cs" />
     <Compile Include="res\tr\stock\ChartIndex.cs" />
@@ -314,8 +334,8 @@
     <Compile Include="res\tr\stock\CSPAT00700.cs" />
     <Compile Include="res\tr\stock\CSPBQ00200.cs" />
     <Compile Include="res\tr\stock\FOCCQ33600.cs" />
-    <Compile Include="res\tr\stock\t0151.cs" />
     <Compile Include="res\tr\stock\t0150.cs" />
+    <Compile Include="res\tr\stock\t0151.cs" />
     <Compile Include="res\tr\stock\t0424.cs" />
     <Compile Include="res\tr\stock\t0425.cs" />
     <Compile Include="res\tr\stock\t1101.cs" />
@@ -387,7 +407,6 @@
     <Compile Include="res\tr\stock\t1926.cs" />
     <Compile Include="res\tr\stock\t1927.cs" />
     <Compile Include="res\tr\stock\t1941.cs" />
-    <Compile Include="res\tr\elw\t1981.cs" />
     <Compile Include="res\tr\stock\t4201.cs" />
     <Compile Include="res\tr\stock\t8407.cs" />
     <Compile Include="res\tr\stock\t8411.cs" />
@@ -395,10 +414,7 @@
     <Compile Include="res\tr\stock\t8413.cs" />
     <Compile Include="res\tr\stock\t8425.cs" />
     <Compile Include="res\tr\stock\t8430.cs" />
-    <Compile Include="res\tr\elw\t8431.cs" />
     <Compile Include="res\tr\stock\t8436.cs" />
-    <Compile Include="res\tr\elw\t9907.cs" />
-    <Compile Include="res\tr\elw\t9942.cs" />
     <Compile Include="res\tr\stock\t9945.cs" />
     <Compile Include="SessionEvents.cs" />
     <Compile Include="Constants.cs" />
@@ -423,10 +439,6 @@
     <Compile Include="tr\elw\Tr_t9907.cs" />
     <Compile Include="tr\QueryInit.cs" />
     <Compile Include="tr\QueryCtrl.cs" />
-    <Compile Include="res\real\B7_.cs" />
-    <Compile Include="res\real\BMT.cs" />
-    <Compile Include="res\real\BM_.cs" />
-    <Compile Include="res\real\C01.cs" />
     <Compile Include="tr\QueryEvents.cs" />
     <Compile Include="tr\sector\Tr_t8419.cs" />
     <Compile Include="tr\sector\Tr_t8424.cs" />
@@ -467,11 +479,17 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="README.md" />
-    <None Include="res\real.yaml" />
     <None Include="res\limit.yaml" />
-    <None Include="res\tr.yaml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DataLib\DataLib.csproj">
+      <Project>{d97f2d9e-3997-46db-9d4b-74953592d756}</Project>
+      <Name>DataLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

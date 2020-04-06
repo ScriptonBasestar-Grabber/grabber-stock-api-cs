@@ -20,10 +20,10 @@ namespace XingBot.real
         {
             _YJ__OutBlock outData;
             outData.time = _realDict[szTrCode].GetFieldData("OutBlock", "time");
-            outData.jisu = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jisu"));
+            outData.jisu = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jisu"));
             outData.sign = _realDict[szTrCode].GetFieldData("OutBlock", "sign");
-            outData.change = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
-            outData.drate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "drate"));
+            outData.change = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
+            outData.drate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "drate"));
             outData.cvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cvolume"));
             outData.volume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "volume"));
             outData.value = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "value"));

@@ -11,33 +11,29 @@ namespace XingBot.tr
 {
     public class Tr_t8424
     {
-        private readonly IXAQuery _query;
-
-        public Tr_t8424(IXAQuery query)
-        {
-            _query = query;
-        }
-
         /**
          * gubun 0, 1 KOSPI,2 KOSDAQ, 3, 4
          */
-        public void InBlock_t8424(string gubun = "0")
+        public static readonly InBlockQuery InBlock_t8424 = (szTrCode, query, inBlock, dict) =>
         {
-            string szTrCode = "t8424";
-            _query.SetFieldData(szTrCode + "InBlock", "gubun1", 0, gubun);
-        }
+            inBlock.Rows.ForEach(delegate (Row row)
+            {
+                query.SetFieldData(inBlock.Name, row.Name, 0, dict[row.Name]);
+            });
+            query.Request(false);
+        };
 
-        public void OutBlock_t8424(string szTrCode, Action<_t8424OutBlock> action)
+        public static readonly OutBlockQuery OutBlock_t8424 = (szTrCode, query, outBlock, writer) =>
         {
-            for (var i = 0; i < _query.GetBlockCount(szTrCode + "OutBlock"); i++)
+            for (var i = 0; i < query.GetBlockCount(szTrCode + "OutBlock"); i++)
             {
                 var result = new _t8424OutBlock()
                 {
-                    hname = _query.GetFieldData(szTrCode + "OutBlock", "hname", i),
-                    upcode = _query.GetFieldData(szTrCode + "OutBlock", "upcode", i)
+                    hname = query.GetFieldData(szTrCode + "OutBlock", "hname", i),
+                    upcode = query.GetFieldData(szTrCode + "OutBlock", "upcode", i)
                 };
-                action(result);
+                writer.WriteRecord(result);
             }
-        }
+        };
     }
 }

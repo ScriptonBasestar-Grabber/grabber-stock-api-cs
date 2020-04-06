@@ -11,41 +11,37 @@ namespace XingBot.tr
 {
     public class Tr_t8436
     {
-        private readonly IXAQuery _query;
-
-        public Tr_t8436(IXAQuery query)
+        public static readonly InBlockQuery InBlock_t8436 = (szTrCode, query, inBlock, dict) =>
         {
-            _query = query;
-        }
+            inBlock.Rows.ForEach(delegate(Row row)
+            {
+                query.SetFieldData(inBlock.Name, row.Name, 0, dict[row.Name]);
+            });
+            query.Request(false);
+        };
 
-        public void InBlock_t8436(string gubun = "0")
+        public static readonly OutBlockQuery OutBlock_t8436 = (szTrCode, query, outBlock, writer) =>
         {
-            string szTrCode = "t8436";
-            _query.SetFieldData(szTrCode + "InBlock", "gubun", 0, gubun);
-        }
-
-        public void OutBlock_t8436(string szTrCode, Action<_t8436OutBlock> action)
-        {
-            for (var i = 0; i < _query.GetBlockCount(szTrCode + "OutBlock"); i++)
+            for (var i = 0; i < query.GetBlockCount(szTrCode + "OutBlock"); i++)
             {
                 var result = new _t8436OutBlock()
                 {
-                    hname = _query.GetFieldData(szTrCode + "OutBlock", "hname", i),
-                    shcode = _query.GetFieldData(szTrCode + "OutBlock", "shcode", i),
-                    expcode = _query.GetFieldData(szTrCode + "OutBlock", "expcode", i),
-                    etfgubun = _query.GetFieldData(szTrCode + "OutBlock", "etfgubun", i),
-                    uplmtprice = long.Parse(_query.GetFieldData(szTrCode + "OutBlock", "uplmtprice", i)),
-                    dnlmtprice = long.Parse(_query.GetFieldData(szTrCode + "OutBlock", "dnlmtprice", i)),
-                    jnilclose = long.Parse(_query.GetFieldData(szTrCode + "OutBlock", "jnilclose", i)),
-                    memedan = _query.GetFieldData(szTrCode + "OutBlock", "memedan", i),
-                    recprice = long.Parse(_query.GetFieldData(szTrCode + "OutBlock", "recprice", i)),
-                    gubun = _query.GetFieldData(szTrCode + "OutBlock", "gubun", i),
-                    bu12gubun = _query.GetFieldData(szTrCode + "OutBlock", "bu12gubun", i),
-                    spac_gubun = _query.GetFieldData(szTrCode + "OutBlock", "spac_gubun", i),
-                    filler = _query.GetFieldData(szTrCode + "OutBlock", "filler", i),
+                    hname = query.GetFieldData(outBlock.Name, "hname", i),
+                    shcode = query.GetFieldData(outBlock.Name, "shcode", i),
+                    expcode = query.GetFieldData(outBlock.Name, "expcode", i),
+                    etfgubun = query.GetFieldData(outBlock.Name, "etfgubun", i),
+                    uplmtprice = long.Parse(query.GetFieldData(outBlock.Name, "uplmtprice", i)),
+                    dnlmtprice = long.Parse(query.GetFieldData(outBlock.Name, "dnlmtprice", i)),
+                    jnilclose = long.Parse(query.GetFieldData(outBlock.Name, "jnilclose", i)),
+                    memedan = query.GetFieldData(outBlock.Name, "memedan", i),
+                    recprice = long.Parse(query.GetFieldData(outBlock.Name, "recprice", i)),
+                    gubun = query.GetFieldData(outBlock.Name, "gubun", i),
+                    bu12gubun = query.GetFieldData(outBlock.Name, "bu12gubun", i),
+                    spac_gubun = query.GetFieldData(outBlock.Name, "spac_gubun", i),
+                    filler = query.GetFieldData(outBlock.Name, "filler", i),
                 };
-                action(result);
+                writer.WriteRecord(result);
             }
-        }
+        };
     }
 }

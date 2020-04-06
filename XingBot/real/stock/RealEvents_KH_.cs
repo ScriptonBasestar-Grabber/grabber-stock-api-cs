@@ -25,7 +25,7 @@ namespace XingBot.real
             outData.change = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
             outData.volume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "volume"));
 
-            outData.drate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "drate"));
+            outData.drate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "drate"));
 
             outData.cdhrem = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cdhrem"));
             outData.cshrem = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cshrem"));

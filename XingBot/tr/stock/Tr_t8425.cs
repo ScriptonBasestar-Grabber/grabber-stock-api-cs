@@ -11,30 +11,26 @@ namespace XingBot.tr
 {
     public class Tr_t8425
     {
-        private readonly IXAQuery _query;
-
-        public Tr_t8425(IXAQuery query)
+        public static readonly InBlockQuery InBlock_t8425 = (szTrCode, query, inBlock, dict) =>
         {
-            _query = query;
-        }
+            inBlock.Rows.ForEach(delegate (Row row)
+            {
+                query.SetFieldData(inBlock.Name, row.Name, 0, dict[row.Name]);
+            });
+            query.Request(false);
+        };
 
-        public void InBlock_t8425()
+        public static readonly OutBlockQuery OutBlock_t8425 = (szTrCode, query, outBlock, writer) =>
         {
-            string szTrCode = "t8425";
-            _query.SetFieldData(szTrCode + "InBlock", "dummy", 0, "");
-        }
-
-        public void OutBlock_t8425(string szTrCode, Action<_t8425OutBlock> action)
-        {
-            for (var i = 0; i < _query.GetBlockCount(szTrCode + "OutBlock"); i++)
+            for (var i = 0; i < query.GetBlockCount(szTrCode + "OutBlock"); i++)
             {
                 var result = new _t8425OutBlock()
                 {
-                    tmname = _query.GetFieldData(szTrCode + "OutBlock", "tmname", i),
-                    tmcode = _query.GetFieldData(szTrCode + "OutBlock", "tmcode", i)
+                    tmname = query.GetFieldData(szTrCode + "OutBlock", "tmname", i),
+                    tmcode = query.GetFieldData(szTrCode + "OutBlock", "tmcode", i)
                 };
-                action(result);
+                writer.WriteRecord(result);
             }
-        }
-    }
+        };
+}
 }

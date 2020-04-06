@@ -20,10 +20,10 @@ namespace XingBot.real
         {
             _IJ__OutBlock outData;
             outData.time = _realDict[szTrCode].GetFieldData("OutBlock", "time");
-            outData.jisu = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jisu"));
+            outData.jisu = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jisu"));
             outData.sign = _realDict[szTrCode].GetFieldData("OutBlock", "sign");
-            outData.change = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
-            outData.drate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "drate"));
+            outData.change = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
+            outData.drate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "drate"));
             outData.cvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cvolume"));
             outData.volume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "volume"));
             outData.value = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "value"));
@@ -33,12 +33,12 @@ namespace XingBot.real
             outData.lowjo = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "lowjo"));
             outData.downjo = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "downjo"));
 
-            outData.upjrate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "upjrate"));
-            outData.openjisu = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "openjisu"));
+            outData.upjrate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "upjrate"));
+            outData.openjisu = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "openjisu"));
             outData.opentime = _realDict[szTrCode].GetFieldData("OutBlock", "opentime");
-            outData.highjisu = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "highjisu"));
+            outData.highjisu = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "highjisu"));
             outData.hightime = _realDict[szTrCode].GetFieldData("OutBlock", "hightime");
-            outData.lowjisu = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "lowjisu"));
+            outData.lowjisu = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "lowjisu"));
             outData.lowtime = _realDict[szTrCode].GetFieldData("OutBlock", "lowtime");
             outData.frgsvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "frgsvolume"));
             outData.orgsvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "orgsvolume"));

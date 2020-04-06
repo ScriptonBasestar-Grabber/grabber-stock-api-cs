@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using XA_DATASETLib;
+using XingBot.Properties;
 
 namespace XingBot.real
 {
@@ -21,7 +22,7 @@ namespace XingBot.real
                 // dwCookie = 0;
                 _realDict[code] = new XAReal
                 {
-                    ResFileName = Properties.Settings.Default.root_path + @"\res\" + code + ".res"
+                    ResFileName = Settings.Default.root_path + @"\res\" + code + ".res"
                 };
                 icpc = (IConnectionPointContainer) _realDict[code];
                 icpc.FindConnectionPoint(ref iidRealEvents, out icp);

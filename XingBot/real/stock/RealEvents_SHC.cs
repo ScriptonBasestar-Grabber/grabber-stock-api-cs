@@ -24,11 +24,11 @@ namespace XingBot.real
             outData.price = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "price"));
             outData.sign = _realDict[szTrCode].GetFieldData("OutBlock", "sign");
             outData.change = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
-            outData.drate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "drate"));
+            outData.drate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "drate"));
             outData.volume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "volume"));
-            outData.volincrate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "volincrate"));
+            outData.volincrate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "volincrate"));
             outData.updnlmtprice = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "updnlmtprice"));
-            outData.updnlmtdrate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "updnlmtdrate"));
+            outData.updnlmtdrate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "updnlmtdrate"));
             outData.jnilvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jnilvolume"));
             outData.shcode = _realDict[szTrCode].GetFieldData("OutBlock", "shcode");
             outData.gwangubun = _realDict[szTrCode].GetFieldData("OutBlock", "gwangubun");

@@ -21,7 +21,7 @@ namespace XingBot.real
             _S4__OutBlock outData;
             outData.sign = _realDict[szTrCode].GetFieldData("OutBlock", "sign");
             outData.change = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
-            outData.drate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "drate"));
+            outData.drate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "drate"));
             outData.price = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "price"));
             outData.opentime = _realDict[szTrCode].GetFieldData("OutBlock", "opentime");
             outData.open = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "open"));

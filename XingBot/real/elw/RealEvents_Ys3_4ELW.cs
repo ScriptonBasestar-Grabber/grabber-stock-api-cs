@@ -24,7 +24,7 @@ namespace XingBot.real
             outData.yevolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "yevolume"));
             outData.jnilysign = _realDict[szTrCode].GetFieldData("OutBlock", "jnilysign");
             outData.preychange = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "preychange"));
-            outData.jnilydrate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jnilydrate"));
+            outData.jnilydrate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jnilydrate"));
             outData.yofferho0 = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "yofferho0"));
             outData.ybidho0 = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "ybidho0"));
             outData.yofferrem0 = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "yofferrem0"));

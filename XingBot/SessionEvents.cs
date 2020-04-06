@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using XA_SESSIONLib;
+using XingBot.tr;
 
 namespace XingBot.real
 {
@@ -22,6 +24,7 @@ namespace XingBot.real
             Guid IID_SessionEvents = typeof(_IXASessionEvents).GUID;
             m_icpc.FindConnectionPoint(ref IID_SessionEvents, out m_icp);
             m_icp.Advise(this, out m_dwCookie);
+
         }
 
         ~SessionEvents()
@@ -33,12 +36,14 @@ namespace XingBot.real
         {
             m_Session.ConnectServer("api.ebestsec.co.kr", 20001);
             m_Session.Login(UserName, UserPass, CertPass, (int)XA_SESSIONLib.XA_SERVER_TYPE.XA_SIMUL_SERVER, true);
+
         }
         void _IXASessionEvents.Login(string szCode, string szMsg)
         {
             Console.WriteLine("login");
             Console.WriteLine(szCode);
             Console.WriteLine(szMsg);
+            var queryInit = new QueryInit();
         }
 
         void _IXASessionEvents.Logout()

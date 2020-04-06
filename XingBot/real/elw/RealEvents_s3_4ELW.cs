@@ -22,7 +22,7 @@ namespace XingBot.real
             outData.chetime = _realDict[szTrCode].GetFieldData("OutBlock", "chetime");
             outData.sign = _realDict[szTrCode].GetFieldData("OutBlock", "sign");
             outData.change = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
-            outData.drate = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "drate"));
+            outData.drate = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "drate"));
             outData.price = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "price"));
             outData.opentime = _realDict[szTrCode].GetFieldData("OutBlock", "opentime");
             outData.open = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "open"));
@@ -38,13 +38,13 @@ namespace XingBot.real
             outData.mdchecnt = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "mdchecnt"));
             outData.msvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "msvolume"));
             outData.mschecnt = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "mschecnt"));
-            outData.cpower = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cpower"));
+            outData.cpower = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cpower"));
             outData.w_avrg = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "w_avrg"));
             outData.offerho = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "offerho"));
             outData.bidho = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "bidho"));
             outData.status = _realDict[szTrCode].GetFieldData("OutBlock", "status");
             outData.jnilvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jnilvolume"));
-            outData.premium = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "premium"));
+            outData.premium = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "premium"));
             outData.moneyness = _realDict[szTrCode].GetFieldData("OutBlock", "moneyness");
             outData.shcode = _realDict[szTrCode].GetFieldData("OutBlock", "shcode");
             outData.lpvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "lpvolume"));

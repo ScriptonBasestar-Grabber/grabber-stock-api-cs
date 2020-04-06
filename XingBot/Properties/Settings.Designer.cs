@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace XingBot.real.Properties {
+namespace XingBot.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -32,6 +32,18 @@ namespace XingBot.real.Properties {
             }
             set {
                 this["root_path"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\tmp")]
+        public string data_path {
+            get {
+                return ((string)(this["data_path"]));
+            }
+            set {
+                this["data_path"] = value;
             }
         }
     }

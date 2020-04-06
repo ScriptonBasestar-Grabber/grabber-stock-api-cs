@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GrabberManager.model;
 using XingBot.real;
-using XingBot.real.tr;
+using XingBot.tr;
 
 namespace GrabberManager
 {
@@ -31,8 +31,8 @@ namespace GrabberManager
             this._company = company;
 
             TxtUserName.Text = loginModel.UserName;
-            TxtUserPass.Text = loginModel.UserPass;
-            TxtCertPass.Text = loginModel.CertPass;
+            TxtUserPass.Password = loginModel.UserPass;
+            TxtCertPass.Password = loginModel.CertPass;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -43,10 +43,7 @@ namespace GrabberManager
             if (_company == "xing")
             {
                 XingBot.real.SessionEvents session = new SessionEvents();
-                session.Login(TxtUserName.Text, TxtUserPass.Text, TxtCertPass.Text);
-                QueryCtrl queryEvents = new QueryCtrl(XingBot.real.Constants.QueryInitialCodes);
-                queryEvents.InBlock_t8436();
-                queryEvents.InBlock_t8425();
+                session.Login(TxtUserName.Text, TxtUserPass.Password, TxtCertPass.Password);
             } else if (_company == "cybos")
             {
 

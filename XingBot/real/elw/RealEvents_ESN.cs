@@ -20,21 +20,21 @@ namespace XingBot.real
         {
             _ESN_OutBlock outData;
             outData.time = _realDict[szTrCode].GetFieldData("OutBlock", "time");
-            outData.theoryprice = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "theoryprice"));
-            outData.delt = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "delt"));
-            outData.gama = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "gama"));
-            outData.ceta = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "ceta"));
-            outData.vega = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "vega"));
-            outData.rhox = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "rhox"));
-            outData.impv = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "impv"));
-            outData.egearing = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "egearing"));
+            outData.theoryprice = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "theoryprice"));
+            outData.delt = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "delt"));
+            outData.gama = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "gama"));
+            outData.ceta = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "ceta"));
+            outData.vega = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "vega"));
+            outData.rhox = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "rhox"));
+            outData.impv = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "impv"));
+            outData.egearing = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "egearing"));
             outData.shcode = _realDict[szTrCode].GetFieldData("OutBlock", "shcode");
             outData.elwclose = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "elwclose"));
             outData.sign = _realDict[szTrCode].GetFieldData("OutBlock", "sign");
             outData.change = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
             outData.date = _realDict[szTrCode].GetFieldData("OutBlock", "date");
-            outData.tickvalue = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "tickvalue"));
-            outData.lp_impv = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "lp_impv"));
+            outData.tickvalue = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "tickvalue"));
+            outData.lp_impv = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "lp_impv"));
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿namespace XingBot.real.res
 {
     // 선물주문체결 ( block )
-    public    public struct _C01_InBlock
+    public struct _C01_InBlock
     {
     }
 

@@ -102,12 +102,12 @@ namespace XingBot.real
 
             outData.jval = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "jval"));
 
-            outData.k50jisu = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "k50jisu"));
+            outData.k50jisu = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "k50jisu"));
 
             outData.k50sign = _realDict[szTrCode].GetFieldData("OutBlock", "k50sign");
-            outData.change = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
+            outData.change = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "change"));
 
-            outData.k50basis = float.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "k50basis"));
+            outData.k50basis = decimal.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "k50basis"));
 
             outData.cdvolume = long.Parse(_realDict[szTrCode].GetFieldData("OutBlock", "cdvolume"));
 

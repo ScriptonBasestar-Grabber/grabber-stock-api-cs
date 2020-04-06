@@ -11,31 +11,27 @@ namespace XingBot.tr
 {
     public class Tr_t9942
     {
-        private readonly IXAQuery _query;
-
-        public Tr_t9942(IXAQuery query)
+        public static readonly InBlockQuery InBlock_t9942 = (szTrCode, query, inBlock, dict) =>
         {
-            _query = query;
-        }
+            inBlock.Rows.ForEach(delegate (Row row)
+            {
+                query.SetFieldData(inBlock.Name, row.Name, 0, dict[row.Name]);
+            });
+            query.Request(false);
+        };
 
-        public void InBlock_t9942()
+        public static readonly OutBlockQuery OutBlock_t9942 = (szTrCode, query, outBlock, writer) =>
         {
-            string szTrCode = "t9942";
-            _query.SetFieldData(szTrCode + "InBlock", "dummy", 0, "");
-        }
-
-        public void OutBlock_t9942(string szTrCode, Action<_t9942OutBlock> action)
-        {
-            for (var i = 0; i < _query.GetBlockCount(szTrCode + "OutBlock"); i++)
+            for (var i = 0; i < query.GetBlockCount(szTrCode + "OutBlock"); i++)
             {
                 var result = new _t9942OutBlock()
                 {
-                    hname = _query.GetFieldData(szTrCode + "OutBlock", "hname", i),
-                    shcode = _query.GetFieldData(szTrCode + "OutBlock", "shcode", i),
-                    expcode = _query.GetFieldData(szTrCode + "OutBlock", "expcode", i),
+                    hname = query.GetFieldData(szTrCode + "OutBlock", "hname", i),
+                    shcode = query.GetFieldData(szTrCode + "OutBlock", "shcode", i),
+                    expcode = query.GetFieldData(szTrCode + "OutBlock", "expcode", i),
                 };
-                action(result);
+                writer.WriteRecord(result);
             }
-        }
+        };
     }
 }
