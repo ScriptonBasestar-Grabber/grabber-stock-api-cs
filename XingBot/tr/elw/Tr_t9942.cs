@@ -11,24 +11,28 @@ namespace XingBot.tr
 {
     public class Tr_t9942
     {
-        public static readonly InBlockQuery InBlock_t9942 = (szTrCode, query, inBlock, dict) =>
+        public static readonly InBlockQuery InBlock_t9942 = (resModel, query, dict) =>
         {
-            inBlock.Rows.ForEach(delegate (Row row)
+            var szTrCode = resModel.Name;
+            var block = resModel.Blocks[szTrCode + "InBlock"];
+            block.Rows.ForEach(delegate (Row row)
             {
-                query.SetFieldData(inBlock.Name, row.Name, 0, dict[row.Name]);
+                query.SetFieldData(block.Name, row.Name, 0, dict[row.Name]);
             });
             query.Request(false);
         };
 
-        public static readonly OutBlockQuery OutBlock_t9942 = (szTrCode, query, outBlock, writer) =>
+        public static readonly OutBlockQuery OutBlock_t9942 = (resModel, query, writer) =>
         {
-            for (var i = 0; i < query.GetBlockCount(szTrCode + "OutBlock"); i++)
+            var szTrCode = resModel.Name;
+            var block = resModel.Blocks[szTrCode + "OutBlock"];
+            for (var i = 0; i < query.GetBlockCount(block.Name); i++)
             {
                 var result = new _t9942OutBlock()
                 {
-                    hname = query.GetFieldData(szTrCode + "OutBlock", "hname", i),
-                    shcode = query.GetFieldData(szTrCode + "OutBlock", "shcode", i),
-                    expcode = query.GetFieldData(szTrCode + "OutBlock", "expcode", i),
+                    hname = query.GetFieldData(block.Name, "hname", i),
+                    shcode = query.GetFieldData(block.Name, "shcode", i),
+                    expcode = query.GetFieldData(block.Name, "expcode", i),
                 };
                 writer.WriteRecord(result);
             }

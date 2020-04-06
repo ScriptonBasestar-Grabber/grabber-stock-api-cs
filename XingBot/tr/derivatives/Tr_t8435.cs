@@ -11,29 +11,34 @@ namespace XingBot.tr
 {
     public class Tr_t8435
     {
-        public static readonly InBlockQuery InBlock_t8435 = (szTrCode, query, inBlock, dict) =>
+        public static readonly InBlockQuery InBlock_t8435 = (resModel, query, dict) =>
         {
-            inBlock.Rows.ForEach(delegate(Row row)
+            var szTrCode = resModel.Name;
+            var block = resModel.Blocks[szTrCode + "InBlock"];
+            block.Rows.ForEach(delegate(Row row)
             {
-                query.SetFieldData(inBlock.Name, row.Name, 0, dict[row.Name]);
+                query.SetFieldData(block.Name, row.Name, 0, dict[row.Name]);
             });
+            query.Request(false);
         };
 
-        public static readonly OutBlockQuery OutBlock_t8435 = (szTrCode, query, outBlock, writer) =>
+        public static readonly OutBlockQuery OutBlock_t8435 = (resModel, query, writer) =>
         {
+            var szTrCode = resModel.Name;
+            var block = resModel.Blocks[szTrCode + "OutBlock"];
             for (var i = 0; i < query.GetBlockCount(szTrCode + "OutBlock"); i++)
             {
                 var result = new _t8435OutBlock()
                 {
-                    hname = query.GetFieldData(szTrCode + "OutBlock", "hname", i),
-                    shcode = query.GetFieldData(szTrCode + "OutBlock", "shcode", i),
-                    expcode = query.GetFieldData(szTrCode + "OutBlock", "expcode", i),
-                    uplmtprice = decimal.Parse(query.GetFieldData(szTrCode + "OutBlock", "uplmtprice", i)),
-                    dnlmtprice = decimal.Parse(query.GetFieldData(szTrCode + "OutBlock", "dnlmtprice", i)),
-                    jnilclose = decimal.Parse(query.GetFieldData(szTrCode + "OutBlock", "jnilclose", i)),
-                    jnilhigh = decimal.Parse(query.GetFieldData(szTrCode + "OutBlock", "jnilhigh", i)),
-                    jnillow = decimal.Parse(query.GetFieldData(szTrCode + "OutBlock", "jnillow", i)),
-                    recprice = decimal.Parse(query.GetFieldData(szTrCode + "OutBlock", "recprice", i)),
+                    hname = query.GetFieldData(block.Name, "hname", i),
+                    shcode = query.GetFieldData(block.Name, "shcode", i),
+                    expcode = query.GetFieldData(block.Name, "expcode", i),
+                    uplmtprice = decimal.Parse(query.GetFieldData(block.Name, "uplmtprice", i)),
+                    dnlmtprice = decimal.Parse(query.GetFieldData(block.Name, "dnlmtprice", i)),
+                    jnilclose = decimal.Parse(query.GetFieldData(block.Name, "jnilclose", i)),
+                    jnilhigh = decimal.Parse(query.GetFieldData(block.Name, "jnilhigh", i)),
+                    jnillow = decimal.Parse(query.GetFieldData(block.Name, "jnillow", i)),
+                    recprice = decimal.Parse(query.GetFieldData(block.Name, "recprice", i)),
                 };
                 writer.WriteRecord(result);
             }

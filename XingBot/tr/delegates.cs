@@ -11,7 +11,7 @@ using XingBot.res;
 
 namespace XingBot.tr
 {
-    public delegate void InBlockQuery(string szTrCode, IXAQuery query, Block inBlock, StringDict dict);
+    public delegate void InBlockQuery(ResModel resModel, IXAQuery query, StringDict dict);
 
-    public delegate void OutBlockQuery(string szTrCode, IXAQuery query, Block outBlock, CsvWriter writer);
+    public delegate void OutBlockQuery(ResModel resModel, IXAQuery query, CsvWriter writer);
 }
