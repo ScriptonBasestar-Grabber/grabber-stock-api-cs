@@ -25,7 +25,8 @@ namespace XingBot.tr
         public static readonly OutBlockQuery OutBlock_t9907 = (resModel, query, writer) =>
         {
             var szTrCode = resModel.Name;
-            var block = resModel.Blocks[szTrCode + "OutBlock"];
+            var block = resModel.Blocks[szTrCode + "OutBlock1"];
+            writer.WriteHeader<_t9907OutBlock1>();
             for (var i = 0; i < query.GetBlockCount(block.Name); i++)
             {
                 var result = new _t9907OutBlock1()
@@ -33,6 +34,7 @@ namespace XingBot.tr
                     lastym = query.GetFieldData(block.Name, "lastym", i),
                     lastnm = query.GetFieldData(block.Name, "lastnm", i),
                 };
+                writer.NextRecord();
                 writer.WriteRecord(result);
             }
         };

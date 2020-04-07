@@ -21,31 +21,31 @@ namespace XingBot.res
             ResModel resModel = new ResModel();
             var lines = File.ReadAllLines(resfile, euckr);
 
-            for (var i = 0; i < lines.Length; i++)
+            for (var idxLine = 0; idxLine < lines.Length; idxLine++)
             {
-                if (lines[i].TrimStart().StartsWith(".Feed") || lines[i].TrimStart().StartsWith(".Func"))
+                if (lines[idxLine].TrimStart().StartsWith(".Feed") || lines[idxLine].TrimStart().StartsWith(".Func"))
                 {
-                    Console.WriteLine("Feed before " + lines[i]);
-                    var spline = Regex.Split(lines[i].Trim(), "[,\\s\t]+");
+                    Console.WriteLine("Feed before " + lines[idxLine]);
+                    var spline = lines[idxLine].Trim().Split(',');
                     resModel.Name = spline[2];
                     resModel.Desc = spline[1];
                     // Console.WriteLine("feed after " + spline[2] + " " + spline[1]);
                 }
-                else if (lines[i].Contains("InBlock") || lines[i].Contains("OutBlock"))
+                else if (lines[idxLine].Contains("InBlock") || lines[idxLine].Contains("OutBlock"))
                 {
-                    var spline = Regex.Split(lines[i].Trim(), "[,\\s\t]+");
+                    var spline = lines[idxLine].Trim().Split(',');
                     Block block = new Block { Name = spline[0], Desc = spline[1] };
-                    i++;
-                    if (lines[i].TrimStart().StartsWith("begin"))
+                    idxLine++;
+                    if (lines[idxLine].TrimStart().StartsWith("begin"))
                     {
-                        i++;
-                        for (int j = i; j < lines.Length; j++)
+                        idxLine++;
+                        for (int idxInner = idxLine; idxInner < lines[idxLine].Length; idxInner++)
                         {
-                            if (lines[j].TrimStart().StartsWith("end"))
+                            if (lines[idxInner].TrimStart().StartsWith("end"))
                             {
                                 break;
                             }
-                            var spline1 = Regex.Split(lines[i].Trim(), "[,\\s\t]+");
+                            var spline1 = Regex.Split(lines[idxInner].Trim(), "[,;\\s\t]+");
                             block.Rows.Add(new Row { Name = spline1[1], Desc = spline1[0], Length = spline1[4], DataType = spline1[3] });
                         }
                         // Console.WriteLine(block.Name);

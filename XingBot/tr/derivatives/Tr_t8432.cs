@@ -28,6 +28,7 @@ namespace XingBot.tr
         {
             var szTrCode = resModel.Name;
             var block = resModel.Blocks[szTrCode + "OutBlock"];
+            writer.WriteHeader<_t8432OutBlock>();
             for (var i = 0; i < query.GetBlockCount(block.Name); i++)
             {
                 var result = new _t8432OutBlock()
@@ -42,6 +43,7 @@ namespace XingBot.tr
                     jnillow = decimal.Parse(query.GetFieldData(block.Name, "jnillow", i)),
                     recprice = decimal.Parse(query.GetFieldData(block.Name, "recprice", i)),
                 };
+                writer.NextRecord();
                 writer.WriteRecord(result);
             }
         };

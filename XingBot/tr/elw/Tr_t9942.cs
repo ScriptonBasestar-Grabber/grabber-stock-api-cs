@@ -26,6 +26,7 @@ namespace XingBot.tr
         {
             var szTrCode = resModel.Name;
             var block = resModel.Blocks[szTrCode + "OutBlock"];
+            writer.WriteHeader<_t9942OutBlock>();
             for (var i = 0; i < query.GetBlockCount(block.Name); i++)
             {
                 var result = new _t9942OutBlock()
@@ -34,6 +35,7 @@ namespace XingBot.tr
                     shcode = query.GetFieldData(block.Name, "shcode", i),
                     expcode = query.GetFieldData(block.Name, "expcode", i),
                 };
+                writer.NextRecord();
                 writer.WriteRecord(result);
             }
         };

@@ -33,6 +33,7 @@ namespace XingBot.tr
         {
             var szTrCode = resModel.Name;
             var block = resModel.Blocks[szTrCode + "OutBlock"];
+            writer.WriteHeader<_t8419OutBlock>();
             for (var i = 0; i < query.GetBlockCount(szTrCode + "OutBlock"); i++)
             {
                 var result = new _t8419OutBlock()
@@ -54,6 +55,7 @@ namespace XingBot.tr
                     dshmin = query.GetFieldData(block.Name, "dshmin", i),
                     rec_count = long.Parse(query.GetFieldData(block.Name, "rec_count", i)),
                 };
+                writer.NextRecord();
                 writer.WriteRecord(result);
             }
         };

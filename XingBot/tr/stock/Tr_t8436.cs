@@ -26,6 +26,7 @@ namespace XingBot.tr
         {
             var szTrCode = resModel.Name;
             var block = resModel.Blocks[szTrCode + "OutBlock"];
+            writer.WriteHeader<_t8436OutBlock>();
             for (var i = 0; i < query.GetBlockCount(block.Name); i++)
             {
                 var result = new _t8436OutBlock()
@@ -44,6 +45,7 @@ namespace XingBot.tr
                     spac_gubun = query.GetFieldData(block.Name, "spac_gubun", i),
                     filler = query.GetFieldData(block.Name, "filler", i),
                 };
+                writer.NextRecord();
                 writer.WriteRecord(result);
             }
         };

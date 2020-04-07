@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using CsvHelper;
+using GrabberManager.util;
 using XA_DATASETLib;
 using XingBot.res;
 
@@ -37,6 +39,35 @@ namespace XingBot.tr
             writer.WriteHeader<_t1981OutBlock1>();
             for (var i = 0; i < query.GetBlockCount(szTrCode + "OutBlock1"); i++)
             {
+                // var result = new _t1981OutBlock1();
+                // block1.Rows.ForEach((row) =>
+                // {
+                //     var value = query.GetFieldData(block1.Name, row.Name, i);
+                //     //11
+                //     // var prop = result.GetType().GetProperty(row.Name,
+                //     //     System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public |
+                //     //     System.Reflection.BindingFlags.SetProperty);
+                //     // if (null != prop && prop.CanWrite)
+                //     // {
+                //     //     prop.SetValue(result, CastingUtil.byStringType(value, row.DataType));
+                //     // }
+                //     //22
+                //     // PropertyInfo propertyInfo = result.GetType().GetProperty(row.Name);
+                //     // propertyInfo.SetValue(result, Convert.ChangeType(value, propertyInfo.PropertyType), null);
+                //     //33
+                //     // var field = result.GetType().GetField(row.Name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                //     // var jjiji = result.GetType().GetFields();
+                //     // var fjewioiewfj = result.GetType().GetDefaultMembers();
+                //     // var jiojwfeio = result.GetType().GetMembers();
+                //     // var fjew0iefwjio = result.GetType().GetProperties();
+                //     // Console.WriteLine(jjiji);
+                //     // // var field = typeof(_t1981OutBlock1).GetField(row.Name);
+                //     // // Console.WriteLine(result);
+                //     // Console.WriteLine(field.FieldType);
+                //     // Console.WriteLine(Convert.ChangeType(value, field.FieldType));
+                //     // field.SetValueDirect(__makeref(result), Convert.ChangeType(value, field.FieldType));
+                //     // System.Console.WriteLine(s.Field); //Prints 5
+                // });
                 var result = new _t1981OutBlock1()
                 {
                     shcode = query.GetFieldData(block1.Name, "shcode", i),
@@ -51,7 +82,7 @@ namespace XingBot.tr
                     mkt_gb = query.GetFieldData(block1.Name, "mkt_gb", i),
                 };
                 writer.NextRecord();
-                writer.WriteRecord<_t1981OutBlock1>(result);
+                writer.WriteRecord(result);
             }
         };
     }
