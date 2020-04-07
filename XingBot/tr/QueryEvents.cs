@@ -43,9 +43,15 @@ namespace XingBot.tr
 
         public void InBlock(InBlockQuery action, StringDict sdict)
         {
-            // _ixa.SetFieldData("t1981InBlock", "mkt_gb", 0, "0");
-            // _ixa.Request(false);
-            action(_resModel, _ixa, sdict);
+            // action(_resModel, _ixa, sdict);
+
+            var szTrCode = _resModel.Name;
+            var block = _resModel.Blocks[szTrCode + "InBlock"];
+            block.Rows.ForEach(delegate (Row row)
+            {
+                _ixa.SetFieldData(block.Name, row.Name, 0, sdict[row.Name]);
+            });
+            _ixa.Request(false);
         }
 
         void _IXAQueryEvents.ReceiveData(string szTrCode)
