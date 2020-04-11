@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // KOSPI200옵션민감도 ( ATTR, KEY=8, GROUP=1 )
-    public struct _OMG_InBlock
+    public class _OMG_InBlock
     {
         public string optcode{ get; set; } // [string,    8] 옵션코드                        StartPos 0, Length 8
     }
 
-    public struct _OMG_OutBlock
+    public class _OMG_OutBlock
     {
         public string chetime{ get; set; } // [string,    6] 체결시간                        StartPos 0, Length 6
         public decimal actprice{ get; set; } // [float ,  6.2] 행사가                          StartPos 7, Length 6

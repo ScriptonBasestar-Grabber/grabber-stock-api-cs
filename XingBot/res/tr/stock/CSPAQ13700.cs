@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 현물계좌 주문체결내역 조회(API) ( SERVICE=CSPAQ13700,HEADTYPE=B,CREATOR=이상은,CREDATE=2015/04/13 08:39:53 )
-    public struct _CSPAQ13700InBlock1
+    public class _CSPAQ13700InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -16,7 +16,7 @@
         public string OrdPtnCode{ get; set; } // [OrdPtnCode,    2] 주문유형코드                    StartPos 68, Length 2
     }
 
-    public struct _CSPAQ13700OutBlock1
+    public class _CSPAQ13700OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -31,7 +31,7 @@
         public string OrdPtnCode{ get; set; } // [OrdPtnCode,    2] 주문유형코드                    StartPos 68, Length 2
     }
 
-    public struct _CSPAQ13700OutBlock2
+    public class _CSPAQ13700OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long SellExecAmt{ get; set; } // [SellExecAmt  ,   16] 매도체결금액                    StartPos 5, Length 16
@@ -42,7 +42,7 @@
         public long BuyOrdQty{ get; set; } // [BuyOrdQty  ,   16] 매수주문수량                    StartPos 85, Length 16
     }
 
-    public struct _CSPAQ13700OutBlock3
+    public class _CSPAQ13700OutBlock3
     {
         public string OrdDt{ get; set; } // [OrdDt,    8] 주문일                          StartPos 0, Length 8
         public string MgmtBrnNo{ get; set; } // [MgmtBrnNo,    3] 관리지점번호                    StartPos 8, Length 3

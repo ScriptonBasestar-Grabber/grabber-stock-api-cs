@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 주식 피봇/디마크 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1105InBlock
+    public class _t1105InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public struct _t1105OutBlock
+    public class _t1105OutBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
         public long pbot{ get; set; } // [long  ,    8] 피봇                            StartPos 7, Length 8

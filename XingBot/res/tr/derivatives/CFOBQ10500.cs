@@ -1,21 +1,21 @@
 ﻿namespace XingBot.res
 {
     // 선물옵션 계좌예탁금증거금조회 ( ENCRYPT,SERVICE=CFOBQ10500,HEADTYPE=B,CREATOR=정명기,CREDATE=2012/03/12 15:03:11 )
-    public struct _CFOBQ10500InBlock1
+    public class _CFOBQ10500InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
         public string Pwd{ get; set; } // [Pwd,    8] 비밀번호                        StartPos 25, Length 8
     }
 
-    public struct _CFOBQ10500OutBlock1
+    public class _CFOBQ10500OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
         public string Pwd{ get; set; } // [Pwd,    8] 비밀번호                        StartPos 25, Length 8
     }
 
-    public struct _CFOBQ10500OutBlock2
+    public class _CFOBQ10500OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -43,7 +43,7 @@
         public string FnoAcntAfmgnNm{ get; set; } // [FnoAcntAfmgnNm,   20] 선물옵션계좌사후증거금명        StartPos 381, Length 20
     }
 
-    public struct _CFOBQ10500OutBlock3
+    public class _CFOBQ10500OutBlock3
     {
         public string PdGrpCodeNm{ get; set; } // [PdGrpCodeNm,   20] 상품군코드명                    StartPos 0, Length 20
         public long NetRiskMgn{ get; set; } // [NetRiskMgn  ,   16] 순위험증거금액                  StartPos 20, Length 16

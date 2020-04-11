@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 시간대별호가잔량추이 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1471InBlock
+    public class _t1471InBlock
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string gubun{ get; set; } // [string,    2] 분구분                          StartPos 7, Length 2
@@ -9,7 +9,7 @@
         public string cnt{ get; set; } // [string,    3] 자료개수                        StartPos 17, Length 3
     }
 
-    public struct _t1471OutBlock
+    public class _t1471OutBlock
     {
         public string time{ get; set; } // [string,    6] 시간CTS                         StartPos 0, Length 6
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 7, Length 8
@@ -19,7 +19,7 @@
         public long volume{ get; set; } // [long  ,   12] 누적거래량                      StartPos 34, Length 12
     }
 
-    public struct _t1471OutBlock1
+    public class _t1471OutBlock1
     {
         public string time{ get; set; } // [string,    6] 체결시간                        StartPos 0, Length 6
         public long preoffercha1{ get; set; } // [long  ,   12] 메도증감                        StartPos 7, Length 12

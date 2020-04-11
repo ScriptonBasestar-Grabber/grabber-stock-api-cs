@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 주식선물체결 ( ATTR, KEY=8, GROUP=1 )
-    public struct _JC0_InBlock
+    public class _JC0_InBlock
     {
         public string futcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    public struct _JC0_OutBlock
+    public class _JC0_OutBlock
     {
         public string futcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
         public string chetime{ get; set; } // [string,    6] 체결시간                        StartPos 9, Length 6

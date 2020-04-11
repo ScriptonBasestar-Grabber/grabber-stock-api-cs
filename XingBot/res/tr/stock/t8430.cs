@@ -2,12 +2,12 @@
 {
     // 주식종목조회 ( BLOCK,HEADTYPE=A )
     // t8436 사용
-    public struct _t8430InBlock
+    public class _t8430InBlock
     {
         public string gubun{ get; set; } // [gubun,    1] 구분(0:전체1:코스피2:코스닥)    StartPos 0, Length 1
     }
 
-    public struct _t8430OutBlock
+    public class _t8430OutBlock
     {
         public string hname{ get; set; } // [hname,   20] 종목명                          StartPos 0, Length 20
         public string shcode{ get; set; } // [shcode,    6] 단축코드                        StartPos 20, Length 6

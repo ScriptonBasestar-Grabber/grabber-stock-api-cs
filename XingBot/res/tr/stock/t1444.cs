@@ -1,18 +1,18 @@
 ﻿namespace XingBot.res
 {
     // 시가총액상위 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1444InBlock
+    public class _t1444InBlock
     {
         public string upcode{ get; set; } // [string,    3] 업종코드                        StartPos 0, Length 3
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 4, Length 4
     }
 
-    public struct _t1444OutBlock
+    public class _t1444OutBlock
     {
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 0, Length 4
     }
 
-    public struct _t1444OutBlock1
+    public class _t1444OutBlock1
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string hname{ get; set; } // [string,   20] 종목명                          StartPos 7, Length 20

@@ -1,20 +1,20 @@
 ﻿namespace XingBot.res
 {
     // ETF 일별추이 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1903InBlock
+    public class _t1903InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
         public string date{ get; set; } // [string,    8] 일자                            StartPos 7, Length 8
     }
 
-    public struct _t1903OutBlock
+    public class _t1903OutBlock
     {
         public string date{ get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public string hname{ get; set; } // [string,   20] 종목명                          StartPos 9, Length 20
         public string upname{ get; set; } // [string,   20] 업종지수명                      StartPos 30, Length 20
     }
 
-    public struct _t1903OutBlock1
+    public class _t1903OutBlock1
     {
         public string hname { get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 9, Length 8

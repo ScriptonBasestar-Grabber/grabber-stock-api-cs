@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 주식당일매매일지/수수료 ( TUXCODE=T0150, HEADTYPE=C )
-    public struct _t0150InBlock
+    public class _t0150InBlock
     {
         public string accno{ get; set; } // [accno,   11] 계좌번호                        StartPos 0, Length 11
         public string cts_medosu{ get; set; } // [cts_medosu,    1] CTS_매매구분                    StartPos 11, Length 1
@@ -10,7 +10,7 @@
         public string cts_middiv{ get; set; } // [cts_middiv,    2] CTS_매체                        StartPos 33, Length 2
     }
 
-    public struct _t0150OutBlock
+    public class _t0150OutBlock
     {
         public long mdqty{ get; set; } // [mdqty  ,    9] 매도수량                        StartPos 0, Length 9
         public long mdamt{ get; set; } // [mdamt  ,   18] 매도약정금액                    StartPos 9, Length 18
@@ -37,7 +37,7 @@
         public string cts_middiv{ get; set; } // [cts_middiv,    2] CTS_매체                        StartPos 337, Length 2
     }
 
-    public struct _t0150OutBlock1
+    public class _t0150OutBlock1
     {
         public string medosu{ get; set; } // [medosu,   10] 매매구분                        StartPos 0, Length 10
         public string expcode{ get; set; } // [expcode,   12] 종목번호                        StartPos 10, Length 12

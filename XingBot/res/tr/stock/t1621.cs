@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 업종별 분별 투자자매매동향 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1621InBlock
+    public class _t1621InBlock
     {
         public string upcode{ get; set; } // [string,    3] 업종코드                        StartPos 0, Length 3
         public string nmin{ get; set; } // [string,    2] N분                             StartPos 4, Length 2
@@ -9,7 +9,7 @@
         public string bgubun{ get; set; } // [string,    1] 전일분                          StartPos 11, Length 1
     }
 
-    public struct _t1621OutBlock
+    public class _t1621OutBlock
     {
         public string indcode{ get; set; } // [string,    4] 개인투자자코드                  StartPos 0, Length 4
         public string forcode{ get; set; } // [string,    4] 외국인투자자코드                StartPos 5, Length 4
@@ -27,7 +27,7 @@
         public string jisunm{ get; set; } // [string,   20] 기준지수명                      StartPos 69, Length 20
     }
 
-    public struct _t1621OutBlock1
+    public class _t1621OutBlock1
     {
         public string date{ get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public string time{ get; set; } // [string,    6] 시간                            StartPos 9, Length 6

@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // KOSPI프로그램매매전체집계 ( ATTR, KEY=1, GROUP=1 )
-    public struct _PM__InBlock
+    public class _PM__InBlock
     {
         public string gubun{ get; set; } // [string,    1] 구분값                          StartPos 0, Length 1
     }
 
-    public struct _PM__OutBlock
+    public class _PM__OutBlock
     {
         public string time{ get; set; } // [string,    6] 수신시간                        StartPos 0, Length 6
         public long cdhrem{ get; set; } // [long  ,    6] 차익매도호가 잔량               StartPos 7, Length 6

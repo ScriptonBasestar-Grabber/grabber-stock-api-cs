@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 투자자 매매종합(차트) ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1664InBlock
+    public class _t1664InBlock
     {
         public string mgubun{ get; set; } // [string,    1] 시장구분                        StartPos 0, Length 1
         public string vagubun{ get; set; } // [string,    1] 금액수량구분                    StartPos 2, Length 1
@@ -9,7 +9,7 @@
         public string cnt{ get; set; } // [string,    3] 조회건수                        StartPos 6, Length 3
     }
 
-    public struct _t1664OutBlock1
+    public class _t1664OutBlock1
     {
         public string dt{ get; set; } // [string,    8] 일자시간                        StartPos 0, Length 8
         public decimal tjj01{ get; set; } // [double,   12] 증권순매수                      StartPos 9, Length 12

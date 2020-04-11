@@ -16,91 +16,64 @@ namespace XingBot.tr
     {
         private readonly IXAQuery _ixa;
         private readonly ResModel _resModel;
-        private readonly string _szTrCode;
+        private readonly OutBlockQuery _receiveAction;
+        // private Action _afterAction = () => { };
 
-        public QueryEvents(string szTrCode)
+        public QueryEvents(string szTrCode, OutBlockQuery receiveAction)
         {
-            this._szTrCode = szTrCode;
+            _resModel = ReadResFile.Read(Settings.Default.root_path + @"\Res\" + szTrCode + ".res");
+            _receiveAction = receiveAction;
 
             int dwCookie = 0;
             IConnectionPoint icp;
             IConnectionPointContainer icpc;
-            Guid iidQueryEvents = typeof(_IXAQueryEvents).GUID;
 
-            this._ixa = new XAQuery
+            _ixa = new XAQuery
             {
                 ResFileName = Settings.Default.root_path + @"\Res\" + szTrCode + ".res"
             };
             icpc = (IConnectionPointContainer) _ixa;
+            Guid iidQueryEvents = typeof(_IXAQueryEvents).GUID;
             icpc.FindConnectionPoint(ref iidQueryEvents, out icp);
             icp.Advise(this, out dwCookie);
-            //
-            // Console.WriteLine(Settings.Default.root_path);
-            // Console.WriteLine(Settings.Default.root_path.ToString());
-            // Console.WriteLine(Path.Combine(Settings.Default.root_path.ToString(), @"\Res\", szTrCode + ".res"));
-            _resModel = ReadResFile.Read(Settings.Default.root_path + @"\Res\" + szTrCode + ".res");
+
+            Console.WriteLine("QueryEvents 생성자완료");
         }
 
         public void InBlock(InBlockQuery action, StringDict sdict)
         {
-            // action(_resModel, _ixa, sdict);
-
             var szTrCode = _resModel.Name;
             var block = _resModel.Blocks[szTrCode + "InBlock"];
-            block.Rows.ForEach(delegate (Row row)
-            {
-                _ixa.SetFieldData(block.Name, row.Name, 0, sdict[row.Name]);
-            });
+            block.Rows.ForEach(delegate(Row row) { _ixa.SetFieldData(block.Name, row.Name, 0, sdict[row.Name]); });
             _ixa.Request(false);
         }
+
+        // public void AfterAction(Action afterAction)
+        // {
+            // _afterAction = afterAction;
+        // }
 
         void _IXAQueryEvents.ReceiveData(string szTrCode)
         {
             Console.WriteLine("_IXAQueryEvents.ReceiveData " + szTrCode);
-            switch (szTrCode)
-            {
-                case "t1981":
-                    OutBlock(szTrCode, Tr_t1981.OutBlock_t1981);
-                    break;
-                case "t8424":
-                    OutBlock(szTrCode, Tr_t8424.OutBlock_t8424);
-                    break;
-                case "t8432":
-                    OutBlock(szTrCode, Tr_t8432.OutBlock_t8432);
-                    break;
-                case "t8433":
-                    OutBlock(szTrCode, Tr_t8433.OutBlock_t8433);
-                    break;
-                case "t8435":
-                    OutBlock(szTrCode, Tr_t8435.OutBlock_t8435);
-                    break;
-                case "t8436":
-                    OutBlock(szTrCode, Tr_t8436.OutBlock_t8436);
-                    break;
-                case "t9907":
-                    OutBlock(szTrCode, Tr_t9907.OutBlock_t9907);
-                    break;
-                case "t9942":
-                    OutBlock(szTrCode, Tr_t9942.OutBlock_t9942);
-                    break;
-                default:
-                    break;
-            }
+            OutBlock(szTrCode);
         }
 
-        private void OutBlock(string szTrCode, OutBlockQuery action)
+        private void OutBlock(string szTrCode)
         {
             FileInfo fi = new FileInfo(Settings.Default.data_path + "\\xing\\" + szTrCode + ".csv");
             if (fi.Directory != null && !fi.Directory.Exists)
             {
                 System.IO.Directory.CreateDirectory(fi.DirectoryName);
             }
-            // using (var writer = new StreamWriter(fi.OpenWrite()))
-            using (var writer = new StreamWriter(Settings.Default.data_path + "\\xing\\" + szTrCode + ".csv"))
+
+            // using (var writer = new StreamWriter(Settings.Default.data_path + "\\xing\\" + szTrCode + ".csv"))
+            using (var writer = new StreamWriter(fi.OpenWrite()))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
-                action(_resModel, _ixa, csv);
+                _receiveAction(_resModel, _ixa, csv);
             }
+            // _afterAction();
         }
 
         void _IXAQueryEvents.ReceiveMessage(bool bIsSystemError, string nMessageCode, string szMessage)
@@ -115,19 +88,13 @@ namespace XingBot.tr
         void _IXAQueryEvents.ReceiveChartRealData(string szTrCode)
         {
             Console.WriteLine("_IXAQueryEvents.ReceiveChartRealData " + szTrCode);
-            if (szTrCode == "t1981")
-            {
-                OutBlock(szTrCode, Tr_t1981.OutBlock_t1981);
-            }
+            OutBlock(szTrCode);
         }
 
         void _IXAQueryEvents.ReceiveSearchRealData(string szTrCode)
         {
             Console.WriteLine("_IXAQueryEvents.ReceiveSearchRealData " + szTrCode);
-            if (szTrCode == "t1981")
-            {
-                OutBlock(szTrCode, Tr_t1981.OutBlock_t1981);
-            }
+            OutBlock(szTrCode);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 업종차트(틱/n틱) ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t8417InBlock
+    public class _t8417InBlock
     {
         public string shcode{ get; set; } // [string,    3] 단축코드                        StartPos 0, Length 3
         public long ncnt{ get; set; } // [long  ,    4] 단위(n틱)                       StartPos 4, Length 4
@@ -16,7 +16,7 @@
         public string comp_yn{ get; set; } // [string,    1] 압축여부(Y:압축N:비압축)        StartPos 68, Length 1
     }
 
-    public struct _t8417OutBlock
+    public class _t8417OutBlock
     {
         public string shcode{ get; set; } // [string,    3] 단축코드                        StartPos 0, Length 3
         public decimal jisiga{ get; set; } // [float ,  7.2] 전일시가                        StartPos 4, Length 7
@@ -36,7 +36,7 @@
         public long rec_count{ get; set; } // [long  ,    7] 레코드카운트                    StartPos 118, Length 7
     }
 
-    public struct _t8417OutBlock1
+    public class _t8417OutBlock1
     {
         public string date{ get; set; } // [string,    8] 날짜                            StartPos 0, Length 8
         public string time{ get; set; } // [string,    6] 시간                            StartPos 9, Length 6

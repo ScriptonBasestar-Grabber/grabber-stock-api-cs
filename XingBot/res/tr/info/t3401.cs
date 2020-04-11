@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 투자의견 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t3401InBlock
+    public class _t3401InBlock
     {
         public string shcode{ get; set; } // [string,    9] 종목코드                        StartPos 0, Length 9
         public string gubun1{ get; set; } // [string,    1] 구분                            StartPos 10, Length 1
@@ -9,7 +9,7 @@
         public string cts_date{ get; set; } // [string,    8] IDXDATE                         StartPos 16, Length 8
     }
 
-    public struct _t3401OutBlock
+    public class _t3401OutBlock
     {
         public string cts_date{ get; set; } // [string,    8] IDXDATE                         StartPos 0, Length 8
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 9, Length 8
@@ -20,7 +20,7 @@
         public long value{ get; set; } // [long  ,   12] 거래대금                        StartPos 49, Length 12
     }
 
-    public struct _t3401OutBlock1
+    public class _t3401OutBlock1
     {
         public string shcode{ get; set; } // [string,    9] 종목코드                        StartPos 0, Length 9
         public string tradno{ get; set; } // [string,    3] 회원사코드                      StartPos 10, Length 3

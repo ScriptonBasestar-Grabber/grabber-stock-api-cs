@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // ELW 현재가(확정지급액) 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1956InBlock
+    public class _t1956InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public struct _t1956OutBlock
+    public class _t1956OutBlock
     {
         public string hname{ get; set; } // [string,   40] 한글명                          StartPos 0, Length 40
         public string chetime{ get; set; } // [string,   10] 체결시간                        StartPos 41, Length 10
@@ -91,7 +91,7 @@
         public decimal givemoney{ get; set; } // [float ,  8.3] 확정지급액                      StartPos 914, Length 8
     }
 
-    public struct _t1956OutBlock1
+    public class _t1956OutBlock1
     {
         public string bskcode{ get; set; } // [string,    6] 기초자산코드                    StartPos 0, Length 6
         public long bskbno{ get; set; } // [long  ,    3] 기초자산비율                    StartPos 7, Length 3

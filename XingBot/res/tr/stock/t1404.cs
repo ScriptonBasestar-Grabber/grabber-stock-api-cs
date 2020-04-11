@@ -1,19 +1,19 @@
 ﻿namespace XingBot.res
 {
     // 관리/불성실/투자유의조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1404InBlock
+    public class _t1404InBlock
     {
         public string gubun{ get; set; } // [string,    1] 구분                            StartPos 0, Length 1
         public string jongchk{ get; set; } // [string,    1] 종목체크                        StartPos 2, Length 1
         public string cts_shcode{ get; set; } // [string,    6] 종목코드_CTS                    StartPos 4, Length 6
     }
 
-    public struct _t1404OutBlock
+    public class _t1404OutBlock
     {
         public string cts_shcode{ get; set; } // [string,    6] 종목코드_CTS                    StartPos 0, Length 6
     }
 
-    public struct _t1404OutBlock1
+    public class _t1404OutBlock1
     {
         public string hname{ get; set; } // [string,   20] 한글명                          StartPos 0, Length 20
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 21, Length 8

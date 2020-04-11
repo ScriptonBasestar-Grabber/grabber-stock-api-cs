@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 업종기간별추이 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1514InBlock
+    public class _t1514InBlock
     {
         public string upcode{ get; set; } // [string,    3] 업종코드                        StartPos 0, Length 3
         public string gubun1{ get; set; } // [string,    1] 구분1                           StartPos 4, Length 1
@@ -11,12 +11,12 @@
         public string rate_gbn{ get; set; } // [string,    1] 비중구분                        StartPos 22, Length 1
     }
 
-    public struct _t1514OutBlock
+    public class _t1514OutBlock
     {
         public string cts_date{ get; set; } // [string,    8] CTS_일자                        StartPos 0, Length 8
     }
 
-    public struct _t1514OutBlock1
+    public class _t1514OutBlock1
     {
         public string date{ get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public decimal jisu{ get; set; } // [float , 12.2] 지수                            StartPos 9, Length 12

@@ -1,11 +1,11 @@
 ﻿namespace XingBot.res
 {
     // 선물주문정정취소 ( KEY=8, GROUP=1 )
-    public struct _H01_InBlock
+    public class _H01_InBlock
     {
     }
 
-    public struct _H01_OutBlock
+    public class _H01_OutBlock
     {
         public long lineseq{ get; set; } // [lineseq  ,   10] 라인일련번호                    StartPos 0, Length 10
         public string accno{ get; set; } // [accno,   11] 계좌번호                        StartPos 10, Length 11

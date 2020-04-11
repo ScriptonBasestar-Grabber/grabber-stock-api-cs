@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 증시주변자금추이 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t8428InBlock
+    public class _t8428InBlock
     {
         public string fdate{ get; set; } // [string,    8] from일자                        StartPos 0, Length 8
         public string tdate{ get; set; } // [string,    8] to일자                          StartPos 9, Length 8
@@ -11,13 +11,13 @@
         public string cnt{ get; set; } // [string,    3] 조회건수                        StartPos 33, Length 3
     }
 
-    public struct _t8428OutBlock
+    public class _t8428OutBlock
     {
         public string date{ get; set; } // [string,    8] 날짜CTS                         StartPos 0, Length 8
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 9, Length 4
     }
 
-    public struct _t8428OutBlock1
+    public class _t8428OutBlock1
     {
         public string date{ get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public decimal jisu{ get; set; } // [float ,  7.2] 지수                            StartPos 9, Length 7

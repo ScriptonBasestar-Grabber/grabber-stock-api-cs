@@ -4,7 +4,9 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
+using DataLib.model;
 using XA_DATASETLib;
+using XingBot.real;
 using XingBot.res;
 
 namespace XingBot.tr
@@ -29,6 +31,7 @@ namespace XingBot.tr
         {
             var szTrCode = resModel.Name;
             var block = resModel.Blocks[szTrCode + "OutBlock"];
+            writer.WriteHeader<_t8424OutBlock>();
             for (var i = 0; i < query.GetBlockCount(block.Name); i++)
             {
                 var result = new _t8424OutBlock()
@@ -36,7 +39,13 @@ namespace XingBot.tr
                     hname = query.GetFieldData(block.Name, "hname", i),
                     upcode = query.GetFieldData(block.Name, "upcode", i)
                 };
+                writer.NextRecord();
                 writer.WriteRecord(result);
+                Constants.CodeSectors.Add(result.upcode, new CodeSector()
+                {
+                    Name = result.hname,
+                    Code = result.upcode,
+                });
             }
         };
     }

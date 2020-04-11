@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물옵션 계좌 미결제 약정현황(평균가) ( SERVICE=CFOFQ02400,HEADTYPE=B,CREATOR=김정현,CREDATE=2012/03/16 14:07:10 )
-    public struct _CFOFQ02400InBlock1
+    public class _CFOFQ02400InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -10,7 +10,7 @@
         public string BuyDt{ get; set; } // [BuyDt,    8] 매수일자                        StartPos 35, Length 8
     }
 
-    public struct _CFOFQ02400OutBlock1
+    public class _CFOFQ02400OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -19,7 +19,7 @@
         public string BuyDt{ get; set; } // [BuyDt,    8] 매수일자                        StartPos 35, Length 8
     }
 
-    public struct _CFOFQ02400OutBlock2
+    public class _CFOFQ02400OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -43,7 +43,7 @@
         public long AllPnlSum{ get; set; } // [AllPnlSum  ,   16] 전체손익합계                    StartPos 317, Length 16
     }
 
-    public struct _CFOFQ02400OutBlock3
+    public class _CFOFQ02400OutBlock3
     {
         public string FnoClssCode{ get; set; } // [FnoClssCode,    1] 선물옵션품목구분                StartPos 0, Length 1
         public long FutsSellQty{ get; set; } // [FutsSellQty  ,   16] 선물매도수량                    StartPos 1, Length 16
@@ -60,7 +60,7 @@
         public long PutBuyPnl{ get; set; } // [PutBuyPnl  ,   16] 풋매수손익                      StartPos 177, Length 16
     }
 
-    public struct _CFOFQ02400OutBlock4
+    public class _CFOFQ02400OutBlock4
     {
         public string IsuNo{ get; set; } // [IsuNo,   12] 종목번호                        StartPos 0, Length 12
         public string IsuNm{ get; set; } // [IsuNm,   40] 종목명                          StartPos 12, Length 40

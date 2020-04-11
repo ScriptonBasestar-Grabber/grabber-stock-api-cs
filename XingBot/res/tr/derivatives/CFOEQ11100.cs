@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물옵션가정산예탁금상세 ( SERVICE=CFOEQ11100,HEADTYPE=B,CREATOR=김정현,CREDATE=2012/03/16 14:04:41 )
-    public struct _CFOEQ11100InBlock1
+    public class _CFOEQ11100InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -9,7 +9,7 @@
         public string BnsDt{ get; set; } // [BnsDt,    8] 매매일                          StartPos 33, Length 8
     }
 
-    public struct _CFOEQ11100OutBlock1
+    public class _CFOEQ11100OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -17,7 +17,7 @@
         public string BnsDt{ get; set; } // [BnsDt,    8] 매매일                          StartPos 33, Length 8
     }
 
-    public struct _CFOEQ11100OutBlock2
+    public class _CFOEQ11100OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40

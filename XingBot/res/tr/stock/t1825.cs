@@ -1,18 +1,18 @@
 ﻿namespace XingBot.res
 {
     // 종목Q클릭검색 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1825InBlock
+    public class _t1825InBlock
     {
         public string search_cd{ get; set; } // [string,    4] 검색코드                        StartPos 0, Length 4
         public string gubun{ get; set; } // [string,    1] 구분(0:전체1:코스피2:코스닥)    StartPos 5, Length 1
     }
 
-    public struct _t1825OutBlock
+    public class _t1825OutBlock
     {
         public long JongCnt{ get; set; } // [long  ,    4] 검색종목수                      StartPos 0, Length 4
     }
 
-    public struct _t1825OutBlock1
+    public class _t1825OutBlock1
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string hname{ get; set; } // [string,   20] 종목명                          StartPos 7, Length 20

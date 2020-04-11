@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // ELW 전광판 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1964InBlock
+    public class _t1964InBlock
     {
         public string item{ get; set; } // [string,   12] 기초자산코드                    StartPos 0, Length 12
         public string issuercd{ get; set; } // [string,   12] 발행사                          StartPos 13, Length 12
@@ -16,7 +16,7 @@
         public string volume{ get; set; } // [string,   12] 거래량                          StartPos 57, Length 12
     }
 
-    public struct _t1964OutBlock1
+    public class _t1964OutBlock1
     {
         public string shcode{ get; set; } // [string,    6] ELW코드                         StartPos 0, Length 6
         public string hname{ get; set; } // [string,   40] 종목명                          StartPos 7, Length 40

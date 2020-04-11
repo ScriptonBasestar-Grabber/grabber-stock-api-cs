@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 주식당일전일분틱조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1310InBlock
+    public class _t1310InBlock
     {
         public string daygb{ get; set; } // [string,    1] 당일전일구분                    StartPos 0, Length 1
         public string timegb{ get; set; } // [string,    1] 분틱구분                        StartPos 2, Length 1
@@ -10,12 +10,12 @@
         public string cts_time{ get; set; } // [string,   10] 시간CTS                         StartPos 16, Length 10
     }
 
-    public struct _t1310OutBlock
+    public class _t1310OutBlock
     {
         public string cts_time{ get; set; } // [string,   10] 시간CTS                         StartPos 0, Length 10
     }
 
-    public struct _t1310OutBlock1
+    public class _t1310OutBlock1
     {
         public string chetime{ get; set; } // [string,   10] 시간                            StartPos 0, Length 10
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 11, Length 8

@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 테마종목별 시세조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1537InBlock
+    public class _t1537InBlock
     {
         public string tmcode{ get; set; } // [string,    4] 테마코드                        StartPos 0, Length 4
     }
 
-    public struct _t1537OutBlock
+    public class _t1537OutBlock
     {
         public long upcnt{ get; set; } // [long  ,    4] 상승종목수                      StartPos 0, Length 4
         public long tmcnt{ get; set; } // [long  ,    4] 테마종목수                      StartPos 5, Length 4
@@ -14,7 +14,7 @@
         public string tmname{ get; set; } // [string,   36] 테마명                          StartPos 15, Length 36
     }
 
-    public struct _t1537OutBlock1
+    public class _t1537OutBlock1
     {
         public string hname{ get; set; } // [string,   20] 종목명                          StartPos 0, Length 20
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 21, Length 8

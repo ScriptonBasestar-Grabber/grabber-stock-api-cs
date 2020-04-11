@@ -1,14 +1,14 @@
 ﻿namespace XingBot.res
 {
     // 업종별 종목시세 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1516InBlock
+    public class _t1516InBlock
     {
         public string upcode{ get; set; } // [string,    3] 업종코드                        StartPos 0, Length 3
         public string gubun{ get; set; } // [string,    1] 구분                            StartPos 4, Length 1
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 6, Length 6
     }
 
-    public struct _t1516OutBlock
+    public class _t1516OutBlock
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public decimal pricejisu{ get; set; } // [float , 12.2] 지수                            StartPos 7, Length 12
@@ -17,7 +17,7 @@
         public decimal jdiff{ get; set; } // [float ,  6.2] 등락율                          StartPos 30, Length 6
     }
 
-    public struct _t1516OutBlock1
+    public class _t1516OutBlock1
     {
         public string hname{ get; set; } // [string,   20] 종목명                          StartPos 0, Length 20
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 21, Length 8

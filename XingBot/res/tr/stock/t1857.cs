@@ -1,21 +1,21 @@
 ﻿namespace XingBot.res
 {
     // e종목검색(API용) ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1857InBlock
+    public class _t1857InBlock
     {
         public string sRealFlag{ get; set; } // [string,    1] 실시간구분(0:조회 1:실시간)     StartPos 0, Length 1
         public string sSearchFlag{ get; set; } // [string,    1] 종목검색구분(F:파일 S:서버)     StartPos 2, Length 1
         public string query_index{ get; set; } // [string,  256] 종목검색입력값                  StartPos 4, Length 256
     }
 
-    public struct _t1857OutBlock
+    public class _t1857OutBlock
     {
         public long result_count{ get; set; } // [long  ,    5] 검색종목수                      StartPos 0, Length 5
         public string result_time{ get; set; } // [string,    6] 포착시간                        StartPos 6, Length 6
         public string AlertNum{ get; set; } // [string,   11] 실시간키                        StartPos 13, Length 11
     }
 
-    public struct _t1857OutBlock1
+    public class _t1857OutBlock1
     {
         public string shcode{ get; set; } // [string,    7] 종목코드                        StartPos 0, Length 7
         public string hname{ get; set; } // [string,   40] 종목명                          StartPos 8, Length 40

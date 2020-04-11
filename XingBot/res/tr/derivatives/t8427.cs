@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물옵션 과거데이터시간대별조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t8427InBlock
+    public class _t8427InBlock
     {
         public string fo_gbn{ get; set; } // [string,    1] 선물옵션구분                    StartPos 0, Length 1
         public string yyyy{ get; set; } // [string,    4] 조회년도                        StartPos 2, Length 4
@@ -15,14 +15,14 @@
         public string time{ get; set; } // [string,    6] 시간                            StartPos 42, Length 6
     }
 
-    public struct _t8427OutBlock
+    public class _t8427OutBlock
     {
         public string focode{ get; set; } // [string,    8] 선물옵션코드                    StartPos 0, Length 8
         public string date{ get; set; } // [string,    8] 날짜                            StartPos 9, Length 8
         public string time{ get; set; } // [string,    6] 시간                            StartPos 18, Length 6
     }
 
-    public struct _t8427OutBlock1
+    public class _t8427OutBlock1
     {
         public string date{ get; set; } // [string,    8] 날짜                            StartPos 0, Length 8
         public string time{ get; set; } // [string,    6] 시간                            StartPos 9, Length 6

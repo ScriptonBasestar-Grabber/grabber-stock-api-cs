@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // EUREX 야간옵션 시세전광판 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t2835InBlock
+    public class _t2835InBlock
     {
         public string yyyymm{ get; set; } // [string,    6] 월물                            StartPos 0, Length 6
     }
 
-    public struct _t2835OutBlock
+    public class _t2835OutBlock
     {
         public decimal gmprice{ get; set; } // [float ,  6.2] 근월물현재가                    StartPos 0, Length 6
         public string gmsign{ get; set; } // [string,    1] 근월물전일대비구분              StartPos 7, Length 1
@@ -16,7 +16,7 @@
         public string gmshcode{ get; set; } // [string,    8] 근월물선물코드                  StartPos 36, Length 8
     }
 
-    public struct _t2835OutBlock1
+    public class _t2835OutBlock1
     {
         public decimal actprice{ get; set; } // [float ,  6.2] 행사가                          StartPos 0, Length 6
         public string optcode{ get; set; } // [string,    8] 콜옵션코드                      StartPos 7, Length 8
@@ -39,7 +39,7 @@
         public decimal jisuconv{ get; set; } // [float ,  6.2] 지수환산                        StartPos 142, Length 6
     }
 
-    public struct _t2835OutBlock2
+    public class _t2835OutBlock2
     {
         public decimal actprice{ get; set; } // [float ,  6.2] 행사가                          StartPos 0, Length 6
         public string optcode{ get; set; } // [string,    8] 풋옵션코드                      StartPos 7, Length 8

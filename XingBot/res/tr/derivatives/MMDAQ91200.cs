@@ -1,21 +1,21 @@
 ﻿namespace XingBot.res
 {
     // 파생상품증거금율조회 ( SERVICE=MMDAQ91200,HEADTYPE=B,CREATOR=임정선,CREDATE=2014/09/03 15:16:28 )
-    public struct _MMDAQ91200InBlock1
+    public class _MMDAQ91200InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string IsuLgclssCode{ get; set; } // [IsuLgclssCode,    2] 종목대분류코드                  StartPos 5, Length 2
         public string IsuMdclssCode{ get; set; } // [IsuMdclssCode,    2] 종목중분류코드                  StartPos 7, Length 2
     }
 
-    public struct _MMDAQ91200OutBlock1
+    public class _MMDAQ91200OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string IsuLgclssCode{ get; set; } // [IsuLgclssCode,    2] 종목대분류코드                  StartPos 5, Length 2
         public string IsuMdclssCode{ get; set; } // [IsuMdclssCode,    2] 종목중분류코드                  StartPos 7, Length 2
     }
 
-    public struct _MMDAQ91200OutBlock2
+    public class _MMDAQ91200OutBlock2
     {
         public string IsuSmclssCode{ get; set; } // [IsuSmclssCode,    3] 종목소분류코드                  StartPos 0, Length 3
         public string IsuMdclssCode{ get; set; } // [IsuMdclssCode,    2] 종목중분류코드                  StartPos 3, Length 2

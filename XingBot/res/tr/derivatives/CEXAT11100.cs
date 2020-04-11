@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // EUREX 야간옵션 정상주문 ( SERVICE=CEXAT11100,HEADTYPE=B,CREATOR=이시종,CREDATE=2012/06/27 20:48:05 )
-    public struct _CEXAT11100InBlock1
+    public class _CEXAT11100InBlock1
     {
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 0, Length 20
         public string Pwd{ get; set; } // [Pwd,    8] 비밀번호                        StartPos 20, Length 8
@@ -12,7 +12,7 @@
         public long OrdQty{ get; set; } // [OrdQty  ,   16] 주문수량                        StartPos 57, Length 16
     }
 
-    public struct _CEXAT11100OutBlock1
+    public class _CEXAT11100OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -26,7 +26,7 @@
         public string CommdaCode{ get; set; } // [CommdaCode,    2] 통신매체코드                    StartPos 103, Length 2
     }
 
-    public struct _CEXAT11100OutBlock2
+    public class _CEXAT11100OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrdNo{ get; set; } // [OrdNo  ,   10] 주문번호                        StartPos 5, Length 10

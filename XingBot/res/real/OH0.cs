@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // KOSPI200옵션호가 ( ATTR, KEY=8, GROUP=1 )
-    public struct _OH0_InBlock
+    public class _OH0_InBlock
     {
         public string optcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    public struct _OH0_OutBlock
+    public class _OH0_OutBlock
     {
         public string hotime{ get; set; } // [string,    6] 호가시간                        StartPos 0, Length 6
         public decimal offerho1{ get; set; } // [double,  6.2] 매도호가1                       StartPos 7, Length 6

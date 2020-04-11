@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 투자자매매종합2 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1617InBlock
+    public class _t1617InBlock
     {
         public string gubun1{ get; set; } // [string,    1] 시장구분(1:코스피2:코스닥3:선물 StartPos 0, Length 1
         public string gubun2{ get; set; } // [string,    1] 수량금액구분(1:수량2:금액)      StartPos 2, Length 1
@@ -10,7 +10,7 @@
         public string cts_time{ get; set; } // [string,    8] CTSTIME(연속키값-시간)          StartPos 15, Length 8
     }
 
-    public struct _t1617OutBlock
+    public class _t1617OutBlock
     {
         public string cts_date{ get; set; } // [string,    8] CTSDATE                         StartPos 0, Length 8
         public string cts_time{ get; set; } // [string,    8] CTSTIME                         StartPos 9, Length 8
@@ -28,7 +28,7 @@
         public long sv_01{ get; set; } // [long  ,   12] 증권순매수                      StartPos 161, Length 12
     }
 
-    public struct _t1617OutBlock1
+    public class _t1617OutBlock1
     {
         public string date{ get; set; } // [string,    8] 날짜                            StartPos 0, Length 8
         public string time{ get; set; } // [string,    8] 시간                            StartPos 9, Length 8

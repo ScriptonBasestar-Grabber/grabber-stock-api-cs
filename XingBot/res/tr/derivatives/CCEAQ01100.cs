@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res_derivatives
 {
     // 선물옵션 CME 매매거래현황 조회 ( SERVICE=CCEAQ01100,HEADTYPE=B,CREATOR=원종혁,CREDATE=2019/04/03 16:08:04 )
-    public struct _CCEAQ01100InBlock1
+    public class _CCEAQ01100InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -11,7 +11,7 @@
         public string StnlnSeqTp{ get; set; } // [StnlnSeqTp,    1] 정렬순서구분                    StartPos 49, Length 1
     }
 
-    public struct _CCEAQ01100OutBlock2
+    public class _CCEAQ01100OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -20,7 +20,7 @@
         public long CmsnAmtSumAmt{ get; set; } // [CmsnAmtSumAmt  ,   16] 수수료합계금액                  StartPos 77, Length 16
     }
 
-    public struct _CCEAQ01100OutBlock3
+    public class _CCEAQ01100OutBlock3
     {
         public string BnsDt{ get; set; } // [BnsDt,    8] 매매일                          StartPos 0, Length 8
         public long OrdNo{ get; set; } // [OrdNo  ,   10] 주문번호                        StartPos 8, Length 10

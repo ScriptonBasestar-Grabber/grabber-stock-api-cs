@@ -1,14 +1,14 @@
 ﻿namespace XingBot.res
 {
     // 종목별잔량/사전공시 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1638InBlock
+    public class _t1638InBlock
     {
         public string gubun1{ get; set; } // [string,    1] 구분                            StartPos 0, Length 1
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 2, Length 6
         public string gubun2{ get; set; } // [string,    1] 정렬                            StartPos 9, Length 1
     }
 
-    public struct _t1638OutBlock
+    public class _t1638OutBlock
     {
         public long rank{ get; set; } // [long  ,    4] 순위                            StartPos 0, Length 4
         public string hname{ get; set; } // [string,   20] 한글명                          StartPos 5, Length 20

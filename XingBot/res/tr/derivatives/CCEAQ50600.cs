@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물옵션 CME 계좌잔고 및 평가현황 ( SERVICE=CCEAQ50600,HEADTYPE=B,CREATOR=김승환,CREDATE=2012/05/01 12:18:45 )
-    public struct _CCEAQ50600InBlock1
+    public class _CCEAQ50600InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -10,7 +10,7 @@
         public string FutsPrcEvalTp{ get; set; } // [FutsPrcEvalTp,    1] 선물가격평가구분                StartPos 34, Length 1
     }
 
-    public struct _CCEAQ50600OutBlock1
+    public class _CCEAQ50600OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -19,7 +19,7 @@
         public string FutsPrcEvalTp{ get; set; } // [FutsPrcEvalTp,    1] 선물가격평가구분                StartPos 34, Length 1
     }
 
-    public struct _CCEAQ50600OutBlock2
+    public class _CCEAQ50600OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -49,7 +49,7 @@
         public long MnyoutAmt{ get; set; } // [MnyoutAmt  ,   16] 출금금액                        StartPos 412, Length 16
     }
 
-    public struct _CCEAQ50600OutBlock3
+    public class _CCEAQ50600OutBlock3
     {
         public string FnoIsuNo{ get; set; } // [FnoIsuNo,   12] 선물옵션종목번호                StartPos 0, Length 12
         public string IsuNm{ get; set; } // [IsuNm,   40] 종목명                          StartPos 12, Length 40

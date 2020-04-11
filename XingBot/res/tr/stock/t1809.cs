@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 신호조회 ( BLOCK,HEADTYPE=A )
-    public struct _t1809InBlock
+    public class _t1809InBlock
     {
         public string gubun{ get; set; } // [gubun,    1] 신호구분                        StartPos 0, Length 1
         public string jmGb{ get; set; } // [jmGb,    1] 종목구분                        StartPos 1, Length 1
@@ -9,12 +9,12 @@
         public string cts{ get; set; } // [cts,   30] NEXTKEY                         StartPos 8, Length 30
     }
 
-    public struct _t1809OutBlock
+    public class _t1809OutBlock
     {
         public string cts{ get; set; } // [cts,   30] NEXTKEY                         StartPos 0, Length 30
     }
 
-    public struct _t1809OutBlock1
+    public class _t1809OutBlock1
     {
         public string date{ get; set; } // [date,    8] 일자                            StartPos 0, Length 8
         public string time{ get; set; } // [time,    6] 시간                            StartPos 8, Length 6

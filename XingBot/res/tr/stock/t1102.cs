@@ -2,12 +2,12 @@
 {
     // 주식 현재가(시세) 조회 ( ATTR,BLOCK,HEADTYPE=A )
 
-    public struct _t1102InBlock
+    public class _t1102InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public struct _t1102OutBlock
+    public class _t1102OutBlock
     {
         public string hname{ get; set; } // [string,   20] 한글명                          StartPos 0, Length 20
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 21, Length 8

@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 현물계좌 증거금률별 주문가능수량 조회 ( SERVICE=CSPBQ00200,HEADTYPE=B,CREATOR=이상은,CREDATE=2011/12/12 09:22:25 )
-    public struct _CSPBQ00200InBlock1
+    public class _CSPBQ00200InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string BnsTpCode{ get; set; } // [BnsTpCode,    1] 매매구분                        StartPos 5, Length 1
@@ -12,7 +12,7 @@
         public string RegCommdaCode{ get; set; } // [RegCommdaCode,    2] 통신매체코드                    StartPos 61, Length 2
     }
 
-    public struct _CSPBQ00200OutBlock1
+    public class _CSPBQ00200OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string BnsTpCode{ get; set; } // [BnsTpCode,    1] 매매구분                        StartPos 5, Length 1
@@ -23,7 +23,7 @@
         public string RegCommdaCode{ get; set; } // [RegCommdaCode,    2] 통신매체코드                    StartPos 61, Length 2
     }
 
-    public struct _CSPBQ00200OutBlock2
+    public class _CSPBQ00200OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40

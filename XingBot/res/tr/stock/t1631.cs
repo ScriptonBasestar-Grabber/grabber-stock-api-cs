@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 프로그램매매 종합조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1631InBlock
+    public class _t1631InBlock
     {
         public string gubun{ get; set; } // [string,    1] 구분                            StartPos 0, Length 1
         public string dgubun{ get; set; } // [string,    1] 일자구분                        StartPos 2, Length 1
@@ -9,7 +9,7 @@
         public string edate{ get; set; } // [string,    8] 종료일자                        StartPos 13, Length 8
     }
 
-    public struct _t1631OutBlock
+    public class _t1631OutBlock
     {
         public long cdhrem{ get; set; } // [long  ,    8] 매도차익미체결잔량              StartPos 0, Length 8
         public long bdhrem{ get; set; } // [long  ,    8] 매도비차익미체결잔량            StartPos 9, Length 8
@@ -21,7 +21,7 @@
         public long tbsrem{ get; set; } // [long  ,    8] 매수비차익주문수량              StartPos 63, Length 8
     }
 
-    public struct _t1631OutBlock1
+    public class _t1631OutBlock1
     {
         public long offervolume{ get; set; } // [long  ,    8] 매도수량                        StartPos 0, Length 8
         public long offervalue{ get; set; } // [long  ,   12] 매도금액                        StartPos 9, Length 12

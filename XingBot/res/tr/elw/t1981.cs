@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 기초자산리스트 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1981InBlock
+    public class _t1981InBlock
     {
         public string mkt_gb { get; set; } // [string,    1] 시장구분(0:전체1:코스피2:코스닥 StartPos 0, Length 1
     }
@@ -12,7 +12,7 @@
         public string ksd_cnt { get; set; } // [string,    4] 코스닥종목건수                  StartPos 5, Length 4
     }
 
-    public struct _t1981OutBlock1
+    public class _t1981OutBlock1
     {
         public string shcode { get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
         public string expcode { get; set; } // [string,   12] 표준코드                        StartPos 7, Length 12

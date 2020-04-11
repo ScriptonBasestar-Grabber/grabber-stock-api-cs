@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물옵션주문가능수량조회 ( SERVICE=CFOAQ10100,HEADTYPE=B,CREATOR=정명기,CREDATE=2011/11/18 15:04:59 )
-    public struct _CFOAQ10100InBlock1
+    public class _CFOAQ10100InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -15,7 +15,7 @@
         public string FnoOrdprcPtnCode{ get; set; } // [FnoOrdprcPtnCode,    2] 선물옵션호가유형코드            StartPos 95, Length 2
     }
 
-    public struct _CFOAQ10100OutBlock1
+    public class _CFOAQ10100OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -29,7 +29,7 @@
         public string FnoOrdprcPtnCode{ get; set; } // [FnoOrdprcPtnCode,    2] 선물옵션호가유형코드            StartPos 95, Length 2
     }
 
-    public struct _CFOAQ10100OutBlock2
+    public class _CFOAQ10100OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40

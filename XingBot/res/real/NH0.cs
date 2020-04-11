@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // CME연계KP200지수선물호가 ( ATTR, KEY=8, GROUP=1 )
-    public struct _NH0_InBlock
+    public class _NH0_InBlock
     {
         public string futcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    public struct _NH0_OutBlock
+    public class _NH0_OutBlock
     {
         public string hotime{ get; set; } // [string,    6] 호가시간(24시간)                StartPos 0, Length 6
         public string hotime1{ get; set; } // [string,    6] 호가시간(36시간)                StartPos 7, Length 6

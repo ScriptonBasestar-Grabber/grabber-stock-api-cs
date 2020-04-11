@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 종목별프로그램매매동향 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1636InBlock
+    public class _t1636InBlock
     {
         public string gubun{ get; set; } // [string,    1] 구분                            StartPos 0, Length 1
         public string gubun1{ get; set; } // [string,    1] 금액수량구분                    StartPos 2, Length 1
@@ -10,12 +10,12 @@
         public long cts_idx{ get; set; } // [long  ,    4] IDXCTS                          StartPos 13, Length 4
     }
 
-    public struct _t1636OutBlock
+    public class _t1636OutBlock
     {
         public long cts_idx{ get; set; } // [long  ,    4] IDXCTS                          StartPos 0, Length 4
     }
 
-    public struct _t1636OutBlock1
+    public class _t1636OutBlock1
     {
         public long rank{ get; set; } // [long  ,    8] 순위                            StartPos 0, Length 8
         public string hname{ get; set; } // [string,   20] 종목명                          StartPos 9, Length 20

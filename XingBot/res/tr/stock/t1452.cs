@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 거래량상위 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1452InBlock
+    public class _t1452InBlock
     {
         public string gubun{ get; set; } // [string,    1] 구분                            StartPos 0, Length 1
         public string jnilgubun{ get; set; } // [string,    1] 전일구분                        StartPos 2, Length 1
@@ -14,12 +14,12 @@
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 56, Length 4
     }
 
-    public struct _t1452OutBlock
+    public class _t1452OutBlock
     {
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 0, Length 4
     }
 
-    public struct _t1452OutBlock1
+    public class _t1452OutBlock1
     {
         public string hname{ get; set; } // [string,   20] 종목명                          StartPos 0, Length 20
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 21, Length 8

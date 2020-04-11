@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // EUREX 야간옵션 예탁금/통합잔고 조회 ( SERVICE=CEXAQ31200,HEADTYPE=B,CREATOR=이유리,CREDATE=2014/12/08 10:30:17 )
-    public struct _CEXAQ31200InBlock1
+    public class _CEXAQ31200InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -10,7 +10,7 @@
         public string FutsPrcEvalTp{ get; set; } // [FutsPrcEvalTp,    1] 선물가격평가구분                StartPos 34, Length 1
     }
 
-    public struct _CEXAQ31200OutBlock1
+    public class _CEXAQ31200OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -19,7 +19,7 @@
         public string FutsPrcEvalTp{ get; set; } // [FutsPrcEvalTp,    1] 선물가격평가구분                StartPos 34, Length 1
     }
 
-    public struct _CEXAQ31200OutBlock2
+    public class _CEXAQ31200OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -50,7 +50,7 @@
         public long FutsCmsnAmt{ get; set; } // [FutsCmsnAmt  ,   16] 선물수수료금액                  StartPos 428, Length 16
     }
 
-    public struct _CEXAQ31200OutBlock3
+    public class _CEXAQ31200OutBlock3
     {
         public string FnoIsuNo{ get; set; } // [FnoIsuNo,   12] 선물옵션종목번호                StartPos 0, Length 12
         public string IsuNm{ get; set; } // [IsuNm,   40] 종목명                          StartPos 12, Length 40

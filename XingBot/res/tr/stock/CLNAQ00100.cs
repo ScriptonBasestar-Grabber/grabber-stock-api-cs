@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 예탁담보융자가능종목현황조회 ( SERVICE=CLNAQ00100,HEADTYPE=B,CREATOR=이성호,CREDATE=2012/01/10 15:45:49 )
-    public struct _CLNAQ00100InBlock1
+    public class _CLNAQ00100InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string QryTp{ get; set; } // [QryTp,    1] 조회구분                        StartPos 5, Length 1
@@ -11,7 +11,7 @@
         public string LoanTp{ get; set; } // [LoanTp,    1] 대출구분                        StartPos 21, Length 1
     }
 
-    public struct _CLNAQ00100OutBlock1
+    public class _CLNAQ00100OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string QryTp{ get; set; } // [QryTp,    1] 조회구분                        StartPos 5, Length 1
@@ -21,7 +21,7 @@
         public string LoanTp{ get; set; } // [LoanTp,    1] 대출구분                        StartPos 21, Length 1
     }
 
-    public struct _CLNAQ00100OutBlock2
+    public class _CLNAQ00100OutBlock2
     {
         public string IsuNo{ get; set; } // [IsuNo,   12] 종목번호                        StartPos 0, Length 12
         public string IsuNm{ get; set; } // [IsuNm,   40] 종목명                          StartPos 12, Length 40
@@ -46,7 +46,7 @@
         public decimal Rat02{ get; set; } // [Rat02, 19.8] 비율값                          StartPos 439, Length 19
     }
 
-    public struct _CLNAQ00100OutBlock3
+    public class _CLNAQ00100OutBlock3
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long LrgMnyoutSumAmt{ get; set; } // [LrgMnyoutSumAmt  ,   16] 대출금합계금액                  StartPos 5, Length 16

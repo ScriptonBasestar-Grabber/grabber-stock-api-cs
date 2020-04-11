@@ -1,11 +1,11 @@
 ﻿namespace XingBot.res
 {
     // 주식주문접수 ( KEY=8, GROUP=1 )
-    public struct _SC0_InBlock
+    public class _SC0_InBlock
     {
     }
 
-    public struct _SC0_OutBlock
+    public class _SC0_OutBlock
     {
         public long lineseq{ get; set; } // [long  ,   10] 라인일련번호                    StartPos 0, Length 10
         public string accno{ get; set; } // [string,   11] 계좌번호                        StartPos 10, Length 11

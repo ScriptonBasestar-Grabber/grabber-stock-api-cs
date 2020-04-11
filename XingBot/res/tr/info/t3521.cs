@@ -1,13 +1,13 @@
 ﻿namespace XingBot.res
 {
     // 해외지수조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t3521InBlock
+    public class _t3521InBlock
     {
         public string kind{ get; set; } // [string,    1] 종목종류                        StartPos 0, Length 1
         public string symbol{ get; set; } // [string,   16] SYMBOL                          StartPos 2, Length 16
     }
 
-    public struct _t3521OutBlock
+    public class _t3521OutBlock
     {
         public string symbol{ get; set; } // [string,   16] 심벌                            StartPos 0, Length 16
         public string hname{ get; set; } // [string,   20] 지수명                          StartPos 17, Length 20

@@ -1,13 +1,13 @@
 ﻿namespace XingBot.res
 {
     // 옵션 전광판 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t2301InBlock
+    public class _t2301InBlock
     {
         public string yyyymm{ get; set; } // [string,    6] 월물                            StartPos 0, Length 6
         public string gubun{ get; set; } // [string,    1] 미니구분(M:미니G:정규)          StartPos 7, Length 1
     }
 
-    public struct _t2301OutBlock
+    public class _t2301OutBlock
     {
         public long histimpv{ get; set; } // [long  ,    4] 역사적변동성                    StartPos 0, Length 4
         public long jandatecnt{ get; set; } // [long  ,    4] 옵션잔존일                      StartPos 5, Length 4
@@ -21,7 +21,7 @@
         public string gmshcode{ get; set; } // [string,    8] 근월물선물코드                  StartPos 60, Length 8
     }
 
-    public struct _t2301OutBlock1
+    public class _t2301OutBlock1
     {
         public decimal actprice{ get; set; } // [float ,  6.2] 행사가                          StartPos 0, Length 6
         public string optcode{ get; set; } // [string,    8] 콜옵션코드                      StartPos 7, Length 8
@@ -57,7 +57,7 @@
         public decimal value{ get; set; } // [float ,   12] 거래대금                        StartPos 257, Length 12
     }
 
-    public struct _t2301OutBlock2
+    public class _t2301OutBlock2
     {
         public decimal actprice{ get; set; } // [float ,  6.2] 행사가                          StartPos 0, Length 6
         public string optcode{ get; set; } // [string,    8] 풋옵션코드                      StartPos 7, Length 8

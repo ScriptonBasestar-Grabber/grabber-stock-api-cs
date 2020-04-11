@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 주식선물 마스터조회 ( BLOCK,HEADTYPE=A )
-    public struct _t8401InBlock
+    public class _t8401InBlock
     {
         public string dummy{ get; set; } // [string,    1] Dummy                           StartPos 0, Length 1
     }
 
-    public struct _t8401OutBlock
+    public class _t8401OutBlock
     {
         public string hname{ get; set; } // [string,   20] 종목명                          StartPos 0, Length 20
         public string shcode{ get; set; } // [string,    8] 단축코드                        StartPos 20, Length 8

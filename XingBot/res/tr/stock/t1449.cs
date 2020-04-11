@@ -1,13 +1,13 @@
 ﻿namespace XingBot.res
 {
     // 가격대별 매매비중 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1449InBlock
+    public class _t1449InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
         public string dategb{ get; set; } // [string,    1] 일자구분                        StartPos 7, Length 1
     }
 
-    public struct _t1449OutBlock
+    public class _t1449OutBlock
     {
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 0, Length 8
         public string sign{ get; set; } // [string,    1] 전일대비구분                    StartPos 9, Length 1
@@ -18,7 +18,7 @@
         public long mdvolume{ get; set; } // [long  ,   12] 매도체결량                      StartPos 53, Length 12
     }
 
-    public struct _t1449OutBlock1
+    public class _t1449OutBlock1
     {
         public long price{ get; set; } // [long  ,    8] 체결가                          StartPos 0, Length 8
         public string sign{ get; set; } // [string,    1] 전일대비구분                    StartPos 9, Length 1

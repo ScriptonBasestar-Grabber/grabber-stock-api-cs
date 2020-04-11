@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 지수 ( ATTR, KEY=3, GROUP=1 )
-    public struct _IJ__InBlock
+    public class _IJ__InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public struct _IJ__OutBlock
+    public class _IJ__OutBlock
     {
         public string time{ get; set; } // [string,    6] 시간                            StartPos 0, Length 6
         public decimal jisu{ get; set; } // [float ,  8.2] 지수                            StartPos 7, Length 8

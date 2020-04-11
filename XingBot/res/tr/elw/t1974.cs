@@ -1,11 +1,11 @@
 ﻿namespace XingBot.res
 {
     // ELW 기초자산 동일종목 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1974InBlock
+    public class _t1974InBlock
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
     }
-    public struct _t1974OutBlock1
+    public class _t1974OutBlock1
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string hname{ get; set; } // [string,   40] 종목명                          StartPos 7, Length 40

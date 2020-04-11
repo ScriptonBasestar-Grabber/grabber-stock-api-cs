@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 주식 분별 주가 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1302InBlock
+    public class _t1302InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
         public string gubun{ get; set; } // [string,    1] 작업구분                        StartPos 7, Length 1
@@ -9,12 +9,12 @@
         public string cnt{ get; set; } // [string,    3] 건수                            StartPos 16, Length 3
     }
 
-    public struct _t1302OutBlock
+    public class _t1302OutBlock
     {
         public string cts_time{ get; set; } // [string,    6] 시간CTS                         StartPos 0, Length 6
     }
 
-    public struct _t1302OutBlock1
+    public class _t1302OutBlock1
     {
         public string chetime{ get; set; } // [string,    6] 시간                            StartPos 0, Length 6
         public long close{ get; set; } // [long  ,    8] 종가                            StartPos 7, Length 8

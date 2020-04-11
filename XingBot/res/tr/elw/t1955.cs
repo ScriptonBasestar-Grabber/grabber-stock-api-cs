@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // ELW 지표검색 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1955InBlock
+    public class _t1955InBlock
     {
         public string chkitem{ get; set; } // [string,    1] 기초자산chk구분                 StartPos 0, Length 1
         public string cbitem{ get; set; } // [string,   12] 기초자산코드                    StartPos 2, Length 12
@@ -57,12 +57,12 @@
         public string cbkoba{ get; set; } // [string,    1] 조기종료(0:전체1:조기종료만2:조 StartPos 292, Length 1
     }
 
-    public struct _t1955OutBlock
+    public class _t1955OutBlock
     {
         public long cnt{ get; set; } // [long  ,    4] 종목갯수                        StartPos 0, Length 4
     }
 
-    public struct _t1955OutBlock1
+    public class _t1955OutBlock1
     {
         public string hname{ get; set; } // [string,   40] 종목명                          StartPos 0, Length 40
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 41, Length 6

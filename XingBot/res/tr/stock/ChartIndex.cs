@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 챠트지표데이터조회 ( HEADTYPE=B )
-    public struct _ChartIndexInBlock
+    public class _ChartIndexInBlock
     {
         public long indexid{ get; set; } // [indexid  ,   10] 지표ID                          StartPos 0, Length 10
         public string indexname{ get; set; } // [indexname,   40] 지표명                          StartPos 10, Length 40
@@ -18,14 +18,14 @@
         public string IsReal{ get; set; } // [IsReal,    1] 실시간 데이터수신 자동등록 여부 StartPos 126, Length 1
     }
 
-    public struct _ChartIndexOutBlock
+    public class _ChartIndexOutBlock
     {
         public long indexid{ get; set; } // [indexid  ,   10] 지표ID                          StartPos 0, Length 10
         public long rec_cnt{ get; set; } // [rec_cnt  ,    5] 레코드갯수                      StartPos 10, Length 5
         public long validdata_cnt{ get; set; } // [validdata_cnt  ,    2] 유효 데이터 컬럼 갯수           StartPos 15, Length 2
     }
 
-    public struct _ChartIndexOutBlock1
+    public class _ChartIndexOutBlock1
     {
         public string date{ get; set; } // [date,    8] 일자                            StartPos 0, Length 8
         public string time{ get; set; } // [time,    6] 시간                            StartPos 8, Length 6

@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 신용거래동향 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1921InBlock
+    public class _t1921InBlock
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string gubun{ get; set; } // [string,    1] 융자대주구분                    StartPos 7, Length 1
@@ -9,14 +9,14 @@
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 18, Length 4
     }
 
-    public struct _t1921OutBlock
+    public class _t1921OutBlock
     {
         public long cnt{ get; set; } // [long  ,    4] CNT                             StartPos 0, Length 4
         public string date{ get; set; } // [string,    8] 날짜                            StartPos 5, Length 8
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 14, Length 4
     }
 
-    public struct _t1921OutBlock1
+    public class _t1921OutBlock1
     {
         public string mmdate{ get; set; } // [string,    8] 날짜                            StartPos 0, Length 8
         public long close{ get; set; } // [long  ,    8] 종가                            StartPos 9, Length 8

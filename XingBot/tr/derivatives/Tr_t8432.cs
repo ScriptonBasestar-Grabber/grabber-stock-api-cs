@@ -7,8 +7,10 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using CsvHelper;
+using DataLib.model;
 using XA_DATASETLib;
 using XingBot.Properties;
+using XingBot.real;
 using XingBot.real.Properties;
 using XingBot.res;
 

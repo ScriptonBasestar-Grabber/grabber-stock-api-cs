@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 신고/신저가 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1442InBlock
+    public class _t1442InBlock
     {
         public string gubun{ get; set; } // [string,    1] 구분                            StartPos 0, Length 1
         public string type1{ get; set; } // [string,    1] 신고신저                        StartPos 2, Length 1
@@ -14,12 +14,12 @@
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 52, Length 4
     }
 
-    public struct _t1442OutBlock
+    public class _t1442OutBlock
     {
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 0, Length 4
     }
 
-    public struct _t1442OutBlock1
+    public class _t1442OutBlock1
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string hname{ get; set; } // [string,   20] 종목명                          StartPos 7, Length 20

@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 외인/기관 종목별동향 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1702InBlock
+    public class _t1702InBlock
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string todt{ get; set; } // [string,    8] 종료일자                        StartPos 7, Length 8
@@ -12,13 +12,13 @@
         public long cts_idx{ get; set; } // [long  ,    4] CTSIDX                          StartPos 31, Length 4
     }
 
-    public struct _t1702OutBlock
+    public class _t1702OutBlock
     {
         public long cts_idx{ get; set; } // [long  ,    4] CTSIDX                          StartPos 0, Length 4
         public string cts_date{ get; set; } // [string,    8] CTSDATE                         StartPos 5, Length 8
     }
 
-    public struct _t1702OutBlock1
+    public class _t1702OutBlock1
     {
         public string date{ get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public long close{ get; set; } // [long  ,    8] 종가                            StartPos 9, Length 8

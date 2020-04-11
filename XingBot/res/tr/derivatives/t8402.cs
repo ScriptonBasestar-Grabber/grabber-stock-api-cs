@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 주식선물 현재가조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t8402InBlock
+    public class _t8402InBlock
     {
         public string focode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    public struct _t8402OutBlock
+    public class _t8402OutBlock
     {
         public string hname{ get; set; } // [string,   20] 한글명                          StartPos 0, Length 20
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 21, Length 8

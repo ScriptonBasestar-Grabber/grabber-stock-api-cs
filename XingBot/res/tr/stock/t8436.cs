@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 주식종목조회 API용 ( BLOCK,HEADTYPE=A )
-    public struct _t8436InBlock
+    public class _t8436InBlock
     {
         public string gubun { get; set; } // [string,    1] 구분(0:전체1:코스피2:코스닥)    StartPos 0, Length 1
     }
 
-    public struct _t8436OutBlock
+    public class _t8436OutBlock
     {
         public string hname { get; set; } // [string,   20] 종목명                          StartPos 0, Length 20
         public string shcode { get; set; } // [string,    6] 단축코드                        StartPos 20, Length 6

@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // EUREX 야간옵션 주문가능 수량/금액 조회 ( SERVICE=CEXAQ21200,HEADTYPE=B,CREATOR=이시종,CREDATE=2012/07/06 14:21:09 )
-    public struct _CEXAQ21200InBlock1
+    public class _CEXAQ21200InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -15,7 +15,7 @@
         public string ErxPrcCndiTpCode{ get; set; } // [ErxPrcCndiTpCode,    1] 유렉스가격조건구분코드          StartPos 95, Length 1
     }
 
-    public struct _CEXAQ21200OutBlock1
+    public class _CEXAQ21200OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -29,7 +29,7 @@
         public string ErxPrcCndiTpCode{ get; set; } // [ErxPrcCndiTpCode,    1] 유렉스가격조건구분코드          StartPos 95, Length 1
     }
 
-    public struct _CEXAQ21200OutBlock2
+    public class _CEXAQ21200OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40

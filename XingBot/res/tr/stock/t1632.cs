@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 시간대별 프로그램 매매추이 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1632InBlock
+    public class _t1632InBlock
     {
         public string gubun{ get; set; } // [string,    1] 구분                            StartPos 0, Length 1
         public string gubun1{ get; set; } // [string,    1] 금액수량구분                    StartPos 2, Length 1
@@ -11,14 +11,14 @@
         public string time{ get; set; } // [string,    6] 시간                            StartPos 17, Length 6
     }
 
-    public struct _t1632OutBlock
+    public class _t1632OutBlock
     {
         public string date{ get; set; } // [string,    8] 날짜CTS                         StartPos 0, Length 8
         public string time{ get; set; } // [string,    6] 시간CTS                         StartPos 9, Length 6
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 16, Length 4
     }
 
-    public struct _t1632OutBlock1
+    public class _t1632OutBlock1
     {
         public string time{ get; set; } // [string,    6] 시간                            StartPos 0, Length 6
         public decimal k200jisu{ get; set; } // [float ,  6.2] KP200                           StartPos 7, Length 6

@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 주식선물호가 ( ATTR, KEY=8, GROUP=1 )
-    public struct _JH0_InBlock
+    public class _JH0_InBlock
     {
         public string futcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    public struct _JH0_OutBlock
+    public class _JH0_OutBlock
     {
         public string futcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
         public string hotime{ get; set; } // [string,    6] 호가시간                        StartPos 9, Length 6

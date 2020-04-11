@@ -2,7 +2,7 @@
 {
     // EUREX 야간옵션 취소주문 ( SERVICE=CEXAT11300,HEADTYPE=B,CREATOR=이시종,CREDATE=2012/06/27 21:31:41 )
 
-    public struct _CEXAT11300InBlock1
+    public class _CEXAT11300InBlock1
     {
         public long OrgOrdNo{ get; set; } // [OrgOrdNo  ,   10] 원주문번호                      StartPos 0, Length 10
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 10, Length 20
@@ -10,7 +10,7 @@
         public string FnoIsuNo{ get; set; } // [FnoIsuNo,   12] 선물옵션종목번호                StartPos 38, Length 12
     }
 
-    public struct _CEXAT11300OutBlock1
+    public class _CEXAT11300OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrgOrdNo{ get; set; } // [OrgOrdNo  ,   10] 원주문번호                      StartPos 5, Length 10
@@ -21,7 +21,7 @@
         public string CommdaCode{ get; set; } // [CommdaCode,    2] 통신매체코드                    StartPos 71, Length 2
     }
 
-    public struct _CEXAT11300OutBlock2
+    public class _CEXAT11300OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrdNo{ get; set; } // [OrdNo  ,   10] 주문번호                        StartPos 5, Length 10

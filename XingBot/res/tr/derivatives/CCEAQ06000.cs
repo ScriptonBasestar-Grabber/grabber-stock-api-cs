@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물옵션 CME 주문체결내역 조회 ( SERVICE=CCEAQ06000,HEADTYPE=B,CREATOR=김효종,CREDATE=2012/04/17 17:48:18 )
-    public struct _CCEAQ06000InBlock1
+    public class _CCEAQ06000InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string ChoicInptTpCode{ get; set; } // [ChoicInptTpCode,    1] 선택입력구분                    StartPos 5, Length 1
@@ -18,7 +18,7 @@
         public string StnlnSeqTp{ get; set; } // [StnlnSeqTp,    1] 정렬순서구분                    StartPos 77, Length 1
     }
 
-    public struct _CCEAQ06000OutBlock1
+    public class _CCEAQ06000OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string ChoicInptTpCode{ get; set; } // [ChoicInptTpCode,    1] 선택입력구분                    StartPos 5, Length 1
@@ -35,7 +35,7 @@
         public string StnlnSeqTp{ get; set; } // [StnlnSeqTp,    1] 정렬순서구분                    StartPos 77, Length 1
     }
 
-    public struct _CCEAQ06000OutBlock2
+    public class _CCEAQ06000OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -43,7 +43,7 @@
         public long FutsExecQty{ get; set; } // [FutsExecQty  ,   16] 선물체결수량                    StartPos 61, Length 16
     }
 
-    public struct _CCEAQ06000OutBlock3
+    public class _CCEAQ06000OutBlock3
     {
         public string AcntNo1{ get; set; } // [AcntNo1,   20] 계좌번호1                       StartPos 0, Length 20
         public string OrdDt{ get; set; } // [OrdDt,    8] 주문일                          StartPos 20, Length 8

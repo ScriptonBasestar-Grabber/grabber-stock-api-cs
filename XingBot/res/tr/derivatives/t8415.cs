@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물/옵션챠트(N분) ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t8415InBlock
+    public class _t8415InBlock
     {
         public string shcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
         public long ncnt{ get; set; } // [long  ,    4] 단위(n분)                       StartPos 9, Length 4
@@ -16,7 +16,7 @@
         public string comp_yn{ get; set; } // [string,    1] 압축여부(Y:압축N:비압축)        StartPos 73, Length 1
     }
 
-    public struct _t8415OutBlock
+    public class _t8415OutBlock
     {
         public string shcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
         public decimal jisiga{ get; set; } // [float ,  6.2] 전일시가                        StartPos 9, Length 6
@@ -38,7 +38,7 @@
         public long rec_count{ get; set; } // [long  ,    7] 레코드카운트                    StartPos 129, Length 7
     }
 
-    public struct _t8415OutBlock1
+    public class _t8415OutBlock1
     {
         public string date{ get; set; } // [string,    8] 날짜                            StartPos 0, Length 8
         public string time{ get; set; } // [string,   10] 시간                            StartPos 9, Length 10

@@ -12,38 +12,42 @@ namespace XingBot.real
 {
     public class SessionEvents : _IXASessionEvents
     {
-        private IXASession m_Session;
-        protected UCOMIConnectionPoint m_icp;
-        protected UCOMIConnectionPointContainer m_icpc;
+        private readonly IXASession _session;
+        private readonly Action _loginAction;
 
-        public SessionEvents()
+        public SessionEvents(Action loginAction)
         {
-            int m_dwCookie = 0;
-            m_Session = new XASession();
-            m_icpc = (UCOMIConnectionPointContainer)m_Session;
-            Guid IID_SessionEvents = typeof(_IXASessionEvents).GUID;
-            m_icpc.FindConnectionPoint(ref IID_SessionEvents, out m_icp);
-            m_icp.Advise(this, out m_dwCookie);
+            this._loginAction = loginAction;
 
+            int dwCookie;
+            UCOMIConnectionPoint icp;
+            UCOMIConnectionPointContainer icpc;
+
+            _session = new XASession();
+
+            icpc = (UCOMIConnectionPointContainer) _session;
+            Guid IID_SessionEvents = typeof(_IXASessionEvents).GUID;
+            icpc.FindConnectionPoint(ref IID_SessionEvents, out icp);
+            icp.Advise(this, out dwCookie);
         }
 
         ~SessionEvents()
         {
-            m_Session.Logout();
+            _session.Logout();
         }
 
         public void Login(string UserName, string UserPass, string CertPass)
         {
-            m_Session.ConnectServer("api.ebestsec.co.kr", 20001);
-            m_Session.Login(UserName, UserPass, CertPass, (int)XA_SESSIONLib.XA_SERVER_TYPE.XA_SIMUL_SERVER, true);
-
+            _session.ConnectServer("api.ebestsec.co.kr", 20001);
+            _session.Login(UserName, UserPass, CertPass, (int) XA_SESSIONLib.XA_SERVER_TYPE.XA_SIMUL_SERVER, true);
         }
+
         void _IXASessionEvents.Login(string szCode, string szMsg)
         {
             Console.WriteLine("login");
             Console.WriteLine(szCode);
             Console.WriteLine(szMsg);
-            var queryInit = new QueryInit();
+            _loginAction();
             Console.WriteLine("call query init next line");
         }
 

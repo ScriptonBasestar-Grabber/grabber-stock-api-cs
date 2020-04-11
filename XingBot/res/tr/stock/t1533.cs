@@ -1,13 +1,13 @@
 ﻿namespace XingBot.res
 {
     // 특이테마 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1533InBlock
+    public class _t1533InBlock
     {
         public string gubun{ get; set; } // [string,    1] 구분                            StartPos 0, Length 1
         public long chgdate{ get; set; } // [long  ,    2] 대비일자                        StartPos 2, Length 2
     }
 
-    public struct _t1533OutBlock
+    public class _t1533OutBlock
     {
         public string tmname{ get; set; } // [string,   36] 테마명                          StartPos 0, Length 36
         public long totcnt{ get; set; } // [long  ,    4] 전체                            StartPos 37, Length 4

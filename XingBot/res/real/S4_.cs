@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // KOSPI기세 ( ATTR, KEY=6, GROUP=1 )
-    public struct _S4__InBlock
+    public class _S4__InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public struct _S4__OutBlock
+    public class _S4__OutBlock
     {
         public string sign{ get; set; } // [string,    1] 전일대비구분                    StartPos 0, Length 1
         public long change{ get; set; } // [long  ,    8] 전일대비                        StartPos 2, Length 8

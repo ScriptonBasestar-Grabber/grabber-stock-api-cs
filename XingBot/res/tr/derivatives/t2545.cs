@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 상품선물투자자매매동향(챠트용) ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t2545InBlock
+    public class _t2545InBlock
     {
         public string eitem{ get; set; } // [string,    2] 상품ID                          StartPos 0, Length 2
         public string sgubun{ get; set; } // [string,    1] 시장구분                        StartPos 3, Length 1
@@ -11,7 +11,7 @@
         public string bgubun{ get; set; } // [string,    1] 전일분                          StartPos 16, Length 1
     }
 
-    public struct _t2545OutBlock
+    public class _t2545OutBlock
     {
         public string eitem{ get; set; } // [string,    2] 상품ID                          StartPos 0, Length 2
         public string sgubun{ get; set; } // [string,    1] 시장구분                        StartPos 3, Length 1
@@ -31,7 +31,7 @@
         public string jisunm{ get; set; } // [string,   20] 기준지수명                      StartPos 74, Length 20
     }
 
-    public struct _t2545OutBlock1
+    public class _t2545OutBlock1
     {
         public string date{ get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public string time{ get; set; } // [string,    6] 시간                            StartPos 9, Length 6

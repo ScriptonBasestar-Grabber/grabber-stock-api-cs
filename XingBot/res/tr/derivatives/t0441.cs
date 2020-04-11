@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물/옵션 잔고평가(이동평균) ( ATTR,TUXCODE=T0441,HEADTYPE=D )
-    public struct _t0441InBlock
+    public class _t0441InBlock
     {
         public string accno{ get; set; } // [string,   11] 계좌번호                        StartPos 0, Length 11
         public string passwd{ get; set; } // [string,    8] 비밀번호                        StartPos 12, Length 8
@@ -9,7 +9,7 @@
         public string cts_medocd{ get; set; } // [string,    1] CTS_매매구분                    StartPos 30, Length 1
     }
 
-    public struct _t0441OutBlock
+    public class _t0441OutBlock
     {
         public long tdtsunik{ get; set; } // [long  ,   18] 매매손익합계                    StartPos 0, Length 18
         public string cts_expcode{ get; set; } // [string,    8] CTS_종목번호                    StartPos 19, Length 8
@@ -18,7 +18,7 @@
         public long tsunik{ get; set; } // [long  ,   18] 평가손익                        StartPos 49, Length 18
     }
 
-    public struct _t0441OutBlock1
+    public class _t0441OutBlock1
     {
         public string expcode{ get; set; } // [string,    8] 종목번호                        StartPos 0, Length 8
         public string medosu{ get; set; } // [string,    4] 구분                            StartPos 9, Length 4

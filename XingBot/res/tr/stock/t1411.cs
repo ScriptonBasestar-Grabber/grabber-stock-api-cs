@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 증거금율별 종목조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1411InBlock
+    public class _t1411InBlock
     {
         public string gubun{ get; set; } // [string,    1] 시장구분                        StartPos 0, Length 1
         public string jongchk{ get; set; } // [string,    1] 위탁신용구분                    StartPos 2, Length 1
@@ -10,14 +10,14 @@
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 13, Length 4
     }
 
-    public struct _t1411OutBlock
+    public class _t1411OutBlock
     {
         public long jkrate{ get; set; } // [long  ,    3] 위탁증거금율                    StartPos 0, Length 3
         public long sjkrate{ get; set; } // [long  ,    3] 신용증거금율                    StartPos 4, Length 3
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 8, Length 4
     }
 
-    public struct _t1411OutBlock1
+    public class _t1411OutBlock1
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string hname{ get; set; } // [string,   20] 종목명                          StartPos 7, Length 20

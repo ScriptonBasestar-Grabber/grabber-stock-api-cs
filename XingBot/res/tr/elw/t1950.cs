@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // ELW 현재가(시세)조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1950InBlock
+    public class _t1950InBlock
     {
         public string shcode { get; set; } // [string,    6] ELW단축코드                     StartPos 0, Length 6
     }
 
-    public struct _t1950OutBlock
+    public class _t1950OutBlock
     {
         public string hname { get; set; } // [string,   40] 한글명                          StartPos 0, Length 40
         public string chetime { get; set; } // [string,   10] 체결시간                        StartPos 41, Length 10
@@ -90,7 +90,7 @@
         public string valuation { get; set; } // [string,  100] 만기평가가격방식                StartPos 813, Length 100
     }
 
-    public struct _t1950OutBlock1
+    public class _t1950OutBlock1
     {
         public string bskcode { get; set; } // [string,    6] 기초자산코드                    StartPos 0, Length 6
         public long bskbno { get; set; } // [long  ,    3] 기초자산비율                    StartPos 7, Length 3

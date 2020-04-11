@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // KOSPI200옵션체결 ( ATTR, KEY=8, GROUP=1 )
-    public struct _OC0_InBlock
+    public class _OC0_InBlock
     {
         public string optcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    public struct _OC0_OutBlock
+    public class _OC0_OutBlock
     {
         public string chetime{ get; set; } // [string,    6] 체결시간                        StartPos 0, Length 6
         public string sign{ get; set; } // [string,    1] 전일대비구분                    StartPos 7, Length 1

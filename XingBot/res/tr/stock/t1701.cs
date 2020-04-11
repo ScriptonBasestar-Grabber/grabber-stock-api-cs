@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 외인/기관 종목별동향 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1701InBlock
+    public class _t1701InBlock
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string gubun{ get; set; } // [string,    1] 구분                            StartPos 7, Length 1
@@ -13,7 +13,7 @@
         public string frggubun{ get; set; } // [string,    1] 외인적용                        StartPos 35, Length 1
     }
 
-    public struct _t1701OutBlock
+    public class _t1701OutBlock
     {
         public string date{ get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public long close{ get; set; } // [long  ,    8] 종가                            StartPos 9, Length 8

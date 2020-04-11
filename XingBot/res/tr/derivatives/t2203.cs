@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물/옵션 기간별 주가 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t2203InBlock
+    public class _t2203InBlock
     {
         public string shcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
         public string futcheck{ get; set; } // [string,    1] 선물최근월물                    StartPos 9, Length 1
@@ -11,7 +11,7 @@
         public string cnt{ get; set; } // [string,    3] 조회요청건수                    StartPos 38, Length 3
     }
 
-    public struct _t2203OutBlock
+    public class _t2203OutBlock
     {
         public string date{ get; set; } // [string,    8] 날짜                            StartPos 0, Length 8
         public string cts_code{ get; set; } // [string,    8] CTS종목코드                     StartPos 9, Length 8
@@ -19,7 +19,7 @@
         public string nowfutyn{ get; set; } // [string,    1] 최근월선물여부                  StartPos 27, Length 1
     }
 
-    public struct _t2203OutBlock1
+    public class _t2203OutBlock1
     {
         public string date{ get; set; } // [string,    8] 날짜                            StartPos 0, Length 8
         public decimal open{ get; set; } // [float ,  6.2] 시가                            StartPos 9, Length 6

@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 코스피ETF종목실시간NAV ( ATTR, KEY=6, GROUP=1 )
-    public struct _I5__InBlock
+    public class _I5__InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public struct _I5__OutBlock
+    public class _I5__OutBlock
     {
         public string time{ get; set; } // [string,    8] 시간                            StartPos 0, Length 8
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 9, Length 8

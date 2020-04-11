@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 예상체결량상위조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1489InBlock
+    public class _t1489InBlock
     {
         public string gubun{ get; set; } // [string,    1] 거래소구분                      StartPos 0, Length 1
         public string jgubun{ get; set; } // [string,    1] 장구분                          StartPos 2, Length 1
@@ -12,12 +12,12 @@
         public long yevolume{ get; set; } // [long  ,   12] 예상체결량                      StartPos 40, Length 12
     }
 
-    public struct _t1489OutBlock
+    public class _t1489OutBlock
     {
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 0, Length 4
     }
 
-    public struct _t1489OutBlock1
+    public class _t1489OutBlock1
     {
         public string hname{ get; set; } // [string,   20] 한글명                          StartPos 0, Length 20
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 21, Length 8

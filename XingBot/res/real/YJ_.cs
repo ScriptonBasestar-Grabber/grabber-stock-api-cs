@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 예상지수 ( ATTR, KEY=3, GROUP=1 )
-    public struct _YJ__InBlock
+    public class _YJ__InBlock
     {
         public string upcode{ get; set; } // [string,    3] 업종코드                        StartPos 0, Length 3
     }
 
-    public struct _YJ__OutBlock
+    public class _YJ__OutBlock
     {
         public string time{ get; set; } // [string,    6] 시간                            StartPos 0, Length 6
         public decimal jisu{ get; set; } // [float ,  8.2] 예상지수                        StartPos 7, Length 8

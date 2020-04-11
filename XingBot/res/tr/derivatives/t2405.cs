@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물/옵션 호가잔량 비율 차트 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t2405InBlock
+    public class _t2405InBlock
     {
         public string focode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
         public string bgubun{ get; set; } // [string,    1] 분구분                          StartPos 9, Length 1
@@ -12,7 +12,7 @@
         public string cts_time{ get; set; } // [string,    6] 시간CTS                         StartPos 25, Length 6
     }
 
-    public struct _t2405OutBlock
+    public class _t2405OutBlock
     {
         public decimal mdvolume{ get; set; } // [double,   12] 매도체결수량                    StartPos 0, Length 12
         public long mdchecnt{ get; set; } // [long  ,    8] 매도체결건수                    StartPos 13, Length 8
@@ -21,7 +21,7 @@
         public string cts_time{ get; set; } // [string,    6] 시간CTS                         StartPos 44, Length 6
     }
 
-    public struct _t2405OutBlock1
+    public class _t2405OutBlock1
     {
         public string time{ get; set; } // [string,    6] 시간                            StartPos 0, Length 6
         public decimal price{ get; set; } // [float ,  6.2] 현재가                          StartPos 7, Length 6

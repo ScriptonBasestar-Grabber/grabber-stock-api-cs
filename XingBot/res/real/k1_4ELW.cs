@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // ELW거래원 ( ATTR, KEY=6, GROUP=1 )
-    public struct _k1_4ELW_InBlock
+    public class _k1_4ELW_InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public struct _k1_4ELW_OutBlock
+    public class _k1_4ELW_OutBlock
     {
         public string offerno1{ get; set; } // [string,    3] 매도증권사코드1                 StartPos 0, Length 3
         public string bidno1{ get; set; } // [string,    3] 매수증권사코드1                 StartPos 4, Length 3

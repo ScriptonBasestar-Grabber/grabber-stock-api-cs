@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 주식챠트(일주월) ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t8413InBlock
+    public class _t8413InBlock
     {
         public string shcode{get;set;} //[string,    6] 단축코드                        StartPos 0, Length 6
         public string gubun{get;set;} //[string,    1] 주기구분(2:일3:주4:월)          StartPos 7, Length 1
@@ -12,7 +12,7 @@
         public string comp_yn{get;set;} //[string,    1] 압축여부(Y:압축N:비압축)        StartPos 41, Length 1
     }
 
-    public struct _t8413OutBlock
+    public class _t8413OutBlock
     {
         public string shcode{get;set;} //[string,    6] 단축코드                        StartPos 0, Length 6
         public long jisiga{get;set;} //[long  ,    8] 전일시가                        StartPos 7, Length 8
@@ -33,7 +33,7 @@
         public long rec_count{get;set;} //[long  ,    7] 레코드카운트                    StartPos 136, Length 7
     }
 
-    public struct _t8413OutBlock1
+    public class _t8413OutBlock1
     {
         public string date{get;set;} //[string,    8] 날짜                            StartPos 0, Length 8
         public long open{get;set;} //[long  ,    8] 시가                            StartPos 9, Length 8

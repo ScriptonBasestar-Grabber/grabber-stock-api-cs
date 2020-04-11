@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 업종현재가 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1511InBlock
+    public class _t1511InBlock
     {
         public string upcode{ get; set; } // [string,    3] 업종코드                        StartPos 0, Length 3
     }
 
-    public struct _t1511OutBlock
+    public class _t1511OutBlock
     {
         public string gubun{ get; set; } // [string,    1] 업종구분                        StartPos 0, Length 1
         public string hname{ get; set; } // [string,   20] 업종명                          StartPos 2, Length 20

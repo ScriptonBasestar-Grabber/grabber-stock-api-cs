@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 프로그램 매매종합 조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1640InBlock
+    public class _t1640InBlock
     {
         public string gubun{ get; set; } // [string,    2] 구분                            StartPos 0, Length 2
     }
 
-    public struct _t1640OutBlock
+    public class _t1640OutBlock
     {
         public long offervolume{ get; set; } // [long  ,    8] 매도수량                        StartPos 0, Length 8
         public long bidvolume{ get; set; } // [long  ,    8] 매수수량                        StartPos 9, Length 8

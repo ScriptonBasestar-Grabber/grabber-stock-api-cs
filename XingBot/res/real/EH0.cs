@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // EUREX연계KP200지수옵션선물호가 ( ATTR, KEY=8, GROUP=1 )
-    public struct _EH0_InBlock
+    public class _EH0_InBlock
     {
         public string optcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    public struct _EH0_OutBlock
+    public class _EH0_OutBlock
     {
         public string hotime{ get; set; } // [string,    6] 호가시간(24시간)                StartPos 0, Length 6
         public string hotime1{ get; set; } // [string,    6] 호가시간(36시간)                StartPos 7, Length 6

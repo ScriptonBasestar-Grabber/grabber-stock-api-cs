@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // ELW 현재가 호가조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1971InBlock
+    public class _t1971InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public struct _t1971OutBlock
+    public class _t1971OutBlock
     {
         public string hname{ get; set; } // [string,   40] 한글명                          StartPos 0, Length 40
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 41, Length 8

@@ -4,8 +4,10 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
+using DataLib.model;
 using GrabberManager.util;
 using XA_DATASETLib;
+using XingBot.real;
 using XingBot.res;
 
 namespace XingBot.tr
@@ -37,6 +39,11 @@ namespace XingBot.tr
                 };
                 writer.NextRecord();
                 writer.WriteRecord(result);
+                Constants.CodeThemes.Add(result.tmcode, new CodeTheme()
+                {
+                    Name = result.tmname,
+                    Code = result.tmcode,
+                });
             }
         };
 }

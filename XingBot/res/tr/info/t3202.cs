@@ -1,13 +1,13 @@
 ﻿namespace XingBot.res
 {
     // 종목별 증시일정 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t3202InBlock
+    public class _t3202InBlock
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string date{ get; set; } // [string,    8] 조회일자                        StartPos 7, Length 8
     }
 
-    public struct _t3202OutBlock
+    public class _t3202OutBlock
     {
         public string recdt{ get; set; } // [string,    8] 기준일                          StartPos 0, Length 8
         public string tableid{ get; set; } // [string,    6] 테이블아이디                    StartPos 9, Length 6

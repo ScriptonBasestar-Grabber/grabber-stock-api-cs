@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물옵션 CME 정정주문 ( SERVICE=CCEAT00200,HEADTYPE=B,CREATOR=이호섭,CREDATE=2012/04/10 10:07:08 )
-    public struct _CCEAT00200InBlock1
+    public class _CCEAT00200InBlock1
     {
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 0, Length 20
         public string Pwd{ get; set; } // [Pwd,    8] 비밀번호                        StartPos 20, Length 8
@@ -12,7 +12,7 @@
         public long MdfyQty{ get; set; } // [MdfyQty  ,   16] 정정수량                        StartPos 67, Length 16
     }
 
-    public struct _CCEAT00200OutBlock1
+    public class _CCEAT00200OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string OrdMktCode{ get; set; } // [OrdMktCode,    2] 주문시장코드                    StartPos 5, Length 2
@@ -38,7 +38,7 @@
         public long FundOrdNo{ get; set; } // [FundOrdNo  ,   10] 펀드주문번호                    StartPos 204, Length 10
     }
 
-    public struct _CCEAT00200OutBlock2
+    public class _CCEAT00200OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrdNo{ get; set; } // [OrdNo  ,   10] 주문번호                        StartPos 5, Length 10

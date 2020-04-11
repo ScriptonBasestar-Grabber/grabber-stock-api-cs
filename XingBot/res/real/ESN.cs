@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 뉴ELW투자지표민감도 ( ATTR, KEY=6, GROUP=1 )
-    public struct _ESN_InBlock
+    public class _ESN_InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public struct _ESN_OutBlock
+    public class _ESN_OutBlock
     {
         public string time{ get; set; } // [string,    6] 시간                            StartPos 0, Length 6
         public decimal theoryprice{ get; set; } // [float , 10.2] 장중이론가                      StartPos 7, Length 10

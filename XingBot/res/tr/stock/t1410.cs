@@ -1,18 +1,18 @@
 ﻿namespace XingBot.res
 {
     // 초저유동성조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1410InBlock
+    public class _t1410InBlock
     {
         public string gubun{ get; set; } // [string,    1] 구분                            StartPos 0, Length 1
         public string cts_shcode{ get; set; } // [string,    6] 종목코드_CTS                    StartPos 2, Length 6
     }
 
-    public struct _t1410OutBlock
+    public class _t1410OutBlock
     {
         public string cts_shcode{ get; set; } // [string,    6] 종목코드_CTS                    StartPos 0, Length 6
     }
 
-    public struct _t1410OutBlock1
+    public class _t1410OutBlock1
     {
         public string hname{ get; set; } // [string,   20] 한글명                          StartPos 0, Length 20
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 21, Length 8

@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 상/하한가 직전 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1427InBlock
+    public class _t1427InBlock
     {
         public string qrygb{ get; set; } // [string,    1] 조회구분                        StartPos 0, Length 1
         public string gubun{ get; set; } // [string,    1] 구분                            StartPos 2, Length 1
@@ -15,13 +15,13 @@
         public string jshex{ get; set; } // [string,    1] 전일상하한제외                  StartPos 59, Length 1
     }
 
-    public struct _t1427OutBlock
+    public class _t1427OutBlock
     {
         public long cnt{ get; set; } // [long  ,    4] CNT                             StartPos 0, Length 4
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 5, Length 4
     }
 
-    public struct _t1427OutBlock1
+    public class _t1427OutBlock1
     {
         public string hname{ get; set; } // [string,   20] 한글명                          StartPos 0, Length 20
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 21, Length 8

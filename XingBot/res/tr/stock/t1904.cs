@@ -1,14 +1,14 @@
 ﻿namespace XingBot.res
 {
     // ETF 구성종목조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1904InBlock
+    public class _t1904InBlock
     {
         public string shcode{ get; set; } // [string,    6] ETF단축코드                     StartPos 0, Length 6
         public string date{ get; set; } // [string,    8] PDF적용일자                     StartPos 7, Length 8
         public string sgb{ get; set; } // [string,    1] 정렬기준(1:평가금액2:증권수)    StartPos 16, Length 1
     }
 
-    public struct _t1904OutBlock
+    public class _t1904OutBlock
     {
         public string chk_tday{ get; set; } // [string,    1] 당일구분                        StartPos 0, Length 1
         public string date{ get; set; } // [string,    8] PDF적용일자                     StartPos 2, Length 8
@@ -49,7 +49,7 @@
         public long tot_sigatval{ get; set; } // [long  ,   12] 전종목구성시가총액합            StartPos 318, Length 12
     }
 
-    public struct _t1904OutBlock1
+    public class _t1904OutBlock1
     {
         public string shcode{ get; set; } // [string,   12] 단축코드                        StartPos 0, Length 12
         public string hname{ get; set; } // [string,   20] 한글명                          StartPos 13, Length 20

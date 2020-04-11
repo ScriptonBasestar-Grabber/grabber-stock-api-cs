@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 계좌별신용한도조회 ( SERVICE=CSPAQ00600,HEADTYPE=B,CREATOR=송우석,CREDATE=2018/09/17 15:17:35 )
-    public struct _CSPAQ00600InBlock1
+    public class _CSPAQ00600InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -12,7 +12,7 @@
         public string CommdaCode{ get; set; } // [CommdaCode,    2] 통신매체코드                    StartPos 60, Length 2
     }
 
-    public struct _CSPAQ00600OutBlock1
+    public class _CSPAQ00600OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -23,7 +23,7 @@
         public string CommdaCode{ get; set; } // [CommdaCode,    2] 통신매체코드                    StartPos 60, Length 2
     }
 
-    public struct _CSPAQ00600OutBlock2
+    public class _CSPAQ00600OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40

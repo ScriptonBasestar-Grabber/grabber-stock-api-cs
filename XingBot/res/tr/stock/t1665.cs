@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 기간별투자자매매추이(챠트) ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1665InBlock
+    public class _t1665InBlock
     {
         public string market{ get; set; } // [string,    1] 시장구분(1:kospi2:kp2003:kosdaq StartPos 0, Length 1
         public string upcode{ get; set; } // [string,    3] 업종코드                        StartPos 2, Length 3
@@ -11,13 +11,13 @@
         public string to_date{ get; set; } // [string,    8] 종료날짜                        StartPos 19, Length 8
     }
 
-    public struct _t1665OutBlock
+    public class _t1665OutBlock
     {
         public string mcode{ get; set; } // [string,    8] 시장코드                        StartPos 0, Length 8
         public string mname{ get; set; } // [string,   20] 시장명                          StartPos 9, Length 20
     }
 
-    public struct _t1665OutBlock1
+    public class _t1665OutBlock1
     {
         public string date{ get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public long sv_08{ get; set; } // [long  ,   12] 개인수량                        StartPos 9, Length 12

@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물옵션 계좌주문체결내역 조회 ( ENCRYPT,SERVICE=CFOAQ00600,HEADTYPE=B,CREATOR=정명기,CREDATE=2012/03/12 16:35:20 )
-    public struct _CFOAQ00600InBlock1
+    public class _CFOAQ00600InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -15,7 +15,7 @@
         public string CommdaCode{ get; set; } // [CommdaCode,    2] 통신매체코드                    StartPos 55, Length 2
     }
 
-    public struct _CFOAQ00600OutBlock1
+    public class _CFOAQ00600OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -29,7 +29,7 @@
         public string CommdaCode{ get; set; } // [CommdaCode,    2] 통신매체코드                    StartPos 55, Length 2
     }
 
-    public struct _CFOAQ00600OutBlock2
+    public class _CFOAQ00600OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -39,7 +39,7 @@
         public long OptExecQty{ get; set; } // [OptExecQty  ,   16] 옵션체결수량                    StartPos 93, Length 16
     }
 
-    public struct _CFOAQ00600OutBlock3
+    public class _CFOAQ00600OutBlock3
     {
         public string OrdDt{ get; set; } // [OrdDt,    8] 주문일                          StartPos 0, Length 8
         public long OrdNo{ get; set; } // [OrdNo  ,   10] 주문번호                        StartPos 8, Length 10

@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 코스닥LP호가 ( ATTR, KEY=6, GROUP=1 )
-    public struct _B7__InBlock
+    public class _B7__InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public struct _B7__OutBlock
+    public class _B7__OutBlock
     {
         public string hotime{ get; set; } // [string,    6] 호가시간                        StartPos 0, Length 6
         public long lp_offerho1{ get; set; } // [long  ,    9] LP매도호가수량1                 StartPos 7, Length 9

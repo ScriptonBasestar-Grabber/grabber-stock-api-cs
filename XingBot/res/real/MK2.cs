@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // US지수 ( ATTR, KEY=16, GROUP=1 )
-    public struct _MK2_InBlock
+    public class _MK2_InBlock
     {
         public string symbol{ get; set; } // [string,   16] 심볼코드                        StartPos 0, Length 16
     }
 
-    public struct _MK2_OutBlock
+    public class _MK2_OutBlock
     {
         public string date{ get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public string time{ get; set; } // [string,    6] 시간                            StartPos 9, Length 6

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -42,7 +43,12 @@ namespace GrabberManager
             // (this.Parent).Children.Clear();
             if (_company == "xing")
             {
-                XingBot.real.SessionEvents session = new SessionEvents();
+                QueryCtrl queryCtrl;
+                XingBot.real.SessionEvents session = new SessionEvents(() =>
+                {
+                    queryCtrl = new QueryCtrl();
+                    queryCtrl.QueryInit();
+                });
                 session.Login(TxtUserName.Text, TxtUserPass.Password, TxtCertPass.Password);
             } else if (_company == "cybos")
             {

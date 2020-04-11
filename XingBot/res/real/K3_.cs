@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // KOSDAQ체결 ( ATTR, KEY=6, GROUP=1 )
-    public struct _K3__InBlock
+    public class _K3__InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public struct _K3__OutBlock
+    public class _K3__OutBlock
     {
         public string chetime{ get; set; } // [string,    6] 체결시간                        StartPos 0, Length 6
         public string sign{ get; set; } // [string,    1] 전일대비구분                    StartPos 7, Length 1

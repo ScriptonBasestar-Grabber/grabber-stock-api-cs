@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 현물 정상주문 ( SERVICE=CSPAT00600,ENCRYPT,SIGNATURE,HEADTYPE=B,CREATOR=김기종,CREDATE=2011/12/07 09:23:39 )
-    public struct _CSPAT00600InBlock1
+    public class _CSPAT00600InBlock1
     {
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 0, Length 20
         public string InptPwd{ get; set; } // [InptPwd,    8] 입력비밀번호                    StartPos 20, Length 8
@@ -15,7 +15,7 @@
         public string OrdCndiTpCode{ get; set; } // [OrdCndiTpCode,    1] 주문조건구분                    StartPos 83, Length 1
     }
 
-    public struct _CSPAT00600OutBlock1
+    public class _CSPAT00600OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -45,7 +45,7 @@
         public string CvrgTpCode{ get; set; } // [CvrgTpCode,    1] 반대매매구분                    StartPos 187, Length 1
     }
 
-    public struct _CSPAT00600OutBlock2
+    public class _CSPAT00600OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public long OrdNo{ get; set; } // [OrdNo  ,   10] 주문번호                        StartPos 5, Length 10

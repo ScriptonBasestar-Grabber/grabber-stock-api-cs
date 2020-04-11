@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물옵션 기간별 계좌 수익률 현황 ( SERVICE=FOCCQ33700,HEADTYPE=B,CREATOR=이석희,CREDATE=2013/01/08 10:45:28 )
-    public struct _FOCCQ33700InBlock1
+    public class _FOCCQ33700InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -14,7 +14,7 @@
         public string PnlCalcTpCode{ get; set; } // [PnlCalcTpCode,    1] 손익산출구분코드                StartPos 52, Length 1
     }
 
-    public struct _FOCCQ33700OutBlock1
+    public class _FOCCQ33700OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -27,7 +27,7 @@
         public string PnlCalcTpCode{ get; set; } // [PnlCalcTpCode,    1] 손익산출구분코드                StartPos 52, Length 1
     }
 
-    public struct _FOCCQ33700OutBlock2
+    public class _FOCCQ33700OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -42,7 +42,7 @@
         public decimal ErnRat{ get; set; } // [ErnRat, 12.6] 수익률                          StartPos 173, Length 12
     }
 
-    public struct _FOCCQ33700OutBlock3
+    public class _FOCCQ33700OutBlock3
     {
         public string TrdDt{ get; set; } // [TrdDt,    8] 거래일                          StartPos 0, Length 8
         public long FdDpsastAmt{ get; set; } // [FdDpsastAmt  ,   16] 기초예탁자산금액                StartPos 8, Length 16

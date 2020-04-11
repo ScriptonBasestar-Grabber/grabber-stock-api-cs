@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // EUREX 야간옵션 주문체결내역 조회 ( SERVICE=CEXAQ21100,HEADTYPE=B,CREATOR=이시종,CREDATE=2012/07/02 21:01:29 )
-    public struct _CEXAQ21100InBlock1
+    public class _CEXAQ21100InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string ChoicInptTpCode{ get; set; } // [ChoicInptTpCode,    1] 선택입력구분                    StartPos 5, Length 1
@@ -11,7 +11,7 @@
         public string StnlnSeqTp{ get; set; } // [StnlnSeqTp,    1] 정렬순서구분                    StartPos 35, Length 1
     }
 
-    public struct _CEXAQ21100OutBlock1
+    public class _CEXAQ21100OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string ChoicInptTpCode{ get; set; } // [ChoicInptTpCode,    1] 선택입력구분                    StartPos 5, Length 1
@@ -21,7 +21,7 @@
         public string StnlnSeqTp{ get; set; } // [StnlnSeqTp,    1] 정렬순서구분                    StartPos 35, Length 1
     }
 
-    public struct _CEXAQ21100OutBlock2
+    public class _CEXAQ21100OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -29,7 +29,7 @@
         public long ExecQty{ get; set; } // [ExecQty  ,   16] 체결수량                        StartPos 61, Length 16
     }
 
-    public struct _CEXAQ21100OutBlock3
+    public class _CEXAQ21100OutBlock3
     {
         public string AcntNo1{ get; set; } // [AcntNo1,   20] 계좌번호1                       StartPos 0, Length 20
         public string OrdDt{ get; set; } // [OrdDt,    8] 주문일                          StartPos 20, Length 8

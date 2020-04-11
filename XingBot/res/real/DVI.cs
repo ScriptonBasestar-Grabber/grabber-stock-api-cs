@@ -8,12 +8,12 @@ namespace XingBot.res
 {
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     // 시간외단일가VI발동해제 ( ATTR, KEY=6, GROUP=1 )
-    public struct _DVI_InBlock
+    public class _DVI_InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드(KEY)                   StartPos 0, Length 6
     }
 
-    public struct _DVI_OutBlock
+    public class _DVI_OutBlock
     {
         public string vi_gubun{ get; set; } // [string,    1] 구분(0:해제 1:정적발동 2:동적발 StartPos 0, Length 1
         public long svi_recprice{ get; set; } // [long  ,    8] 정적VI발동기준가격              StartPos 2, Length 8

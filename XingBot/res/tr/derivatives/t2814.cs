@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // CME야간선물기간별투자자매매추이(차트) ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t2814InBlock
+    public class _t2814InBlock
     {
         public string gubun1{ get; set; } // [string,    1] 수치구분(1:수치2:누적)          StartPos 0, Length 1
         public string gubun2{ get; set; } // [string,    1] 단위구분(1:일2:주3:월)          StartPos 2, Length 1
@@ -9,13 +9,13 @@
         public string to_date{ get; set; } // [string,    8] 종료날짜                        StartPos 13, Length 8
     }
 
-    public struct _t2814OutBlock
+    public class _t2814OutBlock
     {
         public string mcode{ get; set; } // [string,    8] 시장코드                        StartPos 0, Length 8
         public string mname{ get; set; } // [string,   20] 시장명                          StartPos 9, Length 20
     }
 
-    public struct _t2814OutBlock1
+    public class _t2814OutBlock1
     {
         public string date{ get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public long sv_08{ get; set; } // [long  ,   12] 개인수량                        StartPos 9, Length 12

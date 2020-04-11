@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 주식선물 시간대별 체결조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t8404InBlock
+    public class _t8404InBlock
     {
         public string focode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
         public long cvolume{ get; set; } // [long  ,   12] 특이거래량                      StartPos 9, Length 12
@@ -10,12 +10,12 @@
         public string cts_time{ get; set; } // [string,   10] 시간CTS                         StartPos 32, Length 10
     }
 
-    public struct _t8404OutBlock
+    public class _t8404OutBlock
     {
         public string cts_time{ get; set; } // [string,   10] 시간CTS                         StartPos 0, Length 10
     }
 
-    public struct _t8404OutBlock1
+    public class _t8404OutBlock1
     {
         public string chetime{ get; set; } // [string,   10] 시간                            StartPos 0, Length 10
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 11, Length 8

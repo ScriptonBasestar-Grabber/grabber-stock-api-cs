@@ -1,13 +1,13 @@
 ﻿namespace XingBot.res
 {
     // ELW 종목비교 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1958InBlock
+    public class _t1958InBlock
     {
         public string shcode1{ get; set; } // [string,    6] 종목코드1                       StartPos 0, Length 6
         public string shcode2{ get; set; } // [string,    6] 종목코드2                       StartPos 7, Length 6
     }
 
-    public struct _t1958OutBlock
+    public class _t1958OutBlock
     {
         public string hname{ get; set; } // [string,   40] 종목명                          StartPos 0, Length 40
         public string item1{ get; set; } // [string,   12] 기초자산                        StartPos 41, Length 12
@@ -33,7 +33,7 @@
         public decimal diff{ get; set; } // [float ,  6.2] 등락율                          StartPos 235, Length 6
     }
 
-    public struct _t1958OutBlock1
+    public class _t1958OutBlock1
     {
         public string hname{ get; set; } // [string,   40] 종목명                          StartPos 0, Length 40
         public string item1{ get; set; } // [string,   12] 기초자산                        StartPos 41, Length 12
@@ -59,7 +59,7 @@
         public decimal diff{ get; set; } // [float ,  6.2] 등락율                          StartPos 235, Length 6
     }
 
-    public struct _t1958OutBlock2
+    public class _t1958OutBlock2
     {
         public string hnamecmp{ get; set; } // [string,    6] 종목명비교                      StartPos 0, Length 6
         public string item1cmp{ get; set; } // [string,    6] 기초자산비교                    StartPos 7, Length 6

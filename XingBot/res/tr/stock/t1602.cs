@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 시간대별 투자자 매매추이 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1602InBlock
+    public class _t1602InBlock
     {
         public string market{ get; set; } // [string,    1] 시장구분                        StartPos 0, Length 1
         public string upcode{ get; set; } // [string,    3] 업종코드                        StartPos 2, Length 3
@@ -13,7 +13,7 @@
         public string gubun3{ get; set; } // [string,    1] 직전대비구분(C:직전대비)        StartPos 29, Length 1
     }
 
-    public struct _t1602OutBlock
+    public class _t1602OutBlock
     {
         public string cts_time{ get; set; } // [string,    8] CTSTIME                         StartPos 0, Length 8
         public string tjjcode_08{ get; set; } // [string,    4] 개인투자자코드                  StartPos 9, Length 4
@@ -78,7 +78,7 @@
         public long svolume_00{ get; set; } // [long  ,   12] 사모펀드순매수                  StartPos 680, Length 12
     }
 
-    public struct _t1602OutBlock1
+    public class _t1602OutBlock1
     {
         public string time{ get; set; } // [string,    8] 시간                            StartPos 0, Length 8
         public long sv_08{ get; set; } // [long  ,   12] 개인순매수                      StartPos 9, Length 12

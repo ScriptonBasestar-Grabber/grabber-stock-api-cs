@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 주식 잔고2 ( ATTR,TUXCODE=T0424,HEADTYPE=D )
-    public struct _t0424InBlock
+    public class _t0424InBlock
     {
         public string accno{ get; set; } // [string,   11] 계좌번호                        StartPos 0, Length 11
         public string passwd{ get; set; } // [string,    8] 비밀번호                        StartPos 12, Length 8
@@ -12,7 +12,7 @@
         public string cts_expcode{ get; set; } // [string,   22] CTS_종목번호                    StartPos 29, Length 22
     }
 
-    public struct _t0424OutBlock
+    public class _t0424OutBlock
     {
         public long sunamt{ get; set; } // [long  ,   18] 추정순자산                      StartPos 0, Length 18
         public long dtsunik{ get; set; } // [long  ,   18] 실현손익                        StartPos 19, Length 18
@@ -23,7 +23,7 @@
         public long tdtsunik{ get; set; } // [long  ,   18] 평가손익                        StartPos 118, Length 18
     }
 
-    public struct _t0424OutBlock1
+    public class _t0424OutBlock1
     {
         public string expcode{ get; set; } // [string,   12] 종목번호                        StartPos 0, Length 12
         public string jangb{ get; set; } // [string,   10] 잔고구분                        StartPos 13, Length 10

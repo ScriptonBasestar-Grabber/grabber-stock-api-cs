@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 주식 계좌 기간별 수익률 상세 ( SERVICE=FOCCQ33600,HEADTYPE=B,CREATOR=유종우,CREDATE=2012/03/15 11:06:33 )
-    public struct _FOCCQ33600InBlock1
+    public class _FOCCQ33600InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -11,7 +11,7 @@
         public string TermTp{ get; set; } // [TermTp,    1] 기간구분                        StartPos 49, Length 1
     }
 
-    public struct _FOCCQ33600OutBlock1
+    public class _FOCCQ33600OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNo{ get; set; } // [AcntNo,   20] 계좌번호                        StartPos 5, Length 20
@@ -21,7 +21,7 @@
         public string TermTp{ get; set; } // [TermTp,    1] 기간구분                        StartPos 49, Length 1
     }
 
-    public struct _FOCCQ33600OutBlock2
+    public class _FOCCQ33600OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string AcntNm{ get; set; } // [AcntNm,   40] 계좌명                          StartPos 5, Length 40
@@ -33,7 +33,7 @@
         public decimal InvstErnrat{ get; set; } // [InvstErnrat,  9.2] 투자수익률                      StartPos 125, Length 9
     }
 
-    public struct _FOCCQ33600OutBlock3
+    public class _FOCCQ33600OutBlock3
     {
         public string BaseDt{ get; set; } // [BaseDt,    8] 기준일                          StartPos 0, Length 8
         public long FdEvalAmt{ get; set; } // [FdEvalAmt  ,   19] 기초평가금액                    StartPos 8, Length 19

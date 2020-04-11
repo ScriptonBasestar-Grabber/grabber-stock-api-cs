@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // KOSPI예상체결 ( ATTR, KEY=6, GROUP=1 )
-    public struct _YS3_InBlock
+    public class _YS3_InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
     }
 
-    public struct _YS3_OutBlock
+    public class _YS3_OutBlock
     {
         public string hotime{ get; set; } // [string,    6] 호가시간                        StartPos 0, Length 6
         public long yeprice{ get; set; } // [long  ,    8] 예상체결가격                    StartPos 7, Length 8

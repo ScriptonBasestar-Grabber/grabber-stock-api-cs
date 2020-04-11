@@ -1,14 +1,14 @@
 ﻿namespace XingBot.res
 {
     // 종목별대차거래일간추이 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1941InBlock
+    public class _t1941InBlock
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string sdate{ get; set; } // [string,    8] 시작일자                        StartPos 7, Length 8
         public string edate{ get; set; } // [string,    8] 종료일자                        StartPos 16, Length 8
     }
 
-    public struct _t1941OutBlock1
+    public class _t1941OutBlock1
     {
         public string date{ get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public long price{ get; set; } // [long  ,    8] 종가                            StartPos 9, Length 8

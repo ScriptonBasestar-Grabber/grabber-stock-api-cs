@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 종목별상위회원사 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1752InBlock
+    public class _t1752InBlock
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string traddate1{ get; set; } // [string,    8] 조회날짜1                       StartPos 7, Length 8
@@ -10,14 +10,14 @@
         public long cts_idx{ get; set; } // [long  ,    4] CTSIDX                          StartPos 27, Length 4
     }
 
-    public struct _t1752OutBlock
+    public class _t1752OutBlock
     {
         public long fwdvl{ get; set; } // [long  ,   12] 외국계매도                      StartPos 0, Length 12
         public long fwsvl{ get; set; } // [long  ,   12] 외국계매수                      StartPos 13, Length 12
         public long cts_idx{ get; set; } // [long  ,    4] CTSIDX                          StartPos 26, Length 4
     }
 
-    public struct _t1752OutBlock1
+    public class _t1752OutBlock1
     {
         public string tradname{ get; set; } // [string,   20] 회원사                          StartPos 0, Length 20
         public long tradmdvol{ get; set; } // [long  ,   12] 매도수량                        StartPos 21, Length 12

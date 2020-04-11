@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 현물계좌 예수금/주문가능금액/총평가 조회(API) ( SERVICE=CSPAQ12200,HEADTYPE=B,CREATOR=이상은,CREDATE=2015/04/13 08:41:27 )
-    public struct _CSPAQ12200InBlock1
+    public class _CSPAQ12200InBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string MgmtBrnNo{ get; set; } // [MgmtBrnNo,    3] 관리지점번호                    StartPos 5, Length 3
@@ -10,7 +10,7 @@
         public string BalCreTp{ get; set; } // [BalCreTp,    1] 잔고생성구분                    StartPos 36, Length 1
     }
 
-    public struct _CSPAQ12200OutBlock1
+    public class _CSPAQ12200OutBlock1
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string MgmtBrnNo{ get; set; } // [MgmtBrnNo,    3] 관리지점번호                    StartPos 5, Length 3
@@ -19,7 +19,7 @@
         public string BalCreTp{ get; set; } // [BalCreTp,    1] 잔고생성구분                    StartPos 36, Length 1
     }
 
-    public struct _CSPAQ12200OutBlock2
+    public class _CSPAQ12200OutBlock2
     {
         public long RecCnt{ get; set; } // [RecCnt  ,    5] 레코드갯수                      StartPos 0, Length 5
         public string BrnNm{ get; set; } // [BrnNm,   40] 지점명                          StartPos 5, Length 40

@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 선물/옵션챠트(일주월) ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t8416InBlock
+    public class _t8416InBlock
     {
         public string shcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
         public string gubun{ get; set; } // [string,    1] 주기구분(2:일3:주4:월)          StartPos 9, Length 1
@@ -12,7 +12,7 @@
         public string comp_yn{ get; set; } // [string,    1] 압축여부(Y:압축N:비압축)        StartPos 43, Length 1
     }
 
-    public struct _t8416OutBlock
+    public class _t8416OutBlock
     {
         public string shcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
         public decimal jisiga{ get; set; } // [float ,  6.2] 전일시가                        StartPos 9, Length 6
@@ -33,7 +33,7 @@
         public long rec_count{ get; set; } // [long  ,    7] 레코드카운트                    StartPos 118, Length 7
     }
 
-    public struct _t8416OutBlock1
+    public class _t8416OutBlock1
     {
         public string date{ get; set; } // [string,    8] 날짜                            StartPos 0, Length 8
         public decimal open{ get; set; } // [float ,  6.2] 시가                            StartPos 9, Length 6

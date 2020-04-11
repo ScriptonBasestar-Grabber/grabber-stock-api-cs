@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 주식차트(종합) ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t4201InBlock
+    public class _t4201InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
         public string gubun{ get; set; } // [string,    1] 주기구분(0:틱1:분2:일3:주4:월)  StartPos 7, Length 1
@@ -15,7 +15,7 @@
         public string cts_daygb{ get; set; } // [string,    1] 연속당일구분(0:연속전체1:연속당 StartPos 59, Length 1
     }
 
-    public struct _t4201OutBlock
+    public class _t4201OutBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
         public long jisiga{ get; set; } // [long  ,    8] 전일시가                        StartPos 7, Length 8
@@ -34,7 +34,7 @@
         public string cts_daygb{ get; set; } // [string,    1] 연속당일구분                    StartPos 130, Length 1
     }
 
-    public struct _t4201OutBlock1
+    public class _t4201OutBlock1
     {
         public string date{ get; set; } // [string,    8] 날짜                            StartPos 0, Length 8
         public string time{ get; set; } // [string,   10] 시간                            StartPos 9, Length 10

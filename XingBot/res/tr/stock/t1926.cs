@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 종목별 신용/대주 현황 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1926InBlock
+    public class _t1926InBlock
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
     }
 
-    public struct _t1926OutBlock
+    public class _t1926OutBlock
     {
         public long ynvolume{ get; set; } // [long  ,    8] 융자신규수량                    StartPos 0, Length 8
         public long ysvolume{ get; set; } // [long  ,    8] 융자상환수량                    StartPos 9, Length 8

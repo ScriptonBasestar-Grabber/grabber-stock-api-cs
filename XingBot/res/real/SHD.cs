@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 상/하한가근접이탈 ( ATTR, KEY=1, GROUP=1 )
-    public struct _SHD_InBlock
+    public class _SHD_InBlock
     {
         public string updnlmtgubun{ get; set; } // [string,    1] 상/하한구분                     StartPos 0, Length 1
     }
 
-    public struct _SHD_OutBlock
+    public class _SHD_OutBlock
     {
         public string sijanggubun{ get; set; } // [string,    1] 거래소/코스닥구분               StartPos 0, Length 1
         public string hname{ get; set; } // [string,   20] 종목명                          StartPos 2, Length 20

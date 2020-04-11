@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // FNG_요약 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t3320InBlock
+    public class _t3320InBlock
     {
         public string gicode{ get; set; } // [string,    7] 종목코드                        StartPos 0, Length 7
     }
 
-    public struct _t3320OutBlock
+    public class _t3320OutBlock
     {
         public string upgubunnm{ get; set; } // [string,   20] 업종구분명                      StartPos 0, Length 20
         public string sijangcd{ get; set; } // [string,    1] 시장구분                        StartPos 21, Length 1
@@ -31,7 +31,7 @@
         public long jnilclose{ get; set; } // [long  ,    8] 전일종가                        StartPos 480, Length 8
     }
 
-    public struct _t3320OutBlock1
+    public class _t3320OutBlock1
     {
         public string gicode{ get; set; } // [string,    7] 기업코드                        StartPos 0, Length 7
         public string gsym{ get; set; } // [string,    6] 결산년월                        StartPos 8, Length 6

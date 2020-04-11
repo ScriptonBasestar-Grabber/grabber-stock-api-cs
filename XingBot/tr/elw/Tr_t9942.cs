@@ -4,7 +4,9 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
+using DataLib.model;
 using XA_DATASETLib;
+using XingBot.real;
 using XingBot.res;
 
 namespace XingBot.tr
@@ -37,6 +39,12 @@ namespace XingBot.tr
                 };
                 writer.NextRecord();
                 writer.WriteRecord(result);
+                Constants.CodeElws.Add(result.shcode, new CodeElw()
+                {
+                    Name = result.hname,
+                    Code = result.shcode,
+                    ExpCode = result.expcode,
+                });
             }
         };
     }

@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // CME야간선물미결제약정추이 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t8409InBlock
+    public class _t8409InBlock
     {
         public string focode{ get; set; } // [string,    8] 종목코드                        StartPos 0, Length 8
         public string bdgubun{ get; set; } // [string,    1] 분일구분                        StartPos 9, Length 1
@@ -10,7 +10,7 @@
         public string cnt{ get; set; } // [string,    4] 조회건수                        StartPos 17, Length 4
     }
 
-    public struct _t8409OutBlock
+    public class _t8409OutBlock
     {
         public decimal price{ get; set; } // [float ,  6.2] 현재가                          StartPos 0, Length 6
         public string sign{ get; set; } // [string,    1] 전일대비구분                    StartPos 7, Length 1
@@ -22,7 +22,7 @@
     }
 
 
-    public struct _t8409OutBlock1
+    public class _t8409OutBlock1
     {
         public string dt{ get; set; } // [string,   14] 일자시간                        StartPos 0, Length 14
         public decimal open{ get; set; } // [float ,  6.2] 시가                            StartPos 15, Length 6

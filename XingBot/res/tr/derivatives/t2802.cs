@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // CME 호가조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t2802InBlock
+    public class _t2802InBlock
     {
         public string shcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    public struct _t2802OutBlock
+    public class _t2802OutBlock
     {
         public string hname{ get; set; } // [string,   20] 종목명                          StartPos 0, Length 20
         public decimal price{ get; set; } // [float ,  6.2] 현재가                          StartPos 21, Length 6

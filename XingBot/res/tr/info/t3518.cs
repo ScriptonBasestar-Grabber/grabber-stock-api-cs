@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 해외실시간지수 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t3518InBlock
+    public class _t3518InBlock
     {
         public string kind{ get; set; } // [string,    1] 종목종류                        StartPos 0, Length 1
         public string symbol{ get; set; } // [string,   16] SYMBOL                          StartPos 2, Length 16
@@ -12,13 +12,13 @@
         public string cts_time{ get; set; } // [string,    6] CTS_TIME                        StartPos 39, Length 6
     }
 
-    public struct _t3518OutBlock
+    public class _t3518OutBlock
     {
         public string cts_date{ get; set; } // [string,    8] CTS_DATE                        StartPos 0, Length 8
         public string cts_time{ get; set; } // [string,    6] CTS_TIME                        StartPos 9, Length 6
     }
 
-    public struct _t3518OutBlock1
+    public class _t3518OutBlock1
     {
         public string date{ get; set; } // [string,    8] 일자                            StartPos 0, Length 8
         public string time{ get; set; } // [string,    8] 시간                            StartPos 9, Length 8

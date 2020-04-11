@@ -1,12 +1,12 @@
 ﻿namespace XingBot.res
 {
     // 지수옵션예상체결 ( ATTR, KEY=8, GROUP=1 )
-    public struct _YOC_InBlock
+    public class _YOC_InBlock
     {
         public string optcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
     }
 
-    public struct _YOC_OutBlock
+    public class _YOC_OutBlock
     {
         public string ychetime{ get; set; } // [string,    6] 예상체결시간                    StartPos 0, Length 6
         public decimal yeprice{ get; set; } // [float ,  6.2] 예상체결가격                    StartPos 7, Length 6

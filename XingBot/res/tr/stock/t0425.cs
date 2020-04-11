@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 주식 체결/미체결 ( ATTR,TUXCODE=T0425,HEADTYPE=D )
-    public struct _t0425InBlock
+    public class _t0425InBlock
     {
         public string accno{ get; set; } // [string,   11] 계좌번호                        StartPos 0, Length 11
         public string passwd{ get; set; } // [string,    8] 비밀번호                        StartPos 12, Length 8
@@ -12,7 +12,7 @@
         public string cts_ordno{ get; set; } // [string,   10] 주문번호                        StartPos 40, Length 10
     }
 
-    public struct _t0425OutBlock
+    public class _t0425OutBlock
     {
         public long tqty{ get; set; } // [long  ,   18] 총주문수량                      StartPos 0, Length 18
         public long tcheqty{ get; set; } // [long  ,   18] 총체결수량                      StartPos 19, Length 18
@@ -25,7 +25,7 @@
         public string cts_ordno{ get; set; } // [string,   10] 주문번호                        StartPos 152, Length 10
     }
 
-    public struct _t0425OutBlock1
+    public class _t0425OutBlock1
     {
         public long ordno{ get; set; } // [long  ,   10] 주문번호                        StartPos 0, Length 10
         public string expcode{ get; set; } // [string,   12] 종목번호                        StartPos 11, Length 12

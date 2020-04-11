@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 재무순위종합 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t3341InBlock
+    public class _t3341InBlock
     {
         public string gubun{ get; set; } // [string,    1] 시장구분                        StartPos 0, Length 1
         public string gubun1{ get; set; } // [string,    1] 순위구분(1:매출액증가율2:영업이 StartPos 2, Length 1
@@ -9,13 +9,13 @@
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 6, Length 4
     }
 
-    public struct _t3341OutBlock
+    public class _t3341OutBlock
     {
         public long cnt{ get; set; } // [long  ,    4] CNT                             StartPos 0, Length 4
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 5, Length 4
     }
 
-    public struct _t3341OutBlock1
+    public class _t3341OutBlock1
     {
         public long rank{ get; set; } // [long  ,    4] 순위                            StartPos 0, Length 4
         public string hname{ get; set; } // [string,   20] 기업명                          StartPos 5, Length 20

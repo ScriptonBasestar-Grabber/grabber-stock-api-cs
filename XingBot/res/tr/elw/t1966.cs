@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // ELW 거래대금 상위 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1966InBlock
+    public class _t1966InBlock
     {
         public string gubun{ get; set; } // [string,    1] 당일전일(0:당일1:전일)          StartPos 0, Length 1
         public string ggubun{ get; set; } // [string,    2] 권리유형구분(00:EX01:콜02:풋'': StartPos 2, Length 2
@@ -16,12 +16,12 @@
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 83, Length 4
     }
 
-    public struct _t1966OutBlock
+    public class _t1966OutBlock
     {
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 0, Length 4
     }
 
-    public struct _t1966OutBlock1
+    public class _t1966OutBlock1
     {
         public string hname{ get; set; } // [string,   40] 한글명                          StartPos 0, Length 40
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 41, Length 8

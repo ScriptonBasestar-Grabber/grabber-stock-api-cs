@@ -4,7 +4,9 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
+using DataLib.model;
 using XA_DATASETLib;
+using XingBot.real;
 using XingBot.res;
 
 namespace XingBot.tr
@@ -47,6 +49,16 @@ namespace XingBot.tr
                 };
                 writer.NextRecord();
                 writer.WriteRecord(result);
+                Constants.CodeStocks.Add(result.shcode, new CodeStock()
+                {
+                    Name = result.hname,
+                    Code = result.shcode,
+                    ExpCode = result.expcode,
+                    EtfGubun = result.etfgubun,
+                    SpacGubun = result.spac_gubun,
+                    MarketGubun = result.gubun,
+                    Bu12Gubun = result.bu12gubun,
+                });
             }
         };
     }

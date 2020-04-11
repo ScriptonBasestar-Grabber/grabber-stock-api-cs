@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 상/하한 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1422InBlock
+    public class _t1422InBlock
     {
         public string qrygb{ get; set; } // [string,    1] 조회구분                        StartPos 0, Length 1
         public string gubun{ get; set; } // [string,    1] 구분                            StartPos 2, Length 1
@@ -14,13 +14,13 @@
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 52, Length 4
     }
 
-    public struct _t1422OutBlock
+    public class _t1422OutBlock
     {
         public long cnt{ get; set; } // [long  ,    4] CNT                             StartPos 0, Length 4
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 5, Length 4
     }
 
-    public struct _t1422OutBlock1
+    public class _t1422OutBlock1
     {
         public string hname{ get; set; } // [string,   20] 한글명                          StartPos 0, Length 20
         public long price{ get; set; } // [long  ,    8] 현재가                          StartPos 21, Length 8

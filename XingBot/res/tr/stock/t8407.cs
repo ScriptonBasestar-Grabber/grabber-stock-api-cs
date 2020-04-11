@@ -1,13 +1,13 @@
 ﻿namespace XingBot.res
 {
     // 주식멀티현재가조회 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t8407InBlock
+    public class _t8407InBlock
     {
         public long nrec{ get; set; } // [long  ,    3] 건수                            StartPos 0, Length 3
         public string shcode{ get; set; } // [string,  300] 종목코드                        StartPos 4, Length 300
     }
 
-    public struct _t8407OutBlock1
+    public class _t8407OutBlock1
     {
         public string shcode{ get; set; } // [string,    6] 종목코드                        StartPos 0, Length 6
         public string hname{ get; set; } // [string,   40] 종목명                          StartPos 7, Length 40

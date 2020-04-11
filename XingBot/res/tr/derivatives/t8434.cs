@@ -1,13 +1,13 @@
 ﻿namespace XingBot.res
 {
     // 선물옵션멀티현재가 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t8434InBlock
+    public class _t8434InBlock
     {
         public long qrycnt{ get; set; } // [long  ,    3] 건수                            StartPos 0, Length 3
         public string focode{ get; set; } // [string,  400] 단축코드                        StartPos 4, Length 400
     }
 
-    public struct _t8434OutBlock1
+    public class _t8434OutBlock1
     {
         public string hname{ get; set; } // [string,   20] 한글명                          StartPos 0, Length 20
         public decimal price{ get; set; } // [float ,  6.2] 현재가                          StartPos 21, Length 6

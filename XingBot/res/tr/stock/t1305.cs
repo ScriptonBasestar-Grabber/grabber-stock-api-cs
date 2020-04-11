@@ -1,7 +1,7 @@
 ﻿namespace XingBot.res
 {
     // 기간별 주가 ( ATTR,BLOCK,HEADTYPE=A )
-    public struct _t1305InBlock
+    public class _t1305InBlock
     {
         public string shcode{ get; set; } // [string,    6] 단축코드                        StartPos 0, Length 6
         public long dwmcode{ get; set; } // [long  ,    1] 일주월구분                      StartPos 7, Length 1
@@ -10,14 +10,14 @@
         public long cnt{ get; set; } // [long  ,    4] 건수                            StartPos 23, Length 4
     }
 
-    public struct _t1305OutBlock
+    public class _t1305OutBlock
     {
         public long cnt{ get; set; } // [long  ,    4] CNT                             StartPos 0, Length 4
         public string date{ get; set; } // [string,    8] 날짜                            StartPos 5, Length 8
         public long idx{ get; set; } // [long  ,    4] IDX                             StartPos 14, Length 4
     }
 
-    public struct _t1305OutBlock1
+    public class _t1305OutBlock1
     {
         public string date{ get; set; } // [string,    8] 날짜                            StartPos 0, Length 8
         public long open{ get; set; } // [long  ,    8] 시가                            StartPos 9, Length 8
