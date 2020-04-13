@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataLib.model
 {
-    public class CodeOption
+    public class CodeK200Future
     {
         public string Name;
         public string Code;

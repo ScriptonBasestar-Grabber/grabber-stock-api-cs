@@ -1,50 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
-using DataLib.model;
-using XA_DATASETLib;
-using XingBot.real;
 using XingBot.res;
 
 namespace XingBot.tr
 {
-    public class Tr_t9944
+    public class Tr_t8401
     {
-        public static readonly InBlockQuery InBlock_t9944 = (resModel, query, dict) =>
+        public static readonly InBlockQuery InBlock_t8401 = (resModel, query, dict) =>
         {
             var szTrCode = resModel.Name;
             var block = resModel.Blocks[szTrCode + "InBlock"];
-            block.Rows.ForEach(delegate (Row row)
-            {
-                query.SetFieldData(block.Name, row.Name, 0, dict[row.Name]);
-            });
+            block.Rows.ForEach(delegate (Row row) { query.SetFieldData(block.Name, row.Name, 0, dict[row.Name]); });
             query.Request(false);
         };
 
-        public static readonly OutBlockQuery OutBlock_t9944 = (resModel, query, writer) =>
+        public static readonly OutBlockQuery OutBlock_t8401 = (resModel, query, writer) =>
         {
             var szTrCode = resModel.Name;
             var block = resModel.Blocks[szTrCode + "OutBlock"];
-            writer.WriteHeader<_t9944OutBlock>();
+            writer.WriteHeader<_t8401OutBlock>();
             for (var i = 0; i < query.GetBlockCount(block.Name); i++)
             {
-                var result = new _t9944OutBlock()
+                var result = new _t8401OutBlock()
                 {
                     hname = query.GetFieldData(block.Name, "hname", i),
                     shcode = query.GetFieldData(block.Name, "shcode", i),
                     expcode = query.GetFieldData(block.Name, "expcode", i),
+                    basecode = query.GetFieldData(block.Name, "basecode", i),
                 };
                 writer.NextRecord();
                 writer.WriteRecord(result);
-                Constants.CodeOptions.Add(result.shcode, new CodeK200Option()
-                {
-                    Name = result.hname,
-                    Code = result.shcode,
-                    ExpCode = result.expcode,
-                });
             }
         };
     }

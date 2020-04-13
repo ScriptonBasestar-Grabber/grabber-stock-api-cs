@@ -56,6 +56,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="events\Tr_t4203.cs" />
+    <Compile Include="events\Tr_t8414.cs" />
     <Compile Include="Mapping\MappingFieldModel.cs" />
     <Compile Include="Mapping\MappingRowModel.cs" />
     <Compile Include="Mapping\RealMap.cs" />
@@ -357,6 +359,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="real\RealCtrl.cs" />
+    <Compile Include="tr\derivatives\Tr_t8401.cs" />
     <Compile Include="tr\derivatives\Tr_t9944.cs" />
     <Compile Include="tr\elw\Tr_t9905.cs" />
     <Compile Include="tr\derivatives\Tr_t9943.cs" />
@@ -369,6 +372,7 @@
     <Compile Include="tr\elw\Tr_t9942.cs" />
     <Compile Include="tr\elw\Tr_t9907.cs" />
     <Compile Include="tr\QueryCtrl.cs" />
+    <Compile Include="events\QueryBase.cs" />
     <Compile Include="tr\QueryEvents.cs" />
     <Compile Include="tr\sector\Tr_t8419.cs" />
     <Compile Include="tr\sector\Tr_t8424.cs" />
@@ -402,7 +406,7 @@
     <Compile Include="tr\stock\Tr_t1941.cs" />
     <Compile Include="tr\stock\Tr_t8411.cs" />
     <Compile Include="tr\stock\Tr_t8412.cs" />
-    <Compile Include="tr\stock\Tr_t4201.cs" />
+    <Compile Include="events\Tr_t4201.cs" />
     <Compile Include="tr\stock\Tr_t8436.cs" />
     <Compile Include="tr\stock\Tr_t8425.cs" />
     <Compile Include="tr\stock\Tr_t8413.cs" />
@@ -452,6 +456,7 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -9,5 +9,6 @@ namespace DataLib.model
         public string Name;
         public string Code;
         public string ExpCode;
+        public string BaseCode;
     }
 }

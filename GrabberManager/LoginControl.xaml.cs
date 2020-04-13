@@ -38,9 +38,7 @@ namespace GrabberManager
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //TODO Login action parameter
-            ((StackPanel) (this.Parent)).Children.Clear();
-            // (this.Parent).Children.Clear();
+            ((StackPanel)this.Parent).Children.Clear();
             if (_company == "xing")
             {
                 QueryCtrl queryCtrl;

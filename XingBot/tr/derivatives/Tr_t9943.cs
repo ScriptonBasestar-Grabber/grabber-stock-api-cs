@@ -39,7 +39,7 @@ namespace XingBot.tr
                 };
                 writer.NextRecord();
                 writer.WriteRecord(result);
-                Constants.CodeFutures.Add(result.shcode, new CodeFuture()
+                Constants.CodeFutures.Add(result.shcode, new CodeK200Future()
                 {
                     Name = result.hname,
                     Code = result.shcode,
