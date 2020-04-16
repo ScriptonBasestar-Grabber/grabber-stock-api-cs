@@ -27,20 +27,20 @@ namespace GrabberManager
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            LoginStack.Children.Clear();
-            // TODO set saved value
-            LoginStack.Children.Add(new LoginControl("xing",
-                new LoginModel("username", "userpass", "certpass")
-                ));
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void CybosLogin_Click(object sender, RoutedEventArgs e)
         {
             LoginStack.Children.Clear();
             // TODO set saved value
             LoginStack.Children.Add(new LoginControl("cybos",
+                new LoginModel("username", "userpass", "certpass")
+                ));
+        }
+
+        private void XingLogin_Click(object sender, RoutedEventArgs e)
+        {
+            LoginStack.Children.Clear();
+            // TODO set saved value
+            LoginStack.Children.Add(new LoginControl("xing",
                 new LoginModel("username", "userpass", "certpass")
                 ));
         }

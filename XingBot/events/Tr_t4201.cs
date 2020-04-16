@@ -35,11 +35,40 @@ namespace XingBot.tr
             _query.SetFieldData(block.Name, "cts_time", 0, _inBlock.cts_time);
             _query.SetFieldData(block.Name, "cts_daygb", 0, _inBlock.cts_daygb);
             _query.Request(false);
+            Console.WriteLine("===========  GetTrCode");
+            Console.WriteLine(_query.GetTrCode());
+            Console.WriteLine("===========  GetTrDesc");
+            Console.WriteLine(_query.GetTrDesc());
         }
 
         protected override void OutBlock(ResModel resModel, IXAQuery query, CsvHelper.CsvWriter writer)
         {
             var szTrCode = resModel.Name;
+            //Console.WriteLine("===========  GetAccountList");
+            //Console.WriteLine(_query.GetAccountList(0));
+            //Console.WriteLine("===========  GetTrCode");
+            //Console.WriteLine(_query.GetTrCode());
+            //Console.WriteLine("===========  GetTrDesc");
+            //Console.WriteLine(_query.GetTrDesc());
+            Console.WriteLine("===========  GetBlockType");
+            Console.WriteLine(_query.GetBlockType(szTrCode + "InBlock"));
+            //Console.WriteLine("===========  GetResData");
+            //Console.WriteLine(_query.GetResData());
+            //Console.WriteLine("===========  GetBlockSize");
+            //Console.WriteLine(_query.GetBlockSize(szTrCode + "InBlock"));
+            Console.WriteLine("===========  GetFieldDescList");
+            Console.WriteLine(_query.GetFieldDescList(szTrCode + "InBlock"));
+            //Console.WriteLine("===========  GetLastError");
+            //Console.WriteLine(_query.GetLastError());
+            //Console.WriteLine("===========  GetAccountListCount");
+            //Console.WriteLine(_query.GetAccountListCount());
+            //Console.WriteLine("===========  GetTRCountBaseSec");
+            //Console.WriteLine(_query.GetTRCountBaseSec(szTrCode));
+            //Console.WriteLine("===========  GetTRCountRequest");
+            //Console.WriteLine(_query.GetTRCountRequest(szTrCode));
+            //Console.WriteLine("===========  GetTRCountLimit");
+            //Console.WriteLine(_query.GetTRCountLimit(szTrCode));
+
 
             var block = resModel.Blocks[szTrCode + "OutBlock"];
             var meta = new _t4201OutBlock()
@@ -84,11 +113,11 @@ namespace XingBot.tr
                 writer.WriteRecord(result);
             }
 
-            Thread.Sleep(6000);
-            _inBlock.cts_date = meta.cts_date;
-            _inBlock.cts_time = meta.cts_time;
-            _inBlock.cts_daygb = meta.cts_daygb;
-            InBlock();
+            //Thread.Sleep(6000);
+            //_inBlock.cts_date = meta.cts_date;
+            //_inBlock.cts_time = meta.cts_time;
+            //_inBlock.cts_daygb = meta.cts_daygb;
+            //InBlock();
         }
 
     }

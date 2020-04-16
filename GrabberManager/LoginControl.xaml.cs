@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GrabberManager.model;
 using XingBot.real;
+using XingBot.res;
 using XingBot.tr;
 
 namespace GrabberManager
@@ -25,6 +26,8 @@ namespace GrabberManager
     public partial class LoginControl : UserControl
     {
         private string _company;
+        private Tr_t4201 _queryTr4201;
+
         public LoginControl(string company, LoginModel loginModel)
         {
             InitializeComponent();
@@ -41,13 +44,6 @@ namespace GrabberManager
             ((StackPanel)this.Parent).Children.Clear();
             if (_company == "xing")
             {
-                QueryCtrl queryCtrl;
-                XingBot.real.SessionEvents session = new SessionEvents(() =>
-                {
-                    queryCtrl = new QueryCtrl();
-                    queryCtrl.QueryInit();
-                });
-                session.Login(TxtUserName.Text, TxtUserPass.Password, TxtCertPass.Password);
             } else if (_company == "cybos")
             {
 

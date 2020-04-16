@@ -410,6 +410,7 @@
     <Compile Include="tr\stock\Tr_t8436.cs" />
     <Compile Include="tr\stock\Tr_t8425.cs" />
     <Compile Include="tr\stock\Tr_t8413.cs" />
+    <Compile Include="XingManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="XA_DATASETLib">
@@ -456,7 +457,9 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="query\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

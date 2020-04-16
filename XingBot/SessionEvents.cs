@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using XA_SESSIONLib;
 using XingBot.tr;
 
-namespace XingBot.real
+namespace XingBot
 {
     public class SessionEvents : _IXASessionEvents
     {

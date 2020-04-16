@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices.ComTypes;
@@ -24,7 +25,6 @@ namespace XingBot.tr
             int dwCookie = 0;
             IConnectionPoint icp;
             IConnectionPointContainer icpc;
-
             _query = new XAQuery
             {
                 ResFileName = Settings.Default.root_path + @"\Res\" + szTrCode + ".res"
