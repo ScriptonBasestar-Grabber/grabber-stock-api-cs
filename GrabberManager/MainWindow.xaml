@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GrabberManager"
         mc:Ignorable="d"
-        Title="GrabberTower" Height="432.781" Width="405.877">
+        Title="GrabberTower" Height="432.781" Width="489.71">
     <Grid>
         <StackPanel HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="80">
             <Button x:Name="XingLogin" Content="Xing" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="76" Margin="2,0" Click="XingLogin_Click" />
@@ -16,6 +16,7 @@
             <Label Content="WorkingStatus" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" RenderTransformOrigin="-9.942,-3.425" Width="88" Height="30"/>
             <ListBox HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="271"/>
         </StackPanel>
+        <Button Content="t4201" HorizontalAlignment="Left" Margin="127,33,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
 </Window>

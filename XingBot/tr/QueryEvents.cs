@@ -42,15 +42,15 @@ namespace XingBot.tr
 
         public void InBlock(StringDict sdict)
         {
+            InBlock(sdict, () => { });
+        }
+        public void InBlock(StringDict sdict, Action afterAction)
+        {
+            _afterAction = afterAction;
             var szTrCode = _resModel.Name;
             var block = _resModel.Blocks[szTrCode + "InBlock"];
             block.Rows.ForEach(delegate(Row row) { _ixa.SetFieldData(block.Name, row.Name, 0, sdict[row.Name]); });
             _ixa.Request(false);
-        }
-
-        public void AfterAction(Action afterAction)
-        {
-            _afterAction = afterAction;
         }
 
         void _IXAQueryEvents.ReceiveData(string szTrCode)

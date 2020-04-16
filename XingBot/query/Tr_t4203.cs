@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 using XA_DATASETLib;
 using XingBot.res;
 
-namespace XingBot.tr
+namespace XingBot.query
 {
-    public class Tr_t4201 : QueryBase
+    public class Tr_t4203 : QueryBase
     {
-        private _t4201InBlock _inBlock;
+        private _t4203InBlock _inBlock;
 
-        public Tr_t4201(_t4201InBlock inBlock) : base("t4201")
+        public Tr_t4203(_t4203InBlock inBlock) : base("t4203")
         {
             _inBlock = inBlock;
         }
 
-        public override void InBlock()
+        protected override void InBlock(string shcode, bool isNext = false)
         {
             var szTrCode = _resModel.Name;
             var block = _resModel.Blocks[szTrCode + "InBlock"];
@@ -35,43 +35,14 @@ namespace XingBot.tr
             _query.SetFieldData(block.Name, "cts_time", 0, _inBlock.cts_time);
             _query.SetFieldData(block.Name, "cts_daygb", 0, _inBlock.cts_daygb);
             _query.Request(false);
-            Console.WriteLine("===========  GetTrCode");
-            Console.WriteLine(_query.GetTrCode());
-            Console.WriteLine("===========  GetTrDesc");
-            Console.WriteLine(_query.GetTrDesc());
         }
 
         protected override void OutBlock(ResModel resModel, IXAQuery query, CsvHelper.CsvWriter writer)
         {
             var szTrCode = resModel.Name;
-            //Console.WriteLine("===========  GetAccountList");
-            //Console.WriteLine(_query.GetAccountList(0));
-            //Console.WriteLine("===========  GetTrCode");
-            //Console.WriteLine(_query.GetTrCode());
-            //Console.WriteLine("===========  GetTrDesc");
-            //Console.WriteLine(_query.GetTrDesc());
-            Console.WriteLine("===========  GetBlockType");
-            Console.WriteLine(_query.GetBlockType(szTrCode + "InBlock"));
-            //Console.WriteLine("===========  GetResData");
-            //Console.WriteLine(_query.GetResData());
-            //Console.WriteLine("===========  GetBlockSize");
-            //Console.WriteLine(_query.GetBlockSize(szTrCode + "InBlock"));
-            Console.WriteLine("===========  GetFieldDescList");
-            Console.WriteLine(_query.GetFieldDescList(szTrCode + "InBlock"));
-            //Console.WriteLine("===========  GetLastError");
-            //Console.WriteLine(_query.GetLastError());
-            //Console.WriteLine("===========  GetAccountListCount");
-            //Console.WriteLine(_query.GetAccountListCount());
-            //Console.WriteLine("===========  GetTRCountBaseSec");
-            //Console.WriteLine(_query.GetTRCountBaseSec(szTrCode));
-            //Console.WriteLine("===========  GetTRCountRequest");
-            //Console.WriteLine(_query.GetTRCountRequest(szTrCode));
-            //Console.WriteLine("===========  GetTRCountLimit");
-            //Console.WriteLine(_query.GetTRCountLimit(szTrCode));
-
 
             var block = resModel.Blocks[szTrCode + "OutBlock"];
-            var meta = new _t4201OutBlock()
+            var meta = new _t4203OutBlock()
             {
                 shcode = query.GetFieldData(block.Name, "shcode", 0),
                 jisiga = long.Parse(query.GetFieldData(block.Name, "jisiga", 0)),
@@ -83,18 +54,17 @@ namespace XingBot.tr
                 dihigh = long.Parse(query.GetFieldData(block.Name, "dihigh", 0)),
                 dilow = long.Parse(query.GetFieldData(block.Name, "dilow", 0)),
                 diclose = long.Parse(query.GetFieldData(block.Name, "diclose", 0)),
-                highend = long.Parse(query.GetFieldData(block.Name, "highend", 0)),
-                lowend = long.Parse(query.GetFieldData(block.Name, "lowend", 0)),
+                disvalue = long.Parse(query.GetFieldData(block.Name, "disvalue", 0)),
                 cts_date = query.GetFieldData(block.Name, "cts_date", 0),
                 cts_time = query.GetFieldData(block.Name, "cts_time", 0),
                 cts_daygb = query.GetFieldData(block.Name, "cts_daygb", 0),
             };
 
             var block1 = resModel.Blocks[szTrCode + "OutBlock1"];
-            writer.WriteHeader<_t4201OutBlock1>();
+            writer.WriteHeader<_t4203OutBlock1>();
             for (var i = 0; i < query.GetBlockCount(block.Name); i++)
             {
-                var result = new _t4201OutBlock1()
+                var result = new _t4203OutBlock1()
                 {
                     date = query.GetFieldData(block1.Name, "date", i),
                     time = query.GetFieldData(block1.Name, "time", i),
@@ -104,20 +74,16 @@ namespace XingBot.tr
                     close = long.Parse(query.GetFieldData(block1.Name, "close", i)),
                     jdiff_vol = long.Parse(query.GetFieldData(block1.Name, "jdiff_vol", i)),
                     value = long.Parse(query.GetFieldData(block1.Name, "value", i)),
-                    jongchk = long.Parse(query.GetFieldData(block1.Name, "jongchk", i)),
-                    rate = decimal.Parse(query.GetFieldData(block1.Name, "rate", i)),
-                    pricechk = long.Parse(query.GetFieldData(block1.Name, "pricechk", i)),
-                    ratevalue = long.Parse(query.GetFieldData(block1.Name, "ratevalue", i)),
                 };
                 writer.NextRecord();
                 writer.WriteRecord(result);
             }
 
-            //Thread.Sleep(6000);
-            //_inBlock.cts_date = meta.cts_date;
-            //_inBlock.cts_time = meta.cts_time;
-            //_inBlock.cts_daygb = meta.cts_daygb;
-            //InBlock();
+            Thread.Sleep(6000);
+            _inBlock.cts_date = meta.cts_date;
+            _inBlock.cts_time = meta.cts_time;
+            _inBlock.cts_daygb = meta.cts_daygb;
+            InBlock(meta.shcode);
         }
 
     }

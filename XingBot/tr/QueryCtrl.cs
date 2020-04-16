@@ -4,15 +4,20 @@ using System.IO;
 using System.Reflection.Emit;
 using System.Runtime.InteropServices.ComTypes;
 using System.Threading;
+using DataLib.model;
 using DataLib.util;
+using log4net;
 using XA_DATASETLib;
+using XingBot.query;
 using XingBot.real;
+using XingBot.res;
 using XingBot.tr;
 
 namespace XingBot.tr
 {
     public class QueryCtrl
     {
+        protected static readonly ILog LOG = LogManager.GetLogger("QueryCtrl");
         private readonly Dictionary<string, QueryEvents> _queryDict = new Dictionary<string, QueryEvents>();
 
         public void QueryInit()
@@ -110,6 +115,31 @@ namespace XingBot.tr
                 ["dummy"] = ""
             });
             Console.WriteLine("QueryInit 생성자완료");
+        }
+
+        public void QueryT4201()
+        {
+            //foreach (CodeStock value in Constants.CodeStocks.Values)
+            Tr_t4201 tr4201 = new Tr_t4201();
+            tr4201.Start();
+            LOG.Info("finish all");
+
+            //Thread thread = new Thread(() =>
+            //{
+            //    Tr_t4201 tr4201 = new Tr_t4201(new _t4201InBlock()
+            //    {
+            //        //shcode = value.Code,
+            //        shcode = "000660",
+            //        gubun = "0",
+            //        ncnt = 1,
+            //        qrycnt = 500,
+            //        tdgb = "0",
+            //        sdate = "20200401",
+            //        edate = "20200416",
+            //    }, waitHandle);
+            //    tr4201.InBlock();
+            //    waitHandle.WaitOne();
+            //});
         }
     }
 }
