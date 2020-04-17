@@ -4,9 +4,11 @@ using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices.ComTypes;
+using System.Text;
 using CsvHelper;
 using DataLib.util;
 using GrabberManager.util;
+using log4net;
 using XA_DATASETLib;
 using XingBot.Properties;
 using XingBot.res;
@@ -16,11 +18,13 @@ namespace XingBot.real
 {
     public class RealEvents : _IXARealEvents
     {
+        protected static readonly ILog LOG = LogManager.GetLogger("RealEvents");
         private readonly IXAReal _ixa;
         private readonly ResModel _resModel;
+        private FileInfo fi;
         public RealEvents(string szTrCode)
         {
-            _resModel = ReadResFile.Read(Path.Combine(Settings.Default.root_path, szTrCode));
+            _resModel = ReadResFile.Read(Settings.Default.root_path + @"\res\" + szTrCode + ".res");
 
             int dwCookie = 0;
             IConnectionPoint icp;
@@ -30,7 +34,7 @@ namespace XingBot.real
             {
                 ResFileName = Settings.Default.root_path + @"\res\" + szTrCode + ".res"
             };
-            icpc = (IConnectionPointContainer) _ixa;
+            icpc = (IConnectionPointContainer)_ixa;
             Guid iidRealEvents = typeof(_IXARealEvents).GUID;
             icpc.FindConnectionPoint(ref iidRealEvents, out icp);
             icp.Advise(this, out dwCookie);
@@ -38,9 +42,25 @@ namespace XingBot.real
             Console.WriteLine("RealEvents 생성자완료");
         }
 
-        public void Start(StringDict sdict)
+        public void Start(string separator, StringDict sdict)
         {
             var szTrCode = _resModel.Name;
+
+            fi = new FileInfo(Settings.Default.data_path + "\\xing\\" + szTrCode + "-" + separator + ".csv");
+            if (fi.Directory != null && !fi.Directory.Exists)
+            {
+                System.IO.Directory.CreateDirectory(fi.DirectoryName);
+            }
+            using (var writer = fi.AppendText())
+            {
+                StringBuilder sb = new StringBuilder();
+                _resModel.Blocks["OutBlock"].Rows.ForEach(row =>
+                {
+                    sb.Append(row.Name).Append(',');
+                });
+                sb.Remove(sb.Length - 1, 1);
+                writer.WriteLine(sb.ToString());
+            }
             var block = _resModel.Blocks["InBlock"];
             block.Rows.ForEach(delegate (Row row) { _ixa.SetFieldData(block.Name, row.Name, sdict[row.Name]); });
             _ixa.AdviseRealData();
@@ -58,22 +78,15 @@ namespace XingBot.real
         }
         private void OutBlock(string szTrCode)
         {
-            OutBlock(szTrCode);
-            FileInfo fi = new FileInfo(Settings.Default.data_path + "\\xing\\" + szTrCode + ".csv");
-            if (fi.Directory != null && !fi.Directory.Exists)
-            {
-                System.IO.Directory.CreateDirectory(fi.DirectoryName);
-            }
-
-            // using (var writer = new StreamWriter(fi.OpenWrite()))
-            using (var writer = new StreamWriter(Settings.Default.data_path + "\\xing\\" + szTrCode + ".csv", true))
+            using (var writer = fi.AppendText())
+            //using (var writer = new CsvWriter(writer0, CultureInfo.InvariantCulture))
             {
                 var block = _resModel.Blocks["OutBlock"];
-                Hashtable table = new Hashtable();
+                StringBuilder sb = new StringBuilder();
                 block.Rows.ForEach((row) =>
                 {
                     var value = _ixa.GetFieldData(block.Name, row.Name);
-                    writer.Write(value);
+                    sb.Append(value).Append(',');
                     //11
                     // var prop = result.GetType().GetProperty(row.Name,
                     //     System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public |
@@ -99,7 +112,8 @@ namespace XingBot.real
                     // field.SetValueDirect(__makeref(result), Convert.ChangeType(value, field.FieldType));
                     // System.Console.WriteLine(s.Field); //Prints 5
                 });
-                writer.WriteLine(table);
+                sb.Remove(sb.Length - 1, 1);
+                writer.WriteLine(sb.ToString());
             }
         }
         void _IXARealEvents.RecieveLinkData(string szLinkName, string szData, string szFiller)

@@ -41,12 +41,18 @@ namespace XingBot.res
                         idxLine++;
                         for (int idxInner = idxLine; idxInner < lines[idxLine].Length; idxInner++)
                         {
-                            if (lines[idxInner].TrimStart().StartsWith("end"))
+                            if (lines[idxInner].Trim().Length == 0)
+                            {
+                                continue;
+                            }
+                            else if (lines[idxInner].TrimStart().StartsWith("end"))
                             {
                                 break;
                             }
-                            var spline1 = Regex.Split(lines[idxInner].Trim(), "[,;\\s\t]+");
-                            block.Rows.Add(new Row { Name = spline1[1], Desc = spline1[0], Length = spline1[4], DataType = spline1[3] });
+                            //var spline1 = Regex.Split(lines[idxInner].Trim(), "[,;\\s\t]+");
+                            var spline1 = Regex.Split(lines[idxInner].Trim(), "[,;]+");
+                            //var spline1 = lines[idxInner].Split(',');
+                            block.Rows.Add(new Row { Name = spline1[1].Trim(), Desc = spline1[0].Trim(), Length = spline1[4].Trim(), DataType = spline1[3].Trim() });
                         }
                         // Console.WriteLine(block.Name);
                         resModel.Blocks.Add(block.Name, block);

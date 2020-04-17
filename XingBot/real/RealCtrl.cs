@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
+using DataLib.model;
 using DataLib.util;
 using XA_DATASETLib;
 using XingBot.Properties;
@@ -16,26 +18,43 @@ namespace XingBot.real
         /**
          * 주식 전종목
          */
-        public void RealStockALL(string[] shcodes)
+        public void RealStockALL()
         {
+            List<CodeStock> codeStocks = new List<CodeStock>(Constants.CodeStocks.Values);
+            string[] shcodes = codeStocks.Select(codeStock => codeStock.Code).ToArray();
             var codeName = "shcode";
             CallReal("DVI", codeName, shcodes);
-            CallReal("SHC", codeName, shcodes);
-            CallReal("SHD", codeName, shcodes);
-            CallReal("SHI", codeName, shcodes);
-            CallReal("SHO", codeName, shcodes);
             CallReal("VI_", codeName, shcodes);
+            //KOSPI
+            CallReal("PM_", "gubun", "0");
+            //KOSDAQ
+            CallReal("PM_", "gubun", "1");
+            //KOSPI
+            CallReal("KM_", "gubun", "0");
+            //KOSDAQ
+            CallReal("KM_", "gubun", "1");
+            //상한가 진입
+            //CallReal("SHC", updnlmtgubun, "1");
+            //CallReal("SHD", updnlmtgubun, "1");
+            //CallReal("SHI", updnlmtgubun, "1");
+            //CallReal("SHO", updnlmtgubun, "1");
+            //하한가 진입
+            //CallReal("SHC", updnlmtgubun, "4");
+            //CallReal("SHD", updnlmtgubun, "4");
+            //CallReal("SHI", updnlmtgubun, "4");
+            //CallReal("SHO", updnlmtgubun, "4");
         }
 
-        public void RealStockKOSPI(string[] shcodes)
+        public void RealStockKOSPI()
         {
+            List<CodeStock> codeStocks = new List<CodeStock>(Constants.CodeStocks.Values);
+            string[] shcodes = codeStocks.Where(codeStock => codeStock.MarketGubun == "1").Select(codeStock => codeStock.Code).ToArray();
             var codeName = "shcode";
             CallReal("H1_", codeName, shcodes);
             CallReal("H2_", codeName, shcodes);
             CallReal("I5_", codeName, shcodes);
             CallReal("K1_", codeName, shcodes);
             CallReal("PH_", codeName, shcodes);
-            CallReal("PM_", codeName, shcodes);
             CallReal("S2_", codeName, shcodes);
             CallReal("S3_", codeName, shcodes);
             CallReal("S4_", codeName, shcodes);
@@ -47,27 +66,34 @@ namespace XingBot.real
             CallReal("YS3", codeName, shcodes);
         }
 
-        public void RealStockKOSDAQ(string[] shcodes)
+        public void RealStockKOSDAQ()
         {
+            List<CodeStock> codeStocks = new List<CodeStock>(Constants.CodeStocks.Values);
+            string[] shcodes = codeStocks.Where(codeStock => codeStock.MarketGubun == "2").Select(codeStock => codeStock.Code).ToArray();
             var codeName = "shcode";
             CallReal("B7_", codeName, shcodes);
             CallReal("HA_", codeName, shcodes);
             CallReal("HB_", codeName, shcodes);
             CallReal("K3_", codeName, shcodes);
             CallReal("KH_", codeName, shcodes);
-            CallReal("KM_", codeName, shcodes);
             CallReal("KS_", codeName, shcodes);
             CallReal("OK_", codeName, shcodes);
             CallReal("YK3", codeName, shcodes);
         }
 
-        public void RealStockSector(string[] upcodes)
+        public void RealStockSector()
         {
+            List<CodeSector> codeSectors = new List<CodeSector>(Constants.CodeSectors.Values);
+            string[] upcodes = codeSectors.Select(codeSector => codeSector.Code).ToArray();
             var codeName = "upcode";
             CallReal("IJ_", codeName, upcodes);
             CallReal("YJ_", codeName, upcodes);
             CallReal("BMT", codeName, upcodes);
             CallReal("BM_", codeName, upcodes);
+        }
+        private void CallReal(string szTrCode, string codeName, string code)
+        {
+            CallReal(szTrCode, codeName, new string[1] { code });
         }
 
         private void CallReal(string szTrCode, string codeName, string[] codes)
@@ -75,18 +101,20 @@ namespace XingBot.real
             foreach (var shcode in codes)
             {
                 this._realDict[Tuple.Create(szTrCode, shcode)] = new RealEvents(szTrCode);
-                this._realDict[Tuple.Create(szTrCode, shcode)].Start(new StringDict()
+                this._realDict[Tuple.Create(szTrCode, shcode)].Start(shcode, new StringDict()
                 {
                     [codeName] = shcode
                 });
             }
         }
-        private void CallReal(string szTrCode, string codeName, string code)
+        //private void CallReal(string szTrCode, string codeName, string code)
+        //{
+        //    CallReal(szTrCode, codeName, new string[1] { code });
+        //}
+        public void RealDerivativesKospi200Futures()
         {
-            CallReal(szTrCode, codeName, new string[1] { code });
-        }
-        public void RealDerivativesKospi200Futures(string[] fucodes)
-        {
+            List<CodeK200Future> codeK200Futures = new List<CodeK200Future>(Constants.CodeK200Futures.Values);
+            string[] fucodes = codeK200Futures.Select(code => code.Code).ToArray();
             var codeName = "fucode";
             //CallReal("C01",codeName, fucodes);
             //CallReal("CM0",codeName, fucodes);
@@ -103,8 +131,10 @@ namespace XingBot.real
             //CallReal("O01",codeName, fucodes);
             CallReal("YFC", codeName, fucodes);
         }
-        public void RealDerivativesKospi200Options(string[] optcodes)
+        public void RealDerivativesKospi200Options()
         {
+            List<CodeK200Option> codeK200Option = new List<CodeK200Option>(Constants.CodeK200Options.Values);
+            string[] optcodes = codeK200Option.Select(code => code.Code).ToArray();
             var codeName = "optcode";
             CallReal("EC0", codeName, optcodes);
             CallReal("EH0", codeName, optcodes);
@@ -119,35 +149,35 @@ namespace XingBot.real
             CallReal("YOC", codeName, optcodes);
         }
 
-        public void RealDerivativesStockFutures(string[] fucodes)
-        {
-            var codeName = "fucode";
-            CallReal("JC0", codeName, fucodes);
-            CallReal("JD0", codeName, fucodes);
-            CallReal("JH0", codeName, fucodes);
-            CallReal("JX0", codeName, fucodes);
-            CallReal("YJC", codeName, fucodes);
-        }
+        //public void RealDerivativesStockFutures()
+        //{
+        //    var codeName = "fucode";
+        //    CallReal("JC0", codeName, fucodes);
+        //    CallReal("JD0", codeName, fucodes);
+        //    CallReal("JH0", codeName, fucodes);
+        //    CallReal("JX0", codeName, fucodes);
+        //    CallReal("YJC", codeName, fucodes);
+        //}
 
-        public void RealDerivativeCommodityFutures(string[] fucodes)
-        {
-            var codeName = "fucode";
-            CallReal("CD0", codeName, fucodes);
-            CallReal("YC3", codeName, fucodes);
-        }
+        //public void RealDerivativeCommodityFutures()
+        //{
+        //    var codeName = "fucode";
+        //    CallReal("CD0", codeName, fucodes);
+        //    CallReal("YC3", codeName, fucodes);
+        //}
 
-        public void RealDerivativesELW(string[] shcodes)
-        {
-            var codeName = "shcode";
-            CallReal("ESN", codeName, shcodes);
-            CallReal("h2_4ELW", codeName, shcodes);
-            CallReal("h3_4ELW", codeName, shcodes);
-            CallReal("k1_4ELW", codeName, shcodes);
-            CallReal("s2_4ELW", codeName, shcodes);
-            CallReal("s3_4ELW", codeName, shcodes);
-            CallReal("s4_ELW", codeName, shcodes);
-            CallReal("Ys3_4ELW", codeName, shcodes);
-        }
+        //public void RealDerivativesELW()
+        //{
+        //    var codeName = "shcode";
+        //    CallReal("ESN", codeName, shcodes);
+        //    CallReal("h2_4ELW", codeName, shcodes);
+        //    CallReal("h3_4ELW", codeName, shcodes);
+        //    CallReal("k1_4ELW", codeName, shcodes);
+        //    CallReal("s2_4ELW", codeName, shcodes);
+        //    CallReal("s3_4ELW", codeName, shcodes);
+        //    CallReal("s4_ELW", codeName, shcodes);
+        //    CallReal("Ys3_4ELW", codeName, shcodes);
+        //}
 
         public void Etc()
         {

@@ -16,7 +16,10 @@
             <Label Content="WorkingStatus" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" RenderTransformOrigin="-9.942,-3.425" Width="88" Height="30"/>
             <ListBox HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="271"/>
         </StackPanel>
-        <Button Content="t4201" HorizontalAlignment="Left" Margin="127,33,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="t4201-Chart" HorizontalAlignment="Left" Margin="127,33,0,0" VerticalAlignment="Top" Width="75" Click="t4201_Click"/>
+        <Button x:Name="RealStock" Content="RealStock" HorizontalAlignment="Left" Margin="127,58,0,0" VerticalAlignment="Top" Width="75" Click="RealStock_Click" />
+        <Button x:Name="RealFutures" Content="RealFutures" HorizontalAlignment="Left" Margin="127,83,0,0" VerticalAlignment="Top" Width="75" Click="RealFutures_Click"/>
+        <Button x:Name="RealOptions" Content="RealOptions" HorizontalAlignment="Left" Margin="127,108,0,0" VerticalAlignment="Top" Width="75" Click="RealOptions_Click"/>
 
     </Grid>
 </Window>

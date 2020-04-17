@@ -26,7 +26,6 @@ namespace XingBot.tr
             // TODO 순차적 이벤트 완료되는거 확인하고 다음걸로 하려면 콜백지옥?
             // ========================= t9905 기초자산리스트조회 =========================
             code = "t9905";
-            Constants.queryInitNext = false;
             this._queryDict[code] = new QueryEvents(code, Tr_t9905.OutBlock_t9905);
             this._queryDict[code].InBlock(new StringDict()
             {
@@ -34,7 +33,6 @@ namespace XingBot.tr
             });
             // ========================= t8401 업종코드 =========================
             code = "t8401";
-            Constants.queryInitNext = false;
             this._queryDict[code] = new QueryEvents(code, Tr_t8401.OutBlock_t8401);
             this._queryDict[code].InBlock(new StringDict()
             {
@@ -42,7 +40,6 @@ namespace XingBot.tr
             });
             // ========================= t8424 업종코드 =========================
             code = "t8424";
-            Constants.queryInitNext = false;
             this._queryDict[code] = new QueryEvents(code, Tr_t8424.OutBlock_t8424);
             this._queryDict[code].InBlock(new StringDict()
             {
@@ -107,6 +104,11 @@ namespace XingBot.tr
             {
                 ["gubun"] = "S"
             });
+            this._queryDict[code] = new QueryEvents(code, Tr_t9943.OutBlock_t9943);
+            this._queryDict[code].InBlock(new StringDict()
+            {
+                ["gubun"] = ""
+            });
             // ========================= t9944 지수옵션마스터조회 API용 =========================
             code = "t9944";
             this._queryDict[code] = new QueryEvents(code, Tr_t9944.OutBlock_t9944);
@@ -119,27 +121,9 @@ namespace XingBot.tr
 
         public void QueryT4201()
         {
-            //foreach (CodeStock value in Constants.CodeStocks.Values)
             Tr_t4201 tr4201 = new Tr_t4201();
             tr4201.Start();
             LOG.Info("finish all");
-
-            //Thread thread = new Thread(() =>
-            //{
-            //    Tr_t4201 tr4201 = new Tr_t4201(new _t4201InBlock()
-            //    {
-            //        //shcode = value.Code,
-            //        shcode = "000660",
-            //        gubun = "0",
-            //        ncnt = 1,
-            //        qrycnt = 500,
-            //        tdgb = "0",
-            //        sdate = "20200401",
-            //        edate = "20200416",
-            //    }, waitHandle);
-            //    tr4201.InBlock();
-            //    waitHandle.WaitOne();
-            //});
         }
     }
 }

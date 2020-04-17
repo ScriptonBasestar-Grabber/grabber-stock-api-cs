@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GrabberManager.model;
+using log4net;
+using XingBot.real;
 using XingBot.tr;
 
 namespace GrabberManager
@@ -22,12 +24,17 @@ namespace GrabberManager
     /// </summary>
     public partial class MainWindow : Window
     {
+        protected static readonly ILog LOG = LogManager.GetLogger("MainWindow");
         private LoginModel loginModel;
-        QueryCtrl queryCtrl;
+        QueryCtrl _queryCtrl;
+        RealCtrl _realCtrl;
         public MainWindow()
         {
             InitializeComponent();
             loginModel = new LoginModel("username", "userpass", "certpass");
+
+            _queryCtrl = new QueryCtrl();
+            _realCtrl = new RealCtrl();
         }
 
         private void CybosLogin_Click(object sender, RoutedEventArgs e)
@@ -44,10 +51,28 @@ namespace GrabberManager
             LoginStack.Children.Add(new LoginControl("xing", loginModel));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void t4201_Click(object sender, RoutedEventArgs e)
         {
-            queryCtrl = new QueryCtrl();
-            queryCtrl.QueryT4201();
+            _queryCtrl.QueryT4201();
         }
+
+        private void RealStock_Click(object sender, RoutedEventArgs e)
+        {
+            LOG.Info("real stock click");
+            _realCtrl.RealStockALL();
+            _realCtrl.RealStockKOSPI();
+            _realCtrl.RealStockKOSDAQ();
+        }
+
+        private void RealFutures_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RealOptions_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
