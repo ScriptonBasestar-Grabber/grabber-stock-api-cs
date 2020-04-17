@@ -120,7 +120,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Constants.cs" />
-    <Compile Include="io\FileIO.cs" />
     <Compile Include="LoginControl.xaml.cs">
       <DependentUpon>LoginControl.xaml</DependentUpon>
     </Compile>
@@ -130,7 +129,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="model\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -162,10 +160,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="util\" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\DataLib\DataLib.csproj">
+      <Project>{d97f2d9e-3997-46db-9d4b-74953592d756}</Project>
+      <Name>DataLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XingBot\XingBot.csproj">
       <Project>{9287d59b-36fd-439d-b094-5eccba69c99f}</Project>
       <Name>XingBot</Name>

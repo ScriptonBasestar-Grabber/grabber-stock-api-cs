@@ -7,11 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrabberManager", "GrabberMa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingBot", "XingBot\XingBot.csproj", "{9287D59B-36FD-439D-B094-5ECCBA69C99F}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ToolsPy", "ToolsPy\ToolsPy.pyproj", "{1588F307-B73F-421B-ABAA-A719B2BAD413}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLib", "DataLib\DataLib.csproj", "{D97F2D9E-3997-46DB-9D4B-74953592D756}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,12 +43,6 @@ Global
 		{9287D59B-36FD-439D-B094-5ECCBA69C99F}.Release|x64.Build.0 = Release|Any CPU
 		{9287D59B-36FD-439D-B094-5ECCBA69C99F}.Release|x86.ActiveCfg = Release|Any CPU
 		{9287D59B-36FD-439D-B094-5ECCBA69C99F}.Release|x86.Build.0 = Release|Any CPU
-		{1588F307-B73F-421B-ABAA-A719B2BAD413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1588F307-B73F-421B-ABAA-A719B2BAD413}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{1588F307-B73F-421B-ABAA-A719B2BAD413}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{1588F307-B73F-421B-ABAA-A719B2BAD413}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1588F307-B73F-421B-ABAA-A719B2BAD413}.Release|x64.ActiveCfg = Release|Any CPU
-		{1588F307-B73F-421B-ABAA-A719B2BAD413}.Release|x86.ActiveCfg = Release|Any CPU
 		{D97F2D9E-3997-46DB-9D4B-74953592D756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D97F2D9E-3997-46DB-9D4B-74953592D756}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D97F2D9E-3997-46DB-9D4B-74953592D756}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -65,18 +55,6 @@ Global
 		{D97F2D9E-3997-46DB-9D4B-74953592D756}.Release|x64.Build.0 = Release|Any CPU
 		{D97F2D9E-3997-46DB-9D4B-74953592D756}.Release|x86.ActiveCfg = Release|Any CPU
 		{D97F2D9E-3997-46DB-9D4B-74953592D756}.Release|x86.Build.0 = Release|Any CPU
-		{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}.Debug|x64.Build.0 = Debug|Any CPU
-		{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}.Debug|x86.Build.0 = Debug|Any CPU
-		{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}.Release|x64.ActiveCfg = Release|Any CPU
-		{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}.Release|x64.Build.0 = Release|Any CPU
-		{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}.Release|x86.ActiveCfg = Release|Any CPU
-		{21A3DDC4-D2C1-4215-A977-88EDCFA8DDED}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

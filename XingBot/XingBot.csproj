@@ -61,9 +61,6 @@
   <ItemGroup>
     <Compile Include="query\Tr_t4203.cs" />
     <Compile Include="query\Tr_t8414.cs" />
-    <Compile Include="Mapping\MappingFieldModel.cs" />
-    <Compile Include="Mapping\MappingRowModel.cs" />
-    <Compile Include="Mapping\RealMap.cs" />
     <Compile Include="real\real-delegates.cs" />
     <Compile Include="real\RealEvents.cs" />
     <Compile Include="res\models.cs" />
@@ -362,57 +359,57 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="real\RealCtrl.cs" />
-    <Compile Include="tr\derivatives\Tr_t8401.cs" />
-    <Compile Include="tr\derivatives\Tr_t9944.cs" />
-    <Compile Include="tr\elw\Tr_t9905.cs" />
-    <Compile Include="tr\derivatives\Tr_t9943.cs" />
-    <Compile Include="tr\query-delegates.cs" />
-    <Compile Include="tr\derivatives\Tr_t8435.cs" />
-    <Compile Include="tr\derivatives\Tr_t8433.cs" />
-    <Compile Include="tr\derivatives\Tr_t8432.cs" />
-    <Compile Include="tr\elw\Tr_t1981.cs" />
-    <Compile Include="tr\elw\Tr_t1950.cs" />
-    <Compile Include="tr\elw\Tr_t9942.cs" />
-    <Compile Include="tr\elw\Tr_t9907.cs" />
-    <Compile Include="tr\QueryCtrl.cs" />
+    <Compile Include="query\derivatives\Tr_t8401.cs" />
+    <Compile Include="query\derivatives\Tr_t9944.cs" />
+    <Compile Include="query\elw\Tr_t9905.cs" />
+    <Compile Include="query\derivatives\Tr_t9943.cs" />
+    <Compile Include="query\query-delegates.cs" />
+    <Compile Include="query\derivatives\Tr_t8435.cs" />
+    <Compile Include="query\derivatives\Tr_t8433.cs" />
+    <Compile Include="query\derivatives\Tr_t8432.cs" />
+    <Compile Include="query\elw\Tr_t1981.cs" />
+    <Compile Include="query\elw\Tr_t1950.cs" />
+    <Compile Include="query\elw\Tr_t9942.cs" />
+    <Compile Include="query\elw\Tr_t9907.cs" />
+    <Compile Include="query\QueryCtrl.cs" />
     <Compile Include="query\QueryBase.cs" />
-    <Compile Include="tr\QueryEvents.cs" />
-    <Compile Include="tr\sector\Tr_t8419.cs" />
-    <Compile Include="tr\sector\Tr_t8424.cs" />
-    <Compile Include="tr\stock\Tr_t1633.cs" />
-    <Compile Include="tr\stock\Tr_t1636.cs" />
-    <Compile Include="tr\stock\Tr_t1638.cs" />
-    <Compile Include="tr\stock\Tr_t1640.cs" />
-    <Compile Include="tr\stock\Tr_t1662.cs" />
-    <Compile Include="tr\stock\Tr_t1637.cs" />
-    <Compile Include="tr\stock\Tr_t1665.cs" />
-    <Compile Include="tr\stock\Tr_t1664.cs" />
-    <Compile Include="tr\stock\Tr_t1702.cs" />
-    <Compile Include="tr\stock\Tr_t1701.cs" />
-    <Compile Include="tr\stock\Tr_t1752.cs" />
-    <Compile Include="tr\stock\Tr_t1717.cs" />
-    <Compile Include="tr\stock\Tr_t1771.cs" />
-    <Compile Include="tr\stock\Tr_t1809.cs" />
-    <Compile Include="tr\stock\Tr_t1825.cs" />
-    <Compile Include="tr\stock\Tr_t1764.cs" />
-    <Compile Include="tr\stock\Tr_t1857.cs" />
-    <Compile Include="tr\stock\Tr_t1826.cs" />
-    <Compile Include="tr\stock\Tr_t1901.cs" />
-    <Compile Include="tr\stock\Tr_t1866.cs" />
-    <Compile Include="tr\stock\Tr_t1902.cs" />
-    <Compile Include="tr\stock\Tr_t1903.cs" />
-    <Compile Include="tr\stock\Tr_t1904.cs" />
-    <Compile Include="tr\stock\Tr_t1906.cs" />
-    <Compile Include="tr\stock\Tr_t1926.cs" />
-    <Compile Include="tr\stock\Tr_t1921.cs" />
-    <Compile Include="tr\stock\Tr_t1927.cs" />
-    <Compile Include="tr\stock\Tr_t1941.cs" />
-    <Compile Include="tr\stock\Tr_t8411.cs" />
-    <Compile Include="tr\stock\Tr_t8412.cs" />
+    <Compile Include="query\QueryEvents.cs" />
+    <Compile Include="query\sector\Tr_t8419.cs" />
+    <Compile Include="query\sector\Tr_t8424.cs" />
+    <Compile Include="query\stock\Tr_t1633.cs" />
+    <Compile Include="query\stock\Tr_t1636.cs" />
+    <Compile Include="query\stock\Tr_t1638.cs" />
+    <Compile Include="query\stock\Tr_t1640.cs" />
+    <Compile Include="query\stock\Tr_t1662.cs" />
+    <Compile Include="query\stock\Tr_t1637.cs" />
+    <Compile Include="query\stock\Tr_t1665.cs" />
+    <Compile Include="query\stock\Tr_t1664.cs" />
+    <Compile Include="query\stock\Tr_t1702.cs" />
+    <Compile Include="query\stock\Tr_t1701.cs" />
+    <Compile Include="query\stock\Tr_t1752.cs" />
+    <Compile Include="query\stock\Tr_t1717.cs" />
+    <Compile Include="query\stock\Tr_t1771.cs" />
+    <Compile Include="query\stock\Tr_t1809.cs" />
+    <Compile Include="query\stock\Tr_t1825.cs" />
+    <Compile Include="query\stock\Tr_t1764.cs" />
+    <Compile Include="query\stock\Tr_t1857.cs" />
+    <Compile Include="query\stock\Tr_t1826.cs" />
+    <Compile Include="query\stock\Tr_t1901.cs" />
+    <Compile Include="query\stock\Tr_t1866.cs" />
+    <Compile Include="query\stock\Tr_t1902.cs" />
+    <Compile Include="query\stock\Tr_t1903.cs" />
+    <Compile Include="query\stock\Tr_t1904.cs" />
+    <Compile Include="query\stock\Tr_t1906.cs" />
+    <Compile Include="query\stock\Tr_t1926.cs" />
+    <Compile Include="query\stock\Tr_t1921.cs" />
+    <Compile Include="query\stock\Tr_t1927.cs" />
+    <Compile Include="query\stock\Tr_t1941.cs" />
+    <Compile Include="query\stock\Tr_t8411.cs" />
+    <Compile Include="query\stock\Tr_t8412.cs" />
     <Compile Include="query\Tr_t4201.cs" />
-    <Compile Include="tr\stock\Tr_t8436.cs" />
-    <Compile Include="tr\stock\Tr_t8425.cs" />
-    <Compile Include="tr\stock\Tr_t8413.cs" />
+    <Compile Include="query\stock\Tr_t8436.cs" />
+    <Compile Include="query\stock\Tr_t8425.cs" />
+    <Compile Include="query\stock\Tr_t8413.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="XA_DATASETLib">
@@ -453,7 +450,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="README.md" />
-    <None Include="res\limit.yaml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataLib\DataLib.csproj">

@@ -14,6 +14,7 @@ namespace XingBot.res
     {
         public static ResModel Read(string resfile)
         {
+            char[] delimiterChars = { Convert.ToChar(13), Convert.ToChar(10), ' ', ',', '.', ':', '\t', ';' };
             int euckrCodepage = 51949;
             // System.Text.Encoding utf8 = System.Text.Encoding.UTF8;
             System.Text.Encoding euckr = System.Text.Encoding.GetEncoding(euckrCodepage);
@@ -26,15 +27,14 @@ namespace XingBot.res
                 if (lines[idxLine].TrimStart().StartsWith(".Feed") || lines[idxLine].TrimStart().StartsWith(".Func"))
                 {
                     Console.WriteLine("Feed before " + lines[idxLine]);
-                    var spline = lines[idxLine].Trim().Split(',');
-                    resModel.Name = spline[2];
-                    resModel.Desc = spline[1];
-                    // Console.WriteLine("feed after " + spline[2] + " " + spline[1]);
+                    var words1 = lines[idxLine].Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
+                    resModel.Name = words1[2].Trim();
+                    resModel.Desc = words1[1].Trim();
                 }
                 else if (lines[idxLine].Contains("InBlock") || lines[idxLine].Contains("OutBlock"))
                 {
-                    var spline = lines[idxLine].Trim().Split(',');
-                    Block block = new Block { Name = spline[0], Desc = spline[1] };
+                    var words1= lines[idxLine].Trim().Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
+                    Block block = new Block { Name = words1[0], Desc = words1[1] };
                     idxLine++;
                     if (lines[idxLine].TrimStart().StartsWith("begin"))
                     {
@@ -49,10 +49,8 @@ namespace XingBot.res
                             {
                                 break;
                             }
-                            //var spline1 = Regex.Split(lines[idxInner].Trim(), "[,;\\s\t]+");
-                            var spline1 = Regex.Split(lines[idxInner].Trim(), "[,;]+");
-                            //var spline1 = lines[idxInner].Split(',');
-                            block.Rows.Add(new Row { Name = spline1[1].Trim(), Desc = spline1[0].Trim(), Length = spline1[4].Trim(), DataType = spline1[3].Trim() });
+                            var words2 = lines[idxInner].Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
+                            block.Rows.Add(new Row { Name = words2[1].Trim(), Desc = words2[0].Trim(), Length = words2[4].Trim(), DataType = words2[3].Trim() });
                         }
                         // Console.WriteLine(block.Name);
                         resModel.Blocks.Add(block.Name, block);

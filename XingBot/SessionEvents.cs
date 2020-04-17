@@ -25,7 +25,7 @@ namespace XingBot
 
             _session = new XASession();
 
-            icpc = (UCOMIConnectionPointContainer) _session;
+            icpc = (UCOMIConnectionPointContainer)_session;
             Guid IID_SessionEvents = typeof(_IXASessionEvents).GUID;
             icpc.FindConnectionPoint(ref IID_SessionEvents, out icp);
             icp.Advise(this, out dwCookie);
@@ -39,7 +39,7 @@ namespace XingBot
         public void Login(string UserName, string UserPass, string CertPass)
         {
             _session.ConnectServer("api.ebestsec.co.kr", 20001);
-            _session.Login(UserName, UserPass, CertPass, (int) XA_SESSIONLib.XA_SERVER_TYPE.XA_SIMUL_SERVER, true);
+            _session.Login(UserName, UserPass, CertPass, (int)XA_SESSIONLib.XA_SERVER_TYPE.XA_SIMUL_SERVER, true);
         }
 
         void _IXASessionEvents.Login(string szCode, string szMsg)
@@ -59,7 +59,6 @@ namespace XingBot
         void _IXASessionEvents.Disconnect()
         {
             Console.WriteLine("disconnected");
-            //TODO reconnect
         }
     }
 }
