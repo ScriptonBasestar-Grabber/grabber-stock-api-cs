@@ -6,9 +6,9 @@ namespace DataLib.model
 {
     public class CodeStock
     {
-        public string Name;
         public string Code;
-        public string ExpCode;
+        public string ExpandedCode;
+        public string Name;
         // 1 ETC, 2 ETN
         public string EtfGubun;
         // Y N

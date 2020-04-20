@@ -6,8 +6,8 @@ namespace DataLib.model
 {
     public class CodeElwBase
     {
-        public string Name;
         public string Code;
-        public string ExpCode;
+        public string ExpandedCode;
+        public string Name;
     }
 }

@@ -1,30 +1,43 @@
-﻿using System;
+﻿using DataLib.model;
+using DataLib.util;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using DataLib.model;
 using XA_DATASETLib;
+using XingBot.Properties;
 using XingBot.real;
 using XingBot.res;
+using XingBot.tr;
 
-namespace XingBot.tr
+namespace XingBot.query
 {
-    public class Tr_t8436
+    public class QueryT8436 : QueryCodeBase
     {
-        public static readonly InBlockQuery InBlock_t8436 = (resModel, query, dict) =>
-        {
-            var szTrCode = resModel.Name;
-            var block = resModel.Blocks[szTrCode + "InBlock"];
-            block.Rows.ForEach(delegate(Row row)
-            {
-                query.SetFieldData(block.Name, row.Name, 0, dict[row.Name]);
-            });
-            query.Request(false);
-        };
+        private _t8436InBlock _inBlock;
 
-        public static readonly OutBlockQuery OutBlock_t8436 = (resModel, query, writer) =>
+        public QueryT8436() : base("t8436")
+        {
+        }
+
+        public void Start()
+        {
+            _inBlock.gubun = "0";
+            InBlock();
+        }
+
+        protected override void InBlock()
+        {
+            var szTrCode = _resModel.Name;
+            var block = _resModel.Blocks[szTrCode + "InBlock"];
+            _query.SetFieldData(block.Name, "gubun", 0, _inBlock.gubun);
+            _query.Request(false);
+        }
+
+        protected override void OutBlock(ResModel resModel, IXAQuery query, CsvHelper.CsvWriter writer)
         {
             var szTrCode = resModel.Name;
             var block = resModel.Blocks[szTrCode + "OutBlock"];
@@ -53,13 +66,14 @@ namespace XingBot.tr
                 {
                     Name = result.hname,
                     Code = result.shcode,
-                    ExpCode = result.expcode,
+                    ExpandedCode = result.expcode,
                     EtfGubun = result.etfgubun,
                     SpacGubun = result.spac_gubun,
                     MarketGubun = result.gubun,
                     Bu12Gubun = result.bu12gubun,
                 });
             }
-        };
+        }
+
     }
 }

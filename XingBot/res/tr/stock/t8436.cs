@@ -1,9 +1,9 @@
 ﻿namespace XingBot.res
 {
     // 주식종목조회 API용 ( BLOCK,HEADTYPE=A )
-    public class _t8436InBlock
+    public struct _t8436InBlock
     {
-        public string gubun { get; set; } // [string,    1] 구분(0:전체1:코스피2:코스닥)    StartPos 0, Length 1
+        public string gubun; // [string,    1] 구분(0:전체1:코스피2:코스닥)    StartPos 0, Length 1
     }
 
     public class _t8436OutBlock

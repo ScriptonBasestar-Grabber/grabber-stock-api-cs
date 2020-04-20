@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -20,12 +21,12 @@ namespace XingBot
             this._loginAction = loginAction;
 
             int dwCookie;
-            UCOMIConnectionPoint icp;
-            UCOMIConnectionPointContainer icpc;
+            IConnectionPoint icp;
+            IConnectionPointContainer icpc;
 
             _session = new XASession();
 
-            icpc = (UCOMIConnectionPointContainer)_session;
+            icpc = (IConnectionPointContainer)_session;
             Guid IID_SessionEvents = typeof(_IXASessionEvents).GUID;
             icpc.FindConnectionPoint(ref IID_SessionEvents, out icp);
             icp.Advise(this, out dwCookie);

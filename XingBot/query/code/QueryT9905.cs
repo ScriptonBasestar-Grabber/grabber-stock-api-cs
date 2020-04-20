@@ -1,30 +1,41 @@
-﻿using System;
+﻿using DataLib.model;
+using DataLib.util;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices.ComTypes;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using CsvHelper;
-using DataLib.model;
-using GrabberManager.util;
 using XA_DATASETLib;
+using XingBot.Properties;
 using XingBot.real;
 using XingBot.res;
+using XingBot.tr;
 
-namespace XingBot.tr
+namespace XingBot.query
 {
-    public class Tr_t9905
+    public class QueryT9905 : QueryCodeBase
     {
-        public static readonly InBlockQuery InBlock_t9905 = (resModel, query, dict) =>
+        //private _t9905InBlock _inBlock;
+        public QueryT9905() : base("t9905")
         {
-            var szTrCode = resModel.Name;
-            var block = resModel.Blocks[szTrCode + "InBlock"];
-            block.Rows.ForEach(delegate(Row row) { query.SetFieldData(block.Name, row.Name, 0, dict[row.Name]); });
-            query.Request(false);
-        };
+        }
 
-        public static readonly OutBlockQuery OutBlock_t9905 = (resModel, query, writer) =>
+        public void Start()
+        {
+            InBlock();
+        }
+
+        protected override void InBlock()
+        {
+            var szTrCode = _resModel.Name;
+            var block = _resModel.Blocks[szTrCode + "InBlock"];
+            _query.SetFieldData(block.Name, "dummy", 0, "");
+            _query.Request(false);
+        }
+
+        protected override void OutBlock(ResModel resModel, IXAQuery query, CsvHelper.CsvWriter writer)
         {
             var szTrCode = resModel.Name;
 
@@ -44,9 +55,9 @@ namespace XingBot.tr
                 {
                     Name = result.hname,
                     Code = result.shcode,
-                    ExpCode = result.expcode,
+                    ExpandedCode = result.expcode,
                 });
             }
-        };
+        }
     }
 }

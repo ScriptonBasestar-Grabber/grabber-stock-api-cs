@@ -4,6 +4,7 @@ using System.IO;
 using System.Runtime.InteropServices.ComTypes;
 using CsvHelper;
 using DataLib.util;
+using log4net;
 using XA_DATASETLib;
 using XingBot.Properties;
 using XingBot.real.Properties;
@@ -14,10 +15,10 @@ namespace XingBot.tr
 {
     public class QueryEvents : _IXAQueryEvents
     {
+        protected static readonly ILog LOG = LogManager.GetLogger("QueryEvents");
         private readonly IXAQuery _ixa;
         private readonly ResModel _resModel;
         private readonly OutBlockQuery _receiveAction;
-        private Action _afterAction = () => { };
 
         public QueryEvents(string szTrCode, OutBlockQuery receiveAction)
         {
@@ -37,16 +38,11 @@ namespace XingBot.tr
             icpc.FindConnectionPoint(ref iidQueryEvents, out icp);
             icp.Advise(this, out dwCookie);
 
-            Console.WriteLine("QueryEvents 생성자완료");
+            LOG.Info("QueryEvents 생성자완료");
         }
 
         public void InBlock(StringDict sdict)
         {
-            InBlock(sdict, () => { });
-        }
-        public void InBlock(StringDict sdict, Action afterAction)
-        {
-            _afterAction = afterAction;
             var szTrCode = _resModel.Name;
             var block = _resModel.Blocks[szTrCode + "InBlock"];
             block.Rows.ForEach(delegate(Row row) { _ixa.SetFieldData(block.Name, row.Name, 0, sdict[row.Name]); });
@@ -55,7 +51,7 @@ namespace XingBot.tr
 
         void _IXAQueryEvents.ReceiveData(string szTrCode)
         {
-            Console.WriteLine("_IXAQueryEvents.ReceiveData " + szTrCode);
+            LOG.Info("_IXAQueryEvents.ReceiveData " + szTrCode);
             OutBlock(szTrCode);
         }
 
@@ -67,33 +63,31 @@ namespace XingBot.tr
                 System.IO.Directory.CreateDirectory(fi.DirectoryName);
             }
 
-            // using (var writer = new StreamWriter(Settings.Default.data_path + "\\xing\\" + szTrCode + ".csv"))
             using (var writer = new StreamWriter(fi.OpenWrite()))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
                 _receiveAction(_resModel, _ixa, csv);
             }
-            _afterAction();
         }
 
         void _IXAQueryEvents.ReceiveMessage(bool bIsSystemError, string nMessageCode, string szMessage)
         {
-            Console.WriteLine("_IXAQueryEvents.ReceiveMessage  ");
-            Console.WriteLine(bIsSystemError);
-            Console.WriteLine(nMessageCode);
-            Console.WriteLine(szMessage);
+            LOG.Info("_IXAQueryEvents.ReceiveMessage  ");
+            LOG.Info(bIsSystemError);
+            LOG.Info(nMessageCode);
+            LOG.Info(szMessage);
             // ptForm.lblMessage.Text = nMessageCode;
         }
 
         void _IXAQueryEvents.ReceiveChartRealData(string szTrCode)
         {
-            Console.WriteLine("_IXAQueryEvents.ReceiveChartRealData " + szTrCode);
+            LOG.Info("_IXAQueryEvents.ReceiveChartRealData " + szTrCode);
             OutBlock(szTrCode);
         }
 
         void _IXAQueryEvents.ReceiveSearchRealData(string szTrCode)
         {
-            Console.WriteLine("_IXAQueryEvents.ReceiveSearchRealData " + szTrCode);
+            LOG.Info("_IXAQueryEvents.ReceiveSearchRealData " + szTrCode);
             OutBlock(szTrCode);
         }
     }

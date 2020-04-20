@@ -14,22 +14,21 @@ using XingBot.res;
 
 namespace XingBot.query
 {
-    public class Tr_t4201 : QueryBase
+    //주식 차트
+    public class Tr_t4201 : QueryChartBase
     {
         private _t4201InBlock _inBlock;
-        private int _codeIdx;
-        private Dictionary<string, CodeStock> codes;
+        private List<string> codes;
 
         public Tr_t4201() : base("t4201")
         {
-            _codeIdx = 0;
         }
 
         public void Start()
         {
-            codes = Constants.CodeStocks;
-            var code = codes.Values.ElementAt(_codeIdx);
-            InBlock(code.Code);
+            codes = Constants.CodeStocks.Select(code0 => code0.Value.Code).ToList();
+            var code = codes.ElementAt(_codeIdx);
+            InBlock(code);
         }
 
         protected override void InBlock(string shcode, bool isNext = false)
@@ -173,8 +172,14 @@ namespace XingBot.query
             {
                 //finish notify
                 _codeIdx++;
-                var code = codes.Values.ElementAt(_codeIdx);
-                InBlock(code.Code);
+                if (codes.Count < _codeIdx)
+                {
+                    var code = codes.ElementAt(_codeIdx);
+                    InBlock(code);
+                } else
+                {
+                    //TODO next callback hell
+                }
             }
         }
 

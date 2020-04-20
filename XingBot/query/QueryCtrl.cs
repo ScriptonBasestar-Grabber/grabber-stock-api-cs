@@ -18,65 +18,88 @@ namespace XingBot.tr
     public class QueryCtrl
     {
         protected static readonly ILog LOG = LogManager.GetLogger("QueryCtrl");
-        private readonly Dictionary<string, QueryEvents> _queryDict = new Dictionary<string, QueryEvents>();
 
         public void QueryInit()
         {
-            string code;
             // TODO 순차적 이벤트 완료되는거 확인하고 다음걸로 하려면 콜백지옥?
-            // ========================= t9905 기초자산리스트조회 =========================
-            code = "t9905";
-            this._queryDict[code] = new QueryEvents(code, Tr_t9905.OutBlock_t9905);
-            this._queryDict[code].InBlock(new StringDict()
-            {
-                ["dummy"] = ""
-            });
-            // ========================= t8401 업종코드 =========================
-            code = "t8401";
-            this._queryDict[code] = new QueryEvents(code, Tr_t8401.OutBlock_t8401);
-            this._queryDict[code].InBlock(new StringDict()
-            {
-                ["dummy"] = ""
-            });
+            string code;
+            // ========================= t8436 주식종목조회 API용 =========================
+            code = "t8436";
+            var queryT8436 = new QueryT8436();
+            queryT8436.Start();
             // ========================= t8424 업종코드 =========================
             code = "t8424";
-            this._queryDict[code] = new QueryEvents(code, Tr_t8424.OutBlock_t8424);
-            this._queryDict[code].InBlock(new StringDict()
+            var queryT8424 = new QueryT8424();
+            queryT8424.Start(new _t8424InBlock()
             {
-                ["gubun1"] = "0"
+                gubun1 = "1"
+            });
+            queryT8424.Start(new _t8424InBlock()
+            {
+                gubun1 = "2"
+            });
+            queryT8424.Start(new _t8424InBlock()
+            {
+                gubun1 = "3"
+            });
+            queryT8424.Start(new _t8424InBlock()
+            {
+                gubun1 = "4"
             });
             // ========================= t8425 테마전체조회 =========================
             code = "t8425";
-            this._queryDict[code] = new QueryEvents(code, Tr_t8425.OutBlock_t8425);
-            this._queryDict[code].InBlock(new StringDict()
+            var queryT8425 = new QueryT8425();
+            queryT8425.Start();
+            // ========================= t9905 ELW 기초자산리스트조회 =========================
+            code = "t9905";
+            var queryT9905 = new QueryT9905();
+            queryT9905.Start();
+
+            // ========================= t9943 지수선물마스터조회 API용 =========================
+            code = "t9943";
+            var queryT9943 = new QueryT9943();
+            queryT9943.Start(new _t9943InBlock()
             {
-                ["dummy"] = ""
+                gubun = "V"
             });
+            queryT9943.Start(new _t9943InBlock()
+            {
+                gubun = "S"
+            });
+            queryT9943.Start(new _t9943InBlock()
+            {
+                gubun = ""
+            });
+
+            // ========================= t9944 지수옵션마스터조회 API용 =========================
+            code = "t9944";
+            var queryT9944 = new QueryT9944();
+            queryT9944.Start();
             // ========================= t8435 파생종목마스터조회 API용 =========================
             code = "t8435";
-            this._queryDict[code] = new QueryEvents(code, Tr_t8435.OutBlock_t8435);
-            this._queryDict[code].InBlock(new StringDict()
+            var queryT8435 = new QueryT8435();
+            queryT8435.Start(new _t8435InBlock()
             {
-                ["gubun"] = "MF"
+                gubun = "MF"
             });
-            this._queryDict[code] = new QueryEvents(code, Tr_t8435.OutBlock_t8435);
-            this._queryDict[code].InBlock(new StringDict()
+            queryT8435.Start(new _t8435InBlock()
             {
-                ["gubun"] = "MO"
+                gubun = "MO"
             });
-            // Thread.Sleep(1000);
-            // this._queryDict[code] = new QueryEvents(code);
-            // this._queryDict[code].InBlock(new StringDict()
-            // {
-            //     ["gubun"] = "WK"
-            // });
-            // ========================= t8436 주식종목조회 API용 =========================
-            code = "t8436";
-            this._queryDict[code] = new QueryEvents(code, Tr_t8436.OutBlock_t8436);
-            this._queryDict[code].InBlock(new StringDict()
+            queryT8435.Start(new _t8435InBlock()
             {
-                ["gubun"] = "0"
+                gubun = "WK"
             });
+
+            // ========================= t8401 주식선물 마스터 조회 =========================
+            code = "t8401";
+            var queryT8401 = new QueryT8401();
+            queryT8401.Start();
+            // ========================= t8426 상품선물 마스터 조회 =========================
+            code = "t8426";
+            var queryT8426 = new QueryT8426();
+            queryT8426.Start();
+
             // // ========================= t9907 만기월조회 =========================
             // code = "t9907";
             // this._queryDict[code] = new QueryEvents(code, Tr_t9907.OutBlock_t9907);
@@ -86,36 +109,8 @@ namespace XingBot.tr
             // });
             // ========================= t9942 ELW마스터조회 API용 =========================
             code = "t9942";
-            this._queryDict[code] = new QueryEvents(code, Tr_t9942.OutBlock_t9942);
-            this._queryDict[code].InBlock(new StringDict()
-            {
-                ["dummy"] = ""
-            });
-            // ========================= t9943 지수선물마스터조회 API용 =========================
-            code = "t9943";
-            this._queryDict[code] = new QueryEvents(code, Tr_t9943.OutBlock_t9943);
-            this._queryDict[code].InBlock(new StringDict()
-            {
-                ["gubun"] = "V"
-            });
-            // Thread.Sleep(1000);
-            this._queryDict[code] = new QueryEvents(code, Tr_t9943.OutBlock_t9943);
-            this._queryDict[code].InBlock(new StringDict()
-            {
-                ["gubun"] = "S"
-            });
-            this._queryDict[code] = new QueryEvents(code, Tr_t9943.OutBlock_t9943);
-            this._queryDict[code].InBlock(new StringDict()
-            {
-                ["gubun"] = ""
-            });
-            // ========================= t9944 지수옵션마스터조회 API용 =========================
-            code = "t9944";
-            this._queryDict[code] = new QueryEvents(code, Tr_t9944.OutBlock_t9944);
-            this._queryDict[code].InBlock(new StringDict()
-            {
-                ["dummy"] = ""
-            });
+            var queryT9942 = new QueryT9942();
+            queryT9942.Start();
             Console.WriteLine("QueryInit 생성자완료");
         }
 
@@ -123,6 +118,18 @@ namespace XingBot.tr
         {
             Tr_t4201 tr4201 = new Tr_t4201();
             tr4201.Start();
+            LOG.Info("finish all");
+        }
+        public void QueryT4203()
+        {
+            Tr_t4203 tr4203 = new Tr_t4203();
+            tr4203.Start();
+            LOG.Info("finish all");
+        }
+        public void QueryT8414()
+        {
+            Tr_t8414 tr8414 = new Tr_t8414();
+            tr8414.Start();
             LOG.Info("finish all");
         }
     }

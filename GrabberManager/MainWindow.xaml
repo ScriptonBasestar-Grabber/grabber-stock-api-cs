@@ -12,11 +12,9 @@
             <Button x:Name="CybosLogin" Content="Cybos" HorizontalAlignment="Center" VerticalAlignment="Top" Width="75" Click="CybosLogin_Click" />
         </StackPanel>
         <StackPanel Name="LoginStack" HorizontalAlignment="Left" Height="352" Margin="0,48,0,0" VerticalAlignment="Top" Width="122"/>
-        <StackPanel HorizontalAlignment="Right" Height="400" VerticalAlignment="Top" Width="271">
-            <Label Content="WorkingStatus" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" RenderTransformOrigin="-9.942,-3.425" Width="88" Height="30"/>
-            <ListBox HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="271"/>
-        </StackPanel>
-        <Button Content="t4201-Chart" HorizontalAlignment="Left" Margin="127,33,0,0" VerticalAlignment="Top" Width="75" Click="t4201_Click"/>
+        <Button x:Name="t4201" Content="t4201-Chart" HorizontalAlignment="Left" Margin="262,58,0,0" VerticalAlignment="Top" Width="75" Click="t4201_Click"/>
+        <Button x:Name="t4203" Content="t4203-Chart" HorizontalAlignment="Left" Margin="262,83,0,0" VerticalAlignment="Top" Width="75" Click="t4203_Click"/>
+        <Button x:Name="t8414" Content="t8414-Chart" HorizontalAlignment="Left" Margin="262,108,0,0" VerticalAlignment="Top" Width="75" Click="t8414_Click"/>
         <Button x:Name="RealStock" Content="RealStock" HorizontalAlignment="Left" Margin="127,58,0,0" VerticalAlignment="Top" Width="75" Click="RealStock_Click" />
         <Button x:Name="RealFutures" Content="RealFutures" HorizontalAlignment="Left" Margin="127,83,0,0" VerticalAlignment="Top" Width="75" Click="RealFutures_Click"/>
         <Button x:Name="RealOptions" Content="RealOptions" HorizontalAlignment="Left" Margin="127,108,0,0" VerticalAlignment="Top" Width="75" Click="RealOptions_Click"/>

@@ -3,6 +3,7 @@
     // 업종전체조회 ( ATTR,BLOCK,HEADTYPE=A )
     public class _t8424InBlock
     {
+        // 1 KOSPI 2 KOSDAQ 3,4
         public string gubun1 { get; set; } // [string,    1] 구분1                           StartPos 0, Length 1
     }
 

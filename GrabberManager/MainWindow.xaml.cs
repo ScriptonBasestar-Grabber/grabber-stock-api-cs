@@ -56,6 +56,16 @@ namespace GrabberManager
             _queryCtrl.QueryT4201();
         }
 
+        private void t4203_Click(object sender, RoutedEventArgs e)
+        {
+            _queryCtrl.QueryT4203();
+        }
+
+        private void t8414_Click(object sender, RoutedEventArgs e)
+        {
+            _queryCtrl.QueryT8414();
+        }
+
         private void RealStock_Click(object sender, RoutedEventArgs e)
         {
             LOG.Info("real stock click");

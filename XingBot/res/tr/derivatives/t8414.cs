@@ -1,19 +1,19 @@
 ﻿namespace XingBot.res
 {
     // 선물옵션차트(틱/n틱) ( ATTR,BLOCK,HEADTYPE=A )
-    public class _t8414InBlock
+    public struct _t8414InBlock
     {
-        public string shcode{ get; set; } // [string,    8] 단축코드                        StartPos 0, Length 8
-        public long ncnt{ get; set; } // [long  ,    4] 단위(n틱)                       StartPos 9, Length 4
-        public long qrycnt{ get; set; } // [long  ,    4] 요청건수(최대-압축:2000비압축:5 StartPos 14, Length 4
-        public string nday{ get; set; } // [string,    1] 조회영업일수(0:미사용1>=사용)   StartPos 19, Length 1
-        public string sdate{ get; set; } // [string,    8] 시작일자                        StartPos 21, Length 8
-        public string stime{ get; set; } // [string,    6] 시작시간(현재미사용)            StartPos 30, Length 6
-        public string edate{ get; set; } // [string,    8] 종료일자                        StartPos 37, Length 8
-        public string etime{ get; set; } // [string,    6] 종료시간(현재미사용)            StartPos 46, Length 6
-        public string cts_date{ get; set; } // [string,    8] 연속일자                        StartPos 53, Length 8
-        public string cts_time{ get; set; } // [string,   10] 연속시간                        StartPos 62, Length 10
-        public string comp_yn{ get; set; } // [string,    1] 압축여부(Y:압축N:비압축)        StartPos 73, Length 1
+        public string shcode; // [string,    8] 단축코드                        StartPos 0, Length 8
+        public long ncnt; // [long  ,    4] 단위(n틱)                       StartPos 9, Length 4
+        public long qrycnt; // [long  ,    4] 요청건수(최대-압축:2000비압축:5 StartPos 14, Length 4
+        public string nday; // [string,    1] 조회영업일수(0:미사용1>=사용)   StartPos 19, Length 1
+        public string sdate; // [string,    8] 시작일자                        StartPos 21, Length 8
+        public string stime; // [string,    6] 시작시간(현재미사용)            StartPos 30, Length 6
+        public string edate; // [string,    8] 종료일자                        StartPos 37, Length 8
+        public string etime; // [string,    6] 종료시간(현재미사용)            StartPos 46, Length 6
+        public string cts_date; // [string,    8] 연속일자                        StartPos 53, Length 8
+        public string cts_time; // [string,   10] 연속시간                        StartPos 62, Length 10
+        public string comp_yn; // [string,    1] 압축여부(Y:압축N:비압축)        StartPos 73, Length 1
     }
 
     public class _t8414OutBlock

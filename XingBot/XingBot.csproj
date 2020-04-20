@@ -59,8 +59,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="query\Tr_t4203.cs" />
-    <Compile Include="query\Tr_t8414.cs" />
+    <Compile Include="query\code\QueryT8401.cs" />
+    <Compile Include="query\code\QueryT9942.cs" />
+    <Compile Include="query\code\QueryT8426.cs" />
+    <Compile Include="query\code\QueryT8435.cs" />
+    <Compile Include="query\code\QueryT9944.cs" />
+    <Compile Include="query\code\QueryT9943.cs" />
+    <Compile Include="query\code\QueryT9905.cs" />
+    <Compile Include="query\code\QueryT8425.cs" />
+    <Compile Include="query\code\QueryT8424.cs" />
+    <Compile Include="query\code\QueryT8436.cs" />
+    <Compile Include="query\derivatives\Tr_t8426.cs" />
+    <Compile Include="query\code\QueryCodeBase.cs" />
+    <Compile Include="query\chart\Tr_t4203.cs" />
+    <Compile Include="query\chart\Tr_t8414.cs" />
     <Compile Include="real\real-delegates.cs" />
     <Compile Include="real\RealEvents.cs" />
     <Compile Include="res\models.cs" />
@@ -360,9 +372,6 @@
     </Compile>
     <Compile Include="real\RealCtrl.cs" />
     <Compile Include="query\derivatives\Tr_t8401.cs" />
-    <Compile Include="query\derivatives\Tr_t9944.cs" />
-    <Compile Include="query\elw\Tr_t9905.cs" />
-    <Compile Include="query\derivatives\Tr_t9943.cs" />
     <Compile Include="query\query-delegates.cs" />
     <Compile Include="query\derivatives\Tr_t8435.cs" />
     <Compile Include="query\derivatives\Tr_t8433.cs" />
@@ -372,10 +381,9 @@
     <Compile Include="query\elw\Tr_t9942.cs" />
     <Compile Include="query\elw\Tr_t9907.cs" />
     <Compile Include="query\QueryCtrl.cs" />
-    <Compile Include="query\QueryBase.cs" />
+    <Compile Include="query\chart\QueryChartBase.cs" />
     <Compile Include="query\QueryEvents.cs" />
     <Compile Include="query\sector\Tr_t8419.cs" />
-    <Compile Include="query\sector\Tr_t8424.cs" />
     <Compile Include="query\stock\Tr_t1633.cs" />
     <Compile Include="query\stock\Tr_t1636.cs" />
     <Compile Include="query\stock\Tr_t1638.cs" />
@@ -399,15 +407,13 @@
     <Compile Include="query\stock\Tr_t1902.cs" />
     <Compile Include="query\stock\Tr_t1903.cs" />
     <Compile Include="query\stock\Tr_t1904.cs" />
-    <Compile Include="query\stock\Tr_t1906.cs" />
     <Compile Include="query\stock\Tr_t1926.cs" />
     <Compile Include="query\stock\Tr_t1921.cs" />
     <Compile Include="query\stock\Tr_t1927.cs" />
     <Compile Include="query\stock\Tr_t1941.cs" />
     <Compile Include="query\stock\Tr_t8411.cs" />
     <Compile Include="query\stock\Tr_t8412.cs" />
-    <Compile Include="query\Tr_t4201.cs" />
-    <Compile Include="query\stock\Tr_t8436.cs" />
+    <Compile Include="query\chart\Tr_t4201.cs" />
     <Compile Include="query\stock\Tr_t8425.cs" />
     <Compile Include="query\stock\Tr_t8413.cs" />
   </ItemGroup>

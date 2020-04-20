@@ -6,13 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using DataLib.model;
 
-namespace XingBot.real
+namespace XingBot
 {
     public class Constants
     {
         public static readonly Dictionary<string, CodeStock> CodeStocks = new Dictionary<string, CodeStock>();
-        public static readonly Dictionary<string, CodeK200Future> CodeK200Futures = new Dictionary<string, CodeK200Future>();
-        public static readonly Dictionary<string, CodeK200Option> CodeK200Options = new Dictionary<string, CodeK200Option>();
+        public static readonly Dictionary<string, CodeFutures> CodeFutures = new Dictionary<string, CodeFutures>();
+        public static readonly Dictionary<string, CodeOptions> CodeOptions = new Dictionary<string, CodeOptions>();
         public static readonly Dictionary<string, CodeSector> CodeSectors = new Dictionary<string, CodeSector>();
         public static readonly Dictionary<string, CodeTheme> CodeThemes = new Dictionary<string, CodeTheme>();
         public static readonly Dictionary<string, CodeElw> CodeElws = new Dictionary<string, CodeElw>();

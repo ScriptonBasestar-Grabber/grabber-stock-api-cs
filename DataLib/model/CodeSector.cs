@@ -4,9 +4,14 @@ using System.Text;
 
 namespace DataLib.model
 {
+    /**
+     * 업종, 테마
+     */
     public class CodeSector
     {
-        public string Name;
+        //KOSPI, KOSDAQ, KRX, ETC, Theme
+        public string Category;
         public string Code;
+        public string Name;
     }
 }

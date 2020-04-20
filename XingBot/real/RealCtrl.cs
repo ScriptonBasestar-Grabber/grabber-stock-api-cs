@@ -113,7 +113,7 @@ namespace XingBot.real
         //}
         public void RealDerivativesKospi200Futures()
         {
-            List<CodeK200Future> codeK200Futures = new List<CodeK200Future>(Constants.CodeK200Futures.Values);
+            List<CodeFutures> codeK200Futures = new List<CodeFutures>(Constants.CodeFutures.Values);
             string[] fucodes = codeK200Futures.Select(code => code.Code).ToArray();
             var codeName = "fucode";
             //CallReal("C01",codeName, fucodes);
@@ -133,7 +133,7 @@ namespace XingBot.real
         }
         public void RealDerivativesKospi200Options()
         {
-            List<CodeK200Option> codeK200Option = new List<CodeK200Option>(Constants.CodeK200Options.Values);
+            List<CodeOptions> codeK200Option = new List<CodeOptions>(Constants.CodeOptions.Values);
             string[] optcodes = codeK200Option.Select(code => code.Code).ToArray();
             var codeName = "optcode";
             CallReal("EC0", codeName, optcodes);

@@ -14,7 +14,7 @@ namespace XingBot.res
     {
         public static ResModel Read(string resfile)
         {
-            char[] delimiterChars = { Convert.ToChar(13), Convert.ToChar(10), ' ', ',', '.', ':', '\t', ';' };
+            char[] delimiterChars = { Convert.ToChar(13), Convert.ToChar(10), ',',';' };
             int euckrCodepage = 51949;
             // System.Text.Encoding utf8 = System.Text.Encoding.UTF8;
             System.Text.Encoding euckr = System.Text.Encoding.GetEncoding(euckrCodepage);
