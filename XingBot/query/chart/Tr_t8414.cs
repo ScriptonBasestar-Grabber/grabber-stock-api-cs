@@ -143,7 +143,7 @@ namespace XingBot.query
             {
                 //finish notify
                 _codeIdx++;
-                if (codes.Count < _codeIdx)
+                if (codes.Count > _codeIdx)
                 {
                     var code = codes.ElementAt(_codeIdx);
                     InBlock(code);

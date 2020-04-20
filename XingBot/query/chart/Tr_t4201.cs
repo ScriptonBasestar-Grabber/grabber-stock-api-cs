@@ -19,6 +19,7 @@ namespace XingBot.query
     {
         private _t4201InBlock _inBlock;
         private List<string> codes;
+        private DateTime trLimit;
 
         public Tr_t4201() : base("t4201")
         {
@@ -34,10 +35,45 @@ namespace XingBot.query
         protected override void InBlock(string shcode, bool isNext = false)
         {
             var szTrCode = _resModel.Name;
-            while (_query.GetTRCountRequest(szTrCode) > _query.GetTRCountLimit(szTrCode) - 1)
+            var trCountRequest = _query.GetTRCountRequest(szTrCode);
+            var trCountLimit = _query.GetTRCountLimit(szTrCode);
+            if (trCountRequest <= 1)
             {
-                Thread.Sleep(1000);
+                trLimit = DateTime.Now;
             }
+            while (trCountRequest > trCountLimit - 1)
+            {
+                LOG.Info("waiting until reset count");
+                LOG.Info("===========  GetTRCountBaseSec");
+                LOG.Info(_query.GetTRCountBaseSec(szTrCode));
+                LOG.Info("===========  GetTRCountRequest");
+                LOG.Info(_query.GetTRCountRequest(szTrCode));
+                LOG.Info("===========  GetTRCountLimit");
+                LOG.Info(_query.GetTRCountLimit(szTrCode));
+                LOG.Info("===========  GetTRCountPerSec");
+                LOG.Info(_query.GetTRCountPerSec(szTrCode));
+                Thread.Sleep(5000);
+                LOG.Info(trLimit);
+                if(trLimit < DateTime.Now.AddMinutes(-10))
+                {
+                    break;
+                }
+            }
+            //if (_query.GetTRCountRequest(szTrCode) == _query.GetTRCountLimit(szTrCode) - 1)
+            //{
+            //    LOG.Info("waiting until reset count");
+            //    LOG.Info("===========  GetTRCountBaseSec");
+            //    LOG.Info(_query.GetTRCountBaseSec(szTrCode));
+            //    LOG.Info("===========  GetTRCountRequest");
+            //    LOG.Info(_query.GetTRCountRequest(szTrCode));
+            //    LOG.Info("===========  GetTRCountLimit");
+            //    LOG.Info(_query.GetTRCountLimit(szTrCode));
+            //    LOG.Info("===========  GetTRCountPerSec");
+            //    LOG.Info(_query.GetTRCountPerSec(szTrCode));
+            //    //TODO 1일때 시간. 200일때 시간 10분.
+            //    //Thread.Sleep(1000 * 60 * 10);
+            //    Thread.Sleep(5000);
+            //}
             if (isNext == false)
             {
                 fi = new FileInfo(Settings.Default.data_path + "\\xing\\" + szTrCode + "-" + shcode + ".csv");
@@ -170,9 +206,8 @@ namespace XingBot.query
             }
             else
             {
-                //finish notify
                 _codeIdx++;
-                if (codes.Count < _codeIdx)
+                if (codes.Count > _codeIdx)
                 {
                     var code = codes.ElementAt(_codeIdx);
                     InBlock(code);
