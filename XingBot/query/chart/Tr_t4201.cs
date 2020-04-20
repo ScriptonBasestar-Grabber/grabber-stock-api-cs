@@ -43,37 +43,10 @@ namespace XingBot.query
             }
             while (trCountRequest > trCountLimit - 1)
             {
-                LOG.Info("waiting until reset count");
-                LOG.Info("===========  GetTRCountBaseSec");
-                LOG.Info(_query.GetTRCountBaseSec(szTrCode));
-                LOG.Info("===========  GetTRCountRequest");
-                LOG.Info(_query.GetTRCountRequest(szTrCode));
-                LOG.Info("===========  GetTRCountLimit");
-                LOG.Info(_query.GetTRCountLimit(szTrCode));
-                LOG.Info("===========  GetTRCountPerSec");
-                LOG.Info(_query.GetTRCountPerSec(szTrCode));
-                Thread.Sleep(5000);
-                LOG.Info(trLimit);
-                if(trLimit < DateTime.Now.AddMinutes(-10))
-                {
-                    break;
-                }
+                var sleepSecond = trLimit.AddMinutes(10).Second - DateTime.Now.Second;
+                LOG.Info("sleep until :" + sleepSecond);
+                Thread.Sleep(sleepSecond);
             }
-            //if (_query.GetTRCountRequest(szTrCode) == _query.GetTRCountLimit(szTrCode) - 1)
-            //{
-            //    LOG.Info("waiting until reset count");
-            //    LOG.Info("===========  GetTRCountBaseSec");
-            //    LOG.Info(_query.GetTRCountBaseSec(szTrCode));
-            //    LOG.Info("===========  GetTRCountRequest");
-            //    LOG.Info(_query.GetTRCountRequest(szTrCode));
-            //    LOG.Info("===========  GetTRCountLimit");
-            //    LOG.Info(_query.GetTRCountLimit(szTrCode));
-            //    LOG.Info("===========  GetTRCountPerSec");
-            //    LOG.Info(_query.GetTRCountPerSec(szTrCode));
-            //    //TODO 1일때 시간. 200일때 시간 10분.
-            //    //Thread.Sleep(1000 * 60 * 10);
-            //    Thread.Sleep(5000);
-            //}
             if (isNext == false)
             {
                 fi = new FileInfo(Settings.Default.data_path + "\\xing\\" + szTrCode + "-" + shcode + ".csv");
@@ -211,7 +184,8 @@ namespace XingBot.query
                 {
                     var code = codes.ElementAt(_codeIdx);
                     InBlock(code);
-                } else
+                }
+                else
                 {
                     //TODO next callback hell
                 }

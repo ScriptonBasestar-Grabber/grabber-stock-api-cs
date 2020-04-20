@@ -19,6 +19,7 @@ namespace XingBot.query
     {
         private _t8414InBlock _inBlock;
         private List<string> codes;
+        private DateTime trLimit;
 
         public Tr_t8414() : base("t8414")
         {
@@ -36,9 +37,17 @@ namespace XingBot.query
         protected override void InBlock(string shcode, bool isNext = false)
         {
             var szTrCode = _resModel.Name;
-            while (_query.GetTRCountRequest(szTrCode) > _query.GetTRCountLimit(szTrCode) - 1)
+            var trCountRequest = _query.GetTRCountRequest(szTrCode);
+            var trCountLimit = _query.GetTRCountLimit(szTrCode);
+            if (trCountRequest <= 1)
             {
-                Thread.Sleep(1000);
+                trLimit = DateTime.Now;
+            }
+            while (trCountRequest > trCountLimit - 1)
+            {
+                var sleepSecond = trLimit.AddMinutes(10).Second - DateTime.Now.Second;
+                LOG.Info("sleep until :" + sleepSecond);
+                Thread.Sleep(sleepSecond);
             }
             if (isNext == false)
             {
