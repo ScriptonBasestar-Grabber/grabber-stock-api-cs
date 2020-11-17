@@ -444,6 +444,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\DataLib\DataLib.csproj">
+      <Link>DataLib.csproj</Link>
+    </None>
     <None Include="app.config" />
     <None Include="log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
