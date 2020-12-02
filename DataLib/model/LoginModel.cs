@@ -1,4 +1,4 @@
-﻿namespace GrabberManager.model
+﻿namespace DataLib.model
 {
     public class LoginModel
     {

@@ -1,21 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using log4net;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using GrabberManager.model;
-using log4net;
-using XingBot.real;
-using XingBot.tr;
 
 namespace GrabberManager
 {
@@ -25,53 +9,52 @@ namespace GrabberManager
     public partial class MainWindow : Window
     {
         protected static readonly ILog LOG = LogManager.GetLogger("MainWindow");
-        private LoginModel loginModel;
-        QueryCtrl _queryCtrl;
-        RealCtrl _realCtrl;
+
+        private XingBot.Main _xingMain;
+
         public MainWindow()
         {
             InitializeComponent();
-            loginModel = new LoginModel("username", "userpass", "certpass");
-
-            _queryCtrl = new QueryCtrl();
-            _realCtrl = new RealCtrl();
         }
 
         private void CybosLogin_Click(object sender, RoutedEventArgs e)
         {
-            LoginStack.Children.Clear();
-            // TODO set saved value
-            LoginStack.Children.Add(new LoginControl("cybos", loginModel));
+            //LoginStack.Children.Clear();
+            //TODO set saved value
+            //LoginStack.Children.Add(new LoginControl("cybos", loginModel));
         }
 
         private void XingLogin_Click(object sender, RoutedEventArgs e)
         {
+            _xingMain = new XingBot.Main();
             LoginStack.Children.Clear();
-            // TODO set saved value
-            LoginStack.Children.Add(new LoginControl("xing", loginModel));
+            LoginStack.Children.Add(new LoginControl(_xingMain.getLoginModel(), (string username, string userpas, string certpass) =>
+            {
+                _xingMain.login(username, userpas, certpass);
+            }));
         }
-
+        
         private void t4201_Click(object sender, RoutedEventArgs e)
         {
-            _queryCtrl.QueryT4201();
+            //_queryCtrl.QueryT4201();
         }
 
         private void t4203_Click(object sender, RoutedEventArgs e)
         {
-            _queryCtrl.QueryT4203();
+            //_queryCtrl.QueryT4203();
         }
 
         private void t8414_Click(object sender, RoutedEventArgs e)
         {
-            _queryCtrl.QueryT8414();
+            //_queryCtrl.QueryT8414();
         }
 
         private void RealStock_Click(object sender, RoutedEventArgs e)
         {
-            LOG.Info("real stock click");
-            _realCtrl.RealStockALL();
-            _realCtrl.RealStockKOSPI();
-            _realCtrl.RealStockKOSDAQ();
+            //LOG.Info("real stock click");
+            //_realCtrl.RealStockALL();
+            //_realCtrl.RealStockKOSPI();
+            //_realCtrl.RealStockKOSDAQ();
         }
 
         private void RealFutures_Click(object sender, RoutedEventArgs e)
