@@ -37,10 +37,10 @@ namespace XingBot
             _session.Logout();
         }
 
-        public void Login(string UserName, string UserPass, string CertPass)
+        public void Login(string username, string userpass, string certpass)
         {
             _session.ConnectServer("api.ebestsec.co.kr", 20001);
-            _session.Login(UserName, UserPass, CertPass, (int)XA_SESSIONLib.XA_SERVER_TYPE.XA_SIMUL_SERVER, true);
+            _session.Login(username, userpass, certpass, (int)XA_SESSIONLib.XA_SERVER_TYPE.XA_SIMUL_SERVER, true);
         }
 
         void _IXASessionEvents.Login(string szCode, string szMsg)

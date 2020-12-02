@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XingBot", "XingBot\XingBot.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLib", "DataLib\DataLib.csproj", "{D97F2D9E-3997-46DB-9D4B-74953592D756}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CybosBot", "CybosBot\CybosBot.csproj", "{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{D97F2D9E-3997-46DB-9D4B-74953592D756}.Release|x64.Build.0 = Release|Any CPU
 		{D97F2D9E-3997-46DB-9D4B-74953592D756}.Release|x86.ActiveCfg = Release|Any CPU
 		{D97F2D9E-3997-46DB-9D4B-74953592D756}.Release|x86.Build.0 = Release|Any CPU
+		{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}.Debug|x64.Build.0 = Debug|Any CPU
+		{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}.Debug|x86.Build.0 = Debug|Any CPU
+		{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}.Release|x64.ActiveCfg = Release|Any CPU
+		{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}.Release|x64.Build.0 = Release|Any CPU
+		{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}.Release|x86.ActiveCfg = Release|Any CPU
+		{5681FF9D-DCAD-4EE4-B092-A6FE7953407F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

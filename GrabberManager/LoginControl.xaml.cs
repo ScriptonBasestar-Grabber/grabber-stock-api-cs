@@ -1,23 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using DataLib.model;
+using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using GrabberManager.model;
-using XingBot;
-using XingBot.real;
-using XingBot.res;
-using XingBot.tr;
 
 namespace GrabberManager
 {
@@ -26,35 +10,24 @@ namespace GrabberManager
     /// </summary>
     public partial class LoginControl : UserControl
     {
-        private string _company;
+        public delegate void LoginClickCallback(string username, string userpas, string certpass);
 
-        public LoginControl(string company, LoginModel loginModel)
+        private LoginClickCallback _callback;
+
+        public LoginControl(LoginModel loginModel, LoginClickCallback callback)
         {
             InitializeComponent();
-
-            this._company = company;
 
             TxtUserName.Text = loginModel.UserName;
             TxtUserPass.Password = loginModel.UserPass;
             TxtCertPass.Password = loginModel.CertPass;
+            _callback = callback;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ((StackPanel)this.Parent).Children.Clear();
-            if (_company == "xing")
-            {
-                QueryCtrl queryCtrl;
-                SessionEvents session = new SessionEvents(() =>
-                {
-                    queryCtrl = new QueryCtrl();
-                    queryCtrl.QueryInit();
-                });
-                session.Login(TxtUserName.Text, TxtUserPass.Password, TxtCertPass.Password);
-            } else if (_company == "cybos")
-            {
-
-            }
+            Console.WriteLine("click butteon");
+            _callback(TxtUserName.Text, TxtUserPass.Password, TxtCertPass.Password);
         }
     }
 }

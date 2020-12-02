@@ -11,13 +11,50 @@
             <Button x:Name="XingLogin" Content="Xing" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="76" Margin="2,0" Click="XingLogin_Click" />
             <Button x:Name="CybosLogin" Content="Cybos" HorizontalAlignment="Center" VerticalAlignment="Top" Width="75" Click="CybosLogin_Click" />
         </StackPanel>
-        <StackPanel Name="LoginStack" HorizontalAlignment="Left" Height="352" Margin="0,48,0,0" VerticalAlignment="Top" Width="122"/>
-        <Button x:Name="t4201" Content="t4201-Chart" HorizontalAlignment="Left" Margin="262,58,0,0" VerticalAlignment="Top" Width="75" Click="t4201_Click"/>
+        <StackPanel Name="LoginStack" HorizontalAlignment="Left" Height="352" Margin="0,48,0,0" VerticalAlignment="Top" Width="122">
+            <Label Content="Label"/>
+        </StackPanel>
+        <Button x:Name="t4201" Content="t4201-Chart" HorizontalAlignment="Left" Margin="262,58,0,0" VerticalAlignment="Top" Width="75" Click="t4201_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-3.462"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
         <Button x:Name="t4203" Content="t4203-Chart" HorizontalAlignment="Left" Margin="262,83,0,0" VerticalAlignment="Top" Width="75" Click="t4203_Click"/>
-        <Button x:Name="t8414" Content="t8414-Chart" HorizontalAlignment="Left" Margin="262,108,0,0" VerticalAlignment="Top" Width="75" Click="t8414_Click"/>
-        <Button x:Name="RealStock" Content="RealStock" HorizontalAlignment="Left" Margin="127,58,0,0" VerticalAlignment="Top" Width="75" Click="RealStock_Click" />
-        <Button x:Name="RealFutures" Content="RealFutures" HorizontalAlignment="Left" Margin="127,83,0,0" VerticalAlignment="Top" Width="75" Click="RealFutures_Click"/>
-        <Button x:Name="RealOptions" Content="RealOptions" HorizontalAlignment="Left" Margin="127,108,0,0" VerticalAlignment="Top" Width="75" Click="RealOptions_Click"/>
-
+        <Button x:Name="t8414" Content="t8414-Chart" HorizontalAlignment="Left" Margin="263,114,0,0" VerticalAlignment="Top" Width="75" Click="t8414_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-6.227"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="RealStock" Content="RealStock" HorizontalAlignment="Left" Margin="131,54,0,0" VerticalAlignment="Top" Width="75" Click="RealStock_Click" RenderTransformOrigin="0.5,0.5" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="3.408"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="RealFutures" Content="RealFutures" HorizontalAlignment="Left" Margin="134,83,0,0" VerticalAlignment="Top" Width="75" Click="RealFutures_Click"/>
+        <Button x:Name="RealOptions" Content="RealOptions" HorizontalAlignment="Left" Margin="134,113,0,0" VerticalAlignment="Top" Width="75" Click="RealOptions_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="5.12"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Window>
