@@ -23,10 +23,13 @@ namespace XingBot.query
 
         public Tr_t8414() : base("t8414")
         {
+            LOG.Info("Constructor Tr_t8414");
         }
 
-        public void Start()
+        public void Start(Action action)
         {
+            LOG.Debug("t8414 start");
+            _action = action;
             var fucodes = Constants.CodeFutures.Select(code0 => code0.Value.Code).ToList();
             var opcodes = Constants.CodeOptions.Select(code0 => code0.Value.Code).ToList();
             codes = fucodes.Concat(opcodes).ToList();
@@ -37,17 +40,14 @@ namespace XingBot.query
         protected override void InBlock(string shcode, bool isNext = false)
         {
             var szTrCode = _resModel.Name;
-            var trCountRequest = _query.GetTRCountRequest(szTrCode);
-            var trCountLimit = _query.GetTRCountLimit(szTrCode);
-            if (trCountRequest <= 1)
+            LOG.Debug($"trCountLimit : {_query.GetTRCountLimit(szTrCode)}, trCountRequest : {_query.GetTRCountRequest(szTrCode)}, trCountBaseSec : {_query.GetTRCountBaseSec(szTrCode)}, trCountPerSec : {_query.GetTRCountPerSec(szTrCode)}");
+            if (_query.GetTRCountLimit(szTrCode) != 0)
             {
-                trLimit = DateTime.Now;
-            }
-            while (trCountRequest > trCountLimit - 1)
-            {
-                var sleepSecond = trLimit.AddMinutes(10).Second - DateTime.Now.Second;
-                LOG.Info("sleep until :" + sleepSecond);
-                Thread.Sleep(sleepSecond);
+                while (_query.GetTRCountLimit(szTrCode) <= _query.GetTRCountRequest(szTrCode))
+                {
+                    LOG.Debug($"sleep {szTrCode} {_query.GetTRCountLimit(szTrCode)}, {_query.GetTRCountRequest(szTrCode)}");
+                    Thread.Sleep(10000);
+                }
             }
             if (isNext == false)
             {

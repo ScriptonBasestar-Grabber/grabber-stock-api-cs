@@ -40,5 +40,21 @@ namespace XingBot
             });
             session.Login(username, userpass, certpass);
         }
+
+        public void chartT4201()
+        {
+            _queryCtrl.QueryT4201();
+        }
+
+        public void chartT4203()
+        {
+            _queryCtrl.QueryT4203();
+        }
+
+        public void chartT8414()
+        {
+            _queryCtrl.QueryT8414();
+        }
+
     }
 }

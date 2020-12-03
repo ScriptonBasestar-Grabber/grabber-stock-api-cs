@@ -39,7 +39,7 @@ namespace XingBot.query
                 while (_query.GetTRCountLimit(szTrCode) <= _query.GetTRCountRequest(szTrCode))
                 {
                     LOG.Debug($"sleep {szTrCode} {_query.GetTRCountLimit(szTrCode)}, {_query.GetTRCountRequest(szTrCode)}");
-                    Thread.Sleep(1000);
+                    Thread.Sleep(10000);
                 }
             }
             var block = _resModel.Blocks[szTrCode + "InBlock"];

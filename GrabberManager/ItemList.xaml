@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="GrabberManager.ItemList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GrabberManager"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" Width="280">
+    <Grid>
+        <ListBox ItemsSource="{Binding TheList}"  HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="280">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox IsChecked="{Binding IsSelected}" Content="{Binding TheText}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

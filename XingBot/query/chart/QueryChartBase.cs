@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices.ComTypes;
+using System.Threading;
 using CsvHelper;
 using DataLib.util;
 using log4net;
@@ -24,6 +25,8 @@ namespace XingBot.query
         public Action<string> BeforeAction { set => _beforeAction = value; }
         protected Action<string> _afterAction = (szTrCode) => { Console.WriteLine(szTrCode + "empty afterAction"); };
         public Action<string> AfterAction { set => _beforeAction = value; }
+
+        protected Action _action;
         protected FileInfo fi;
 
 
@@ -36,6 +39,7 @@ namespace XingBot.query
             int dwCookie = 0;
             IConnectionPoint icp;
             IConnectionPointContainer icpc;
+
             _query = new XAQuery
             {
                 ResFileName = resFileName
@@ -45,7 +49,7 @@ namespace XingBot.query
             icpc.FindConnectionPoint(ref iidQueryEvents, out icp);
             icp.Advise(this, out dwCookie);
 
-            Console.WriteLine("QueryEvents 생성자완료");
+            LOG.Info($"QueryChartBase 생성자완료 szTrCode: {szTrCode}");
         }
 
         protected abstract void InBlock(string shcode, bool isNext = false);
@@ -53,7 +57,7 @@ namespace XingBot.query
         void _IXAQueryEvents.ReceiveData(string szTrCode)
         {
             _beforeAction(szTrCode);
-            LOG.Info("_IXAQueryEvents.ReceiveData " + szTrCode);
+            LOG.Info($"_IXAQueryEvents.ReceiveData szTrCode: {szTrCode}");
             //using (var writer = new StreamWriter(Settings.Default.data_path + "\\xing\\" + szTrCode + ".csv"))
             //using (var writer = new StreamWriter(fi.Open(FileMode.Append)))
             //using (var writer = new StreamWriter(fi.AppendWrite()))
@@ -63,6 +67,11 @@ namespace XingBot.query
                 OutBlock(_resModel, _query, csv);
             }
             _afterAction(szTrCode);
+            if (_action != null)
+            {
+                Thread.Sleep(1000 / _query.GetTRCountPerSec(szTrCode) + 10);
+                _action();
+            }
         }
 
         protected abstract void OutBlock(ResModel resModel, IXAQuery query, CsvHelper.CsvWriter writer);

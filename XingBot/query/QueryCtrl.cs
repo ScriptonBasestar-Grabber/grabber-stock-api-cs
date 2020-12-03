@@ -143,20 +143,21 @@ namespace XingBot.tr
 
         public void QueryT4201()
         {
+            // fullscan 만 가능한게 돼 버렸는데 이걸 외부로
             Tr_t4201 tr4201 = new Tr_t4201();
-            tr4201.Start();
+            tr4201.Start(null);
             LOG.Info("finish all");
         }
         public void QueryT4203()
         {
             Tr_t4203 tr4203 = new Tr_t4203();
-            tr4203.Start();
+            tr4203.Start(null);
             LOG.Info("finish all");
         }
         public void QueryT8414()
         {
             Tr_t8414 tr8414 = new Tr_t8414();
-            tr8414.Start();
+            tr8414.Start(null);
             LOG.Info("finish all");
         }
     }

@@ -37,35 +37,20 @@ namespace GrabberManager
         
         private void t4201_Click(object sender, RoutedEventArgs e)
         {
-            //_queryCtrl.QueryT4201();
+            LOG.Info("real stock click");
+            _xingMain.chartT4201();
         }
 
         private void t4203_Click(object sender, RoutedEventArgs e)
         {
-            //_queryCtrl.QueryT4203();
+            LOG.Info("real stock click");
+            _xingMain.chartT4203();
         }
 
         private void t8414_Click(object sender, RoutedEventArgs e)
         {
-            //_queryCtrl.QueryT8414();
-        }
-
-        private void RealStock_Click(object sender, RoutedEventArgs e)
-        {
-            //LOG.Info("real stock click");
-            //_realCtrl.RealStockALL();
-            //_realCtrl.RealStockKOSPI();
-            //_realCtrl.RealStockKOSDAQ();
-        }
-
-        private void RealFutures_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RealOptions_Click(object sender, RoutedEventArgs e)
-        {
-
+            LOG.Info("real stock click");
+            _xingMain.chartT8414();
         }
 
     }
