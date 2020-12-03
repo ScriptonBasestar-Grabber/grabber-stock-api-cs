@@ -386,7 +386,6 @@
     <Compile Include="query\elw\Tr_t9907.cs" />
     <Compile Include="query\QueryCtrl.cs" />
     <Compile Include="query\chart\QueryChartBase.cs" />
-    <Compile Include="query\QueryEvents.cs" />
     <Compile Include="query\sector\Tr_t8419.cs" />
     <Compile Include="query\stock\Tr_t1633.cs" />
     <Compile Include="query\stock\Tr_t1636.cs" />

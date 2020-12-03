@@ -21,88 +21,111 @@ namespace XingBot.tr
 
         public void QueryInit()
         {
-            LOG.Info("query init");
+            LOG.Info("QueryInit start");
             // TODO 순차적 이벤트 완료되는거 확인하고 다음걸로 하려면 콜백지옥?
             string code;
             // ========================= t8436 주식종목조회 API용 =========================
             LOG.Debug("t8436");
             code = "t8436";
+            //Thread thread = new Thread(() => {
+            
+            //});
             var queryT8436 = new QueryT8436();
-            queryT8436.Start();
             // ========================= t8424 업종코드 =========================
             LOG.Debug("t8424");
             code = "t8424";
             var queryT8424 = new QueryT8424();
-            queryT8424.Start(new _t8424InBlock()
+            queryT8436.Start(() =>
             {
-                gubun1 = "1"
+                queryT8424.Start(new _t8424InBlock()
+                {
+                    gubun1 = "1"
+                }, () =>
+                {
+                    queryT8424.Start(new _t8424InBlock()
+                    {
+                        gubun1 = "2"
+                    }, () =>
+                    {
+                        queryT8424.Start(new _t8424InBlock()
+                        {
+                            gubun1 = "3"
+                        }, () =>
+                        {
+                            queryT8424.Start(new _t8424InBlock()
+                            {
+                                gubun1 = "4"
+                            }, () => { });
+                        });
+                    });
+                });
             });
-            queryT8424.Start(new _t8424InBlock()
-            {
-                gubun1 = "2"
-            });
-            queryT8424.Start(new _t8424InBlock()
-            {
-                gubun1 = "3"
-            });
-            queryT8424.Start(new _t8424InBlock()
-            {
-                gubun1 = "4"
-            });
+            Thread.Sleep(1000);
             // ========================= t8425 테마전체조회 =========================
             code = "t8425";
             var queryT8425 = new QueryT8425();
-            queryT8425.Start();
+            queryT8425.Start(null);
+            Thread.Sleep(1000);
             // ========================= t9905 ELW 기초자산리스트조회 =========================
             code = "t9905";
             var queryT9905 = new QueryT9905();
-            queryT9905.Start();
-
+            queryT9905.Start(null);
+            Thread.Sleep(1000);
             // ========================= t9943 지수선물마스터조회 API용 =========================
             code = "t9943";
             var queryT9943 = new QueryT9943();
             queryT9943.Start(new _t9943InBlock()
             {
                 gubun = "V"
-            });
-            queryT9943.Start(new _t9943InBlock()
+            }, () =>
             {
-                gubun = "S"
+                queryT9943.Start(new _t9943InBlock()
+                {
+                    gubun = "S"
+                }, () =>
+                {
+                    queryT9943.Start(new _t9943InBlock()
+                    {
+                        gubun = ""
+                    }, null);
+                });
             });
-            queryT9943.Start(new _t9943InBlock()
-            {
-                gubun = ""
-            });
-
+            Thread.Sleep(1000);
             // ========================= t9944 지수옵션마스터조회 API용 =========================
             code = "t9944";
             var queryT9944 = new QueryT9944();
-            queryT9944.Start();
+            queryT9944.Start(null);
+            Thread.Sleep(1000);
             // ========================= t8435 파생종목마스터조회 API용 =========================
             code = "t8435";
             var queryT8435 = new QueryT8435();
             queryT8435.Start(new _t8435InBlock()
             {
                 gubun = "MF"
-            });
-            queryT8435.Start(new _t8435InBlock()
+            }, () =>
             {
-                gubun = "MO"
+                queryT8435.Start(new _t8435InBlock()
+                {
+                    gubun = "MO"
+                }, () =>
+                {
+                    queryT8435.Start(new _t8435InBlock()
+                    {
+                        gubun = "WK"
+                    }, null);
+                });
             });
-            queryT8435.Start(new _t8435InBlock()
-            {
-                gubun = "WK"
-            });
-
+            Thread.Sleep(1000);
             // ========================= t8401 주식선물 마스터 조회 =========================
             code = "t8401";
             var queryT8401 = new QueryT8401();
-            queryT8401.Start();
+            queryT8401.Start(null);
+            Thread.Sleep(1000);
             // ========================= t8426 상품선물 마스터 조회 =========================
             code = "t8426";
             var queryT8426 = new QueryT8426();
-            queryT8426.Start();
-
+            queryT8426.Start(null);
+            Thread.Sleep(1000);
             // // ========================= t9907 만기월조회 =========================
             // code = "t9907";
             // this._queryDict[code] = new QueryEvents(code, Tr_t9907.OutBlock_t9907);
@@ -113,7 +136,8 @@ namespace XingBot.tr
             // ========================= t9942 ELW마스터조회 API용 =========================
             code = "t9942";
             var queryT9942 = new QueryT9942();
-            queryT9942.Start();
+            queryT9942.Start(null);
+            Thread.Sleep(1000);
             Console.WriteLine("QueryInit 생성자완료");
         }
 

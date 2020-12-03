@@ -29,7 +29,8 @@ namespace XingBot.query
 
         public QueryChartBase(string szTrCode)
         {
-            _resModel = ReadResFile.Read(Settings.Default.root_path + @"\Res\" + szTrCode + ".res");
+            var resFileName = Path.Combine(Settings.Default.root_path, "Res", szTrCode + ".res");
+            _resModel = ReadResFile.Read(resFileName);
             _codeIdx = 0;
 
             int dwCookie = 0;
@@ -37,7 +38,7 @@ namespace XingBot.query
             IConnectionPointContainer icpc;
             _query = new XAQuery
             {
-                ResFileName = Settings.Default.root_path + @"\Res\" + szTrCode + ".res"
+                ResFileName = resFileName
             };
             icpc = (IConnectionPointContainer)_query;
             Guid iidQueryEvents = typeof(_IXAQueryEvents).GUID;
@@ -52,7 +53,7 @@ namespace XingBot.query
         void _IXAQueryEvents.ReceiveData(string szTrCode)
         {
             _beforeAction(szTrCode);
-            Console.WriteLine("_IXAQueryEvents.ReceiveData " + szTrCode);
+            LOG.Info("_IXAQueryEvents.ReceiveData " + szTrCode);
             //using (var writer = new StreamWriter(Settings.Default.data_path + "\\xing\\" + szTrCode + ".csv"))
             //using (var writer = new StreamWriter(fi.Open(FileMode.Append)))
             //using (var writer = new StreamWriter(fi.AppendWrite()))

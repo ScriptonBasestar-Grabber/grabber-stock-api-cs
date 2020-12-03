@@ -70,7 +70,7 @@ namespace XingBot.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\tmp")]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\tmp\\xing")]
         public string data_path {
             get {
                 return ((string)(this["data_path"]));

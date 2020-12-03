@@ -7,7 +7,7 @@ namespace XingBot
 {
     public class Main
     {
-        protected static readonly ILog LOG = LogManager.GetLogger("XingBot");
+        protected static readonly ILog LOG = LogManager.GetLogger("XingBot.Main");
 
         QueryCtrl _queryCtrl;
         RealCtrl _realCtrl;
