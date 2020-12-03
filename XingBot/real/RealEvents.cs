@@ -24,7 +24,8 @@ namespace XingBot.real
         private FileInfo fi;
         public RealEvents(string szTrCode)
         {
-            _resModel = ReadResFile.Read(Settings.Default.root_path + @"\res\" + szTrCode + ".res");
+            var resFileName = Path.Combine(Settings.Default.root_path, "Res", szTrCode + ".res");
+            _resModel = ReadResFile.Read(resFileName);
 
             int dwCookie = 0;
             IConnectionPoint icp;
@@ -32,7 +33,7 @@ namespace XingBot.real
 
             _ixa = new XAReal
             {
-                ResFileName = Settings.Default.root_path + @"\res\" + szTrCode + ".res"
+                ResFileName = resFileName
             };
             icpc = (IConnectionPointContainer)_ixa;
             Guid iidRealEvents = typeof(_IXARealEvents).GUID;
@@ -46,7 +47,7 @@ namespace XingBot.real
         {
             var szTrCode = _resModel.Name;
 
-            fi = new FileInfo(Settings.Default.data_path + "\\xing\\" + szTrCode + "-" + separator + ".csv");
+            fi = new FileInfo(Path.Combine(Settings.Default.data_path, szTrCode + ".csv"));
             if (fi.Directory != null && !fi.Directory.Exists)
             {
                 System.IO.Directory.CreateDirectory(fi.DirectoryName);
