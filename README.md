@@ -1,5 +1,5 @@
-# Grabber API CS
-
+Grabber API CS
+==============
 
 ## 개요
 
@@ -7,32 +7,42 @@
 
 ### 수집
 
-* xing(ebestsec)
+* xing(ebestsec,이베스트투자증권)
+* cybos(daishin,대신증권)
 
 ### 저장
 
-* kafka
 * csv
 
 
-## Dev
+## 환경구성
 
-* VS2019
+### DEV
+
+사전설치 항목
+
 * WIN10
+* VS2019 - WPF, .NET desktop 개발도구
+* XING API - 기본경로 설치
+* XING DevCenter - RES 다운로드
 
-1. ebestsec.kr - 요즘엔 xing api 설치하면 dll설치됨, 이 프로젝트 기본경로
-2. VS2019 섫치 - .NET 데스크톱 개발
-3. git clone ~
-4. GrabberCS.sln
-5. nuget 초기화
-6. DataLib이 안 열리는 경우 프로젝트 리로드
-7. 노가다시작
+소스코드 받은 후
+
+1. git clone ~
+2. GrabberCS.sln
+3. nuget 초기화
+4. DataLib이 안 열리는 경우 프로젝트 리로드
+5. 노가다시작
 
 
-## Install(현재불가)
+### PRD
 
-인스톨러가 필요할지 고민
+XXXXXXXXXXXXXXX
 
-윈도우 백그라운드, 자동로그인 안되면 수동
 
-kafka 전달
+## TODO
+
+* Kafka 전달
+* 윈도우 스케줄러 설치
+* 자동실행, 로그인
+* 윈도우 백그라운드 실행
