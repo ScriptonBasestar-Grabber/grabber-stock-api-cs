@@ -26,7 +26,7 @@ namespace GrabberManager
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("click butteon");
+            Console.WriteLine("Login Button Click");
             _callback(TxtUserName.Text, TxtUserPass.Password, TxtCertPass.Password);
         }
     }

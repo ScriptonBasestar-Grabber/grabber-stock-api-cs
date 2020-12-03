@@ -31,6 +31,7 @@ namespace GrabberManager
             LoginStack.Children.Add(new LoginControl(_xingMain.getLoginModel(), (string username, string userpas, string certpass) =>
             {
                 _xingMain.login(username, userpas, certpass);
+                LoginStack.Children.Clear();
             }));
         }
         
