@@ -21,19 +21,18 @@ namespace XingBot
         public LoginModel getLoginModel()
         {
             return new LoginModel(
-                //Properties.Settings.Default.username ?? "",
-                //Properties.Settings.Default.userpass ?? "",
-                //Properties.Settings.Default.certpass ?? ""
-                "","",""
+                Properties.Settings.Default.username ?? "",
+                Properties.Settings.Default.userpass ?? "",
+                Properties.Settings.Default.certpass ?? ""
                 );
         }
 
         public void login(string username, string userpass, string certpass)
         {
-            //Properties.Settings.Default.username = username;
-            //Properties.Settings.Default.userpass = userpass;
-            //Properties.Settings.Default.certpass = certpass;
-            //Properties.Settings.Default.Save();
+            Properties.Settings.Default.username = username;
+            Properties.Settings.Default.userpass = userpass;
+            Properties.Settings.Default.certpass = certpass;
+            Properties.Settings.Default.Save();
             SessionEvents session = new SessionEvents(() =>
             {
                 _queryCtrl = new QueryCtrl();

@@ -25,30 +25,6 @@ namespace XingBot.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\eBEST\\xingAPI")]
-        public string root_path {
-            get {
-                return ((string)(this["root_path"]));
-            }
-            set {
-                this["root_path"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\tmp")]
-        public string data_path {
-            get {
-                return ((string)(this["data_path"]));
-            }
-            set {
-                this["data_path"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string username {
             get {
@@ -80,6 +56,24 @@ namespace XingBot.Properties {
             }
             set {
                 this["certpass"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\eBEST\\xingAPI")]
+        public string root_path {
+            get {
+                return ((string)(this["root_path"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\tmp")]
+        public string data_path {
+            get {
+                return ((string)(this["data_path"]));
             }
         }
     }

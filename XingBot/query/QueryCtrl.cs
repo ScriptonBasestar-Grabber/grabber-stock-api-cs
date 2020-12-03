@@ -21,15 +21,16 @@ namespace XingBot.tr
 
         public void QueryInit()
         {
+            LOG.Info("query init");
             // TODO 순차적 이벤트 완료되는거 확인하고 다음걸로 하려면 콜백지옥?
             string code;
             // ========================= t8436 주식종목조회 API용 =========================
-            Console.WriteLine("t8436");
+            LOG.Debug("t8436");
             code = "t8436";
             var queryT8436 = new QueryT8436();
             queryT8436.Start();
             // ========================= t8424 업종코드 =========================
-            Console.WriteLine("t8424");
+            LOG.Debug("t8424");
             code = "t8424";
             var queryT8424 = new QueryT8424();
             queryT8424.Start(new _t8424InBlock()

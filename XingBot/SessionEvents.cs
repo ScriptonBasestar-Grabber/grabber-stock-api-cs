@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -13,6 +14,8 @@ namespace XingBot
 {
     public class SessionEvents : _IXASessionEvents
     {
+        protected static readonly ILog LOG = LogManager.GetLogger("SessionEvent");
+
         private readonly IXASession _session;
         private readonly Action _loginAction;
 
@@ -45,21 +48,19 @@ namespace XingBot
 
         void _IXASessionEvents.Login(string szCode, string szMsg)
         {
-            Console.WriteLine("login");
-            Console.WriteLine(szCode);
-            Console.WriteLine(szMsg);
+            LOG.Debug($"login s- szCode: {szCode} szMsg: {szMsg}");
             _loginAction();
-            Console.WriteLine("call query init next line");
+            LOG.Debug("login e");
         }
 
         void _IXASessionEvents.Logout()
         {
-            Console.WriteLine("logout");
+            LOG.Debug("logout");
         }
 
         void _IXASessionEvents.Disconnect()
         {
-            Console.WriteLine("disconnected");
+            LOG.Debug("disconnect");
         }
     }
 }
