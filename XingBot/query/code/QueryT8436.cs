@@ -21,10 +21,12 @@ namespace XingBot.query
 
         public QueryT8436() : base("t8436")
         {
+            LOG.Info("QueryT8436 생성자");
         }
 
         public void Start()
         {
+            LOG.Debug("t8436 start");
             _inBlock.gubun = "0";
             InBlock();
         }

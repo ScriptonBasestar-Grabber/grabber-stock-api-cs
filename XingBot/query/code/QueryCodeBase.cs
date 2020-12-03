@@ -21,20 +21,27 @@ namespace XingBot.query
 
         public QueryCodeBase(string szTrCode)
         {
+            LOG.Info("QueryEvents 생성자 11111");
             _resModel = ReadResFile.Read(Settings.Default.root_path + @"\Res\" + szTrCode + ".res");
 
             int dwCookie = 0;
             IConnectionPoint icp;
             IConnectionPointContainer icpc;
 
+            LOG.Info("QueryEvents 생성자 11111");
             _query = new XAQuery
             {
                 ResFileName = Settings.Default.root_path + @"\Res\" + szTrCode + ".res"
             };
+            LOG.Info("QueryEvents 생성자 11111");
             icpc = (IConnectionPointContainer)_query;
+            LOG.Info("QueryEvents 생성자 11111");
             Guid iidQueryEvents = typeof(_IXAQueryEvents).GUID;
+            LOG.Info("QueryEvents 생성자 11111");
             icpc.FindConnectionPoint(ref iidQueryEvents, out icp);
+            LOG.Info("QueryEvents 생성자 11111");
             icp.Advise(this, out dwCookie);
+            LOG.Info("QueryEvents 생성자 11111");
 
             LOG.Info("QueryEvents 생성자완료");
         }
