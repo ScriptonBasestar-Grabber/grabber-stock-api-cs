@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices.ComTypes;
+using System.Threading;
 using CsvHelper;
 using DataLib.util;
 using log4net;
@@ -19,70 +20,68 @@ namespace XingBot.query
         protected readonly IXAQuery _query;
         protected readonly ResModel _resModel;
 
+        protected Action _action;
+
         public QueryCodeBase(string szTrCode)
         {
-            LOG.Info("QueryEvents 생성자 11111");
-            _resModel = ReadResFile.Read(Settings.Default.root_path + @"\Res\" + szTrCode + ".res");
+            var resFileName = Path.Combine(Settings.Default.root_path, "Res", szTrCode + ".res");
+            _resModel = ReadResFile.Read(resFileName);
 
             int dwCookie = 0;
             IConnectionPoint icp;
             IConnectionPointContainer icpc;
 
-            LOG.Info("QueryEvents 생성자 11111");
             _query = new XAQuery
             {
-                ResFileName = Settings.Default.root_path + @"\Res\" + szTrCode + ".res"
+                ResFileName = resFileName
             };
-            LOG.Info("QueryEvents 생성자 11111");
             icpc = (IConnectionPointContainer)_query;
-            LOG.Info("QueryEvents 생성자 11111");
             Guid iidQueryEvents = typeof(_IXAQueryEvents).GUID;
-            LOG.Info("QueryEvents 생성자 11111");
             icpc.FindConnectionPoint(ref iidQueryEvents, out icp);
-            LOG.Info("QueryEvents 생성자 11111");
             icp.Advise(this, out dwCookie);
-            LOG.Info("QueryEvents 생성자 11111");
 
-            LOG.Info("QueryEvents 생성자완료");
+            LOG.Info($"QueryCodeBase 생성자완료 szTrCode: {szTrCode}");
         }
 
         protected abstract void InBlock();
 
         void _IXAQueryEvents.ReceiveData(string szTrCode)
         {
-            LOG.Info("_IXAQueryEvents.ReceiveData " + szTrCode);
-            FileInfo fi = new FileInfo(Settings.Default.data_path + "\\xing\\" + szTrCode + ".csv");
+            LOG.Info($"_IXAQueryEvents.ReceiveData szTrCode: {szTrCode}");
+            FileInfo fi = new FileInfo(Path.Combine(Settings.Default.data_path, szTrCode + ".csv"));
             if (fi.Directory != null && !fi.Directory.Exists)
             {
                 System.IO.Directory.CreateDirectory(fi.DirectoryName);
             }
 
+            // TODO write date to ~~
             using (var writer = new StreamWriter(fi.OpenWrite()))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
                 OutBlock(_resModel, _query, csv);
+            }
+            if (_action != null) {
+                Thread.Sleep(1000/_query.GetTRCountPerSec(szTrCode) + 10);
+                _action();
             }
         }
 
         protected abstract void OutBlock(ResModel resModel, IXAQuery query, CsvHelper.CsvWriter writer);
         void _IXAQueryEvents.ReceiveMessage(bool bIsSystemError, string nMessageCode, string szMessage)
         {
-            LOG.Info("_IXAQueryEvents.ReceiveMessage  ");
-            LOG.Info(bIsSystemError);
-            LOG.Info(nMessageCode);
-            LOG.Info(szMessage);
+            LOG.Info($"_IXAQueryEvents.ReceiveMessage biSystemError: {bIsSystemError}, nMessageCode: {nMessageCode}, szMessage: {szMessage}");
             // ptForm.lblMessage.Text = nMessageCode;
         }
 
         void _IXAQueryEvents.ReceiveChartRealData(string szTrCode)
         {
-            LOG.Info("_IXAQueryEvents.ReceiveChartRealData " + szTrCode);
+            LOG.Info($"_IXAQueryEvents.ReceiveChartRealData szTrCode: {szTrCode}");
             //OutBlock(_resModel, _query, csv);
         }
 
         void _IXAQueryEvents.ReceiveSearchRealData(string szTrCode)
         {
-            LOG.Info("_IXAQueryEvents.ReceiveSearchRealData " + szTrCode);
+            LOG.Info($"_IXAQueryEvents.ReceiveSearchRealData szTrCode: {szTrCode}");
             //OutBlock(_resModel, _query, csv);
         }
     }

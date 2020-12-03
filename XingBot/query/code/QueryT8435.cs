@@ -21,10 +21,13 @@ namespace XingBot.query
 
         public QueryT8435() : base("t8435")
         {
+            LOG.Info("Constructor QueryT8435");
         }
 
-        public void Start(_t8435InBlock inBlock)
+        public void Start(_t8435InBlock inBlock, Action action)
         {
+            LOG.Debug("t8435 start");
+            _action = action;
             _inBlock = inBlock;
             InBlock();
         }
@@ -32,6 +35,15 @@ namespace XingBot.query
         protected override void InBlock()
         {
             var szTrCode = _resModel.Name;
+            LOG.Debug($"trCountLimit : {_query.GetTRCountLimit(szTrCode)}, trCountRequest : {_query.GetTRCountRequest(szTrCode)}, trCountBaseSec : {_query.GetTRCountBaseSec(szTrCode)}, trCountPerSec : {_query.GetTRCountPerSec(szTrCode)}");
+            if (_query.GetTRCountLimit(szTrCode) != 0)
+            {
+                while (_query.GetTRCountLimit(szTrCode) <= _query.GetTRCountRequest(szTrCode))
+                {
+                    LOG.Debug($"sleep {szTrCode} {_query.GetTRCountLimit(szTrCode)}, {_query.GetTRCountRequest(szTrCode)}");
+                    Thread.Sleep(1000);
+                }
+            }
             var block = _resModel.Blocks[szTrCode + "InBlock"];
             _query.SetFieldData(block.Name, "gubun", 0, _inBlock.gubun);
             _query.Request(false);
