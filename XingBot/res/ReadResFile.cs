@@ -10,7 +10,7 @@ using XingBot.res;
 namespace XingBot.res
 {
 
-    class ReadResFile
+    public class ReadResFile
     {
         public static ResModel Read(string resfile)
         {
@@ -18,7 +18,7 @@ namespace XingBot.res
             int euckrCodepage = 51949;
             // System.Text.Encoding utf8 = System.Text.Encoding.UTF8;
             System.Text.Encoding euckr = System.Text.Encoding.GetEncoding(euckrCodepage);
-
+            //'D:\work\ScriponBasestar-Grabber\grabber-stock-api-cs\XingBotTest\xing_resfile\H11.res
             ResModel resModel = new ResModel();
             var lines = File.ReadAllLines(resfile, euckr);
 
@@ -39,8 +39,9 @@ namespace XingBot.res
                     if (lines[idxLine].TrimStart().StartsWith("begin"))
                     {
                         idxLine++;
-                        for (int idxInner = idxLine; idxInner < lines[idxLine].Length; idxInner++)
-                        {
+                        //for (int idxInner = idxLine; idxInner < lines[idxLine].Length; idxInner++)
+                        for (int idxInner = idxLine; idxInner < lines.Length; idxInner++)
+                            {
                             if (lines[idxInner].Trim().Length == 0)
                             {
                                 continue;
@@ -52,7 +53,6 @@ namespace XingBot.res
                             var words2 = lines[idxInner].Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
                             block.Rows.Add(new Row { Name = words2[1].Trim(), Desc = words2[0].Trim(), Length = words2[4].Trim(), DataType = words2[3].Trim() });
                         }
-                        // Console.WriteLine(block.Name);
                         resModel.Blocks.Add(block.Name, block);
                     }
                     else
