@@ -63,5 +63,11 @@ namespace GrabberManager
             LOG.Info("real futures click");
             _xingMain.RealFutures();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            LOG.Info("real options click");
+            _xingMain.RealOptions();
+        }
     }
 }
