@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using log4net;
 using XingBot.res;
 
 namespace XingBot.res
@@ -12,6 +13,8 @@ namespace XingBot.res
 
     public class ReadResFile
     {
+        protected static readonly ILog LOG = LogManager.GetLogger("SessionEvent");
+
         public static ResModel Read(string resfile)
         {
             char[] delimiterChars = { Convert.ToChar(13), Convert.ToChar(10), ',',';' };
@@ -26,7 +29,7 @@ namespace XingBot.res
             {
                 if (lines[idxLine].TrimStart().StartsWith(".Feed") || lines[idxLine].TrimStart().StartsWith(".Func"))
                 {
-                    Console.WriteLine("Feed before " + lines[idxLine]);
+                    LOG.Debug($"Feed before {lines[idxLine]}");
                     var words1 = lines[idxLine].Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
                     resModel.Name = words1[2].Trim();
                     resModel.Desc = words1[1].Trim();
@@ -41,7 +44,7 @@ namespace XingBot.res
                         idxLine++;
                         //for (int idxInner = idxLine; idxInner < lines[idxLine].Length; idxInner++)
                         for (int idxInner = idxLine; idxInner < lines.Length; idxInner++)
-                            {
+                        {
                             if (lines[idxInner].Trim().Length == 0)
                             {
                                 continue;

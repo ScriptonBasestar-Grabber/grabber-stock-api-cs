@@ -19,7 +19,7 @@ namespace XingBot.tr
     {
         protected static readonly ILog LOG = LogManager.GetLogger("QueryCtrl");
 
-        public void QueryInit()
+        public void QueryInit(Action action)
         {
             LOG.Info("QueryInit start");
             // TODO 순차적 이벤트 완료되는거 확인하고 다음걸로 하려면 콜백지옥?
@@ -138,7 +138,9 @@ namespace XingBot.tr
             var queryT9942 = new QueryT9942();
             queryT9942.Start(null);
             Thread.Sleep(1000);
-            Console.WriteLine("QueryInit 생성자완료");
+            action();
+            LOG.Info("QueryInit 생성자완료");
+
         }
 
         public void QueryT4201()

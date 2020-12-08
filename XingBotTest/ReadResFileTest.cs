@@ -39,6 +39,18 @@ namespace XingBotTest
             Assert.IsTrue(model.Blocks["OutBlock"].Rows.Last().Name == "alloc_gubun");
         }
 
+        [TestMethod]
+        public void ReadTest_Real_FC0()
+        {
+            ResModel model = ReadResFile.Read(GetProjectPath("xing_resfile/FC0.res"));
+            Console.WriteLine(model);
+            Assert.IsTrue(model.Blocks["InBlock"].Rows.Count == 1);
+            //Assert.IsTrue(model.Blocks["OutBlock"].Rows.Count == 0);
+            Assert.IsTrue(model.Blocks["OutBlock"].Rows.First().Name == "chetime");
+            Assert.IsTrue(model.Blocks["OutBlock"].Rows.Last().Name == "futcode");
+        }
+
+
 
         [TestMethod]
         public void ReadTest_Real_HB_()

@@ -28,30 +28,40 @@ namespace GrabberManager
         {
             _xingMain = new XingBot.Main();
             LoginStack.Children.Clear();
-            LoginStack.Children.Add(new LoginControl(_xingMain.getLoginModel(), (string username, string userpas, string certpass) =>
+            LoginStack.Children.Add(new LoginControl(_xingMain.getLoginModel(), (string username, string userpass, string certpass) =>
             {
-                _xingMain.login(username, userpas, certpass);
+                _xingMain.login(username, userpass, certpass, delegate
+                {
+                    t4201.IsEnabled = true;
+                    t4203.IsEnabled = true;
+                    t8414.IsEnabled = true;
+                });
                 LoginStack.Children.Clear();
             }));
         }
-        
+
         private void t4201_Click(object sender, RoutedEventArgs e)
         {
-            LOG.Info("real stock click");
-            _xingMain.chartT4201();
+            LOG.Info("query stock click");
+            _xingMain.ChartT4201();
         }
 
         private void t4203_Click(object sender, RoutedEventArgs e)
         {
-            LOG.Info("real stock click");
-            _xingMain.chartT4203();
+            LOG.Info("query upjong click");
+            _xingMain.ChartT4203();
         }
 
         private void t8414_Click(object sender, RoutedEventArgs e)
         {
-            LOG.Info("real stock click");
-            _xingMain.chartT8414();
+            LOG.Info("query fuop click");
+            _xingMain.ChartT8414();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LOG.Info("real futures click");
+            _xingMain.RealFutures();
+        }
     }
 }

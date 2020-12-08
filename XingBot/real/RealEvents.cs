@@ -47,7 +47,7 @@ namespace XingBot.real
         {
             var szTrCode = _resModel.Name;
 
-            fi = new FileInfo(Path.Combine(Settings.Default.data_path, szTrCode + ".csv"));
+            fi = new FileInfo(Path.Combine(Settings.Default.root_path, szTrCode + ".csv"));
             if (fi.Directory != null && !fi.Directory.Exists)
             {
                 System.IO.Directory.CreateDirectory(fi.DirectoryName);

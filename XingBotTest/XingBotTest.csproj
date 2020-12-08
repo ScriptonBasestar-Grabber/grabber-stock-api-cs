@@ -67,6 +67,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="xing_resfile\FC0.res" />
     <Content Include="xing_resfile\H1_.res" />
     <Content Include="xing_resfile\HB_.res" />
     <Content Include="xing_resfile\t1104.res" />

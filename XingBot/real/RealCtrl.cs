@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using DataLib.model;
 using DataLib.util;
+using log4net;
 using XA_DATASETLib;
 using XingBot.Properties;
 using XingBot.res;
@@ -13,6 +14,7 @@ namespace XingBot.real
 {
     public class RealCtrl
     {
+        protected static readonly ILog LOG = LogManager.GetLogger("RealEvents");
         private readonly Dictionary<Tuple<string, string>, RealEvents> _realDict = new Dictionary<Tuple<string, string>, RealEvents>();
 
         /**
@@ -100,6 +102,7 @@ namespace XingBot.real
         {
             foreach (var shcode in codes)
             {
+                LOG.Debug($"shcode {shcode}");
                 this._realDict[Tuple.Create(szTrCode, shcode)] = new RealEvents(szTrCode);
                 this._realDict[Tuple.Create(szTrCode, shcode)].Start(shcode, new StringDict()
                 {
@@ -114,22 +117,22 @@ namespace XingBot.real
         public void RealDerivativesKospi200Futures()
         {
             List<CodeFutures> codeK200Futures = new List<CodeFutures>(Constants.CodeFutures.Values);
-            string[] fucodes = codeK200Futures.Select(code => code.Code).ToArray();
-            var codeName = "fucode";
+            string[] futcodes = codeK200Futures.Select(code => code.Code).ToArray();
+            var codeName = "futcode";
             //CallReal("C01",codeName, fucodes);
             //CallReal("CM0",codeName, fucodes);
             //CallReal("CM1",codeName, fucodes);
             //CallReal("CM2",codeName, fucodes);
             //CallReal("H01",codeName, fucodes);
 
-            CallReal("FC0",codeName, fucodes);
-            CallReal("FD0",codeName, fucodes);
-            CallReal("FH0",codeName, fucodes);
-            CallReal("FX0",codeName, fucodes);
-            CallReal("NC0",codeName, fucodes);
-            CallReal("NH0", codeName, fucodes);
-            //CallReal("O01",codeName, fucodes);
-            CallReal("YFC", codeName, fucodes);
+            CallReal("FC0",codeName, futcodes);
+            CallReal("FD0",codeName, futcodes);
+            CallReal("FH0",codeName, futcodes);
+            CallReal("FX0",codeName, futcodes);
+            CallReal("NC0",codeName, futcodes);
+            CallReal("NH0", codeName, futcodes);
+            //CallReal("O01",codeName, futcodes);
+            CallReal("YFC", codeName, futcodes);
         }
         public void RealDerivativesKospi200Options()
         {
