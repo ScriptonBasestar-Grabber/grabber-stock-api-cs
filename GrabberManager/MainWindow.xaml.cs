@@ -58,13 +58,13 @@ namespace GrabberManager
             _xingMain.ChartT8414();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtnRealFutures_Click(object sender, RoutedEventArgs e)
         {
             LOG.Info("real futures click");
             _xingMain.RealFutures();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void BtnRealOptions_Click(object sender, RoutedEventArgs e)
         {
             LOG.Info("real options click");
             _xingMain.RealOptions();

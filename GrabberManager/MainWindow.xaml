@@ -35,7 +35,7 @@
             </Button.RenderTransform>
         </Button>
         <local:ItemList HorizontalAlignment="Right" Height="400" Margin="314,0,0,0" VerticalAlignment="Top" Width="200"/>
-        <Button Content="BtnRealFutures" HorizontalAlignment="Left" Margin="146,205,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button Content="BtnRealOptions" HorizontalAlignment="Left" Margin="146,237,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="BtnRealFutures" HorizontalAlignment="Left" Margin="146,205,0,0" VerticalAlignment="Top" Width="75" Click="BtnRealFutures_Click"/>
+        <Button Content="BtnRealOptions" HorizontalAlignment="Left" Margin="146,237,0,0" VerticalAlignment="Top" Width="75" Click="BtnRealOptions_Click"/>
     </Grid>
 </Window>
